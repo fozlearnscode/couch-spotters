@@ -108,6 +108,102 @@
   section.view{ display:none; }
   section.view.active{ display:block; }
 
+  /* ---- The Lounge ---- */
+  .lounge-block{
+    margin-bottom:28px;
+  }
+  .lounge-block-head{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;
+    margin-bottom:16px;
+  }
+  .lounge-block-head h2{
+    font-family:'Space Grotesk', sans-serif; font-size:18px; margin:0;
+  }
+  .lounge-sub{
+    font-size:12px; color:var(--text-muted); font-family:'JetBrains Mono', monospace;
+  }
+  .link-btn{
+    background:transparent; border:1px solid var(--teal); color:var(--teal);
+    font-size:12px; padding:6px 10px; border-radius:5px; cursor:pointer; font-weight:600;
+  }
+  .link-btn:hover{ background:rgba(79,182,168,0.1); }
+
+  .now-playing-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:16px;
+    margin-bottom:24px;
+  }
+  .lounge-video-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    cursor:pointer;
+  }
+  .lounge-video-thumb{
+    aspect-ratio:16/9;
+    background:#000;
+    position:relative;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .lounge-video-thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .lounge-video-badge{
+    position:absolute; top:8px; right:8px;
+    background:rgba(226,105,79,0.9); color:#fff;
+    font-size:11px; font-weight:700; padding:4px 9px; border-radius:5px;
+    font-family:'JetBrains Mono', monospace;
+  }
+  .lounge-video-meta{
+    padding:12px 14px;
+  }
+  .lounge-video-meta .title{
+    font-weight:600; font-size:13px; line-height:1.3; margin-bottom:4px;
+  }
+  .lounge-video-meta .sub{
+    font-size:11px; color:var(--text-muted); font-family:'JetBrains Mono', monospace;
+  }
+
+  .lounge-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+  }
+  .snapshot-pair{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+  .snap-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:9px;
+    padding:14px;
+  }
+  .snap-card.wide{
+    grid-column:1/-1;
+  }
+  .snap-label{
+    display:block; font-size:11px; text-transform:uppercase; letter-spacing:0.05em;
+    color:var(--text-muted); font-family:'JetBrains Mono', monospace; margin-bottom:8px;
+  }
+  .snap-body{
+    font-family:'JetBrains Mono', monospace; font-size:14px; font-weight:600;
+    line-height:1.4;
+  }
+  .snap-body .callsign{
+    color:var(--gold); display:block; margin-bottom:3px;
+  }
+  .snap-body .detail{
+    color:var(--text-muted); font-size:12px;
+  }
+
+  @media (max-width:800px){
+    .lounge-row{ grid-template-columns:1fr; }
+    .snapshot-pair{ grid-template-columns:1fr; }
+  }
+
   /* ---- Watch tab ---- */
   .chip-row{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px; }
   .chip{
@@ -694,6 +790,7 @@
   // ---------- MEL live board ----------
   const MEL_BBOX = { lamin:-37.86, lomin:144.62, lamax:-37.49, lomax:145.06 }; // tight ring around YMML
   let lastBoardFetch = 0;
+  let lastMelData = null;
 
   async function fetchMelBoard(force){
     const now = Date.now();
@@ -708,8 +805,10 @@
       const res = await fetch(url);
       if(!res.ok) throw new Error('HTTP '+res.status);
       const data = await res.json();
-      renderMelBoard(data.states || []);
+      lastMelData = data.states || [];
+      renderMelBoard(lastMelData);
       status.textContent = `Updated ${new Date().toLocaleTimeString('en-AU')} · via OpenSky Network`;
+      updateLoungeSnapshots();
     }catch(e){
       status.innerHTML = `Couldn't reach OpenSky Network right now. Try again shortly.`;
       document.querySelector('#arrivalsTable tbody').innerHTML = '';
@@ -752,6 +851,154 @@
     fillTable('departuresTable', departures);
   }
   document.getElementById('boardRefreshBtn').addEventListener('click', ()=>fetchMelBoard(true));
+
+  // ---------- The Lounge: Now Playing, MEL Snapshot, Nearest Overhead ----------
+  let lastOverheadData = null;
+
+  function renderNowPlaying(){
+    const grid = document.getElementById('nowPlayingGrid');
+    const sub = document.getElementById('npSub');
+    grid.innerHTML = '';
+    
+    // Get airports with verified channel IDs only (can embed live)
+    const liveAirports = AIRPORTS.filter(ap => ap.channelId);
+    
+    // Pick 2 random ones
+    const selected = [];
+    for(let i = 0; i < Math.min(2, liveAirports.length); i++){
+      const idx = Math.floor(Math.random() * liveAirports.length);
+      const ap = liveAirports[idx];
+      if(!selected.includes(ap)) selected.push(ap);
+    }
+    
+    sub.textContent = `${selected.length} live feeds available`;
+    
+    selected.forEach(ap=>{
+      const card = document.createElement('div');
+      card.className = 'lounge-video-card';
+      card.style.cursor = 'pointer';
+      
+      // Use a static image for "now playing" — shows airport instead of specific video
+      const thumbUrl = `https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg`; // placeholder
+      const thumb = document.createElement('div');
+      thumb.className = 'lounge-video-thumb';
+      thumb.innerHTML = `<img loading="lazy" src="https://yt3.lh.google.com/dummy" alt="${ap.name}" style="background:linear-gradient(135deg,#4a7c59,#2d5a3d); display:flex;align-items:center;justify-content:center; font-size:12px; color:#fff; font-weight:600;"><div class="lounge-video-badge">LIVE</div>`;
+      
+      const meta = document.createElement('div');
+      meta.className = 'lounge-video-meta';
+      meta.innerHTML = `<div class="title">${ap.name}</div><div class="sub">${ap.streamer}</div>`;
+      
+      card.appendChild(thumb);
+      card.appendChild(meta);
+      card.addEventListener('click', ()=>{
+        // Switch to Live Now tab and scroll
+        document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+        document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+        document.querySelector('[data-view="live"]').classList.add('active');
+        document.querySelector('[data-view="live"]').parentElement.parentElement.scrollIntoView({ behavior:'smooth' });
+        const btn = document.querySelector('[data-view="live"]');
+        btn.classList.add('active');
+        document.getElementById('view-live').classList.add('active');
+      });
+      grid.appendChild(card);
+    });
+  }
+
+  function updateLoungeSnapshots(){
+    // MEL snapshot
+    const melSnap = document.getElementById('melSnapshot');
+    if(!lastMelData || lastMelData.length === 0){
+      melSnap.querySelectorAll('.snap-body').forEach(b=>b.innerHTML = 'No data yet');
+      return;
+    }
+    
+    const arrivals = [];
+    const departures = [];
+    lastMelData.forEach(s=>{
+      const onGround = s[8];
+      const baroAlt = s[7];
+      const vRate = s[11];
+      if(onGround || baroAlt==null) return;
+      if(baroAlt > 3000) return;
+      const row = { callsign: s[1] ? s[1].trim() : s[0].toUpperCase(), alt: mToFt(baroAlt), speed: msToKnots(s[9]) };
+      if(vRate!=null && vRate < -1) arrivals.push(row);
+      else if(vRate!=null && vRate > 1) departures.push(row);
+    });
+    arrivals.sort((a,b)=>a.alt-b.alt);
+    departures.sort((a,b)=>a.alt-b.alt);
+    
+    const arrCard = melSnap.children[0].querySelector('.snap-body');
+    const depCard = melSnap.children[1].querySelector('.snap-body');
+    
+    if(arrivals.length > 0){
+      const a = arrivals[0];
+      arrCard.innerHTML = `<span class="callsign">${a.callsign}</span><span class="detail">${a.alt} ft · ${a.speed} kt</span>`;
+    } else {
+      arrCard.innerHTML = 'None in range';
+    }
+    
+    if(departures.length > 0){
+      const d = departures[0];
+      depCard.innerHTML = `<span class="callsign">${d.callsign}</span><span class="detail">${d.alt} ft · ${d.speed} kt</span>`;
+    } else {
+      depCard.innerHTML = 'None in range';
+    }
+    
+    // Nearest overhead
+    const nearSnap = document.getElementById('nearestSnapshot').querySelector('.snap-body');
+    if(!lastOverheadData || lastOverheadData.length === 0){
+      nearSnap.innerHTML = 'No aircraft yet';
+      return;
+    }
+    
+    const inAir = lastOverheadData.filter(s => s[8]===false && s[7]!=null).sort((a,b)=>a[7]-b[7]);
+    if(inAir.length > 0){
+      const nearest = inAir[0];
+      const [icao24, callsign, country, , , , , baroAlt, , velocity, track] = nearest;
+      const cs = callsign ? callsign.trim() : icao24.toUpperCase();
+      nearSnap.innerHTML = `<span class="callsign">${cs}</span><span class="detail">${mToFt(baroAlt)} ft · ${msToKnots(velocity)} kt · ${compass(track)}</span>`;
+    } else {
+      nearSnap.innerHTML = 'No aircraft yet';
+    }
+  }
+
+  // Override fetchOverhead to also update lastOverheadData
+  const origFetchOverhead = fetchOverhead;
+  window.fetchOverheadWithSnapshot = async function(force){
+    await origFetchOverhead(force);
+    // lastOverheadData is set in renderFlights
+    updateLoungeSnapshots();
+  };
+
+  // Monkey-patch renderFlights to set lastOverheadData
+  const origRenderFlights = renderFlights;
+  renderFlights = function(states){
+    lastOverheadData = states;
+    origRenderFlights.call(this, states);
+    updateLoungeSnapshots();
+  };
+
+  // Replace the click handler for refresh button
+  document.getElementById('refreshBtn').removeEventListener('click', ()=>fetchOverhead(true));
+  document.getElementById('refreshBtn').addEventListener('click', async ()=>{
+    await fetchOverhead(true);
+    updateLoungeSnapshots();
+  });
+
+  // Link button handlers
+  document.querySelectorAll('.link-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const view = btn.dataset.jump;
+      document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+      const tabBtn = document.querySelector(`[data-view="${view}"]`);
+      tabBtn.classList.add('active');
+      document.getElementById(`view-${view}`).classList.add('active');
+      window.scrollTo(0, 0);
+      if(view === 'board' && lastBoardFetch === 0) fetchMelBoard(true);
+      if(view === 'overhead' && lastFetch === 0) fetchOverhead(true);
+    });
+  });
 
   // ---------- Logbook ----------
   let logEntries = [];
@@ -842,6 +1089,13 @@
   renderVideos();
   renderAirports();
   loadLog();
+  
+  // Populate The Lounge on load
+  renderNowPlaying();
+  
+  // Fetch MEL and Overhead data for Lounge
+  fetchMelBoard(true);
+  fetchOverhead(true);
 })();
 </script>
 </body>
