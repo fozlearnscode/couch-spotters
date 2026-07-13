@@ -1177,3 +1177,1196 @@
 </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Couch Spotters</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0E1830;
+    --surface: #172341;
+    --surface-raised: #1D2B4E;
+    --line: #2C3B63;
+    --text: #F2ECDC;
+    --text-muted: #8D9BC2;
+    --gold: #E8A33D;
+    --gold-deep: #C4841F;
+    --teal: #4FB6A8;
+    --heavy: #E2694F;
+    --shadow: 0 2px 6px rgba(0,0,0,0.25), 0 8px 24px rgba(0,0,0,0.2);
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    background:
+      radial-gradient(ellipse at 20% -10%, rgba(232,163,61,0.08), transparent 45%),
+      radial-gradient(ellipse at 90% 10%, rgba(79,182,168,0.07), transparent 40%),
+      var(--bg);
+    color:var(--text);
+    font-family:'Inter', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{ max-width:1100px; margin:0 auto; padding:28px 20px 90px; }
+
+  header{ margin-bottom:18px; }
+  .brand{ display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; justify-content:space-between; }
+  .gear-btn{
+    background:var(--surface); border:1px solid var(--line); color:var(--text-muted);
+    width:34px; height:34px; border-radius:50%; font-size:15px; cursor:pointer;
+    align-self:center;
+  }
+  .gear-btn:hover{ color:var(--gold); border-color:var(--gold); }
+  .brand h1{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    font-size:clamp(26px,4vw,36px);
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  .brand p{ margin:2px 0 0; color:var(--text-muted); font-size:14px; }
+
+  /* Split-flap ticker */
+  .ticker{
+    margin-top:16px;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:10px 14px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-family:'JetBrains Mono', monospace;
+    overflow:hidden;
+  }
+  .ticker .tlabel{
+    font-size:11px;
+    letter-spacing:0.1em;
+    color:var(--teal);
+    text-transform:uppercase;
+    flex:0 0 auto;
+  }
+  .flap-row{ display:flex; gap:3px; flex-wrap:wrap; }
+  .flap{
+    background:#0B1428;
+    border:1px solid var(--line);
+    border-radius:3px;
+    padding:4px 6px;
+    font-size:13px;
+    font-weight:600;
+    color:var(--gold);
+    min-width:14px;
+    text-align:center;
+    animation:flapIn .4s ease-out both;
+  }
+  @keyframes flapIn{
+    0%{ transform:rotateX(90deg); opacity:0; }
+    100%{ transform:rotateX(0deg); opacity:1; }
+  }
+  @media (prefers-reduced-motion: reduce){ .flap{ animation:none; } }
+
+  nav.tabs{
+    display:flex;
+    gap:8px;
+    margin:20px 0 22px;
+    border-bottom:1px solid var(--line);
+  }
+  .tab-btn{
+    background:transparent;
+    border:none;
+    color:var(--text-muted);
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    font-size:14.5px;
+    padding:10px 4px;
+    margin-right:18px;
+    cursor:pointer;
+    border-bottom:2.5px solid transparent;
+    letter-spacing:0.01em;
+  }
+  .tab-btn.active{ color:var(--gold); border-bottom-color:var(--gold); }
+  .tab-btn:focus-visible{ outline:2px solid var(--teal); outline-offset:3px; }
+
+  section.view{ display:none; }
+  section.view.active{ display:block; }
+
+  /* ---- Lounge ---- */
+  .lounge-block{ margin-bottom:26px; }
+  .lounge-block-head{
+    display:flex; justify-content:space-between; align-items:center;
+    margin-bottom:12px;
+  }
+  .lounge-block-head h2{ font-family:'Space Grotesk',sans-serif; font-size:18px; margin:0; }
+  .lounge-sub{ font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--text-muted); }
+  .lounge-row{ display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+  @media (max-width:760px){ .lounge-row{ grid-template-columns:1fr; } }
+
+  .link-btn{
+    background:transparent; border:none; color:var(--teal); font-size:12.5px;
+    font-weight:600; cursor:pointer; font-family:'Inter',sans-serif;
+  }
+  .link-btn:hover{ text-decoration:underline; }
+
+  .now-playing-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+  }
+  @media (max-width:700px){ .now-playing-grid{ grid-template-columns:1fr; } }
+  .np-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    overflow:hidden; box-shadow:var(--shadow);
+  }
+  .np-stage{ aspect-ratio:16/9; background:#000; }
+  .np-stage iframe{ width:100%; height:100%; border:0; display:block; }
+  .np-meta{
+    padding:10px 13px; display:flex; align-items:center; gap:10px;
+  }
+  .np-title{ font-weight:600; font-size:13.5px; }
+  .np-empty{
+    grid-column:1/-1;
+    background:var(--surface); border:1px dashed var(--line); border-radius:10px;
+    padding:26px 20px; text-align:center; color:var(--text-muted); font-size:13.5px;
+  }
+  .np-empty p{ margin:0 0 12px; }
+
+  .live-status-badge{
+    font-family:'JetBrains Mono',monospace; font-size:10.5px; font-weight:700;
+    padding:3px 8px; border-radius:10px; display:inline-flex; align-items:center; gap:5px;
+    letter-spacing:0.04em;
+  }
+  .live-status-badge.live{ background:var(--heavy); color:#2a0f08; }
+  .live-status-badge.offline{ background:var(--line); color:var(--text-muted); }
+  .airport-stage .live-status-badge{ position:absolute; top:8px; left:8px; }
+
+  .snapshot-pair{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .snap-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:9px;
+    padding:12px 14px;
+  }
+  .snap-card.wide{ grid-column:1/-1; }
+  .snap-label{
+    display:block; font-family:'JetBrains Mono',monospace; font-size:10.5px;
+    text-transform:uppercase; letter-spacing:0.05em; color:var(--text-muted); margin-bottom:6px;
+  }
+  .snap-body{ font-size:14px; font-weight:600; }
+  .snap-body .sb-sub{ display:block; font-weight:400; font-size:12px; color:var(--text-muted); margin-top:2px; font-family:'JetBrains Mono',monospace; }
+
+  /* ---- Watch tab ---- */
+  .chip-row{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px; }
+  .chip{
+    background:var(--surface);
+    border:1px solid var(--line);
+    color:var(--text-muted);
+    font-size:12.5px;
+    font-weight:600;
+    padding:7px 13px;
+    border-radius:20px;
+    cursor:pointer;
+    font-family:'Inter',sans-serif;
+  }
+  .chip.active{ background:var(--gold); border-color:var(--gold); color:#241a06; }
+
+  .video-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(240px, 1fr));
+    gap:16px;
+  }
+  .video-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+  }
+  .video-thumb-wrap{
+    position:relative;
+    aspect-ratio:16/9;
+    background:#000;
+    cursor:pointer;
+  }
+  .video-thumb-wrap img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .video-thumb-wrap .play{
+    position:absolute; inset:0;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .video-thumb-wrap .play span{
+    width:52px; height:52px;
+    border-radius:50%;
+    background:rgba(14,24,48,0.75);
+    border:1.5px solid var(--gold);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--gold);
+    font-size:20px;
+  }
+  .video-thumb-wrap iframe{ width:100%; height:100%; border:0; display:block; }
+  .video-meta{ padding:12px 13px 14px; }
+  .video-meta .vtitle{ font-weight:600; font-size:14px; line-height:1.35; display:block; margin-bottom:4px; }
+  .video-meta .vsub{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    color:var(--text-muted);
+    display:flex;
+    justify-content:space-between;
+  }
+  .cat-tag{ color:var(--teal); }
+
+  /* ---- Overhead tab ---- */
+  .overhead-head{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;
+    margin-bottom:16px;
+  }
+  .overhead-head h2{ font-family:'Space Grotesk',sans-serif; font-size:20px; margin:0; }
+  .refresh-btn{
+    background:var(--gold); color:#241a06; border:none; font-weight:700;
+    padding:9px 16px; border-radius:6px; cursor:pointer; font-size:13.5px;
+  }
+  .refresh-btn:disabled{ background:var(--line); color:var(--text-muted); cursor:default; }
+  .oh-status{ font-size:12.5px; color:var(--text-muted); margin-bottom:14px; font-family:'JetBrains Mono',monospace; }
+
+  .flight-list{ display:flex; flex-direction:column; gap:8px; }
+  .flight-row{
+    display:grid;
+    grid-template-columns:auto 1fr auto auto auto;
+    gap:14px;
+    align-items:center;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:12px 14px;
+    font-size:13.5px;
+  }
+  .flight-row .callsign{ font-family:'JetBrains Mono',monospace; font-weight:700; letter-spacing:0.03em; }
+  .flight-row .country{ color:var(--text-muted); font-size:12px; }
+  .heavy-badge{
+    background:var(--heavy); color:#2a0f08; font-weight:700; font-size:10.5px;
+    padding:2px 7px; border-radius:10px; font-family:'JetBrains Mono',monospace;
+  }
+  .flight-row .datum{ text-align:right; font-family:'JetBrains Mono',monospace; }
+  .flight-row .datum .dlabel{ display:block; color:var(--text-muted); font-size:10px; text-transform:uppercase; letter-spacing:.05em; }
+  .empty-oh{
+    text-align:center; padding:34px 16px; color:var(--text-muted);
+    font-family:'JetBrains Mono',monospace; font-size:13px;
+    background:var(--surface); border:1px dashed var(--line); border-radius:10px;
+  }
+  .empty-oh a{ color:var(--teal); }
+
+  /* ---- Live Now tab ---- */
+  .live-note{
+    font-size:12.5px; color:var(--text-muted); margin-bottom:18px; line-height:1.5;
+    background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:10px 14px;
+  }
+  .airport-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(260px, 1fr));
+    gap:16px;
+  }
+  .airport-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+  }
+  .airport-card .ac-head{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:12px 14px 10px;
+  }
+  .airport-card .ac-code{
+    font-family:'JetBrains Mono',monospace; font-weight:700; color:var(--gold);
+    font-size:13px; letter-spacing:0.05em;
+  }
+  .airport-card .ac-name{ font-weight:600; font-size:14px; }
+  .airport-card .ac-city{ color:var(--text-muted); font-size:12px; margin-top:1px; }
+  .airport-stage{
+    aspect-ratio:16/9;
+    background:#000;
+    display:flex; align-items:center; justify-content:center;
+    position:relative;
+  }
+  .airport-stage iframe{ width:100%; height:100%; border:0; display:block; }
+  .airport-watch-btn{
+    background:var(--gold); color:#241a06; border:none; font-weight:700;
+    padding:9px 14px; border-radius:6px; cursor:pointer; font-size:13px;
+    display:flex; align-items:center; gap:6px;
+  }
+  .airport-card .ac-foot{
+    padding:10px 14px 14px;
+    display:flex; justify-content:space-between; align-items:center;
+    font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-muted);
+  }
+  .airport-card .ac-foot a{ color:var(--teal); text-decoration:none; }
+  .live-dot{
+    width:7px; height:7px; border-radius:50%; background:var(--heavy);
+    display:inline-block; margin-right:5px;
+    animation:pulseDot 1.6s ease-in-out infinite;
+  }
+  @keyframes pulseDot{ 0%,100%{ opacity:1; } 50%{ opacity:0.35; } }
+  @media (prefers-reduced-motion: reduce){ .live-dot{ animation:none; } }
+
+  /* ---- MEL Board tab ---- */
+  .board-wrap{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+  }
+  .board-col h3{
+    font-family:'Space Grotesk',sans-serif; font-size:15px; margin:0 0 10px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .board-col h3 .arrow{ font-size:16px; }
+  .board-col.arrivals h3 .arrow{ color:var(--teal); }
+  .board-col.departures h3 .arrow{ color:var(--gold); }
+  .board-table{ width:100%; border-collapse:collapse; font-size:13px; }
+  .board-table th{
+    text-align:left; font-family:'JetBrains Mono',monospace; font-size:10.5px;
+    text-transform:uppercase; letter-spacing:.05em; color:var(--text-muted);
+    border-bottom:1px solid var(--line); padding:0 8px 8px;
+  }
+  .board-table td{
+    padding:9px 8px; border-bottom:1px solid var(--line);
+    font-family:'JetBrains Mono',monospace;
+  }
+  .board-table tr:last-child td{ border-bottom:none; }
+  .board-empty{ color:var(--text-muted); font-size:12.5px; padding:14px 0; }
+  @media (max-width:700px){ .board-wrap{ grid-template-columns:1fr; } }
+
+  /* ---- Logbook tab ---- */
+  .log-form{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:18px;
+    margin-bottom:22px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(160px,1fr));
+    gap:12px;
+  }
+  .log-form .field{ display:flex; flex-direction:column; gap:5px; }
+  .log-form label{ font-size:11px; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-muted); font-family:'JetBrains Mono',monospace; }
+  .log-form input, .log-form select, .log-form textarea{
+    background:var(--surface-raised);
+    border:1px solid var(--line);
+    border-radius:5px;
+    padding:8px 9px;
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    font-size:13.5px;
+  }
+  .log-form textarea{ resize:vertical; min-height:38px; }
+  .log-form .full{ grid-column:1/-1; }
+  .star-picker{ display:flex; gap:4px; font-size:20px; }
+  .star-picker span{ cursor:pointer; color:var(--line); }
+  .star-picker span.on{ color:var(--gold); }
+  .add-entry-btn{
+    grid-column:1/-1;
+    background:var(--teal); color:#06231f; border:none; font-weight:700;
+    padding:10px; border-radius:6px; cursor:pointer; font-size:14px;
+  }
+
+  .log-entry{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:9px;
+    padding:14px 16px;
+    margin-bottom:10px;
+    display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap;
+  }
+  .log-entry .le-main .le-title{ font-weight:700; font-size:14.5px; }
+  .log-entry .le-main .le-sub{ color:var(--text-muted); font-size:12.5px; margin-top:2px; }
+  .log-entry .le-main .le-notes{ margin-top:6px; font-size:13px; line-height:1.4; }
+  .log-entry .le-side{ text-align:right; display:flex; flex-direction:column; align-items:flex-end; gap:6px; }
+  .le-stars{ color:var(--gold); font-size:14px; }
+  .le-del{ background:transparent; border:1px solid var(--line); color:var(--text-muted); border-radius:5px; padding:3px 9px; font-size:11px; cursor:pointer; }
+  .le-del:hover{ border-color:var(--heavy); color:var(--heavy); }
+
+  button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible{
+    outline:2px solid var(--teal); outline-offset:2px;
+  }
+
+  @media (max-width:640px){
+    .flight-row{ grid-template-columns:1fr; text-align:left; }
+    .flight-row .datum{ text-align:left; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <div>
+        <h1>Couch Spotters</h1>
+        <p>Your weekend flight deck — Victoria, Australia</p>
+      </div>
+      <button class="gear-btn" id="settingsBtn" title="Live-detection settings">⚙</button>
+    </div>
+    <div class="ticker">
+      <span class="tlabel">On Approach</span>
+      <div class="flap-row" id="tickerFlaps"></div>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab-btn active" data-view="lounge">The Lounge</button>
+    <button class="tab-btn" data-view="watch">Watch</button>
+    <button class="tab-btn" data-view="live">Live Now</button>
+    <button class="tab-btn" data-view="overhead">Overhead</button>
+    <button class="tab-btn" data-view="board">MEL Board</button>
+    <button class="tab-btn" data-view="logbook">Logbook</button>
+  </nav>
+
+  <!-- LOUNGE -->
+  <section class="view active" id="view-lounge">
+    <div class="lounge-block">
+      <div class="lounge-block-head">
+        <h2>Now Playing</h2>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span class="lounge-sub" id="npSub"></span>
+          <button class="link-btn" id="npRefreshBtn">Refresh</button>
+        </div>
+      </div>
+      <div class="now-playing-grid" id="nowPlayingGrid"></div>
+    </div>
+
+    <div class="lounge-row">
+      <div class="lounge-block">
+        <div class="lounge-block-head">
+          <h2>Melbourne Airport, right now</h2>
+          <button class="link-btn" data-jump="board">Full board →</button>
+        </div>
+        <div class="snapshot-pair" id="melSnapshot">
+          <div class="snap-card"><span class="snap-label">↓ Next arrival</span><div class="snap-body">Checking…</div></div>
+          <div class="snap-card"><span class="snap-label">↑ Next departure</span><div class="snap-body">Checking…</div></div>
+        </div>
+      </div>
+
+      <div class="lounge-block">
+        <div class="lounge-block-head">
+          <h2>Nearest overhead</h2>
+          <button class="link-btn" data-jump="overhead">Full tracker →</button>
+        </div>
+        <div class="snap-card wide" id="nearestSnapshot"><div class="snap-body">Checking…</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WATCH -->
+  <section class="view" id="view-watch">
+    <div class="chip-row" id="chipRow"></div>
+    <div class="video-grid" id="videoGrid"></div>
+  </section>
+
+  <!-- LIVE NOW -->
+  <section class="view" id="view-live">
+    <div class="live-note">Real YouTube search results for currently live plane-spotting streams — both airport-specific searches (rotating through Heathrow, Sydney, Melbourne, Madeira, DFW, SFO, LAX, JFK a few at a time) and a general worldwide pool, sorted by how many people are watching right now. Every card here is confirmed live at last check, not a guess.</div>
+    <div class="airport-grid" id="airportGrid"></div>
+  </section>
+
+  <!-- OVERHEAD -->
+  <section class="view" id="view-overhead">
+    <div class="overhead-head">
+      <h2>What's flying near you right now</h2>
+      <button class="refresh-btn" id="refreshBtn">Refresh</button>
+    </div>
+    <div class="oh-status" id="ohStatus">Not checked yet.</div>
+    <div class="flight-list" id="flightList"></div>
+  </section>
+
+  <!-- MEL BOARD -->
+  <section class="view" id="view-board">
+    <div class="overhead-head">
+      <h2>Melbourne Airport (MEL/YMML) — live board</h2>
+      <button class="refresh-btn" id="boardRefreshBtn">Refresh</button>
+    </div>
+    <div class="oh-status" id="boardStatus">Not checked yet.</div>
+    <div class="board-wrap">
+      <div class="board-col arrivals">
+        <h3><span class="arrow">↓</span> Arriving</h3>
+        <table class="board-table" id="arrivalsTable">
+          <thead><tr><th>Flight</th><th>Alt (ft)</th><th>Speed (kt)</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="board-col departures">
+        <h3><span class="arrow">↑</span> Departing</h3>
+        <table class="board-table" id="departuresTable">
+          <thead><tr><th>Flight</th><th>Alt (ft)</th><th>Speed (kt)</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <p class="live-note" style="margin-top:16px;">Built from live ADS-B positions near MEL (via OpenSky Network), not the official airline schedule — so it shows what's actually in the air around the airport right now, sorted by altitude, rather than gate numbers or flight times.</p>
+  </section>
+
+  <!-- LOGBOOK -->
+  <section class="view" id="view-logbook">
+    <div class="log-form">
+      <div class="field"><label for="lgDate">Date</label><input type="date" id="lgDate"></div>
+      <div class="field"><label for="lgAircraft">Aircraft / callsign</label><input type="text" id="lgAircraft" placeholder="e.g. Qantas A380"></div>
+      <div class="field"><label for="lgLocation">Location</label><input type="text" id="lgLocation" placeholder="e.g. Tullamarine, home couch"></div>
+      <div class="field"><label for="lgSpotter">Spotted by</label><input type="text" id="lgSpotter" placeholder="Your name"></div>
+      <div class="field full"><label for="lgNotes">Notes</label><textarea id="lgNotes" placeholder="What made it worth logging?"></textarea></div>
+      <div class="field">
+        <label>Rating</label>
+        <div class="star-picker" id="starPicker">
+          <span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span><span data-v="4">★</span><span data-v="5">★</span>
+        </div>
+      </div>
+      <button class="add-entry-btn" id="addEntryBtn">Add to logbook</button>
+    </div>
+    <div id="logList"></div>
+  </section>
+</div>
+
+<!-- SETTINGS MODAL -->
+<div class="modal-backdrop" id="settingsBackdrop">
+  <div class="modal">
+    <h3>Live-detection settings</h3>
+    <p class="hint" style="margin-bottom:14px;">
+      Without an API key, "Now Playing" and the Live Now tab can't confirm what's actually live — they'll only let you jump to a channel and check yourself.
+      Adding a free <a href="https://console.cloud.google.com/apis/library/youtube.googleapis.com" target="_blank" rel="noopener" style="color:var(--teal)">YouTube Data API key</a> lets the app genuinely search YouTube for live plane-spotting streams — both airport-specific and worldwide — ranked by live viewer count, with real thumbnails. It re-checks automatically every 60 minutes; YouTube caps live-search calls at roughly 100/day per key, and each refresh uses about 4, so this cadence leaves plenty of room for manual refreshes too.
+    </p>
+    <div class="field">
+      <label for="ytApiKeyInput">YouTube Data API key</label>
+      <input type="text" id="ytApiKeyInput" placeholder="Paste your key here">
+    </div>
+    <p class="hint">Stored privately in this browser only — not shared with anyone else using this app, and never leaves your device except to call YouTube's API directly.</p>
+    <div class="modal-actions">
+      <button class="btn-ghost" id="settingsClear">Remove key</button>
+      <button class="btn-ghost" id="settingsCancel">Close</button>
+      <button class="btn" id="settingsSave">Save</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  // Storage adapter: uses Claude's window.storage when available (e.g. running
+  // as a Claude artifact, with cross-device sync), and falls back to the
+  // browser's localStorage when deployed standalone (e.g. GitHub Pages) —
+  // same file, works in both places. Note: the localStorage fallback is
+  // per-browser/device only, it won't sync between two people's phones.
+  const storage = {
+    async get(key, shared){
+      if (typeof window.storage !== 'undefined') {
+        try { return await window.storage.get(key, shared); } catch(e){ return null; }
+      }
+      const raw = localStorage.getItem(key);
+      return raw ? { key, value: raw, shared } : null;
+    },
+    async set(key, value, shared){
+      if (typeof window.storage !== 'undefined') {
+        try { return await window.storage.set(key, value, shared); } catch(e){ /* fall through */ }
+      }
+      localStorage.setItem(key, value);
+      return { key, value, shared };
+    }
+  };
+
+  const STORE_LOG = 'couch-spotters-logbook';
+
+  // ---------- Curated video library ----------
+  const VIDEOS = [
+    { id:'sllPo5KE-J0', title:'100 Close-Up Takeoffs & Landings — Sydney Airport', channel:'SydSquad', cat:'heavies' },
+    { id:'0mKMVhpFZRc', title:'45 Minutes of Sydney Airport Plane Spotting — A380s, 787s, Heavy Departures', channel:'The Skybound Pilot', cat:'heavies' },
+    { id:'uGhLzAUCLrk', title:'Qantas A380 Pushback & Takeoff @ Sydney Airport', channel:'SydSquad', cat:'heavies' },
+    { id:'zPo1xZ8VfiM', title:'Big Jet TV: How a Plane Stream Became a Sensation During Storm Eunice', channel:'BBC News', cat:'storms' },
+    { id:'Gln7T-xxE4k', title:'#StormCiara at Heathrow — 20+ Go-Arounds and Crosswind Landings', channel:'Big Jet TV', cat:'storms' },
+    { id:'5hIqXjAmo6k', title:'American 777 Insane Landing at Heathrow', channel:'Big Jet TV', cat:'storms' },
+    { id:'5gYENf3Zyho', title:'Kai Tak Checkerboard Approach — Old Hong Kong Airport', channel:'Aviation Archive', cat:'historic' },
+    { id:'VRJVwBxw92A', title:'St Maarten Planespotting at Maho Beach — Low Passes', channel:'Planespotting', cat:'bucket' },
+  ];
+  const CATS = {
+    all:'All', heavies:'Heavies', storms:'Storms & Crosswinds', historic:'Historic', bucket:'Bucket List'
+  };
+  let activeCat = 'all';
+
+  function renderChips(){
+    const row = document.getElementById('chipRow');
+    row.innerHTML = '';
+    Object.keys(CATS).forEach(key=>{
+      const c = document.createElement('button');
+      c.className = 'chip' + (key===activeCat ? ' active':'');
+      c.textContent = CATS[key];
+      c.addEventListener('click', ()=>{ activeCat = key; renderChips(); renderVideos(); });
+      row.appendChild(c);
+    });
+  }
+  function renderVideos(){
+    const grid = document.getElementById('videoGrid');
+    grid.innerHTML = '';
+    VIDEOS.filter(v => activeCat==='all' || v.cat===activeCat).forEach(v=>{
+      const card = document.createElement('div');
+      card.className = 'video-card';
+      const thumbWrap = document.createElement('div');
+      thumbWrap.className = 'video-thumb-wrap';
+      thumbWrap.innerHTML = `<img loading="lazy" src="https://img.youtube.com/vi/${v.id}/hqdefault.jpg" alt=""><div class="play"><span>▶</span></div>`;
+      thumbWrap.addEventListener('click', ()=>{
+        thumbWrap.innerHTML = `<iframe src="https://www.youtube.com/embed/${v.id}?autoplay=1" title="${v.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+      }, { once:true });
+      const meta = document.createElement('div');
+      meta.className = 'video-meta';
+      meta.innerHTML = `<span class="vtitle">${v.title}</span><span class="vsub"><span>${v.channel}</span><span class="cat-tag">${CATS[v.cat]}</span></span>`;
+      card.appendChild(thumbWrap);
+      card.appendChild(meta);
+      grid.appendChild(card);
+    });
+  }
+
+  // ---------- Live discovery: search YouTube for what's actually live ----------
+  // Airport-specific queries rotate a few per cycle (to control API cost);
+  // general queries cast a worldwide net every cycle.
+  const AIRPORT_QUERIES = [
+    { code:'LHR', name:'Heathrow', q:'Heathrow airport plane spotting live' },
+    { code:'SYD', name:'Sydney', q:'Sydney airport plane spotting live' },
+    { code:'MEL', name:'Melbourne', q:'Melbourne airport plane spotting live' },
+    { code:'FNC', name:'Madeira', q:'Madeira airport plane spotting live' },
+    { code:'DFW', name:'Dallas/Fort Worth', q:'DFW airport plane spotting live' },
+    { code:'SFO', name:'San Francisco', q:'SFO airport plane spotting live' },
+    { code:'LAX', name:'Los Angeles', q:'LAX airport plane spotting live' },
+    { code:'JFK', name:'New York', q:'JFK airport plane spotting live' },
+  ];
+  const GENERAL_QUERIES = ['plane spotting live stream', 'airport live cam plane spotting'];
+  const AIRPORTS_PER_CYCLE = 3; // keeps each refresh to ~4 search calls total
+
+  const YT_KEY_STORE = 'yt-api-key';
+  let ytApiKey = null;
+  let liveRefreshTimer = null;
+  const LIVE_REFRESH_MS = 60 * 60 * 1000; // 60 min — YouTube caps live-search calls at ~100/day; see settings modal
+  let airportRotationStart = 0;
+  let liveResults = []; // merged, deduped, sorted by concurrent viewers desc
+  let quotaExceeded = false;
+  let lastSearchError = null;
+
+  async function loadApiKey(){
+    try{
+      const res = await storage.get(YT_KEY_STORE, false);
+      ytApiKey = res && res.value ? res.value : null;
+    }catch(e){ ytApiKey = null; }
+    document.getElementById('ytApiKeyInput').value = ytApiKey || '';
+  }
+  async function saveApiKey(key){
+    ytApiKey = key || null;
+    try{ if(ytApiKey) await storage.set(YT_KEY_STORE, ytApiKey, false); }
+    catch(e){ console.error('Could not save key', e); }
+  }
+  async function clearApiKey(){
+    ytApiKey = null;
+    try{ await storage.set(YT_KEY_STORE, '', false); }catch(e){}
+  }
+
+  function errorHint(reason){
+    const r = (reason||'').toLowerCase();
+    if(r.includes('key') || r.includes('invalid')) return 'Check the key was copied exactly, with no extra spaces or missing characters.';
+    if(r.includes('accessnotconfigured') || r.includes('not been used') || r.includes('disabled')) return 'The YouTube Data API v3 may not be enabled on this key\'s project — check APIs & Services → Library in Google Cloud Console.';
+    if(r.includes('referer') || r.includes('forbidden')) return 'Your key\'s website restriction may not match this page\'s URL — check it\'s set to fozlearnscode.github.io/* exactly, with the trailing /*.';
+    if(r.includes('quota')) return 'Daily search limit reached (YouTube caps this around 100 live-search calls/day) — it resets at midnight Pacific time.';
+    return 'Open Settings and re-check the key, or try "Remove key" then re-add it.';
+  }
+
+  // Keywords that a genuine plane-spotting stream's title/channel will very likely
+  // contain at least one of. Used to screen out high-viewer streams that only
+  // loosely matched the search query but aren't actually about planes.
+  const RELEVANCE_KEYWORDS = [
+    'plane', 'planespotting', 'spotting', 'spotter', 'aircraft', 'airport', 'airline',
+    'aviation', 'runway', 'takeoff', 'take-off', 'take off', 'landing', 'arrivals',
+    'departures', 'atc', 'tower', 'jet', 'heavy', 'airbus', 'boeing', 'a380', 'a350',
+    'a330', 'a320', 'a321', 'a220', '747', '737', '777', '787', 'flightradar', 'faa'
+  ];
+  function isPlaneSpottingRelevant(item){
+    const text = (item.title + ' ' + item.channel).toLowerCase();
+    return RELEVANCE_KEYWORDS.some(k => text.includes(k));
+  }
+
+  async function runOneSearch(query){
+    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(query)}&type=video&eventType=live&order=relevance&maxResults=15&key=${ytApiKey}`;
+    const res = await fetch(url);
+    const data = await res.json();
+    if(data.error){
+      const reason = (data.error.errors && data.error.errors[0] && data.error.errors[0].reason) || data.error.message || '';
+      if(reason === 'quotaExceeded' || reason === 'dailyLimitExceeded'){ throw { quota:true }; }
+      throw { message: reason };
+    }
+    return (data.items||[]).map(it => ({
+      videoId: it.id.videoId,
+      title: it.snippet.title,
+      channel: it.snippet.channelTitle,
+      thumb: it.snippet.thumbnails.medium.url,
+      matchedQuery: query,
+    }));
+  }
+
+  async function fetchViewerCounts(videoIds){
+    if(videoIds.length===0) return {};
+    const url = `https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails,snippet&id=${videoIds.join(',')}&key=${ytApiKey}`;
+    const res = await fetch(url);
+    const data = await res.json();
+    if(data.error) return {};
+    const map = {};
+    (data.items||[]).forEach(v=>{
+      const stillLive = v.snippet && v.snippet.liveBroadcastContent === 'live';
+      map[v.id] = {
+        viewers: stillLive && v.liveStreamingDetails && v.liveStreamingDetails.concurrentViewers
+          ? parseInt(v.liveStreamingDetails.concurrentViewers, 10) : null,
+        stillLive,
+      };
+    });
+    return map;
+  }
+
+  async function runLiveSearch(){
+    if(!ytApiKey){
+      liveResults = [];
+      renderLiveNow(); renderNowPlaying();
+      return;
+    }
+    document.getElementById('npSub').textContent = 'Searching YouTube…';
+    const airportBatch = [];
+    for(let i=0;i<AIRPORTS_PER_CYCLE;i++){
+      airportBatch.push(AIRPORT_QUERIES[(airportRotationStart+i) % AIRPORT_QUERIES.length]);
+    }
+    airportRotationStart = (airportRotationStart + AIRPORTS_PER_CYCLE) % AIRPORT_QUERIES.length;
+    const queries = [...GENERAL_QUERIES, ...airportBatch.map(a=>a.q)];
+
+    let merged = [];
+    lastSearchError = null;
+    try{
+      for(const q of queries){
+        const results = await runOneSearch(q);
+        merged.push(...results);
+      }
+      quotaExceeded = false;
+    }catch(e){
+      if(e && e.quota){ quotaExceeded = true; }
+      else { lastSearchError = (e && e.message) || 'Unknown API error'; }
+    }
+
+    // dedupe by videoId, then screen out anything that doesn't look plane-related
+    const seen = new Map();
+    merged.forEach(r=>{ if(!seen.has(r.videoId)) seen.set(r.videoId, r); });
+    const deduped = [...seen.values()].filter(isPlaneSpottingRelevant);
+
+    if(deduped.length && ytApiKey){
+      const viewerMap = await fetchViewerCounts(deduped.map(r=>r.videoId)).catch(()=>({}));
+      deduped.forEach(r=>{
+        const info = viewerMap[r.videoId];
+        r.viewers = info ? info.viewers : null;
+        r.stillLive = info ? info.stillLive : true;
+      });
+      liveResults = deduped.filter(r=>r.stillLive !== false)
+        .sort((a,b)=> (b.viewers||0) - (a.viewers||0));
+    } else if(!quotaExceeded && !lastSearchError){
+      liveResults = [];
+    }
+
+    renderLiveNow();
+    renderNowPlaying();
+  }
+
+  function startAutoRefresh(){
+    if(liveRefreshTimer) clearInterval(liveRefreshTimer);
+    if(ytApiKey) liveRefreshTimer = setInterval(runLiveSearch, LIVE_REFRESH_MS);
+  }
+
+  function fmtViewers(n){
+    if(n==null) return '';
+    if(n >= 1000) return (n/1000).toFixed(1).replace(/\.0$/,'') + 'K watching';
+    return n + ' watching';
+  }
+
+  // ---------- Live Now tab: render discovery grid ----------
+  function renderLiveNow(){
+    const grid = document.getElementById('airportGrid');
+    grid.innerHTML = '';
+
+    if(!ytApiKey){
+      grid.innerHTML = `<div class="np-empty"><p>Add a free YouTube API key in Settings to search for what's actually live right now.</p><button class="btn" id="lnAddKeyBtn">Add API key</button></div>`;
+      document.getElementById('lnAddKeyBtn').addEventListener('click', openSettings);
+      return;
+    }
+    if(quotaExceeded){
+      grid.innerHTML = `<div class="np-empty"><p><strong>Daily search limit reached.</strong> ${errorHint('quota')}</p></div>`;
+      return;
+    }
+    if(lastSearchError){
+      grid.innerHTML = `<div class="np-empty"><p><strong>YouTube API error:</strong> ${lastSearchError}<br>${errorHint(lastSearchError)}</p><button class="btn" id="lnAddKeyBtn">Open settings</button></div>`;
+      document.getElementById('lnAddKeyBtn').addEventListener('click', openSettings);
+      return;
+    }
+    if(liveResults.length===0){
+      grid.innerHTML = `<div class="np-empty"><p>No live plane-spotting streams turned up in this search pass — try Refresh, or check back shortly.</p></div>`;
+      return;
+    }
+
+    liveResults.forEach(r=>{
+      const card = document.createElement('div');
+      card.className = 'airport-card';
+      const head = document.createElement('div');
+      head.className = 'ac-head';
+      head.innerHTML = `<div><div class="ac-name">${r.channel}</div><div class="ac-city">${r.title}</div></div>`;
+      const stage = document.createElement('div');
+      stage.className = 'airport-stage';
+      stage.innerHTML = `<img src="${r.thumb}" alt=""><div class="play"><span>▶</span></div><span class="live-status-badge live"><span class="live-dot"></span>LIVE</span>`;
+      stage.addEventListener('click', ()=>{
+        stage.innerHTML = `<iframe src="https://www.youtube.com/embed/${r.videoId}?autoplay=1&mute=1" title="${r.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+      });
+      const foot = document.createElement('div');
+      foot.className = 'ac-foot';
+      foot.innerHTML = `<span>${r.viewers!=null ? fmtViewers(r.viewers) : 'viewers unknown'}</span><a href="https://www.youtube.com/watch?v=${r.videoId}" target="_blank" rel="noopener">Open ↗</a>`;
+      card.appendChild(head);
+      card.appendChild(stage);
+      card.appendChild(foot);
+      grid.appendChild(card);
+    });
+  }
+
+  // ---------- Lounge: Now Playing (top 2 by live viewer count) ----------
+  function renderNowPlaying(){
+    const grid = document.getElementById('nowPlayingGrid');
+    const sub = document.getElementById('npSub');
+    grid.innerHTML = '';
+
+    if(!ytApiKey){
+      sub.textContent = '';
+      grid.innerHTML = `<div class="np-empty">
+        <p>Add a free YouTube API key to see who's actually live the moment you open the app.</p>
+        <button class="btn" id="npAddKeyBtn">Add API key</button>
+      </div>`;
+      document.getElementById('npAddKeyBtn').addEventListener('click', openSettings);
+      return;
+    }
+    if(quotaExceeded){
+      sub.textContent = '';
+      grid.innerHTML = `<div class="np-empty"><p><strong>Daily search limit reached.</strong> ${errorHint('quota')}</p></div>`;
+      return;
+    }
+    if(lastSearchError){
+      sub.textContent = '';
+      grid.innerHTML = `<div class="np-empty">
+        <p><strong>YouTube API error:</strong> ${lastSearchError}<br>${errorHint(lastSearchError)}</p>
+        <button class="btn" id="npAddKeyBtn">Open settings</button>
+      </div>`;
+      document.getElementById('npAddKeyBtn').addEventListener('click', openSettings);
+      return;
+    }
+    if(liveResults.length===0){
+      sub.textContent = 'Checked just now';
+      grid.innerHTML = `<div class="np-empty"><p>Nothing confirmed live in this search pass. Try Refresh, or browse Live Now.</p></div>`;
+      return;
+    }
+    sub.textContent = `Checked just now · top of ${liveResults.length} found`;
+    liveResults.slice(0,2).forEach(r=>{
+      const card = document.createElement('div');
+      card.className = 'np-card';
+      card.innerHTML = `
+        <div class="np-stage"><iframe src="https://www.youtube.com/embed/${r.videoId}?autoplay=1&mute=1" title="${r.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="np-meta"><span class="live-status-badge live"><span class="live-dot"></span>LIVE</span><span class="np-title">${r.channel}${r.viewers!=null ? ' · '+fmtViewers(r.viewers) : ''}</span></div>
+      `;
+      grid.appendChild(card);
+    });
+  }
+
+  function openSettings(){
+    document.getElementById('ytApiKeyInput').value = ytApiKey || '';
+    document.getElementById('settingsBackdrop').classList.add('show');
+  }
+  document.getElementById('settingsBtn').addEventListener('click', openSettings);
+  document.getElementById('npRefreshBtn').addEventListener('click', ()=>{
+    if(!ytApiKey){ openSettings(); return; }
+    runLiveSearch();
+  });
+  document.getElementById('settingsCancel').addEventListener('click', ()=> document.getElementById('settingsBackdrop').classList.remove('show'));
+  document.getElementById('settingsBackdrop').addEventListener('click', (e)=>{ if(e.target.id==='settingsBackdrop') e.currentTarget.classList.remove('show'); });
+  document.getElementById('settingsSave').addEventListener('click', async ()=>{
+    const key = document.getElementById('ytApiKeyInput').value.trim();
+    await saveApiKey(key);
+    document.getElementById('settingsBackdrop').classList.remove('show');
+    startAutoRefresh();
+    runLiveSearch();
+  });
+  document.getElementById('settingsClear').addEventListener('click', async ()=>{
+    await clearApiKey();
+    document.getElementById('ytApiKeyInput').value = '';
+    if(liveRefreshTimer) clearInterval(liveRefreshTimer);
+    liveResults = [];
+    runLiveSearch();
+  });
+
+  document.querySelectorAll('.link-btn[data-jump]').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const view = btn.dataset.jump;
+      document.querySelectorAll('.tab-btn').forEach(b=>b.classList.toggle('active', b.dataset.view===view));
+      document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active', v.id==='view-'+view));
+      if(view==='overhead' && lastFetch===0) fetchOverhead(true);
+      if(view==='board' && lastBoardFetch===0) fetchMelBoard(true);
+    });
+  });
+
+  // ---------- Ticker (signature flip element) ----------
+  function setTicker(text){
+    const row = document.getElementById('tickerFlaps');
+    row.innerHTML = '';
+    text.toUpperCase().split('').forEach((ch,i)=>{
+      const f = document.createElement('div');
+      f.className = 'flap';
+      f.textContent = ch===' ' ? '\u00A0' : ch;
+      f.style.animationDelay = (i*0.02)+'s';
+      row.appendChild(f);
+    });
+  }
+  setTicker('Welcome aboard');
+
+  // ---------- Overhead tracker (OpenSky Network) ----------
+  const BBOX = { lamin:-38.4, lomin:144.2, lamax:-37.3, lomax:145.6 }; // Greater Melbourne & regional Victoria
+  let lastFetch = 0;
+  const COOLDOWN_MS = 20000;
+
+  function msToKnots(v){ return v==null ? null : Math.round(v*1.94384); }
+  function mToFt(v){ return v==null ? null : Math.round(v*3.28084); }
+  function compass(deg){
+    if(deg==null) return '—';
+    const dirs=['N','NNE','NE','ENE','E','ESE','SE','SSE','S','SSW','SW','WSW','W','WNW','NW','NNW'];
+    return dirs[Math.round(deg/22.5)%16];
+  }
+  function isHeavy(cat){ return cat===5 || cat===6; }
+
+  async function fetchOverhead(force){
+    const now = Date.now();
+    if(!force && now-lastFetch < COOLDOWN_MS) return;
+    lastFetch = now;
+    const btn = document.getElementById('refreshBtn');
+    const status = document.getElementById('ohStatus');
+    btn.disabled = true;
+    status.textContent = 'Checking OpenSky Network…';
+    try{
+      const url = `https://opensky-network.org/api/states/all?lamin=${BBOX.lamin}&lomin=${BBOX.lomin}&lamax=${BBOX.lamax}&lomax=${BBOX.lomax}&extended=1`;
+      const res = await fetch(url);
+      if(!res.ok) throw new Error('HTTP '+res.status);
+      const data = await res.json();
+      renderFlights(data.states || []);
+      status.textContent = `Updated ${new Date().toLocaleTimeString('en-AU')} · ${((data.states)||[]).length} aircraft in range · via OpenSky Network`;
+      if(data.states && data.states.length){
+        const nearest = [...data.states].filter(s=>s[7]!=null).sort((a,b)=>a[7]-b[7])[0];
+        if(nearest) setTicker(`${nearest[1] ? nearest[1].trim() : nearest[0]} · ${mToFt(nearest[7])||'—'} FT`);
+      }
+    }catch(e){
+      status.innerHTML = `Couldn't reach OpenSky Network right now. Coverage depends on volunteer ADS-B receivers, so quiet periods happen too — try <a href="https://www.flightradar24.com/-37.81,144.96/9" target="_blank" rel="noopener" style="color:var(--teal)">a live map instead</a>.`;
+      document.getElementById('flightList').innerHTML = '';
+    }finally{
+      setTimeout(()=>{ btn.disabled = false; }, COOLDOWN_MS);
+    }
+  }
+
+  function renderFlights(states){
+    const list = document.getElementById('flightList');
+    list.innerHTML = '';
+    const inAir = states.filter(s => s[8]===false).sort((a,b)=>(a[7]??999999)-(b[7]??999999));
+    updateNearestSnapshot(inAir);
+    if(inAir.length===0){
+      list.innerHTML = `<div class="empty-oh">Nothing currently visible on ADS-B over Victoria. Check back in a few minutes, or try a <a href="https://www.flightradar24.com/-37.81,144.96/9" target="_blank" rel="noopener">live map</a>.</div>`;
+      return;
+    }
+    inAir.slice(0,25).forEach(s=>{
+      const [icao24, callsign, country, , , , , baroAlt, , velocity, track, , , , , , , category] = s;
+      const row = document.createElement('div');
+      row.className = 'flight-row';
+      row.innerHTML = `
+        <span class="callsign">${callsign ? callsign.trim() : icao24.toUpperCase()}</span>
+        <span class="country">${country || '—'}${isHeavy(category) ? ' <span class=\"heavy-badge\">HEAVY</span>' : ''}</span>
+        <span class="datum"><span class="dlabel">Alt</span>${mToFt(baroAlt) ?? '—'} ft</span>
+        <span class="datum"><span class="dlabel">Speed</span>${msToKnots(velocity) ?? '—'} kt</span>
+        <span class="datum"><span class="dlabel">Heading</span>${compass(track)}</span>
+      `;
+      list.appendChild(row);
+    });
+  }
+  document.getElementById('refreshBtn').addEventListener('click', ()=>fetchOverhead(true));
+
+  function updateNearestSnapshot(inAir){
+    const box = document.getElementById('nearestSnapshot');
+    if(!inAir || inAir.length===0){
+      box.innerHTML = `<span class="snap-label">Nearest overhead</span><div class="snap-body">Nothing overhead right now</div>`;
+      return;
+    }
+    const [icao24, callsign, , , , , , baroAlt, , velocity, track] = inAir[0];
+    box.innerHTML = `<span class="snap-label">Nearest overhead</span><div class="snap-body">${callsign ? callsign.trim() : icao24.toUpperCase()}
+      <span class="sb-sub">${mToFt(baroAlt) ?? '—'} ft · ${msToKnots(velocity) ?? '—'} kt · heading ${compass(track)}</span></div>`;
+  }
+
+  // ---------- MEL live board ----------
+  const MEL_BBOX = { lamin:-37.86, lomin:144.62, lamax:-37.49, lomax:145.06 }; // tight ring around YMML
+  let lastBoardFetch = 0;
+
+  async function fetchMelBoard(force){
+    const now = Date.now();
+    if(!force && now-lastBoardFetch < COOLDOWN_MS) return;
+    lastBoardFetch = now;
+    const btn = document.getElementById('boardRefreshBtn');
+    const status = document.getElementById('boardStatus');
+    btn.disabled = true;
+    status.textContent = 'Checking OpenSky Network…';
+    try{
+      const url = `https://opensky-network.org/api/states/all?lamin=${MEL_BBOX.lamin}&lomin=${MEL_BBOX.lomin}&lamax=${MEL_BBOX.lamax}&lomax=${MEL_BBOX.lomax}`;
+      const res = await fetch(url);
+      if(!res.ok) throw new Error('HTTP '+res.status);
+      const data = await res.json();
+      renderMelBoard(data.states || []);
+      status.textContent = `Updated ${new Date().toLocaleTimeString('en-AU')} · via OpenSky Network`;
+    }catch(e){
+      status.innerHTML = `Couldn't reach OpenSky Network right now. Try again shortly.`;
+      document.querySelector('#arrivalsTable tbody').innerHTML = '';
+      document.querySelector('#departuresTable tbody').innerHTML = '';
+    }finally{
+      setTimeout(()=>{ btn.disabled = false; }, COOLDOWN_MS);
+    }
+  }
+
+  function renderMelBoard(states){
+    const arrivals = [];
+    const departures = [];
+    states.forEach(s=>{
+      const onGround = s[8];
+      const baroAlt = s[7];
+      const vRate = s[11];
+      if(onGround || baroAlt==null) return;
+      if(baroAlt > 3000) return; // only near-field traffic, not overflights
+      const row = { callsign: s[1] ? s[1].trim() : s[0].toUpperCase(), alt: mToFt(baroAlt), speed: msToKnots(s[9]) };
+      if(vRate!=null && vRate < -1) arrivals.push(row);
+      else if(vRate!=null && vRate > 1) departures.push(row);
+    });
+    arrivals.sort((a,b)=>a.alt-b.alt);
+    departures.sort((a,b)=>a.alt-b.alt);
+
+    const fillTable = (id, rows) => {
+      const tbody = document.querySelector('#'+id+' tbody');
+      tbody.innerHTML = '';
+      if(rows.length===0){
+        tbody.innerHTML = `<tr><td colspan="3" class="board-empty">Nothing in this band right now.</td></tr>`;
+        return;
+      }
+      rows.forEach(r=>{
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${r.callsign}</td><td>${r.alt ?? '—'}</td><td>${r.speed ?? '—'}</td>`;
+        tbody.appendChild(tr);
+      });
+    };
+    fillTable('arrivalsTable', arrivals);
+    fillTable('departuresTable', departures);
+    updateMelSnapshot(arrivals, departures);
+  }
+  function updateMelSnapshot(arrivals, departures){
+    const wrap = document.getElementById('melSnapshot');
+    const cardHtml = (label, row) => `
+      <div class="snap-card">
+        <span class="snap-label">${label}</span>
+        <div class="snap-body">${row ? row.callsign : 'None right now'}
+          ${row ? `<span class="sb-sub">${row.alt ?? '—'} ft · ${row.speed ?? '—'} kt</span>` : ''}
+        </div>
+      </div>`;
+    wrap.innerHTML = cardHtml('↓ Next arrival', arrivals[0]) + cardHtml('↑ Next departure', departures[0]);
+  }
+  document.getElementById('boardRefreshBtn').addEventListener('click', ()=>fetchMelBoard(true));
+
+  // ---------- Logbook ----------
+  let logEntries = [];
+  let selectedStars = 0;
+
+  async function loadLog(){
+    try{
+      const res = await storage.get(STORE_LOG, true);
+      logEntries = res && res.value ? JSON.parse(res.value) : [];
+    }catch(e){ logEntries = []; }
+    renderLog();
+  }
+  async function saveLog(){
+    try{ await storage.set(STORE_LOG, JSON.stringify(logEntries), true); }
+    catch(e){ console.error('Storage error', e); }
+  }
+  function renderLog(){
+    const box = document.getElementById('logList');
+    box.innerHTML = '';
+    if(logEntries.length===0){
+      box.innerHTML = `<div class="empty-oh">No entries yet — log your first sighting above.</div>`;
+      return;
+    }
+    [...logEntries].sort((a,b)=> b.date.localeCompare(a.date)).forEach(entry=>{
+      const el = document.createElement('div');
+      el.className = 'log-entry';
+      el.innerHTML = `
+        <div class="le-main">
+          <div class="le-title">${entry.aircraft || 'Unlisted aircraft'}</div>
+          <div class="le-sub">${entry.date} · ${entry.location || 'location not noted'}${entry.spotter ? ' · spotted by '+entry.spotter : ''}</div>
+          ${entry.notes ? `<div class="le-notes">${entry.notes}</div>` : ''}
+        </div>
+        <div class="le-side">
+          <div class="le-stars">${'★'.repeat(entry.rating||0)}${'☆'.repeat(5-(entry.rating||0))}</div>
+          <button class="le-del">Delete</button>
+        </div>
+      `;
+      el.querySelector('.le-del').addEventListener('click', ()=>{
+        logEntries = logEntries.filter(e=>e.id!==entry.id);
+        saveLog(); renderLog();
+      });
+      box.appendChild(el);
+    });
+  }
+  document.querySelectorAll('#starPicker span').forEach(s=>{
+    s.addEventListener('click', ()=>{
+      selectedStars = Number(s.dataset.v);
+      document.querySelectorAll('#starPicker span').forEach(x=>{
+        x.classList.toggle('on', Number(x.dataset.v) <= selectedStars);
+      });
+    });
+  });
+  document.getElementById('addEntryBtn').addEventListener('click', ()=>{
+    const date = document.getElementById('lgDate').value || new Date().toISOString().slice(0,10);
+    const aircraft = document.getElementById('lgAircraft').value.trim();
+    const location = document.getElementById('lgLocation').value.trim();
+    const spotter = document.getElementById('lgSpotter').value.trim();
+    const notes = document.getElementById('lgNotes').value.trim();
+    if(!aircraft){ document.getElementById('lgAircraft').focus(); return; }
+    logEntries.push({
+      id: 'e'+Math.random().toString(36).slice(2,10),
+      date, aircraft, location, spotter, notes, rating: selectedStars
+    });
+    saveLog(); renderLog();
+    document.getElementById('lgAircraft').value='';
+    document.getElementById('lgLocation').value='';
+    document.getElementById('lgSpotter').value='';
+    document.getElementById('lgNotes').value='';
+    selectedStars = 0;
+    document.querySelectorAll('#starPicker span').forEach(x=>x.classList.remove('on'));
+  });
+
+  // ---------- Tabs ----------
+  document.querySelectorAll('.tab-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('view-'+btn.dataset.view).classList.add('active');
+      if(btn.dataset.view==='overhead' && lastFetch===0) fetchOverhead(true);
+      if(btn.dataset.view==='board' && lastBoardFetch===0) fetchMelBoard(true);
+    });
+  });
+
+  // ---------- Init ----------
+  document.getElementById('lgDate').value = new Date().toISOString().slice(0,10);
+  renderChips();
+  renderVideos();
+  loadLog();
+  (async ()=>{
+    await loadApiKey();
+    renderLiveNow();
+    renderNowPlaying();
+    if(ytApiKey){ await runLiveSearch(); startAutoRefresh(); }
+  })();
+  fetchOverhead(true);
+  fetchMelBoard(true);
+})();
+</script>
+</body>
+</html>
