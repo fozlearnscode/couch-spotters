@@ -631,7 +631,7 @@
 
   <!-- LIVE NOW -->
   <section class="view" id="view-live">
-    <div class="live-note">These are real streamers who broadcast frequently from each airport — not every card is guaranteed on-air the second you click, but this is where the action actually happens. Tap through and it'll show whatever's live right now, or take you straight to the channel if a stream isn't running.</div>
+    <div class="live-note">These are real streamers who broadcast frequently from each airport — not every card is guaranteed on-air the second you click, but this is where the action actually [...]
     <div class="airport-grid" id="airportGrid"></div>
   </section>
 
@@ -668,7 +668,7 @@
         </table>
       </div>
     </div>
-    <p class="live-note" style="margin-top:16px;">Built from live ADS-B positions near MEL (via OpenSky Network), not the official airline schedule — so it shows what's actually in the air around the airport right now, sorted by altitude, rather than gate numbers or flight times.</p>
+    <p class="live-note" style="margin-top:16px;">Built from live ADS-B positions near MEL (via OpenSky Network), not the official airline schedule — so it shows what's actually in the air arou[...]
   </section>
 
   <!-- LOGBOOK -->
@@ -697,7 +697,7 @@
     <h3>Live-detection settings</h3>
     <p>
       Without an API key, "Now Playing" and the Live Now tab make a best-effort guess at what's live — it might occasionally show a channel's most recent replay instead of true live footage.
-      Adding a free <a href="https://console.cloud.google.com/apis/library/youtube.googleapis.com" target="_blank" rel="noopener">YouTube Data API key</a> lets the app actually confirm live status for Heathrow, Sydney, Madeira and DFW before showing them (the free daily quota comfortably covers home use).
+      Adding a free <a href="https://console.cloud.google.com/apis/library/youtube.googleapis.com" target="_blank" rel="noopener">YouTube Data API key</a> lets the app actually confirm live statu[...]
     </p>
     <div class="field">
       <label for="ytApiKeyInput">YouTube Data API key</label>
@@ -801,7 +801,7 @@
       thumbWrap.className = 'video-thumb-wrap';
       thumbWrap.innerHTML = `<img loading="lazy" src="https://img.youtube.com/vi/${v.id}/hqdefault.jpg" alt=""><div class="play"><span>▶</span></div>`;
       thumbWrap.addEventListener('click', ()=>{
-        thumbWrap.innerHTML = `<iframe src="https://www.youtube.com/embed/${v.id}?autoplay=1" title="${v.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+        thumbWrap.innerHTML = `<iframe src="https://www.youtube.com/embed/${v.id}?autoplay=1" title="${v.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
       }, { once:true });
       const meta = document.createElement('div');
       meta.className = 'video-meta';
@@ -835,7 +835,7 @@
     if(!key || !key.value) return null;
     
     try{
-      const res = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=id&forHandle=${handle}&key=${key.value}`);
+      const res = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=id&forUsername=${handle}&key=${key.value}`);
       if(!res.ok) return null;
       const data = await res.json();
       if(data.items && data.items[0]){
@@ -859,7 +859,7 @@
     if(!channelId) return null;
     
     try{
-      const res = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&eventType=live&maxResults=1&key=${key.value}`);
+      const res = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&eventType=live&type=video&maxResults=1&key=${key.value}`);
       if(!res.ok){
         if(res.status === 403) return 'quota'; // Quota exceeded
         return null;
@@ -925,9 +925,9 @@
       const status = airportLiveStatus[ap.code];
       stage.querySelector('button').addEventListener('click', ()=>{
         if(status?.isLive && status.videoId){
-          stage.innerHTML = `<iframe src="https://www.youtube.com/embed/${status.videoId}?autoplay=1" title="${ap.name} live" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+          stage.innerHTML = `<iframe src="https://www.youtube.com/embed/${status.videoId}?autoplay=1" title="${ap.name} live" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
         } else if(ap.channelId){
-          stage.innerHTML = `<iframe src="https://www.youtube.com/embed/live_stream?channel=${ap.channelId}&autoplay=1" title="${ap.name} live" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+          stage.innerHTML = `<iframe src="https://www.youtube.com/embed/live_stream?channel=${ap.channelId}&autoplay=1" title="${ap.name} live" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
         } else {
           window.open(`https://www.youtube.com/@${ap.handle}/live`, '_blank', 'noopener');
         }
@@ -995,334 +995,137 @@
         if(nearest) setTicker(`${nearest[1] ? nearest[1].trim() : nearest[0]} · ${mToFt(nearest[7])||'—'} FT`);
       }
     }catch(e){
-      status.innerHTML = `Couldn't reach OpenSky Network right now. Coverage depends on volunteer ADS-B receivers, so quiet periods happen too — try <a href="https://www.flightradar24.com/-37.81,144.96/9" target="_blank" rel="noopener" style="color:var(--teal)">a live map instead</a>.`;
+      status.innerHTML = `Couldn't reach OpenSky Network right now. Coverage depends on volunteer ADS-B receivers, so quiet periods happen too — try <a href="https://www.flightradar24.com/-37.8,145.0,-37.7,145.1/grid" target="_blank" rel="noopener">Flightradar24</a>.`;
       document.getElementById('flightList').innerHTML = '';
     }finally{
-      setTimeout(()=>{ btn.disabled = false; }, COOLDOWN_MS);
+      btn.disabled = false;
     }
   }
 
   function renderFlights(states){
     const list = document.getElementById('flightList');
     list.innerHTML = '';
-    const inAir = states.filter(s => s[8]===false).sort((a,b)=>(a[7]??999999)-(b[7]??999999));
-    if(inAir.length===0){
-      list.innerHTML = `<div class="empty-oh">Nothing currently visible on ADS-B over Victoria. Check back in a few minutes, or try a <a href="https://www.flightradar24.com/-37.81,144.96/9" target="_blank" rel="noopener">live map</a>.</div>`;
+    if(!states.length){
+      list.innerHTML = '<div class="empty-oh">Nothing overhead right now. Try refreshing or check <a href="https://www.flightradar24.com/-37.8,145.0,-37.7,145.1/grid" target="_blank">Flightradar24</a>.</div>';
       return;
     }
-    inAir.slice(0,25).forEach(s=>{
-      const [icao24, callsign, country, , , , , baroAlt, , velocity, track, , , , , , , category] = s;
+
+    const heavies = states.filter(s => isHeavy(s[8])).sort((a,b) => a[7]-b[7]);
+    (heavies.length ? heavies : states.slice(0,10)).forEach(s=>{
       const row = document.createElement('div');
       row.className = 'flight-row';
+      const callsign = s[1] ? s[1].trim() : s[0];
+      const alt = mToFt(s[7]);
+      const speed = msToKnots(s[9]);
+      const heading = compass(s[10]);
+      const badge = isHeavy(s[8]) ? '<span class="heavy-badge">HEAVY</span>' : '';
       row.innerHTML = `
-        <span class="callsign">${callsign ? callsign.trim() : icao24.toUpperCase()}</span>
-        <span class="country">${country || '—'}${isHeavy(category) ? ' <span class="heavy-badge">HEAVY</span>' : ''}</span>
-        <span class="datum"><span class="dlabel">Alt</span>${mToFt(baroAlt) ?? '—'} ft</span>
-        <span class="datum"><span class="dlabel">Speed</span>${msToKnots(velocity) ?? '—'} kt</span>
-        <span class="datum"><span class="dlabel">Heading</span>${compass(track)}</span>
+        <span class="callsign">${callsign}</span>
+        ${badge}
+        <span class="country">${s[2] || '?'}</span>
+        <div class="datum"><span class="dlabel">Alt</span>${alt || '—'} ft</div>
+        <div class="datum"><span class="dlabel">Spd</span>${speed || '—'} kt</div>
       `;
       list.appendChild(row);
     });
   }
-  document.getElementById('refreshBtn').addEventListener('click', ()=>fetchOverhead(true));
 
-  // ---------- MEL live board ----------
-  const MEL_BBOX = { lamin:-37.86, lomin:144.62, lamax:-37.49, lomax:145.06 };
-  let lastBoardFetch = 0;
-  let lastMelData = null;
+  document.getElementById('refreshBtn').addEventListener('click', () => fetchOverhead(true));
+  document.addEventListener('DOMContentLoaded', () => fetchOverhead(false));
 
-  async function fetchMelBoard(force){
-    const now = Date.now();
-    if(!force && now-lastBoardFetch < COOLDOWN_MS) return;
-    lastBoardFetch = now;
-    const btn = document.getElementById('boardRefreshBtn');
-    const status = document.getElementById('boardStatus');
-    btn.disabled = true;
-    status.textContent = 'Checking OpenSky Network…';
-    try{
-      const url = `https://opensky-network.org/api/states/all?lamin=${MEL_BBOX.lamin}&lomin=${MEL_BBOX.lomin}&lamax=${MEL_BBOX.lamax}&lomax=${MEL_BBOX.lomax}`;
-      const res = await fetch(url);
-      if(!res.ok) throw new Error('HTTP '+res.status);
-      const data = await res.json();
-      lastMelData = data.states || [];
-      renderMelBoard(lastMelData);
-      status.textContent = `Updated ${new Date().toLocaleTimeString('en-AU')} · via OpenSky Network`;
-      updateLoungeSnapshots();
-    }catch(e){
-      status.innerHTML = `Couldn't reach OpenSky Network right now. Try again shortly.`;
-      document.querySelector('#arrivalsTable tbody').innerHTML = '';
-      document.querySelector('#departuresTable tbody').innerHTML = '';
-    }finally{
-      setTimeout(()=>{ btn.disabled = false; }, COOLDOWN_MS);
-    }
-  }
-
-  function renderMelBoard(states){
-    const arrivals = [];
-    const departures = [];
-    states.forEach(s=>{
-      const onGround = s[8];
-      const baroAlt = s[7];
-      const vRate = s[11];
-      if(onGround || baroAlt==null) return;
-      if(baroAlt > 3000) return;
-      const row = { callsign: s[1] ? s[1].trim() : s[0].toUpperCase(), alt: mToFt(baroAlt), speed: msToKnots(s[9]) };
-      if(vRate!=null && vRate < -1) arrivals.push(row);
-      else if(vRate!=null && vRate > 1) departures.push(row);
-    });
-    arrivals.sort((a,b)=>a.alt-b.alt);
-    departures.sort((a,b)=>a.alt-b.alt);
-
-    const fillTable = (id, rows) => {
-      const tbody = document.querySelector('#'+id+' tbody');
-      tbody.innerHTML = '';
-      if(rows.length===0){
-        tbody.innerHTML = `<tr><td colspan="3" class="board-empty">Nothing in this band right now.</td></tr>`;
-        return;
-      }
-      rows.forEach(r=>{
-        const tr = document.createElement('tr');
-        tr.innerHTML = `<td>${r.callsign}</td><td>${r.alt ?? '—'}</td><td>${r.speed ?? '—'}</td>`;
-        tbody.appendChild(tr);
-      });
-    };
-    fillTable('arrivalsTable', arrivals);
-    fillTable('departuresTable', departures);
-  }
-  document.getElementById('boardRefreshBtn').addEventListener('click', ()=>fetchMelBoard(true));
-
-  // ---------- The Lounge ----------
-  let lastOverheadData = null;
-
-  function renderNowPlaying(){
-    const grid = document.getElementById('nowPlayingGrid');
-    const sub = document.getElementById('npSub');
-    grid.innerHTML = '';
-    
-    // Find live-confirmed airports
-    const liveAirports = AIRPORTS.filter(ap => airportLiveStatus[ap.code]?.isLive);
-    
-    if(liveAirports.length === 0){
-      sub.textContent = 'No live streams detected. Add a YouTube API key in settings to enable live detection.';
-      grid.innerHTML = '<div class="now-playing-empty">Without a YouTube Data API key, we can\'t confirm live streams. Go to settings (⚙) and add your free API key to see what\'s live right now.</div>';
-      return;
-    }
-    
-    sub.textContent = `${liveAirports.length} live stream${liveAirports.length !== 1 ? 's' : ''} confirmed`;
-    
-    liveAirports.slice(0, 2).forEach(ap => {
-      const status = airportLiveStatus[ap.code];
-      const card = document.createElement('div');
-      card.className = 'lounge-video-card';
-      
-      const thumb = document.createElement('div');
-      thumb.className = 'lounge-video-thumb';
-      
-      if(status.videoId && status.thumb){
-        thumb.innerHTML = `<img src="${status.thumb}" alt="${ap.name}"><div class="lounge-video-badge">LIVE</div>`;
-      } else {
-        thumb.innerHTML = `<div style="width:100%;height:100%;background:linear-gradient(135deg,#4a7c59,#2d5a3d);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;font-size:14px;">${ap.name}</div><div class="lounge-video-badge">LIVE</div>`;
-      }
-      
-      thumb.addEventListener('click', () => {
-        if(status.videoId){
-          thumb.innerHTML = `<iframe src="https://www.youtube.com/embed/${status.videoId}?autoplay=1" title="${ap.name} live" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-        } else {
-          window.open(`https://www.youtube.com/channel/${ap.channelId}`, '_blank', 'noopener');
-        }
-      });
-      
-      const meta = document.createElement('div');
-      meta.className = 'lounge-video-meta';
-      meta.innerHTML = `<div class="title">${ap.name}</div><div class="sub">${ap.streamer}</div>`;
-      
-      card.appendChild(thumb);
-      card.appendChild(meta);
-      grid.appendChild(card);
-    });
-  }
-
-  function updateLoungeSnapshots(){
-    const melSnap = document.getElementById('melSnapshot');
-    if(!lastMelData || lastMelData.length === 0){
-      melSnap.querySelectorAll('.snap-body').forEach(b=>b.innerHTML = 'No data yet');
-      return;
-    }
-    
-    const arrivals = [];
-    const departures = [];
-    lastMelData.forEach(s=>{
-      const onGround = s[8];
-      const baroAlt = s[7];
-      const vRate = s[11];
-      if(onGround || baroAlt==null) return;
-      if(baroAlt > 3000) return;
-      const row = { callsign: s[1] ? s[1].trim() : s[0].toUpperCase(), alt: mToFt(baroAlt), speed: msToKnots(s[9]) };
-      if(vRate!=null && vRate < -1) arrivals.push(row);
-      else if(vRate!=null && vRate > 1) departures.push(row);
-    });
-    arrivals.sort((a,b)=>a.alt-b.alt);
-    departures.sort((a,b)=>a.alt-b.alt);
-    
-    const arrCard = melSnap.children[0].querySelector('.snap-body');
-    const depCard = melSnap.children[1].querySelector('.snap-body');
-    
-    if(arrivals.length > 0){
-      const a = arrivals[0];
-      arrCard.innerHTML = `<span class="callsign">${a.callsign}</span><span class="detail">${a.alt} ft · ${a.speed} kt</span>`;
-    } else {
-      arrCard.innerHTML = 'None in range';
-    }
-    
-    if(departures.length > 0){
-      const d = departures[0];
-      depCard.innerHTML = `<span class="callsign">${d.callsign}</span><span class="detail">${d.alt} ft · ${d.speed} kt</span>`;
-    } else {
-      depCard.innerHTML = 'None in range';
-    }
-    
-    const nearSnap = document.getElementById('nearestSnapshot').querySelector('.snap-body');
-    if(!lastOverheadData || lastOverheadData.length === 0){
-      nearSnap.innerHTML = 'No aircraft yet';
-      return;
-    }
-    
-    const inAir = lastOverheadData.filter(s => s[8]===false && s[7]!=null).sort((a,b)=>a[7]-b[7]);
-    if(inAir.length > 0){
-      const nearest = inAir[0];
-      const [icao24, callsign, country, , , , , baroAlt, , velocity, track] = nearest;
-      const cs = callsign ? callsign.trim() : icao24.toUpperCase();
-      nearSnap.innerHTML = `<span class="callsign">${cs}</span><span class="detail">${mToFt(baroAlt)} ft · ${msToKnots(velocity)} kt · ${compass(track)}</span>`;
-    } else {
-      nearSnap.innerHTML = 'No aircraft yet';
-    }
-  }
-
-  const origRenderFlights = renderFlights;
-  renderFlights = function(states){
-    lastOverheadData = states;
-    origRenderFlights.call(this, states);
-    updateLoungeSnapshots();
-  };
-
-  document.getElementById('refreshBtn').removeEventListener('click', ()=>fetchOverhead(true));
-  document.getElementById('refreshBtn').addEventListener('click', async ()=>{
-    await fetchOverhead(true);
-    updateLoungeSnapshots();
-  });
-
-  document.querySelectorAll('.link-btn').forEach(btn=>{
-    btn.addEventListener('click', ()=>{
-      const view = btn.dataset.jump;
-      document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-      document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
-      const tabBtn = document.querySelector(`[data-view="${view}"]`);
-      tabBtn.classList.add('active');
-      document.getElementById(`view-${view}`).classList.add('active');
-      window.scrollTo(0, 0);
-      if(view === 'board' && lastBoardFetch === 0) fetchMelBoard(true);
-      if(view === 'overhead' && lastFetch === 0) fetchOverhead(true);
-    });
-  });
-
-  // ---------- Logbook ----------
-  let logEntries = [];
-  let selectedStars = 0;
-
-  async function loadLog(){
-    try{
-      const res = await storage.get(STORE_LOG, true);
-      logEntries = res && res.value ? JSON.parse(res.value) : [];
-    }catch(e){ logEntries = []; }
-    renderLog();
-  }
-  async function saveLog(){
-    try{ await storage.set(STORE_LOG, JSON.stringify(logEntries), true); }
-    catch(e){ console.error('Storage error', e); }
-  }
-  function renderLog(){
-    const box = document.getElementById('logList');
-    box.innerHTML = '';
-    if(logEntries.length===0){
-      box.innerHTML = `<div class="empty-oh">No entries yet — log your first sighting above.</div>`;
-      return;
-    }
-    [...logEntries].sort((a,b)=> b.date.localeCompare(a.date)).forEach(entry=>{
-      const el = document.createElement('div');
-      el.className = 'log-entry';
-      el.innerHTML = `
-        <div class="le-main">
-          <div class="le-title">${entry.aircraft || 'Unlisted aircraft'}</div>
-          <div class="le-sub">${entry.date} · ${entry.location || 'location not noted'}${entry.spotter ? ' · spotted by '+entry.spotter : ''}</div>
-          ${entry.notes ? `<div class="le-notes">${entry.notes}</div>` : ''}
-        </div>
-        <div class="le-side">
-          <div class="le-stars">${'★'.repeat(entry.rating||0)}${'☆'.repeat(5-(entry.rating||0))}</div>
-          <button class="le-del">Delete</button>
-        </div>
-      `;
-      el.querySelector('.le-del').addEventListener('click', ()=>{
-        logEntries = logEntries.filter(e=>e.id!==entry.id);
-        saveLog(); renderLog();
-      });
-      box.appendChild(el);
-    });
-  }
-  document.querySelectorAll('#starPicker span').forEach(s=>{
-    s.addEventListener('click', ()=>{
-      selectedStars = Number(s.dataset.v);
-      document.querySelectorAll('#starPicker span').forEach(x=>{
-        x.classList.toggle('on', Number(x.dataset.v) <= selectedStars);
-      });
-    });
-  });
-  document.getElementById('addEntryBtn').addEventListener('click', ()=>{
-    const date = document.getElementById('lgDate').value || new Date().toISOString().slice(0,10);
-    const aircraft = document.getElementById('lgAircraft').value.trim();
-    const location = document.getElementById('lgLocation').value.trim();
-    const spotter = document.getElementById('lgSpotter').value.trim();
-    const notes = document.getElementById('lgNotes').value.trim();
-    if(!aircraft){ document.getElementById('lgAircraft').focus(); return; }
-    logEntries.push({
-      id: 'e'+Math.random().toString(36).slice(2,10),
-      date, aircraft, location, spotter, notes, rating: selectedStars
-    });
-    saveLog(); renderLog();
-    document.getElementById('lgAircraft').value='';
-    document.getElementById('lgLocation').value='';
-    document.getElementById('lgSpotter').value='';
-    document.getElementById('lgNotes').value='';
-    selectedStars = 0;
-    document.querySelectorAll('#starPicker span').forEach(x=>x.classList.remove('on'));
-  });
-
-  // ---------- Tabs ----------
+  // Tabs
   document.querySelectorAll('.tab-btn').forEach(btn=>{
     btn.addEventListener('click', ()=>{
-      document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-      document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
       btn.classList.add('active');
-      document.getElementById('view-'+btn.dataset.view).classList.add('active');
-      if(btn.dataset.view==='overhead' && lastFetch===0) fetchOverhead(true);
-      if(btn.dataset.view==='board' && lastBoardFetch===0) fetchMelBoard(true);
+      const view = btn.getAttribute('data-view');
+      document.getElementById('view-'+view).classList.add('active');
+      if(view === 'overhead') fetchOverhead(false);
+    });
+  });
+  document.querySelectorAll('[data-jump]').forEach(btn=>{
+    btn.addEventListener('click', (e)=>{
+      e.preventDefault();
+      const view = btn.getAttribute('data-jump');
+      document.querySelector(`[data-view="${view}"]`).click();
     });
   });
 
-  // ---------- Init & Auto-refresh ----------
-  document.getElementById('lgDate').value = new Date().toISOString().slice(0,10);
+  // Logbook
+  const logbookKey = STORE_LOG;
+  async function loadLogbook(){
+    const stored = await storage.get(logbookKey);
+    const entries = stored ? JSON.parse(stored.value || '[]') : [];
+    renderLogbookEntries(entries);
+  }
+  async function saveLogbookEntries(entries){
+    await storage.set(logbookKey, JSON.stringify(entries));
+  }
+  function renderLogbookEntries(entries){
+    const list = document.getElementById('logList');
+    list.innerHTML = '';
+    entries.forEach((e, i)=>{
+      const card = document.createElement('div');
+      card.className = 'log-entry';
+      card.innerHTML = `
+        <div class="le-main">
+          <div class="le-title">${e.aircraft}</div>
+          <div class="le-sub">${e.date} · ${e.location}</div>
+          <div class="le-notes">${e.notes}</div>
+        </div>
+        <div class="le-side">
+          <div class="le-stars">${'★'.repeat(e.rating)}</div>
+          <button class="le-del" data-i="${i}">Delete</button>
+        </div>
+      `;
+      card.querySelector('.le-del').addEventListener('click', async ()=>{
+        entries.splice(i, 1);
+        await saveLogbookEntries(entries);
+        loadLogbook();
+      });
+      list.appendChild(card);
+    });
+  }
+  document.getElementById('addEntryBtn').addEventListener('click', async ()=>{
+    const date = document.getElementById('lgDate').value;
+    const aircraft = document.getElementById('lgAircraft').value;
+    const location = document.getElementById('lgLocation').value;
+    const spotter = document.getElementById('lgSpotter').value;
+    const notes = document.getElementById('lgNotes').value;
+    const rating = document.querySelectorAll('.star-picker span.on').length;
+    
+    if(!date || !aircraft){
+      alert('Date and Aircraft are required');
+      return;
+    }
+
+    const stored = await storage.get(logbookKey);
+    const entries = stored ? JSON.parse(stored.value || '[]') : [];
+    entries.push({ date, aircraft, location, spotter, notes, rating });
+    await saveLogbookEntries(entries);
+    
+    document.getElementById('lgDate').value = '';
+    document.getElementById('lgAircraft').value = '';
+    document.getElementById('lgLocation').value = '';
+    document.getElementById('lgSpotter').value = '';
+    document.getElementById('lgNotes').value = '';
+    document.querySelectorAll('.star-picker span').forEach(s => s.classList.remove('on'));
+    
+    loadLogbook();
+  });
+  document.querySelectorAll('.star-picker span').forEach(star=>{
+    star.addEventListener('click', ()=>{
+      const val = star.getAttribute('data-v');
+      document.querySelectorAll('.star-picker span').forEach(s=>s.classList.remove('on'));
+      document.querySelectorAll(`.star-picker span[data-v<="${val}"]`).forEach(s=>s.classList.add('on'));
+    });
+  });
+
   renderChips();
   renderVideos();
-  loadLog();
-  
-  // Initial load
-  (async ()=>{
-    await refreshLiveDetection();
-    await fetchMelBoard(true);
-    await fetchOverhead(true);
-  })();
-  
-  // Auto-refresh live detection every 10 minutes
-  setInterval(refreshLiveDetection, 10 * 60 * 1000);
+  loadLogbook();
+  refreshLiveDetection();
 })();
 </script>
 </body>
