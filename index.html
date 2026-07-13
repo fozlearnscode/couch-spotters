@@ -824,7 +824,7 @@
     { code:'JFK', name:'New York', city:'USA', streamer:'Planes and Friends', handle:'PlanesandFriends' },
   ];
 
-  let airportLiveStatus = {}; // { code: {isLive, thumb, videoId} }
+  let airportLiveStatus = {}; // { code: {isLive, videoId, title} }
 
   async function resolveChannelHandle(handle){
     const stored = await storage.get(STORE_CHANNEL_IDS, true);
@@ -844,7 +844,7 @@
         await storage.set(STORE_CHANNEL_IDS, JSON.stringify(cache), true);
         return id;
       }
-    }catch(e){ }
+    }catch(e){ console.error('Channel handle lookup failed:', handle, e); }
     return null;
   }
 
@@ -859,21 +859,53 @@
     if(!channelId) return null;
     
     try{
-      const res = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&eventType=live&type=video&maxResults=1&key=${key.value}`);
-      if(!res.ok){
-        if(res.status === 403) return 'quota'; // Quota exceeded
+      // Use channels.list with part=contentDetails to get uploads playlist
+      const channelRes = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${channelId}&key=${key.value}`);
+      if(!channelRes.ok) return null;
+      const channelData = await channelRes.json();
+      if(!channelData.items || !channelData.items[0]) return null;
+      
+      const uploadsPlaylistId = channelData.items[0].contentDetails.relatedPlaylists.uploads;
+      
+      // Get latest videos from uploads playlist
+      const videosRes = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&playlistId=${uploadsPlaylistId}&maxResults=5&key=${key.value}`);
+      if(!videosRes.ok){
+        if(videosRes.status === 403) return 'quota';
         return null;
       }
-      const data = await res.json();
-      if(data.items && data.items[0]){
-        const item = data.items[0];
-        return {
-          isLive: true,
-          videoId: item.id.videoId,
-          thumb: item.snippet.thumbnails.medium?.url || ''
-        };
+      const videosData = await videosRes.json();
+      if(!videosData.items || videosData.items.length === 0) return null;
+      
+      // Check each recent video for live status
+      for(const item of videosData.items){
+        const videoId = item.contentDetails.videoId;
+        const videoRes = await fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet,liveStreamingDetails&id=${videoId}&key=${key.value}`);
+        if(!videoRes.ok) continue;
+        const videoData = await videoRes.json();
+        if(!videoData.items || !videoData.items[0]) continue;
+        
+        const video = videoData.items[0];
+        const liveBroadcastContent = video.snippet.liveBroadcastContent;
+        
+        // Check if currently live
+        if(liveBroadcastContent === 'live'){
+          return {
+            isLive: true,
+            videoId: videoId,
+            title: video.snippet.title
+          };
+        }
+        // Check if upcoming
+        if(liveBroadcastContent === 'upcoming'){
+          return {
+            isLive: false,
+            videoId: videoId,
+            title: video.snippet.title,
+            isUpcoming: true
+          };
+        }
       }
-    }catch(e){ }
+    }catch(e){ console.error('Live status check failed:', airport.code, e); }
     return null;
   }
 
@@ -889,7 +921,8 @@
     for(const airport of AIRPORTS){
       const status = await checkLiveStatus(airport);
       if(status === 'quota'){
-        break; // Stop on quota exceeded
+        console.log('YouTube API quota exceeded');
+        break;
       }
       airportLiveStatus[airport.code] = status || { isLive: false };
     }
@@ -902,10 +935,10 @@
     const grid = document.getElementById('airportGrid');
     grid.innerHTML = '';
     
-    // Sort: live-confirmed first
+    // Sort: live-confirmed first, then upcoming
     const sorted = [...AIRPORTS].sort((a, b)=>{
-      const aLive = airportLiveStatus[a.code]?.isLive ? 1 : 0;
-      const bLive = airportLiveStatus[b.code]?.isLive ? 1 : 0;
+      const aLive = airportLiveStatus[a.code]?.isLive ? 2 : (airportLiveStatus[a.code]?.isUpcoming ? 1 : 0);
+      const bLive = airportLiveStatus[b.code]?.isLive ? 2 : (airportLiveStatus[b.code]?.isUpcoming ? 1 : 0);
       return bLive - aLive;
     });
     
@@ -924,7 +957,7 @@
       
       const status = airportLiveStatus[ap.code];
       stage.querySelector('button').addEventListener('click', ()=>{
-        if(status?.isLive && status.videoId){
+        if(status?.videoId){
           stage.innerHTML = `<iframe src="https://www.youtube.com/embed/${status.videoId}?autoplay=1" title="${ap.name} live" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
         } else if(ap.channelId){
           stage.innerHTML = `<iframe src="https://www.youtube.com/embed/live_stream?channel=${ap.channelId}&autoplay=1" title="${ap.name} live" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
@@ -943,6 +976,51 @@
       card.appendChild(head);
       card.appendChild(stage);
       card.appendChild(foot);
+      grid.appendChild(card);
+    });
+  }
+
+  function renderNowPlaying(){
+    const grid = document.getElementById('nowPlayingGrid');
+    const sub = document.getElementById('npSub');
+    grid.innerHTML = '';
+    
+    const liveStreams = Object.entries(airportLiveStatus)
+      .filter(([_, status]) => status?.isLive)
+      .map(([code, status]) => {
+        const airport = AIRPORTS.find(a => a.code === code);
+        return { ...status, airport };
+      });
+    
+    if(liveStreams.length === 0){
+      grid.innerHTML = '<div class="now-playing-empty">No live streams right now. Add your YouTube API key to enable detection.</div>';
+      sub.textContent = '';
+      return;
+    }
+    
+    sub.textContent = `${liveStreams.length} live now`;
+    
+    liveStreams.forEach(stream => {
+      const card = document.createElement('div');
+      card.className = 'lounge-video-card';
+      
+      const thumb = document.createElement('div');
+      thumb.className = 'lounge-video-thumb';
+      thumb.innerHTML = `<img src="https://img.youtube.com/vi/${stream.videoId}/hqdefault.jpg" alt="" style="width:100%;height:100%;object-fit:cover;">
+        <div style="position:absolute;inset:0;background:rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;">
+          <span style="width:60px;height:60px;border-radius:50%;background:rgba(226,105,79,0.9);display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;">●</span>
+        </div>`;
+      
+      thumb.addEventListener('click', ()=>{
+        thumb.innerHTML = `<iframe src="https://www.youtube.com/embed/${stream.videoId}?autoplay=1" title="${stream.airport.name}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width:100%;height:100%;border:0;"></iframe>`;
+      });
+      
+      const meta = document.createElement('div');
+      meta.className = 'lounge-video-meta';
+      meta.innerHTML = `<div class="title">${stream.airport.name}</div><div class="sub">${stream.airport.streamer}</div>`;
+      
+      card.appendChild(thumb);
+      card.appendChild(meta);
       grid.appendChild(card);
     });
   }
