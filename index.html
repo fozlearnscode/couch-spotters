@@ -134,6 +134,17 @@
     gap:16px;
     margin-bottom:24px;
   }
+  .now-playing-empty{
+    grid-column:1/-1;
+    text-align:center;
+    padding:34px 16px;
+    color:var(--text-muted);
+    font-family:'JetBrains Mono',monospace;
+    font-size:13px;
+    background:var(--surface);
+    border:1px dashed var(--line);
+    border-radius:10px;
+  }
   .lounge-video-card{
     background:var(--surface);
     border:1px solid var(--line);
@@ -141,28 +152,56 @@
     overflow:hidden;
     box-shadow:var(--shadow);
     cursor:pointer;
+    position:relative;
   }
   .lounge-video-thumb{
     aspect-ratio:16/9;
     background:#000;
     position:relative;
-    display:flex; align-items:center; justify-content:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
   }
-  .lounge-video-thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .lounge-video-thumb img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+  .lounge-video-thumb iframe{
+    width:100%;
+    height:100%;
+    border:0;
+    display:block;
+    position:absolute;
+    inset:0;
+  }
   .lounge-video-badge{
-    position:absolute; top:8px; right:8px;
-    background:rgba(226,105,79,0.9); color:#fff;
-    font-size:11px; font-weight:700; padding:4px 9px; border-radius:5px;
+    position:absolute;
+    top:8px;
+    right:8px;
+    background:rgba(226,105,79,0.9);
+    color:#fff;
+    font-size:11px;
+    font-weight:700;
+    padding:4px 9px;
+    border-radius:5px;
     font-family:'JetBrains Mono', monospace;
   }
   .lounge-video-meta{
     padding:12px 14px;
   }
   .lounge-video-meta .title{
-    font-weight:600; font-size:13px; line-height:1.3; margin-bottom:4px;
+    font-weight:600;
+    font-size:13px;
+    line-height:1.3;
+    margin-bottom:4px;
   }
   .lounge-video-meta .sub{
-    font-size:11px; color:var(--text-muted); font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    color:var(--text-muted);
+    font-family:'JetBrains Mono', monospace;
   }
 
   .lounge-row{
@@ -185,18 +224,28 @@
     grid-column:1/-1;
   }
   .snap-label{
-    display:block; font-size:11px; text-transform:uppercase; letter-spacing:0.05em;
-    color:var(--text-muted); font-family:'JetBrains Mono', monospace; margin-bottom:8px;
+    display:block;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    color:var(--text-muted);
+    font-family:'JetBrains Mono', monospace;
+    margin-bottom:8px;
   }
   .snap-body{
-    font-family:'JetBrains Mono', monospace; font-size:14px; font-weight:600;
+    font-family:'JetBrains Mono', monospace;
+    font-size:14px;
+    font-weight:600;
     line-height:1.4;
   }
   .snap-body .callsign{
-    color:var(--gold); display:block; margin-bottom:3px;
+    color:var(--gold);
+    display:block;
+    margin-bottom:3px;
   }
   .snap-body .detail{
-    color:var(--text-muted); font-size:12px;
+    color:var(--text-muted);
+    font-size:12px;
   }
 
   @media (max-width:800px){
@@ -320,6 +369,9 @@
     overflow:hidden;
     box-shadow:var(--shadow);
   }
+  .airport-card.live-confirmed{
+    border-color:var(--heavy);
+  }
   .airport-card .ac-head{
     display:flex; justify-content:space-between; align-items:center;
     padding:12px 14px 10px;
@@ -336,11 +388,13 @@
     display:flex; align-items:center; justify-content:center;
     position:relative;
   }
-  .airport-stage iframe{ width:100%; height:100%; border:0; display:block; }
+  .airport-stage iframe{ width:100%; height:100%; border:0; display:block; position:absolute; inset:0; }
   .airport-watch-btn{
     background:var(--gold); color:#241a06; border:none; font-weight:700;
     padding:9px 14px; border-radius:6px; cursor:pointer; font-size:13px;
     display:flex; align-items:center; gap:6px;
+    position:relative;
+    z-index:1;
   }
   .airport-card .ac-foot{
     padding:10px 14px 14px;
@@ -432,9 +486,79 @@
   .le-del{ background:transparent; border:1px solid var(--line); color:var(--text-muted); border-radius:5px; padding:3px 9px; font-size:11px; cursor:pointer; }
   .le-del:hover{ border-color:var(--heavy); color:var(--heavy); }
 
+  /* Settings modal */
+  .modal-backdrop{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.6);
+    align-items:center;
+    justify-content:center;
+    z-index:1000;
+  }
+  .modal-backdrop.active{ display:flex; }
+  .modal{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:24px;
+    max-width:450px;
+    width:90%;
+    box-shadow:var(--shadow);
+  }
+  .modal h3{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:18px;
+    margin:0 0 14px;
+  }
+  .modal p{ font-size:13px; line-height:1.5; color:var(--text-muted); }
+  .modal p a{ color:var(--teal); }
+  .modal .field{ display:flex; flex-direction:column; gap:6px; margin:14px 0; }
+  .modal label{ font-size:12px; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-muted); font-family:'JetBrains Mono',monospace; }
+  .modal input{
+    background:var(--surface-raised);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:9px 11px;
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    font-size:13px;
+  }
+  .modal-actions{
+    display:flex;
+    gap:8px;
+    margin-top:18px;
+  }
+  .modal-actions button{
+    flex:1;
+    padding:9px 14px;
+    border-radius:6px;
+    border:1px solid var(--line);
+    background:transparent;
+    color:var(--text);
+    font-weight:600;
+    cursor:pointer;
+    font-size:13px;
+  }
+  .modal-actions .btn{
+    background:var(--teal);
+    color:#06231f;
+    border-color:var(--teal);
+  }
+
   button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible{
     outline:2px solid var(--teal); outline-offset:2px;
   }
+
+  .gear-btn{
+    background:transparent;
+    border:none;
+    color:var(--text-muted);
+    font-size:20px;
+    cursor:pointer;
+    padding:4px 8px;
+  }
+  .gear-btn:hover{ color:var(--gold); }
 
   @media (max-width:640px){
     .flight-row{ grid-template-columns:1fr; text-align:left; }
@@ -571,18 +695,18 @@
 <div class="modal-backdrop" id="settingsBackdrop">
   <div class="modal">
     <h3>Live-detection settings</h3>
-    <p class="hint" style="margin-bottom:14px;">
+    <p>
       Without an API key, "Now Playing" and the Live Now tab make a best-effort guess at what's live — it might occasionally show a channel's most recent replay instead of true live footage.
-      Adding a free <a href="https://console.cloud.google.com/apis/library/youtube.googleapis.com" target="_blank" rel="noopener" style="color:var(--teal)">YouTube Data API key</a> lets the app actually confirm live status for Heathrow, Sydney, Madeira and DFW before showing them (the free daily quota comfortably covers home use).
+      Adding a free <a href="https://console.cloud.google.com/apis/library/youtube.googleapis.com" target="_blank" rel="noopener">YouTube Data API key</a> lets the app actually confirm live status for Heathrow, Sydney, Madeira and DFW before showing them (the free daily quota comfortably covers home use).
     </p>
     <div class="field">
       <label for="ytApiKeyInput">YouTube Data API key</label>
       <input type="text" id="ytApiKeyInput" placeholder="Paste your key here">
     </div>
-    <p class="hint">Stored privately in this browser only — not shared with anyone else using this app, and never leaves your device except to call YouTube's API directly.</p>
+    <p>Stored privately in this browser only — not shared with anyone else using this app, and never leaves your device except to call YouTube's API directly.</p>
     <div class="modal-actions">
-      <button class="btn-ghost" id="settingsClear">Remove key</button>
-      <button class="btn-ghost" id="settingsCancel">Close</button>
+      <button id="settingsClear">Remove key</button>
+      <button id="settingsCancel">Close</button>
       <button class="btn" id="settingsSave">Save</button>
     </div>
   </div>
@@ -590,11 +714,6 @@
 
 <script>
 (function(){
-  // Storage adapter: uses Claude's window.storage when available (e.g. running
-  // as a Claude artifact, with cross-device sync), and falls back to the
-  // browser's localStorage when deployed standalone (e.g. GitHub Pages) —
-  // same file, works in both places. Note: the localStorage fallback is
-  // per-browser/device only, it won't sync between two people's phones.
   const storage = {
     async get(key, shared){
       if (typeof window.storage !== 'undefined') {
@@ -613,6 +732,37 @@
   };
 
   const STORE_LOG = 'couch-spotters-logbook';
+  const STORE_YT_KEY = 'couch-spotters-yt-key';
+  const STORE_CHANNEL_IDS = 'couch-spotters-channel-ids';
+
+  // ---------- Settings Modal ----------
+  document.getElementById('settingsBtn').addEventListener('click', async ()=>{
+    const backdrop = document.getElementById('settingsBackdrop');
+    const key = await storage.get(STORE_YT_KEY, true);
+    document.getElementById('ytApiKeyInput').value = key?.value || '';
+    backdrop.classList.add('active');
+  });
+  document.getElementById('settingsCancel').addEventListener('click', ()=>{
+    document.getElementById('settingsBackdrop').classList.remove('active');
+  });
+  document.getElementById('settingsSave').addEventListener('click', async ()=>{
+    const key = document.getElementById('ytApiKeyInput').value.trim();
+    await storage.set(STORE_YT_KEY, key, true);
+    document.getElementById('settingsBackdrop').classList.remove('active');
+    // Refresh live detection
+    await refreshLiveDetection();
+  });
+  document.getElementById('settingsClear').addEventListener('click', async ()=>{
+    await storage.set(STORE_YT_KEY, '', true);
+    document.getElementById('ytApiKeyInput').value = '';
+    document.getElementById('settingsBackdrop').classList.remove('active');
+    await refreshLiveDetection();
+  });
+  document.getElementById('settingsBackdrop').addEventListener('click', (e)=>{
+    if(e.target.id === 'settingsBackdrop'){
+      document.getElementById('settingsBackdrop').classList.remove('active');
+    }
+  });
 
   // ---------- Curated video library ----------
   const VIDEOS = [
@@ -663,8 +813,6 @@
   }
 
   // ---------- Live Now: airport streamers ----------
-  // channelId = verified numeric YouTube channel ID -> embeds inline via live_stream endpoint
-  // handle = fallback -> opens the channel's /live page in a new tab
   const AIRPORTS = [
     { code:'LHR', name:'Heathrow', city:'London, UK', streamer:'Big Jet TV', channelId:'UCkQef3Fidr7tm3gNuXgGKPw' },
     { code:'SYD', name:'Sydney', city:'Australia', streamer:'SydSquad', channelId:'UC8tLfsImEWybHQB_3CI-JDQ' },
@@ -676,31 +824,122 @@
     { code:'JFK', name:'New York', city:'USA', streamer:'Planes and Friends', handle:'PlanesandFriends' },
   ];
 
+  let airportLiveStatus = {}; // { code: {isLive, thumb, videoId} }
+
+  async function resolveChannelHandle(handle){
+    const stored = await storage.get(STORE_CHANNEL_IDS, true);
+    const cache = stored ? JSON.parse(stored.value || '{}') : {};
+    if(cache[handle]) return cache[handle];
+    
+    const key = await storage.get(STORE_YT_KEY, true);
+    if(!key || !key.value) return null;
+    
+    try{
+      const res = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=id&forHandle=${handle}&key=${key.value}`);
+      if(!res.ok) return null;
+      const data = await res.json();
+      if(data.items && data.items[0]){
+        const id = data.items[0].id;
+        cache[handle] = id;
+        await storage.set(STORE_CHANNEL_IDS, JSON.stringify(cache), true);
+        return id;
+      }
+    }catch(e){ }
+    return null;
+  }
+
+  async function checkLiveStatus(airport){
+    const key = await storage.get(STORE_YT_KEY, true);
+    if(!key || !key.value) return null;
+    
+    let channelId = airport.channelId;
+    if(!channelId && airport.handle){
+      channelId = await resolveChannelHandle(airport.handle);
+    }
+    if(!channelId) return null;
+    
+    try{
+      const res = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&eventType=live&maxResults=1&key=${key.value}`);
+      if(!res.ok){
+        if(res.status === 403) return 'quota'; // Quota exceeded
+        return null;
+      }
+      const data = await res.json();
+      if(data.items && data.items[0]){
+        const item = data.items[0];
+        return {
+          isLive: true,
+          videoId: item.id.videoId,
+          thumb: item.snippet.thumbnails.medium?.url || ''
+        };
+      }
+    }catch(e){ }
+    return null;
+  }
+
+  async function refreshLiveDetection(){
+    airportLiveStatus = {};
+    const key = await storage.get(STORE_YT_KEY, true);
+    if(!key || !key.value){
+      renderAirports();
+      renderNowPlaying();
+      return;
+    }
+    
+    for(const airport of AIRPORTS){
+      const status = await checkLiveStatus(airport);
+      if(status === 'quota'){
+        break; // Stop on quota exceeded
+      }
+      airportLiveStatus[airport.code] = status || { isLive: false };
+    }
+    
+    renderAirports();
+    renderNowPlaying();
+  }
+
   function renderAirports(){
     const grid = document.getElementById('airportGrid');
     grid.innerHTML = '';
-    AIRPORTS.forEach(ap=>{
+    
+    // Sort: live-confirmed first
+    const sorted = [...AIRPORTS].sort((a, b)=>{
+      const aLive = airportLiveStatus[a.code]?.isLive ? 1 : 0;
+      const bLive = airportLiveStatus[b.code]?.isLive ? 1 : 0;
+      return bLive - aLive;
+    });
+    
+    sorted.forEach(ap=>{
       const card = document.createElement('div');
       card.className = 'airport-card';
+      if(airportLiveStatus[ap.code]?.isLive) card.classList.add('live-confirmed');
+      
       const head = document.createElement('div');
       head.className = 'ac-head';
       head.innerHTML = `<div><div class="ac-name">${ap.name}</div><div class="ac-city">${ap.city}</div></div><span class="ac-code">${ap.code}</span>`;
+      
       const stage = document.createElement('div');
       stage.className = 'airport-stage';
       stage.innerHTML = `<button class="airport-watch-btn"><span class="live-dot"></span>Watch live</button>`;
+      
+      const status = airportLiveStatus[ap.code];
       stage.querySelector('button').addEventListener('click', ()=>{
-        if(ap.channelId){
+        if(status?.isLive && status.videoId){
+          stage.innerHTML = `<iframe src="https://www.youtube.com/embed/${status.videoId}?autoplay=1" title="${ap.name} live" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+        } else if(ap.channelId){
           stage.innerHTML = `<iframe src="https://www.youtube.com/embed/live_stream?channel=${ap.channelId}&autoplay=1" title="${ap.name} live" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
         } else {
           window.open(`https://www.youtube.com/@${ap.handle}/live`, '_blank', 'noopener');
         }
       });
+      
       const foot = document.createElement('div');
       foot.className = 'ac-foot';
       const chLink = ap.channelId
         ? `https://www.youtube.com/channel/${ap.channelId}`
         : `https://www.youtube.com/@${ap.handle}`;
       foot.innerHTML = `<span>${ap.streamer}</span><a href="${chLink}" target="_blank" rel="noopener">Channel ↗</a>`;
+      
       card.appendChild(head);
       card.appendChild(stage);
       card.appendChild(foot);
@@ -708,7 +947,7 @@
     });
   }
 
-  // ---------- Ticker (signature flip element) ----------
+  // ---------- Ticker ----------
   function setTicker(text){
     const row = document.getElementById('tickerFlaps');
     row.innerHTML = '';
@@ -723,7 +962,7 @@
   setTicker('Welcome aboard');
 
   // ---------- Overhead tracker (OpenSky Network) ----------
-  const BBOX = { lamin:-38.4, lomin:144.2, lamax:-37.3, lomax:145.6 }; // Greater Melbourne & regional Victoria
+  const BBOX = { lamin:-38.4, lomin:144.2, lamax:-37.3, lomax:145.6 };
   let lastFetch = 0;
   const COOLDOWN_MS = 20000;
 
@@ -788,7 +1027,7 @@
   document.getElementById('refreshBtn').addEventListener('click', ()=>fetchOverhead(true));
 
   // ---------- MEL live board ----------
-  const MEL_BBOX = { lamin:-37.86, lomin:144.62, lamax:-37.49, lomax:145.06 }; // tight ring around YMML
+  const MEL_BBOX = { lamin:-37.86, lomin:144.62, lamax:-37.49, lomax:145.06 };
   let lastBoardFetch = 0;
   let lastMelData = null;
 
@@ -826,7 +1065,7 @@
       const baroAlt = s[7];
       const vRate = s[11];
       if(onGround || baroAlt==null) return;
-      if(baroAlt > 3000) return; // only near-field traffic, not overflights
+      if(baroAlt > 3000) return;
       const row = { callsign: s[1] ? s[1].trim() : s[0].toUpperCase(), alt: mToFt(baroAlt), speed: msToKnots(s[9]) };
       if(vRate!=null && vRate < -1) arrivals.push(row);
       else if(vRate!=null && vRate > 1) departures.push(row);
@@ -852,7 +1091,7 @@
   }
   document.getElementById('boardRefreshBtn').addEventListener('click', ()=>fetchMelBoard(true));
 
-  // ---------- The Lounge: Now Playing, MEL Snapshot, Nearest Overhead ----------
+  // ---------- The Lounge ----------
   let lastOverheadData = null;
 
   function renderNowPlaying(){
@@ -860,29 +1099,38 @@
     const sub = document.getElementById('npSub');
     grid.innerHTML = '';
     
-    // Get airports with verified channel IDs only (can embed live)
-    const liveAirports = AIRPORTS.filter(ap => ap.channelId);
+    // Find live-confirmed airports
+    const liveAirports = AIRPORTS.filter(ap => airportLiveStatus[ap.code]?.isLive);
     
-    // Pick 2 random ones
-    const selected = [];
-    for(let i = 0; i < Math.min(2, liveAirports.length); i++){
-      const idx = Math.floor(Math.random() * liveAirports.length);
-      const ap = liveAirports[idx];
-      if(!selected.includes(ap)) selected.push(ap);
+    if(liveAirports.length === 0){
+      sub.textContent = 'No live streams detected. Add a YouTube API key in settings to enable live detection.';
+      grid.innerHTML = '<div class="now-playing-empty">Without a YouTube Data API key, we can\'t confirm live streams. Go to settings (⚙) and add your free API key to see what\'s live right now.</div>';
+      return;
     }
     
-    sub.textContent = `${selected.length} live feeds available`;
+    sub.textContent = `${liveAirports.length} live stream${liveAirports.length !== 1 ? 's' : ''} confirmed`;
     
-    selected.forEach(ap=>{
+    liveAirports.slice(0, 2).forEach(ap => {
+      const status = airportLiveStatus[ap.code];
       const card = document.createElement('div');
       card.className = 'lounge-video-card';
-      card.style.cursor = 'pointer';
       
-      // Use a static image for "now playing" — shows airport instead of specific video
-      const thumbUrl = `https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg`; // placeholder
       const thumb = document.createElement('div');
       thumb.className = 'lounge-video-thumb';
-      thumb.innerHTML = `<img loading="lazy" src="https://yt3.lh.google.com/dummy" alt="${ap.name}" style="background:linear-gradient(135deg,#4a7c59,#2d5a3d); display:flex;align-items:center;justify-content:center; font-size:12px; color:#fff; font-weight:600;"><div class="lounge-video-badge">LIVE</div>`;
+      
+      if(status.videoId && status.thumb){
+        thumb.innerHTML = `<img src="${status.thumb}" alt="${ap.name}"><div class="lounge-video-badge">LIVE</div>`;
+      } else {
+        thumb.innerHTML = `<div style="width:100%;height:100%;background:linear-gradient(135deg,#4a7c59,#2d5a3d);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;font-size:14px;">${ap.name}</div><div class="lounge-video-badge">LIVE</div>`;
+      }
+      
+      thumb.addEventListener('click', () => {
+        if(status.videoId){
+          thumb.innerHTML = `<iframe src="https://www.youtube.com/embed/${status.videoId}?autoplay=1" title="${ap.name} live" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+        } else {
+          window.open(`https://www.youtube.com/channel/${ap.channelId}`, '_blank', 'noopener');
+        }
+      });
       
       const meta = document.createElement('div');
       meta.className = 'lounge-video-meta';
@@ -890,22 +1138,11 @@
       
       card.appendChild(thumb);
       card.appendChild(meta);
-      card.addEventListener('click', ()=>{
-        // Switch to Live Now tab and scroll
-        document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-        document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
-        document.querySelector('[data-view="live"]').classList.add('active');
-        document.querySelector('[data-view="live"]').parentElement.parentElement.scrollIntoView({ behavior:'smooth' });
-        const btn = document.querySelector('[data-view="live"]');
-        btn.classList.add('active');
-        document.getElementById('view-live').classList.add('active');
-      });
       grid.appendChild(card);
     });
   }
 
   function updateLoungeSnapshots(){
-    // MEL snapshot
     const melSnap = document.getElementById('melSnapshot');
     if(!lastMelData || lastMelData.length === 0){
       melSnap.querySelectorAll('.snap-body').forEach(b=>b.innerHTML = 'No data yet');
@@ -944,7 +1181,6 @@
       depCard.innerHTML = 'None in range';
     }
     
-    // Nearest overhead
     const nearSnap = document.getElementById('nearestSnapshot').querySelector('.snap-body');
     if(!lastOverheadData || lastOverheadData.length === 0){
       nearSnap.innerHTML = 'No aircraft yet';
@@ -962,15 +1198,6 @@
     }
   }
 
-  // Override fetchOverhead to also update lastOverheadData
-  const origFetchOverhead = fetchOverhead;
-  window.fetchOverheadWithSnapshot = async function(force){
-    await origFetchOverhead(force);
-    // lastOverheadData is set in renderFlights
-    updateLoungeSnapshots();
-  };
-
-  // Monkey-patch renderFlights to set lastOverheadData
   const origRenderFlights = renderFlights;
   renderFlights = function(states){
     lastOverheadData = states;
@@ -978,14 +1205,12 @@
     updateLoungeSnapshots();
   };
 
-  // Replace the click handler for refresh button
   document.getElementById('refreshBtn').removeEventListener('click', ()=>fetchOverhead(true));
   document.getElementById('refreshBtn').addEventListener('click', async ()=>{
     await fetchOverhead(true);
     updateLoungeSnapshots();
   });
 
-  // Link button handlers
   document.querySelectorAll('.link-btn').forEach(btn=>{
     btn.addEventListener('click', ()=>{
       const view = btn.dataset.jump;
@@ -1083,19 +1308,21 @@
     });
   });
 
-  // ---------- Init ----------
+  // ---------- Init & Auto-refresh ----------
   document.getElementById('lgDate').value = new Date().toISOString().slice(0,10);
   renderChips();
   renderVideos();
-  renderAirports();
   loadLog();
   
-  // Populate The Lounge on load
-  renderNowPlaying();
+  // Initial load
+  (async ()=>{
+    await refreshLiveDetection();
+    await fetchMelBoard(true);
+    await fetchOverhead(true);
+  })();
   
-  // Fetch MEL and Overhead data for Lounge
-  fetchMelBoard(true);
-  fetchOverhead(true);
+  // Auto-refresh live detection every 10 minutes
+  setInterval(refreshLiveDetection, 10 * 60 * 1000);
 })();
 </script>
 </body>
