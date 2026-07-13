@@ -35,6 +35,12 @@
 
   header{ margin-bottom:18px; }
   .brand{ display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; justify-content:space-between; }
+  .gear-btn{
+    background:var(--surface); border:1px solid var(--line); color:var(--text-muted);
+    width:34px; height:34px; border-radius:50%; font-size:15px; cursor:pointer;
+    align-self:center;
+  }
+  .gear-btn:hover{ color:var(--gold); border-color:var(--gold); }
   .brand h1{
     font-family:'Space Grotesk', sans-serif;
     font-weight:700;
@@ -108,150 +114,67 @@
   section.view{ display:none; }
   section.view.active{ display:block; }
 
-  /* ---- The Lounge ---- */
-  .lounge-block{
-    margin-bottom:28px;
-  }
+  /* ---- Lounge ---- */
+  .lounge-block{ margin-bottom:26px; }
   .lounge-block-head{
-    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;
-    margin-bottom:16px;
+    display:flex; justify-content:space-between; align-items:center;
+    margin-bottom:12px;
   }
-  .lounge-block-head h2{
-    font-family:'Space Grotesk', sans-serif; font-size:18px; margin:0;
-  }
-  .lounge-sub{
-    font-size:12px; color:var(--text-muted); font-family:'JetBrains Mono', monospace;
-  }
+  .lounge-block-head h2{ font-family:'Space Grotesk',sans-serif; font-size:18px; margin:0; }
+  .lounge-sub{ font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--text-muted); }
+  .lounge-row{ display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+  @media (max-width:760px){ .lounge-row{ grid-template-columns:1fr; } }
+
   .link-btn{
-    background:transparent; border:1px solid var(--teal); color:var(--teal);
-    font-size:12px; padding:6px 10px; border-radius:5px; cursor:pointer; font-weight:600;
+    background:transparent; border:none; color:var(--teal); font-size:12.5px;
+    font-weight:600; cursor:pointer; font-family:'Inter',sans-serif;
   }
-  .link-btn:hover{ background:rgba(79,182,168,0.1); }
+  .link-btn:hover{ text-decoration:underline; }
 
   .now-playing-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns:1fr 1fr;
     gap:16px;
-    margin-bottom:24px;
   }
-  .now-playing-empty{
+  @media (max-width:700px){ .now-playing-grid{ grid-template-columns:1fr; } }
+  .np-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    overflow:hidden; box-shadow:var(--shadow);
+  }
+  .np-stage{ aspect-ratio:16/9; background:#000; }
+  .np-stage iframe{ width:100%; height:100%; border:0; display:block; }
+  .np-meta{
+    padding:10px 13px; display:flex; align-items:center; gap:10px;
+  }
+  .np-title{ font-weight:600; font-size:13.5px; }
+  .np-empty{
     grid-column:1/-1;
-    text-align:center;
-    padding:34px 16px;
-    color:var(--text-muted);
-    font-family:'JetBrains Mono',monospace;
-    font-size:13px;
-    background:var(--surface);
-    border:1px dashed var(--line);
-    border-radius:10px;
+    background:var(--surface); border:1px dashed var(--line); border-radius:10px;
+    padding:26px 20px; text-align:center; color:var(--text-muted); font-size:13.5px;
   }
-  .lounge-video-card{
-    background:var(--surface);
-    border:1px solid var(--line);
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:var(--shadow);
-    cursor:pointer;
-    position:relative;
+  .np-empty p{ margin:0 0 12px; }
+
+  .live-status-badge{
+    font-family:'JetBrains Mono',monospace; font-size:10.5px; font-weight:700;
+    padding:3px 8px; border-radius:10px; display:inline-flex; align-items:center; gap:5px;
+    letter-spacing:0.04em;
   }
-  .lounge-video-thumb{
-    aspect-ratio:16/9;
-    background:#000;
-    position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:hidden;
-  }
-  .lounge-video-thumb img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-  }
-  .lounge-video-thumb iframe{
-    width:100%;
-    height:100%;
-    border:0;
-    display:block;
-    position:absolute;
-    inset:0;
-  }
-  .lounge-video-badge{
-    position:absolute;
-    top:8px;
-    right:8px;
-    background:rgba(226,105,79,0.9);
-    color:#fff;
-    font-size:11px;
-    font-weight:700;
-    padding:4px 9px;
-    border-radius:5px;
-    font-family:'JetBrains Mono', monospace;
-  }
-  .lounge-video-meta{
+  .live-status-badge.live{ background:var(--heavy); color:#2a0f08; }
+  .live-status-badge.offline{ background:var(--line); color:var(--text-muted); }
+  .airport-stage .live-status-badge{ position:absolute; top:8px; left:8px; }
+
+  .snapshot-pair{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .snap-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:9px;
     padding:12px 14px;
   }
-  .lounge-video-meta .title{
-    font-weight:600;
-    font-size:13px;
-    line-height:1.3;
-    margin-bottom:4px;
-  }
-  .lounge-video-meta .sub{
-    font-size:11px;
-    color:var(--text-muted);
-    font-family:'JetBrains Mono', monospace;
-  }
-
-  .lounge-row{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:18px;
-  }
-  .snapshot-pair{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:10px;
-  }
-  .snap-card{
-    background:var(--surface);
-    border:1px solid var(--line);
-    border-radius:9px;
-    padding:14px;
-  }
-  .snap-card.wide{
-    grid-column:1/-1;
-  }
+  .snap-card.wide{ grid-column:1/-1; }
   .snap-label{
-    display:block;
-    font-size:11px;
-    text-transform:uppercase;
-    letter-spacing:0.05em;
-    color:var(--text-muted);
-    font-family:'JetBrains Mono', monospace;
-    margin-bottom:8px;
+    display:block; font-family:'JetBrains Mono',monospace; font-size:10.5px;
+    text-transform:uppercase; letter-spacing:0.05em; color:var(--text-muted); margin-bottom:6px;
   }
-  .snap-body{
-    font-family:'JetBrains Mono', monospace;
-    font-size:14px;
-    font-weight:600;
-    line-height:1.4;
-  }
-  .snap-body .callsign{
-    color:var(--gold);
-    display:block;
-    margin-bottom:3px;
-  }
-  .snap-body .detail{
-    color:var(--text-muted);
-    font-size:12px;
-  }
-
-  @media (max-width:800px){
-    .lounge-row{ grid-template-columns:1fr; }
-    .snapshot-pair{ grid-template-columns:1fr; }
-  }
+  .snap-body{ font-size:14px; font-weight:600; }
+  .snap-body .sb-sub{ display:block; font-weight:400; font-size:12px; color:var(--text-muted); margin-top:2px; font-family:'JetBrains Mono',monospace; }
 
   /* ---- Watch tab ---- */
   .chip-row{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px; }
@@ -369,9 +292,6 @@
     overflow:hidden;
     box-shadow:var(--shadow);
   }
-  .airport-card.live-confirmed{
-    border-color:var(--heavy);
-  }
   .airport-card .ac-head{
     display:flex; justify-content:space-between; align-items:center;
     padding:12px 14px 10px;
@@ -388,13 +308,11 @@
     display:flex; align-items:center; justify-content:center;
     position:relative;
   }
-  .airport-stage iframe{ width:100%; height:100%; border:0; display:block; position:absolute; inset:0; }
+  .airport-stage iframe{ width:100%; height:100%; border:0; display:block; }
   .airport-watch-btn{
     background:var(--gold); color:#241a06; border:none; font-weight:700;
     padding:9px 14px; border-radius:6px; cursor:pointer; font-size:13px;
     display:flex; align-items:center; gap:6px;
-    position:relative;
-    z-index:1;
   }
   .airport-card .ac-foot{
     padding:10px 14px 14px;
@@ -486,79 +404,9 @@
   .le-del{ background:transparent; border:1px solid var(--line); color:var(--text-muted); border-radius:5px; padding:3px 9px; font-size:11px; cursor:pointer; }
   .le-del:hover{ border-color:var(--heavy); color:var(--heavy); }
 
-  /* Settings modal */
-  .modal-backdrop{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,0.6);
-    align-items:center;
-    justify-content:center;
-    z-index:1000;
-  }
-  .modal-backdrop.active{ display:flex; }
-  .modal{
-    background:var(--surface);
-    border:1px solid var(--line);
-    border-radius:10px;
-    padding:24px;
-    max-width:450px;
-    width:90%;
-    box-shadow:var(--shadow);
-  }
-  .modal h3{
-    font-family:'Space Grotesk',sans-serif;
-    font-size:18px;
-    margin:0 0 14px;
-  }
-  .modal p{ font-size:13px; line-height:1.5; color:var(--text-muted); }
-  .modal p a{ color:var(--teal); }
-  .modal .field{ display:flex; flex-direction:column; gap:6px; margin:14px 0; }
-  .modal label{ font-size:12px; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-muted); font-family:'JetBrains Mono',monospace; }
-  .modal input{
-    background:var(--surface-raised);
-    border:1px solid var(--line);
-    border-radius:6px;
-    padding:9px 11px;
-    color:var(--text);
-    font-family:'Inter',sans-serif;
-    font-size:13px;
-  }
-  .modal-actions{
-    display:flex;
-    gap:8px;
-    margin-top:18px;
-  }
-  .modal-actions button{
-    flex:1;
-    padding:9px 14px;
-    border-radius:6px;
-    border:1px solid var(--line);
-    background:transparent;
-    color:var(--text);
-    font-weight:600;
-    cursor:pointer;
-    font-size:13px;
-  }
-  .modal-actions .btn{
-    background:var(--teal);
-    color:#06231f;
-    border-color:var(--teal);
-  }
-
   button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible{
     outline:2px solid var(--teal); outline-offset:2px;
   }
-
-  .gear-btn{
-    background:transparent;
-    border:none;
-    color:var(--text-muted);
-    font-size:20px;
-    cursor:pointer;
-    padding:4px 8px;
-  }
-  .gear-btn:hover{ color:var(--gold); }
 
   @media (max-width:640px){
     .flight-row{ grid-template-columns:1fr; text-align:left; }
@@ -596,7 +444,10 @@
     <div class="lounge-block">
       <div class="lounge-block-head">
         <h2>Now Playing</h2>
-        <span class="lounge-sub" id="npSub"></span>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span class="lounge-sub" id="npSub"></span>
+          <button class="link-btn" id="npRefreshBtn">Refresh</button>
+        </div>
       </div>
       <div class="now-playing-grid" id="nowPlayingGrid"></div>
     </div>
@@ -631,7 +482,7 @@
 
   <!-- LIVE NOW -->
   <section class="view" id="view-live">
-    <div class="live-note">These are real streamers who broadcast frequently from each airport — not every card is guaranteed on-air the second you click, but this is where the action actually [...]
+    <div class="live-note">Real YouTube search results for currently live plane-spotting streams — both airport-specific searches (rotating through Heathrow, Sydney, Melbourne, Madeira, DFW, SFO, LAX, JFK a few at a time) and a general worldwide pool, sorted by how many people are watching right now. Every card here is confirmed live at last check, not a guess.</div>
     <div class="airport-grid" id="airportGrid"></div>
   </section>
 
@@ -668,7 +519,7 @@
         </table>
       </div>
     </div>
-    <p class="live-note" style="margin-top:16px;">Built from live ADS-B positions near MEL (via OpenSky Network), not the official airline schedule — so it shows what's actually in the air arou[...]
+    <p class="live-note" style="margin-top:16px;">Built from live ADS-B positions near MEL (via OpenSky Network), not the official airline schedule — so it shows what's actually in the air around the airport right now, sorted by altitude, rather than gate numbers or flight times.</p>
   </section>
 
   <!-- LOGBOOK -->
@@ -695,18 +546,18 @@
 <div class="modal-backdrop" id="settingsBackdrop">
   <div class="modal">
     <h3>Live-detection settings</h3>
-    <p>
-      Without an API key, "Now Playing" and the Live Now tab make a best-effort guess at what's live — it might occasionally show a channel's most recent replay instead of true live footage.
-      Adding a free <a href="https://console.cloud.google.com/apis/library/youtube.googleapis.com" target="_blank" rel="noopener">YouTube Data API key</a> lets the app actually confirm live statu[...]
+    <p class="hint" style="margin-bottom:14px;">
+      Without an API key, "Now Playing" and the Live Now tab can't confirm what's actually live — they'll only let you jump to a channel and check yourself.
+      Adding a free <a href="https://console.cloud.google.com/apis/library/youtube.googleapis.com" target="_blank" rel="noopener" style="color:var(--teal)">YouTube Data API key</a> lets the app genuinely search YouTube for live plane-spotting streams — both airport-specific and worldwide — ranked by live viewer count, with real thumbnails. It re-checks automatically every 60 minutes; YouTube caps live-search calls at roughly 100/day per key, and each refresh uses about 4, so this cadence leaves plenty of room for manual refreshes too.
     </p>
     <div class="field">
       <label for="ytApiKeyInput">YouTube Data API key</label>
       <input type="text" id="ytApiKeyInput" placeholder="Paste your key here">
     </div>
-    <p>Stored privately in this browser only — not shared with anyone else using this app, and never leaves your device except to call YouTube's API directly.</p>
+    <p class="hint">Stored privately in this browser only — not shared with anyone else using this app, and never leaves your device except to call YouTube's API directly.</p>
     <div class="modal-actions">
-      <button id="settingsClear">Remove key</button>
-      <button id="settingsCancel">Close</button>
+      <button class="btn-ghost" id="settingsClear">Remove key</button>
+      <button class="btn-ghost" id="settingsCancel">Close</button>
       <button class="btn" id="settingsSave">Save</button>
     </div>
   </div>
@@ -714,6 +565,11 @@
 
 <script>
 (function(){
+  // Storage adapter: uses Claude's window.storage when available (e.g. running
+  // as a Claude artifact, with cross-device sync), and falls back to the
+  // browser's localStorage when deployed standalone (e.g. GitHub Pages) —
+  // same file, works in both places. Note: the localStorage fallback is
+  // per-browser/device only, it won't sync between two people's phones.
   const storage = {
     async get(key, shared){
       if (typeof window.storage !== 'undefined') {
@@ -732,37 +588,6 @@
   };
 
   const STORE_LOG = 'couch-spotters-logbook';
-  const STORE_YT_KEY = 'couch-spotters-yt-key';
-  const STORE_CHANNEL_IDS = 'couch-spotters-channel-ids';
-
-  // ---------- Settings Modal ----------
-  document.getElementById('settingsBtn').addEventListener('click', async ()=>{
-    const backdrop = document.getElementById('settingsBackdrop');
-    const key = await storage.get(STORE_YT_KEY, true);
-    document.getElementById('ytApiKeyInput').value = key?.value || '';
-    backdrop.classList.add('active');
-  });
-  document.getElementById('settingsCancel').addEventListener('click', ()=>{
-    document.getElementById('settingsBackdrop').classList.remove('active');
-  });
-  document.getElementById('settingsSave').addEventListener('click', async ()=>{
-    const key = document.getElementById('ytApiKeyInput').value.trim();
-    await storage.set(STORE_YT_KEY, key, true);
-    document.getElementById('settingsBackdrop').classList.remove('active');
-    // Refresh live detection
-    await refreshLiveDetection();
-  });
-  document.getElementById('settingsClear').addEventListener('click', async ()=>{
-    await storage.set(STORE_YT_KEY, '', true);
-    document.getElementById('ytApiKeyInput').value = '';
-    document.getElementById('settingsBackdrop').classList.remove('active');
-    await refreshLiveDetection();
-  });
-  document.getElementById('settingsBackdrop').addEventListener('click', (e)=>{
-    if(e.target.id === 'settingsBackdrop'){
-      document.getElementById('settingsBackdrop').classList.remove('active');
-    }
-  });
 
   // ---------- Curated video library ----------
   const VIDEOS = [
@@ -801,7 +626,7 @@
       thumbWrap.className = 'video-thumb-wrap';
       thumbWrap.innerHTML = `<img loading="lazy" src="https://img.youtube.com/vi/${v.id}/hqdefault.jpg" alt=""><div class="play"><span>▶</span></div>`;
       thumbWrap.addEventListener('click', ()=>{
-        thumbWrap.innerHTML = `<iframe src="https://www.youtube.com/embed/${v.id}?autoplay=1" title="${v.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+        thumbWrap.innerHTML = `<iframe src="https://www.youtube.com/embed/${v.id}?autoplay=1" title="${v.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
       }, { once:true });
       const meta = document.createElement('div');
       meta.className = 'video-meta';
@@ -812,167 +637,192 @@
     });
   }
 
-  // ---------- Live Now: airport streamers ----------
-  const AIRPORTS = [
-    { code:'LHR', name:'Heathrow', city:'London, UK', streamer:'Big Jet TV', channelId:'UCkQef3Fidr7tm3gNuXgGKPw' },
-    { code:'SYD', name:'Sydney', city:'Australia', streamer:'SydSquad', channelId:'UC8tLfsImEWybHQB_3CI-JDQ' },
-    { code:'MEL', name:'Melbourne', city:'Australia', streamer:'HD Melbourne Aviation', handle:'HDMelbourneAviation' },
-    { code:'FNC', name:'Madeira', city:'Portugal', streamer:'Madeira Airport Spotting', channelId:'UCY7O4L08pmGiwHAegzcHMBA' },
-    { code:'DFW', name:'Dallas/Fort Worth', city:'USA', streamer:'Runway DFW', channelId:'UCuTBDbnc6IzZ-AYrDSoNKDA' },
-    { code:'SFO', name:'San Francisco', city:'USA', streamer:'LA Flights', handle:'L.A.FLIGHTS' },
-    { code:'LAX', name:'Los Angeles', city:'USA', streamer:'LA Flights', handle:'L.A.FLIGHTS' },
-    { code:'JFK', name:'New York', city:'USA', streamer:'Planes and Friends', handle:'PlanesandFriends' },
+  // ---------- Live discovery: search YouTube for what's actually live ----------
+  // Airport-specific queries rotate a few per cycle (to control API cost);
+  // general queries cast a worldwide net every cycle.
+  const AIRPORT_QUERIES = [
+    { code:'LHR', name:'Heathrow', q:'Heathrow airport plane spotting live' },
+    { code:'SYD', name:'Sydney', q:'Sydney airport plane spotting live' },
+    { code:'MEL', name:'Melbourne', q:'Melbourne airport plane spotting live' },
+    { code:'FNC', name:'Madeira', q:'Madeira airport plane spotting live' },
+    { code:'DFW', name:'Dallas/Fort Worth', q:'DFW airport plane spotting live' },
+    { code:'SFO', name:'San Francisco', q:'SFO airport plane spotting live' },
+    { code:'LAX', name:'Los Angeles', q:'LAX airport plane spotting live' },
+    { code:'JFK', name:'New York', q:'JFK airport plane spotting live' },
   ];
+  const GENERAL_QUERIES = ['plane spotting live stream', 'airport live cam plane spotting'];
+  const AIRPORTS_PER_CYCLE = 3; // keeps each refresh to ~4 search calls total
 
-  let airportLiveStatus = {}; // { code: {isLive, videoId, title} }
+  const YT_KEY_STORE = 'yt-api-key';
+  let ytApiKey = null;
+  let liveRefreshTimer = null;
+  const LIVE_REFRESH_MS = 60 * 60 * 1000; // 60 min — YouTube caps live-search calls at ~100/day; see settings modal
+  let airportRotationStart = 0;
+  let liveResults = []; // merged, deduped, sorted by concurrent viewers desc
+  let quotaExceeded = false;
+  let lastSearchError = null;
 
-  async function resolveChannelHandle(handle){
-    const stored = await storage.get(STORE_CHANNEL_IDS, true);
-    const cache = stored ? JSON.parse(stored.value || '{}') : {};
-    if(cache[handle]) return cache[handle];
-    
-    const key = await storage.get(STORE_YT_KEY, true);
-    if(!key || !key.value) return null;
-    
+  async function loadApiKey(){
     try{
-      const res = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=id&forUsername=${handle}&key=${key.value}`);
-      if(!res.ok) return null;
-      const data = await res.json();
-      if(data.items && data.items[0]){
-        const id = data.items[0].id;
-        cache[handle] = id;
-        await storage.set(STORE_CHANNEL_IDS, JSON.stringify(cache), true);
-        return id;
-      }
-    }catch(e){ console.error('Channel handle lookup failed:', handle, e); }
-    return null;
+      const res = await storage.get(YT_KEY_STORE, false);
+      ytApiKey = res && res.value ? res.value : null;
+    }catch(e){ ytApiKey = null; }
+    document.getElementById('ytApiKeyInput').value = ytApiKey || '';
+  }
+  async function saveApiKey(key){
+    ytApiKey = key || null;
+    try{ if(ytApiKey) await storage.set(YT_KEY_STORE, ytApiKey, false); }
+    catch(e){ console.error('Could not save key', e); }
+  }
+  async function clearApiKey(){
+    ytApiKey = null;
+    try{ await storage.set(YT_KEY_STORE, '', false); }catch(e){}
   }
 
-  async function checkLiveStatus(airport){
-    const key = await storage.get(STORE_YT_KEY, true);
-    if(!key || !key.value) return null;
-    
-    let channelId = airport.channelId;
-    if(!channelId && airport.handle){
-      channelId = await resolveChannelHandle(airport.handle);
+  function errorHint(reason){
+    const r = (reason||'').toLowerCase();
+    if(r.includes('key') || r.includes('invalid')) return 'Check the key was copied exactly, with no extra spaces or missing characters.';
+    if(r.includes('accessnotconfigured') || r.includes('not been used') || r.includes('disabled')) return 'The YouTube Data API v3 may not be enabled on this key\'s project — check APIs & Services → Library in Google Cloud Console.';
+    if(r.includes('referer') || r.includes('forbidden')) return 'Your key\'s website restriction may not match this page\'s URL — check it\'s set to fozlearnscode.github.io/* exactly, with the trailing /*.';
+    if(r.includes('quota')) return 'Daily search limit reached (YouTube caps this around 100 live-search calls/day) — it resets at midnight Pacific time.';
+    return 'Open Settings and re-check the key, or try "Remove key" then re-add it.';
+  }
+
+  async function runOneSearch(query){
+    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(query)}&type=video&eventType=live&order=viewCount&maxResults=15&key=${ytApiKey}`;
+    const res = await fetch(url);
+    const data = await res.json();
+    if(data.error){
+      const reason = (data.error.errors && data.error.errors[0] && data.error.errors[0].reason) || data.error.message || '';
+      if(reason === 'quotaExceeded' || reason === 'dailyLimitExceeded'){ throw { quota:true }; }
+      throw { message: reason };
     }
-    if(!channelId) return null;
-    
-    try{
-      // Use channels.list with part=contentDetails to get uploads playlist
-      const channelRes = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${channelId}&key=${key.value}`);
-      if(!channelRes.ok) return null;
-      const channelData = await channelRes.json();
-      if(!channelData.items || !channelData.items[0]) return null;
-      
-      const uploadsPlaylistId = channelData.items[0].contentDetails.relatedPlaylists.uploads;
-      
-      // Get latest videos from uploads playlist
-      const videosRes = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&playlistId=${uploadsPlaylistId}&maxResults=5&key=${key.value}`);
-      if(!videosRes.ok){
-        if(videosRes.status === 403) return 'quota';
-        return null;
-      }
-      const videosData = await videosRes.json();
-      if(!videosData.items || videosData.items.length === 0) return null;
-      
-      // Check each recent video for live status
-      for(const item of videosData.items){
-        const videoId = item.contentDetails.videoId;
-        const videoRes = await fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet,liveStreamingDetails&id=${videoId}&key=${key.value}`);
-        if(!videoRes.ok) continue;
-        const videoData = await videoRes.json();
-        if(!videoData.items || !videoData.items[0]) continue;
-        
-        const video = videoData.items[0];
-        const liveBroadcastContent = video.snippet.liveBroadcastContent;
-        
-        // Check if currently live
-        if(liveBroadcastContent === 'live'){
-          return {
-            isLive: true,
-            videoId: videoId,
-            title: video.snippet.title
-          };
-        }
-        // Check if upcoming
-        if(liveBroadcastContent === 'upcoming'){
-          return {
-            isLive: false,
-            videoId: videoId,
-            title: video.snippet.title,
-            isUpcoming: true
-          };
-        }
-      }
-    }catch(e){ console.error('Live status check failed:', airport.code, e); }
-    return null;
+    return (data.items||[]).map(it => ({
+      videoId: it.id.videoId,
+      title: it.snippet.title,
+      channel: it.snippet.channelTitle,
+      thumb: it.snippet.thumbnails.medium.url,
+      matchedQuery: query,
+    }));
   }
 
-  async function refreshLiveDetection(){
-    airportLiveStatus = {};
-    const key = await storage.get(STORE_YT_KEY, true);
-    if(!key || !key.value){
-      renderAirports();
-      renderNowPlaying();
+  async function fetchViewerCounts(videoIds){
+    if(videoIds.length===0) return {};
+    const url = `https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails,snippet&id=${videoIds.join(',')}&key=${ytApiKey}`;
+    const res = await fetch(url);
+    const data = await res.json();
+    if(data.error) return {};
+    const map = {};
+    (data.items||[]).forEach(v=>{
+      const stillLive = v.snippet && v.snippet.liveBroadcastContent === 'live';
+      map[v.id] = {
+        viewers: stillLive && v.liveStreamingDetails && v.liveStreamingDetails.concurrentViewers
+          ? parseInt(v.liveStreamingDetails.concurrentViewers, 10) : null,
+        stillLive,
+      };
+    });
+    return map;
+  }
+
+  async function runLiveSearch(){
+    if(!ytApiKey){
+      liveResults = [];
+      renderLiveNow(); renderNowPlaying();
       return;
     }
-    
-    for(const airport of AIRPORTS){
-      const status = await checkLiveStatus(airport);
-      if(status === 'quota'){
-        console.log('YouTube API quota exceeded');
-        break;
-      }
-      airportLiveStatus[airport.code] = status || { isLive: false };
+    document.getElementById('npSub').textContent = 'Searching YouTube…';
+    const airportBatch = [];
+    for(let i=0;i<AIRPORTS_PER_CYCLE;i++){
+      airportBatch.push(AIRPORT_QUERIES[(airportRotationStart+i) % AIRPORT_QUERIES.length]);
     }
-    
-    renderAirports();
+    airportRotationStart = (airportRotationStart + AIRPORTS_PER_CYCLE) % AIRPORT_QUERIES.length;
+    const queries = [...GENERAL_QUERIES, ...airportBatch.map(a=>a.q)];
+
+    let merged = [];
+    lastSearchError = null;
+    try{
+      for(const q of queries){
+        const results = await runOneSearch(q);
+        merged.push(...results);
+      }
+      quotaExceeded = false;
+    }catch(e){
+      if(e && e.quota){ quotaExceeded = true; }
+      else { lastSearchError = (e && e.message) || 'Unknown API error'; }
+    }
+
+    // dedupe by videoId
+    const seen = new Map();
+    merged.forEach(r=>{ if(!seen.has(r.videoId)) seen.set(r.videoId, r); });
+    const deduped = [...seen.values()];
+
+    if(deduped.length && ytApiKey){
+      const viewerMap = await fetchViewerCounts(deduped.map(r=>r.videoId)).catch(()=>({}));
+      deduped.forEach(r=>{
+        const info = viewerMap[r.videoId];
+        r.viewers = info ? info.viewers : null;
+        r.stillLive = info ? info.stillLive : true;
+      });
+      liveResults = deduped.filter(r=>r.stillLive !== false)
+        .sort((a,b)=> (b.viewers||0) - (a.viewers||0));
+    } else if(!quotaExceeded && !lastSearchError){
+      liveResults = [];
+    }
+
+    renderLiveNow();
     renderNowPlaying();
   }
 
-  function renderAirports(){
+  function startAutoRefresh(){
+    if(liveRefreshTimer) clearInterval(liveRefreshTimer);
+    if(ytApiKey) liveRefreshTimer = setInterval(runLiveSearch, LIVE_REFRESH_MS);
+  }
+
+  function fmtViewers(n){
+    if(n==null) return '';
+    if(n >= 1000) return (n/1000).toFixed(1).replace(/\.0$/,'') + 'K watching';
+    return n + ' watching';
+  }
+
+  // ---------- Live Now tab: render discovery grid ----------
+  function renderLiveNow(){
     const grid = document.getElementById('airportGrid');
     grid.innerHTML = '';
-    
-    // Sort: live-confirmed first, then upcoming
-    const sorted = [...AIRPORTS].sort((a, b)=>{
-      const aLive = airportLiveStatus[a.code]?.isLive ? 2 : (airportLiveStatus[a.code]?.isUpcoming ? 1 : 0);
-      const bLive = airportLiveStatus[b.code]?.isLive ? 2 : (airportLiveStatus[b.code]?.isUpcoming ? 1 : 0);
-      return bLive - aLive;
-    });
-    
-    sorted.forEach(ap=>{
+
+    if(!ytApiKey){
+      grid.innerHTML = `<div class="np-empty"><p>Add a free YouTube API key in Settings to search for what's actually live right now.</p><button class="btn" id="lnAddKeyBtn">Add API key</button></div>`;
+      document.getElementById('lnAddKeyBtn').addEventListener('click', openSettings);
+      return;
+    }
+    if(quotaExceeded){
+      grid.innerHTML = `<div class="np-empty"><p><strong>Daily search limit reached.</strong> ${errorHint('quota')}</p></div>`;
+      return;
+    }
+    if(lastSearchError){
+      grid.innerHTML = `<div class="np-empty"><p><strong>YouTube API error:</strong> ${lastSearchError}<br>${errorHint(lastSearchError)}</p><button class="btn" id="lnAddKeyBtn">Open settings</button></div>`;
+      document.getElementById('lnAddKeyBtn').addEventListener('click', openSettings);
+      return;
+    }
+    if(liveResults.length===0){
+      grid.innerHTML = `<div class="np-empty"><p>No live plane-spotting streams turned up in this search pass — try Refresh, or check back shortly.</p></div>`;
+      return;
+    }
+
+    liveResults.forEach(r=>{
       const card = document.createElement('div');
       card.className = 'airport-card';
-      if(airportLiveStatus[ap.code]?.isLive) card.classList.add('live-confirmed');
-      
       const head = document.createElement('div');
       head.className = 'ac-head';
-      head.innerHTML = `<div><div class="ac-name">${ap.name}</div><div class="ac-city">${ap.city}</div></div><span class="ac-code">${ap.code}</span>`;
-      
+      head.innerHTML = `<div><div class="ac-name">${r.channel}</div><div class="ac-city">${r.title}</div></div>`;
       const stage = document.createElement('div');
       stage.className = 'airport-stage';
-      stage.innerHTML = `<button class="airport-watch-btn"><span class="live-dot"></span>Watch live</button>`;
-      
-      const status = airportLiveStatus[ap.code];
-      stage.querySelector('button').addEventListener('click', ()=>{
-        if(status?.videoId){
-          stage.innerHTML = `<iframe src="https://www.youtube.com/embed/${status.videoId}?autoplay=1" title="${ap.name} live" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
-        } else if(ap.channelId){
-          stage.innerHTML = `<iframe src="https://www.youtube.com/embed/live_stream?channel=${ap.channelId}&autoplay=1" title="${ap.name} live" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
-        } else {
-          window.open(`https://www.youtube.com/@${ap.handle}/live`, '_blank', 'noopener');
-        }
+      stage.innerHTML = `<img src="${r.thumb}" alt=""><div class="play"><span>▶</span></div><span class="live-status-badge live"><span class="live-dot"></span>LIVE</span>`;
+      stage.addEventListener('click', ()=>{
+        stage.innerHTML = `<iframe src="https://www.youtube.com/embed/${r.videoId}?autoplay=1&mute=1" title="${r.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
       });
-      
       const foot = document.createElement('div');
       foot.className = 'ac-foot';
-      const chLink = ap.channelId
-        ? `https://www.youtube.com/channel/${ap.channelId}`
-        : `https://www.youtube.com/@${ap.handle}`;
-      foot.innerHTML = `<span>${ap.streamer}</span><a href="${chLink}" target="_blank" rel="noopener">Channel ↗</a>`;
-      
+      foot.innerHTML = `<span>${r.viewers!=null ? fmtViewers(r.viewers) : 'viewers unknown'}</span><a href="https://www.youtube.com/watch?v=${r.videoId}" target="_blank" rel="noopener">Open ↗</a>`;
       card.appendChild(head);
       card.appendChild(stage);
       card.appendChild(foot);
@@ -980,52 +830,89 @@
     });
   }
 
+  // ---------- Lounge: Now Playing (top 2 by live viewer count) ----------
   function renderNowPlaying(){
     const grid = document.getElementById('nowPlayingGrid');
     const sub = document.getElementById('npSub');
     grid.innerHTML = '';
-    
-    const liveStreams = Object.entries(airportLiveStatus)
-      .filter(([_, status]) => status?.isLive)
-      .map(([code, status]) => {
-        const airport = AIRPORTS.find(a => a.code === code);
-        return { ...status, airport };
-      });
-    
-    if(liveStreams.length === 0){
-      grid.innerHTML = '<div class="now-playing-empty">No live streams right now. Add your YouTube API key to enable detection.</div>';
+
+    if(!ytApiKey){
       sub.textContent = '';
+      grid.innerHTML = `<div class="np-empty">
+        <p>Add a free YouTube API key to see who's actually live the moment you open the app.</p>
+        <button class="btn" id="npAddKeyBtn">Add API key</button>
+      </div>`;
+      document.getElementById('npAddKeyBtn').addEventListener('click', openSettings);
       return;
     }
-    
-    sub.textContent = `${liveStreams.length} live now`;
-    
-    liveStreams.forEach(stream => {
+    if(quotaExceeded){
+      sub.textContent = '';
+      grid.innerHTML = `<div class="np-empty"><p><strong>Daily search limit reached.</strong> ${errorHint('quota')}</p></div>`;
+      return;
+    }
+    if(lastSearchError){
+      sub.textContent = '';
+      grid.innerHTML = `<div class="np-empty">
+        <p><strong>YouTube API error:</strong> ${lastSearchError}<br>${errorHint(lastSearchError)}</p>
+        <button class="btn" id="npAddKeyBtn">Open settings</button>
+      </div>`;
+      document.getElementById('npAddKeyBtn').addEventListener('click', openSettings);
+      return;
+    }
+    if(liveResults.length===0){
+      sub.textContent = 'Checked just now';
+      grid.innerHTML = `<div class="np-empty"><p>Nothing confirmed live in this search pass. Try Refresh, or browse Live Now.</p></div>`;
+      return;
+    }
+    sub.textContent = `Checked just now · top of ${liveResults.length} found`;
+    liveResults.slice(0,2).forEach(r=>{
       const card = document.createElement('div');
-      card.className = 'lounge-video-card';
-      
-      const thumb = document.createElement('div');
-      thumb.className = 'lounge-video-thumb';
-      thumb.innerHTML = `<img src="https://img.youtube.com/vi/${stream.videoId}/hqdefault.jpg" alt="" style="width:100%;height:100%;object-fit:cover;">
-        <div style="position:absolute;inset:0;background:rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;">
-          <span style="width:60px;height:60px;border-radius:50%;background:rgba(226,105,79,0.9);display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;">●</span>
-        </div>`;
-      
-      thumb.addEventListener('click', ()=>{
-        thumb.innerHTML = `<iframe src="https://www.youtube.com/embed/${stream.videoId}?autoplay=1" title="${stream.airport.name}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width:100%;height:100%;border:0;"></iframe>`;
-      });
-      
-      const meta = document.createElement('div');
-      meta.className = 'lounge-video-meta';
-      meta.innerHTML = `<div class="title">${stream.airport.name}</div><div class="sub">${stream.airport.streamer}</div>`;
-      
-      card.appendChild(thumb);
-      card.appendChild(meta);
+      card.className = 'np-card';
+      card.innerHTML = `
+        <div class="np-stage"><iframe src="https://www.youtube.com/embed/${r.videoId}?autoplay=1&mute=1" title="${r.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="np-meta"><span class="live-status-badge live"><span class="live-dot"></span>LIVE</span><span class="np-title">${r.channel}${r.viewers!=null ? ' · '+fmtViewers(r.viewers) : ''}</span></div>
+      `;
       grid.appendChild(card);
     });
   }
 
-  // ---------- Ticker ----------
+  function openSettings(){
+    document.getElementById('ytApiKeyInput').value = ytApiKey || '';
+    document.getElementById('settingsBackdrop').classList.add('show');
+  }
+  document.getElementById('settingsBtn').addEventListener('click', openSettings);
+  document.getElementById('npRefreshBtn').addEventListener('click', ()=>{
+    if(!ytApiKey){ openSettings(); return; }
+    runLiveSearch();
+  });
+  document.getElementById('settingsCancel').addEventListener('click', ()=> document.getElementById('settingsBackdrop').classList.remove('show'));
+  document.getElementById('settingsBackdrop').addEventListener('click', (e)=>{ if(e.target.id==='settingsBackdrop') e.currentTarget.classList.remove('show'); });
+  document.getElementById('settingsSave').addEventListener('click', async ()=>{
+    const key = document.getElementById('ytApiKeyInput').value.trim();
+    await saveApiKey(key);
+    document.getElementById('settingsBackdrop').classList.remove('show');
+    startAutoRefresh();
+    runLiveSearch();
+  });
+  document.getElementById('settingsClear').addEventListener('click', async ()=>{
+    await clearApiKey();
+    document.getElementById('ytApiKeyInput').value = '';
+    if(liveRefreshTimer) clearInterval(liveRefreshTimer);
+    liveResults = [];
+    runLiveSearch();
+  });
+
+  document.querySelectorAll('.link-btn[data-jump]').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const view = btn.dataset.jump;
+      document.querySelectorAll('.tab-btn').forEach(b=>b.classList.toggle('active', b.dataset.view===view));
+      document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active', v.id==='view-'+view));
+      if(view==='overhead' && lastFetch===0) fetchOverhead(true);
+      if(view==='board' && lastBoardFetch===0) fetchMelBoard(true);
+    });
+  });
+
+  // ---------- Ticker (signature flip element) ----------
   function setTicker(text){
     const row = document.getElementById('tickerFlaps');
     row.innerHTML = '';
@@ -1040,7 +927,7 @@
   setTicker('Welcome aboard');
 
   // ---------- Overhead tracker (OpenSky Network) ----------
-  const BBOX = { lamin:-38.4, lomin:144.2, lamax:-37.3, lomax:145.6 };
+  const BBOX = { lamin:-38.4, lomin:144.2, lamax:-37.3, lomax:145.6 }; // Greater Melbourne & regional Victoria
   let lastFetch = 0;
   const COOLDOWN_MS = 20000;
 
@@ -1073,137 +960,219 @@
         if(nearest) setTicker(`${nearest[1] ? nearest[1].trim() : nearest[0]} · ${mToFt(nearest[7])||'—'} FT`);
       }
     }catch(e){
-      status.innerHTML = `Couldn't reach OpenSky Network right now. Coverage depends on volunteer ADS-B receivers, so quiet periods happen too — try <a href="https://www.flightradar24.com/-37.8,145.0,-37.7,145.1/grid" target="_blank" rel="noopener">Flightradar24</a>.`;
+      status.innerHTML = `Couldn't reach OpenSky Network right now. Coverage depends on volunteer ADS-B receivers, so quiet periods happen too — try <a href="https://www.flightradar24.com/-37.81,144.96/9" target="_blank" rel="noopener" style="color:var(--teal)">a live map instead</a>.`;
       document.getElementById('flightList').innerHTML = '';
     }finally{
-      btn.disabled = false;
+      setTimeout(()=>{ btn.disabled = false; }, COOLDOWN_MS);
     }
   }
 
   function renderFlights(states){
     const list = document.getElementById('flightList');
     list.innerHTML = '';
-    if(!states.length){
-      list.innerHTML = '<div class="empty-oh">Nothing overhead right now. Try refreshing or check <a href="https://www.flightradar24.com/-37.8,145.0,-37.7,145.1/grid" target="_blank">Flightradar24</a>.</div>';
+    const inAir = states.filter(s => s[8]===false).sort((a,b)=>(a[7]??999999)-(b[7]??999999));
+    updateNearestSnapshot(inAir);
+    if(inAir.length===0){
+      list.innerHTML = `<div class="empty-oh">Nothing currently visible on ADS-B over Victoria. Check back in a few minutes, or try a <a href="https://www.flightradar24.com/-37.81,144.96/9" target="_blank" rel="noopener">live map</a>.</div>`;
       return;
     }
-
-    const heavies = states.filter(s => isHeavy(s[8])).sort((a,b) => a[7]-b[7]);
-    (heavies.length ? heavies : states.slice(0,10)).forEach(s=>{
+    inAir.slice(0,25).forEach(s=>{
+      const [icao24, callsign, country, , , , , baroAlt, , velocity, track, , , , , , , category] = s;
       const row = document.createElement('div');
       row.className = 'flight-row';
-      const callsign = s[1] ? s[1].trim() : s[0];
-      const alt = mToFt(s[7]);
-      const speed = msToKnots(s[9]);
-      const heading = compass(s[10]);
-      const badge = isHeavy(s[8]) ? '<span class="heavy-badge">HEAVY</span>' : '';
       row.innerHTML = `
-        <span class="callsign">${callsign}</span>
-        ${badge}
-        <span class="country">${s[2] || '?'}</span>
-        <div class="datum"><span class="dlabel">Alt</span>${alt || '—'} ft</div>
-        <div class="datum"><span class="dlabel">Spd</span>${speed || '—'} kt</div>
+        <span class="callsign">${callsign ? callsign.trim() : icao24.toUpperCase()}</span>
+        <span class="country">${country || '—'}${isHeavy(category) ? ' <span class=\"heavy-badge\">HEAVY</span>' : ''}</span>
+        <span class="datum"><span class="dlabel">Alt</span>${mToFt(baroAlt) ?? '—'} ft</span>
+        <span class="datum"><span class="dlabel">Speed</span>${msToKnots(velocity) ?? '—'} kt</span>
+        <span class="datum"><span class="dlabel">Heading</span>${compass(track)}</span>
       `;
       list.appendChild(row);
     });
   }
+  document.getElementById('refreshBtn').addEventListener('click', ()=>fetchOverhead(true));
 
-  document.getElementById('refreshBtn').addEventListener('click', () => fetchOverhead(true));
-  document.addEventListener('DOMContentLoaded', () => fetchOverhead(false));
-
-  // Tabs
-  document.querySelectorAll('.tab-btn').forEach(btn=>{
-    btn.addEventListener('click', ()=>{
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
-      btn.classList.add('active');
-      const view = btn.getAttribute('data-view');
-      document.getElementById('view-'+view).classList.add('active');
-      if(view === 'overhead') fetchOverhead(false);
-    });
-  });
-  document.querySelectorAll('[data-jump]').forEach(btn=>{
-    btn.addEventListener('click', (e)=>{
-      e.preventDefault();
-      const view = btn.getAttribute('data-jump');
-      document.querySelector(`[data-view="${view}"]`).click();
-    });
-  });
-
-  // Logbook
-  const logbookKey = STORE_LOG;
-  async function loadLogbook(){
-    const stored = await storage.get(logbookKey);
-    const entries = stored ? JSON.parse(stored.value || '[]') : [];
-    renderLogbookEntries(entries);
-  }
-  async function saveLogbookEntries(entries){
-    await storage.set(logbookKey, JSON.stringify(entries));
-  }
-  function renderLogbookEntries(entries){
-    const list = document.getElementById('logList');
-    list.innerHTML = '';
-    entries.forEach((e, i)=>{
-      const card = document.createElement('div');
-      card.className = 'log-entry';
-      card.innerHTML = `
-        <div class="le-main">
-          <div class="le-title">${e.aircraft}</div>
-          <div class="le-sub">${e.date} · ${e.location}</div>
-          <div class="le-notes">${e.notes}</div>
-        </div>
-        <div class="le-side">
-          <div class="le-stars">${'★'.repeat(e.rating)}</div>
-          <button class="le-del" data-i="${i}">Delete</button>
-        </div>
-      `;
-      card.querySelector('.le-del').addEventListener('click', async ()=>{
-        entries.splice(i, 1);
-        await saveLogbookEntries(entries);
-        loadLogbook();
-      });
-      list.appendChild(card);
-    });
-  }
-  document.getElementById('addEntryBtn').addEventListener('click', async ()=>{
-    const date = document.getElementById('lgDate').value;
-    const aircraft = document.getElementById('lgAircraft').value;
-    const location = document.getElementById('lgLocation').value;
-    const spotter = document.getElementById('lgSpotter').value;
-    const notes = document.getElementById('lgNotes').value;
-    const rating = document.querySelectorAll('.star-picker span.on').length;
-    
-    if(!date || !aircraft){
-      alert('Date and Aircraft are required');
+  function updateNearestSnapshot(inAir){
+    const box = document.getElementById('nearestSnapshot');
+    if(!inAir || inAir.length===0){
+      box.innerHTML = `<span class="snap-label">Nearest overhead</span><div class="snap-body">Nothing overhead right now</div>`;
       return;
     }
+    const [icao24, callsign, , , , , , baroAlt, , velocity, track] = inAir[0];
+    box.innerHTML = `<span class="snap-label">Nearest overhead</span><div class="snap-body">${callsign ? callsign.trim() : icao24.toUpperCase()}
+      <span class="sb-sub">${mToFt(baroAlt) ?? '—'} ft · ${msToKnots(velocity) ?? '—'} kt · heading ${compass(track)}</span></div>`;
+  }
 
-    const stored = await storage.get(logbookKey);
-    const entries = stored ? JSON.parse(stored.value || '[]') : [];
-    entries.push({ date, aircraft, location, spotter, notes, rating });
-    await saveLogbookEntries(entries);
-    
-    document.getElementById('lgDate').value = '';
-    document.getElementById('lgAircraft').value = '';
-    document.getElementById('lgLocation').value = '';
-    document.getElementById('lgSpotter').value = '';
-    document.getElementById('lgNotes').value = '';
-    document.querySelectorAll('.star-picker span').forEach(s => s.classList.remove('on'));
-    
-    loadLogbook();
+  // ---------- MEL live board ----------
+  const MEL_BBOX = { lamin:-37.86, lomin:144.62, lamax:-37.49, lomax:145.06 }; // tight ring around YMML
+  let lastBoardFetch = 0;
+
+  async function fetchMelBoard(force){
+    const now = Date.now();
+    if(!force && now-lastBoardFetch < COOLDOWN_MS) return;
+    lastBoardFetch = now;
+    const btn = document.getElementById('boardRefreshBtn');
+    const status = document.getElementById('boardStatus');
+    btn.disabled = true;
+    status.textContent = 'Checking OpenSky Network…';
+    try{
+      const url = `https://opensky-network.org/api/states/all?lamin=${MEL_BBOX.lamin}&lomin=${MEL_BBOX.lomin}&lamax=${MEL_BBOX.lamax}&lomax=${MEL_BBOX.lomax}`;
+      const res = await fetch(url);
+      if(!res.ok) throw new Error('HTTP '+res.status);
+      const data = await res.json();
+      renderMelBoard(data.states || []);
+      status.textContent = `Updated ${new Date().toLocaleTimeString('en-AU')} · via OpenSky Network`;
+    }catch(e){
+      status.innerHTML = `Couldn't reach OpenSky Network right now. Try again shortly.`;
+      document.querySelector('#arrivalsTable tbody').innerHTML = '';
+      document.querySelector('#departuresTable tbody').innerHTML = '';
+    }finally{
+      setTimeout(()=>{ btn.disabled = false; }, COOLDOWN_MS);
+    }
+  }
+
+  function renderMelBoard(states){
+    const arrivals = [];
+    const departures = [];
+    states.forEach(s=>{
+      const onGround = s[8];
+      const baroAlt = s[7];
+      const vRate = s[11];
+      if(onGround || baroAlt==null) return;
+      if(baroAlt > 3000) return; // only near-field traffic, not overflights
+      const row = { callsign: s[1] ? s[1].trim() : s[0].toUpperCase(), alt: mToFt(baroAlt), speed: msToKnots(s[9]) };
+      if(vRate!=null && vRate < -1) arrivals.push(row);
+      else if(vRate!=null && vRate > 1) departures.push(row);
+    });
+    arrivals.sort((a,b)=>a.alt-b.alt);
+    departures.sort((a,b)=>a.alt-b.alt);
+
+    const fillTable = (id, rows) => {
+      const tbody = document.querySelector('#'+id+' tbody');
+      tbody.innerHTML = '';
+      if(rows.length===0){
+        tbody.innerHTML = `<tr><td colspan="3" class="board-empty">Nothing in this band right now.</td></tr>`;
+        return;
+      }
+      rows.forEach(r=>{
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${r.callsign}</td><td>${r.alt ?? '—'}</td><td>${r.speed ?? '—'}</td>`;
+        tbody.appendChild(tr);
+      });
+    };
+    fillTable('arrivalsTable', arrivals);
+    fillTable('departuresTable', departures);
+    updateMelSnapshot(arrivals, departures);
+  }
+  function updateMelSnapshot(arrivals, departures){
+    const wrap = document.getElementById('melSnapshot');
+    const cardHtml = (label, row) => `
+      <div class="snap-card">
+        <span class="snap-label">${label}</span>
+        <div class="snap-body">${row ? row.callsign : 'None right now'}
+          ${row ? `<span class="sb-sub">${row.alt ?? '—'} ft · ${row.speed ?? '—'} kt</span>` : ''}
+        </div>
+      </div>`;
+    wrap.innerHTML = cardHtml('↓ Next arrival', arrivals[0]) + cardHtml('↑ Next departure', departures[0]);
+  }
+  document.getElementById('boardRefreshBtn').addEventListener('click', ()=>fetchMelBoard(true));
+
+  // ---------- Logbook ----------
+  let logEntries = [];
+  let selectedStars = 0;
+
+  async function loadLog(){
+    try{
+      const res = await storage.get(STORE_LOG, true);
+      logEntries = res && res.value ? JSON.parse(res.value) : [];
+    }catch(e){ logEntries = []; }
+    renderLog();
+  }
+  async function saveLog(){
+    try{ await storage.set(STORE_LOG, JSON.stringify(logEntries), true); }
+    catch(e){ console.error('Storage error', e); }
+  }
+  function renderLog(){
+    const box = document.getElementById('logList');
+    box.innerHTML = '';
+    if(logEntries.length===0){
+      box.innerHTML = `<div class="empty-oh">No entries yet — log your first sighting above.</div>`;
+      return;
+    }
+    [...logEntries].sort((a,b)=> b.date.localeCompare(a.date)).forEach(entry=>{
+      const el = document.createElement('div');
+      el.className = 'log-entry';
+      el.innerHTML = `
+        <div class="le-main">
+          <div class="le-title">${entry.aircraft || 'Unlisted aircraft'}</div>
+          <div class="le-sub">${entry.date} · ${entry.location || 'location not noted'}${entry.spotter ? ' · spotted by '+entry.spotter : ''}</div>
+          ${entry.notes ? `<div class="le-notes">${entry.notes}</div>` : ''}
+        </div>
+        <div class="le-side">
+          <div class="le-stars">${'★'.repeat(entry.rating||0)}${'☆'.repeat(5-(entry.rating||0))}</div>
+          <button class="le-del">Delete</button>
+        </div>
+      `;
+      el.querySelector('.le-del').addEventListener('click', ()=>{
+        logEntries = logEntries.filter(e=>e.id!==entry.id);
+        saveLog(); renderLog();
+      });
+      box.appendChild(el);
+    });
+  }
+  document.querySelectorAll('#starPicker span').forEach(s=>{
+    s.addEventListener('click', ()=>{
+      selectedStars = Number(s.dataset.v);
+      document.querySelectorAll('#starPicker span').forEach(x=>{
+        x.classList.toggle('on', Number(x.dataset.v) <= selectedStars);
+      });
+    });
   });
-  document.querySelectorAll('.star-picker span').forEach(star=>{
-    star.addEventListener('click', ()=>{
-      const val = star.getAttribute('data-v');
-      document.querySelectorAll('.star-picker span').forEach(s=>s.classList.remove('on'));
-      document.querySelectorAll(`.star-picker span[data-v<="${val}"]`).forEach(s=>s.classList.add('on'));
+  document.getElementById('addEntryBtn').addEventListener('click', ()=>{
+    const date = document.getElementById('lgDate').value || new Date().toISOString().slice(0,10);
+    const aircraft = document.getElementById('lgAircraft').value.trim();
+    const location = document.getElementById('lgLocation').value.trim();
+    const spotter = document.getElementById('lgSpotter').value.trim();
+    const notes = document.getElementById('lgNotes').value.trim();
+    if(!aircraft){ document.getElementById('lgAircraft').focus(); return; }
+    logEntries.push({
+      id: 'e'+Math.random().toString(36).slice(2,10),
+      date, aircraft, location, spotter, notes, rating: selectedStars
+    });
+    saveLog(); renderLog();
+    document.getElementById('lgAircraft').value='';
+    document.getElementById('lgLocation').value='';
+    document.getElementById('lgSpotter').value='';
+    document.getElementById('lgNotes').value='';
+    selectedStars = 0;
+    document.querySelectorAll('#starPicker span').forEach(x=>x.classList.remove('on'));
+  });
+
+  // ---------- Tabs ----------
+  document.querySelectorAll('.tab-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('view-'+btn.dataset.view).classList.add('active');
+      if(btn.dataset.view==='overhead' && lastFetch===0) fetchOverhead(true);
+      if(btn.dataset.view==='board' && lastBoardFetch===0) fetchMelBoard(true);
     });
   });
 
+  // ---------- Init ----------
+  document.getElementById('lgDate').value = new Date().toISOString().slice(0,10);
   renderChips();
   renderVideos();
-  loadLogbook();
-  refreshLiveDetection();
+  loadLog();
+  (async ()=>{
+    await loadApiKey();
+    renderLiveNow();
+    renderNowPlaying();
+    if(ytApiKey){ await runLiveSearch(); startAutoRefresh(); }
+  })();
+  fetchOverhead(true);
+  fetchMelBoard(true);
 })();
 </script>
 </body>
