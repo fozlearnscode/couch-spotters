@@ -6,6 +6,8 @@
 <title>Couch Spotters</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
   :root{
     --bg: #0E1830;
@@ -328,6 +330,28 @@
   @keyframes pulseDot{ 0%,100%{ opacity:1; } 50%{ opacity:0.35; } }
   @media (prefers-reduced-motion: reduce){ .live-dot{ animation:none; } }
 
+  /* ---- Overhead map ---- */
+  .overhead-map{
+    width:100%; height:380px; border-radius:10px; overflow:hidden;
+    border:1px solid var(--line); margin-bottom:16px; background:var(--surface);
+  }
+  .home-marker{
+    background:var(--teal); width:14px; height:14px; border-radius:50%;
+    border:2px solid #06231f; box-shadow:0 0 0 4px rgba(79,182,168,0.25);
+  }
+  .plane-icon{ filter:drop-shadow(0 0 2px rgba(0,0,0,0.7)); }
+  .leaflet-popup-content-wrapper{ background:var(--surface); color:var(--text); border-radius:8px; box-shadow:var(--shadow); }
+  .leaflet-popup-tip{ background:var(--surface); }
+  .leaflet-popup-content{ font-family:'Inter',sans-serif; font-size:12.5px; margin:10px 12px; line-height:1.5; }
+  .leaflet-popup-content b{ font-family:'JetBrains Mono',monospace; color:var(--gold); letter-spacing:0.02em; }
+  .leaflet-container a.leaflet-popup-close-button{ color:var(--text-muted); }
+  .leaflet-control-attribution{ background:rgba(23,35,65,0.85) !important; color:var(--text-muted) !important; font-size:9.5px !important; }
+  .leaflet-control-attribution a{ color:var(--teal) !important; }
+  .leaflet-control-zoom a{
+    background:var(--surface) !important; color:var(--text) !important; border-color:var(--line) !important;
+  }
+  .leaflet-control-zoom a:hover{ background:var(--surface-raised) !important; }
+
   /* ---- MEL Board tab: split-flap departure board ---- */
   .board-wrap{
     display:grid;
@@ -552,6 +576,7 @@
       <button class="refresh-btn" id="refreshBtn">Refresh</button>
     </div>
     <div class="oh-status" id="ohStatus">Not checked yet.</div>
+    <div class="overhead-map" id="overheadMap"></div>
     <div class="flight-list" id="flightList"></div>
   </section>
 
@@ -900,7 +925,7 @@
       const view = btn.dataset.jump;
       document.querySelectorAll('.tab-btn').forEach(b=>b.classList.toggle('active', b.dataset.view===view));
       document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active', v.id==='view-'+view));
-      if(view==='overhead' && lastFetch===0) fetchOverhead(true);
+      if(view==='overhead'){ showOverheadTab(); if(lastFetch===0) fetchOverhead(true); }
       if(view==='board' && lastBoardFetch===0) fetchMelBoard(true);
     });
   });
@@ -935,6 +960,58 @@
   // Centre point + radius (nm) covering Greater Melbourne & regional Victoria
   const OVERHEAD_POINT = { lat:-37.85, lon:144.9, radiusNm:70 };
 
+  // ---------- Overhead map ----------
+  let overheadMap = null;
+  let aircraftMarkers = [];
+  let lastAircraftData = [];
+
+  function initOverheadMap(){
+    if(overheadMap) return;
+    overheadMap = L.map('overheadMap', { zoomControl:true, attributionControl:true })
+      .setView([OVERHEAD_POINT.lat, OVERHEAD_POINT.lon], 8);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+      subdomains: 'abcd', maxZoom: 18
+    }).addTo(overheadMap);
+    L.marker([OVERHEAD_POINT.lat, OVERHEAD_POINT.lon], {
+      icon: L.divIcon({ className:'', html:'<div class="home-marker"></div>', iconSize:[14,14], iconAnchor:[7,7] })
+    }).addTo(overheadMap).bindPopup('Approx. coverage area centre');
+  }
+
+  function planeIcon(track, heavy){
+    const rot = track!=null ? track : 0;
+    const color = heavy ? '#E2694F' : '#E8A33D';
+    return L.divIcon({
+      className: '',
+      html: `<svg class="plane-icon" width="22" height="22" viewBox="0 0 24 24" style="transform:rotate(${rot}deg)">
+        <path d="M12 2 L15 10 L22 13 L15 15 L14 22 L12 19 L10 22 L9 15 L2 13 L9 10 Z" fill="${color}" stroke="#06111f" stroke-width="0.8"/>
+      </svg>`,
+      iconSize:[22,22], iconAnchor:[11,11]
+    });
+  }
+
+  function updateOverheadMap(aircraft){
+    if(!overheadMap) return;
+    aircraftMarkers.forEach(m => overheadMap.removeLayer(m));
+    aircraftMarkers = [];
+    aircraft.forEach(a=>{
+      if(a.lat==null || a.lon==null) return;
+      const callsign = a.flight ? a.flight.trim() : (a.hex||'').toUpperCase();
+      const onGround = a.alt_baro === 'ground';
+      const popup = `<b>${callsign}</b><br>${onGround ? 'On ground' : (numAlt(a) ?? '—')+' ft'} · ${numGs(a) ?? '—'} kt<br>Heading ${compass(a.track)}`;
+      const marker = L.marker([a.lat, a.lon], { icon: planeIcon(a.track, isHeavy(a.category)) }).bindPopup(popup);
+      marker.addTo(overheadMap);
+      aircraftMarkers.push(marker);
+    });
+  }
+
+  function showOverheadTab(){
+    initOverheadMap();
+    setTimeout(()=>{
+      if(overheadMap){ overheadMap.invalidateSize(); updateOverheadMap(lastAircraftData); }
+    }, 60);
+  }
+
   async function fetchOverhead(force){
     const now = Date.now();
     if(!force && now-lastFetch < COOLDOWN_MS) return;
@@ -949,7 +1026,9 @@
       if(!res.ok) throw new Error('HTTP '+res.status);
       const data = await res.json();
       const aircraft = data.ac || data.aircraft || [];
+      lastAircraftData = aircraft;
       renderFlights(aircraft);
+      updateOverheadMap(aircraft);
       status.textContent = `Updated ${new Date().toLocaleTimeString('en-AU')} · ${aircraft.length} aircraft in range · via airplanes.live`;
       const withAlt = aircraft.filter(a=>numAlt(a)!=null).sort((a,b)=>numAlt(a)-numAlt(b));
       if(withAlt.length){
@@ -1210,7 +1289,7 @@
       document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
       btn.classList.add('active');
       document.getElementById('view-'+btn.dataset.view).classList.add('active');
-      if(btn.dataset.view==='overhead' && lastFetch===0) fetchOverhead(true);
+      if(btn.dataset.view==='overhead'){ showOverheadTab(); if(lastFetch===0) fetchOverhead(true); }
       if(btn.dataset.view==='board' && lastBoardFetch===0) fetchMelBoard(true);
     });
   });
