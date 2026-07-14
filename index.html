@@ -328,7 +328,7 @@
   @keyframes pulseDot{ 0%,100%{ opacity:1; } 50%{ opacity:0.35; } }
   @media (prefers-reduced-motion: reduce){ .live-dot{ animation:none; } }
 
-  /* ---- MEL Board tab ---- */
+  /* ---- MEL Board tab: split-flap departure board ---- */
   .board-wrap{
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -341,18 +341,52 @@
   .board-col h3 .arrow{ font-size:16px; }
   .board-col.arrivals h3 .arrow{ color:var(--teal); }
   .board-col.departures h3 .arrow{ color:var(--gold); }
-  .board-table{ width:100%; border-collapse:collapse; font-size:13px; }
-  .board-table th{
-    text-align:left; font-family:'JetBrains Mono',monospace; font-size:10.5px;
-    text-transform:uppercase; letter-spacing:.05em; color:var(--text-muted);
-    border-bottom:1px solid var(--line); padding:0 8px 8px;
+  .board-col-head{
+    display:grid; grid-template-columns:1fr auto; gap:10px;
+    font-family:'JetBrains Mono',monospace; font-size:10px; text-transform:uppercase;
+    letter-spacing:.08em; color:var(--text-muted); padding:0 10px 6px;
   }
-  .board-table td{
-    padding:9px 8px; border-bottom:1px solid var(--line);
+  .board-list{ display:flex; flex-direction:column; gap:3px; }
+  .board-row{
+    display:grid;
+    grid-template-columns:1fr auto;
+    align-items:center;
+    gap:10px;
+    background:#0B1428;
+    border:1px solid var(--line);
+    border-radius:5px;
+    padding:9px 10px;
+  }
+  .bf-flight-row{ display:flex; gap:2px; margin-bottom:5px; }
+  .bf-flap{
+    background:#050B18;
+    border:1px solid var(--line);
+    border-radius:3px;
+    padding:3px 5px;
     font-family:'JetBrains Mono',monospace;
+    font-size:12.5px;
+    font-weight:700;
+    color:var(--gold);
+    min-width:12px;
+    text-align:center;
+    line-height:1.2;
+    animation:flapIn .35s ease-out both;
   }
-  .board-table tr:last-child td{ border-bottom:none; }
-  .board-empty{ color:var(--text-muted); font-size:12.5px; padding:14px 0; }
+  .bf-flap-sm{ font-size:11px; padding:2px 4px; color:var(--teal); }
+  @media (prefers-reduced-motion: reduce){ .bf-flap{ animation:none; } }
+  .bf-info{ min-width:0; }
+  .bf-airline{
+    font-family:'Inter',sans-serif; font-size:11.5px; color:var(--text-muted);
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-bottom:5px;
+  }
+  .bf-route-row{ display:flex; gap:2px; flex-wrap:wrap; min-height:20px; }
+  .bf-stats{
+    display:flex; flex-direction:column; align-items:flex-end; gap:2px;
+    font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--text-muted);
+    white-space:nowrap; text-align:right;
+  }
+  .bf-stats .stat-alt{ color:var(--text); font-weight:700; font-size:13px; }
+  .board-empty{ color:var(--text-muted); font-size:12.5px; padding:14px 4px; font-family:'Inter',sans-serif; }
   @media (max-width:700px){ .board-wrap{ grid-template-columns:1fr; } }
 
   /* ---- Logbook tab ---- */
@@ -506,20 +540,16 @@
     <div class="board-wrap">
       <div class="board-col arrivals">
         <h3><span class="arrow">↓</span> Arriving</h3>
-        <table class="board-table" id="arrivalsTable">
-          <thead><tr><th>Flight</th><th>Alt (ft)</th><th>Speed (kt)</th></tr></thead>
-          <tbody></tbody>
-        </table>
+        <div class="board-col-head"><span>Flight · From</span><span>Alt / Spd</span></div>
+        <div class="board-list" id="arrivalsList"></div>
       </div>
       <div class="board-col departures">
         <h3><span class="arrow">↑</span> Departing</h3>
-        <table class="board-table" id="departuresTable">
-          <thead><tr><th>Flight</th><th>Alt (ft)</th><th>Speed (kt)</th></tr></thead>
-          <tbody></tbody>
-        </table>
+        <div class="board-col-head"><span>Flight · To</span><span>Alt / Spd</span></div>
+        <div class="board-list" id="departuresList"></div>
       </div>
     </div>
-    <p class="live-note" style="margin-top:16px;">Built from live ADS-B positions near MEL (via OpenSky Network), not the official airline schedule — so it shows what's actually in the air around the airport right now, sorted by altitude, rather than gate numbers or flight times.</p>
+    <p class="live-note" style="margin-top:16px;">Built from live ADS-B positions near MEL (via <a href="https://airplanes.live" target="_blank" rel="noopener" style="color:var(--teal)">airplanes.live</a>), not the official airline schedule — so it shows what's actually in the air around the airport right now, sorted by altitude. Airline and route come from <a href="https://www.adsbdb.com" target="_blank" rel="noopener" style="color:var(--teal)">adsbdb.com</a>'s free flight-route lookup and may occasionally be unavailable for a given flight.</p>
   </section>
 
   <!-- LOGBOOK -->
@@ -1004,11 +1034,34 @@
       status.textContent = `Updated ${new Date().toLocaleTimeString('en-AU')} · via airplanes.live`;
     }catch(e){
       status.innerHTML = `Couldn't reach airplanes.live right now. Try again shortly.`;
-      document.querySelector('#arrivalsTable tbody').innerHTML = '';
-      document.querySelector('#departuresTable tbody').innerHTML = '';
+      document.getElementById('arrivalsList').innerHTML = '';
+      document.getElementById('departuresList').innerHTML = '';
     }finally{
       setTimeout(()=>{ btn.disabled = false; }, COOLDOWN_MS);
     }
+  }
+
+  // ---- Flight route lookup (adsbdb.com) — airline + origin/destination airports ----
+  const routeCache = new Map();
+  async function getRoute(callsign){
+    const key = (callsign||'').trim();
+    if(!key) return null;
+    if(routeCache.has(key)) return routeCache.get(key);
+    try{
+      const res = await fetch(`https://api.adsbdb.com/v0/callsign/${encodeURIComponent(key)}`);
+      if(!res.ok){ routeCache.set(key, null); return null; }
+      const data = await res.json();
+      const route = (data && data.response && data.response.flightroute) ? data.response.flightroute : null;
+      routeCache.set(key, route);
+      return route;
+    }catch(e){
+      routeCache.set(key, null);
+      return null;
+    }
+  }
+
+  function flapChars(text, cls){
+    return [...String(text)].map(ch => `<span class="${cls}">${ch===' ' ? '&nbsp;' : ch}</span>`).join('');
   }
 
   function renderMelBoard(aircraft){
@@ -1026,22 +1079,56 @@
     arrivals.sort((a,b)=>a.alt-b.alt);
     departures.sort((a,b)=>a.alt-b.alt);
 
-    const fillTable = (id, rows) => {
-      const tbody = document.querySelector('#'+id+' tbody');
-      tbody.innerHTML = '';
-      if(rows.length===0){
-        tbody.innerHTML = `<tr><td colspan="3" class="board-empty">Nothing in this band right now.</td></tr>`;
+    fillBoardList('arrivalsList', arrivals, 'arrival');
+    fillBoardList('departuresList', departures, 'departure');
+    updateMelSnapshot(arrivals, departures);
+  }
+
+  function boardRowHtml(row){
+    const flightCode = (row.callsign || '———').padEnd(7).slice(0,7);
+    return `
+      <div class="board-row" data-flight="${row.callsign||''}">
+        <div class="bf-info">
+          <div class="bf-flight-row">${flapChars(flightCode, 'bf-flap')}</div>
+          <div class="bf-airline">Looking up flight…</div>
+          <div class="bf-route-row"></div>
+        </div>
+        <div class="bf-stats">
+          <span class="stat-alt">${row.alt ?? '—'} ft</span>
+          <span>${row.speed ?? '—'} kt</span>
+        </div>
+      </div>`;
+  }
+
+  function fillBoardList(id, rows, kind){
+    const list = document.getElementById(id);
+    list.innerHTML = '';
+    if(rows.length===0){
+      list.innerHTML = `<div class="board-empty">Nothing in this band right now.</div>`;
+      return;
+    }
+    rows.forEach(row => list.insertAdjacentHTML('beforeend', boardRowHtml(row)));
+
+    // Enrich each row with airline + route in the background, so the board
+    // shows immediately and rows fill in as lookups resolve.
+    rows.forEach(async row=>{
+      if(!row.callsign) return;
+      const rowEl = list.querySelector(`.board-row[data-flight="${CSS.escape(row.callsign)}"]`);
+      if(!rowEl) return;
+      const route = await getRoute(row.callsign);
+      const airlineEl = rowEl.querySelector('.bf-airline');
+      const routeEl = rowEl.querySelector('.bf-route-row');
+      if(!route){
+        airlineEl.textContent = 'Airline unknown';
+        routeEl.innerHTML = '';
         return;
       }
-      rows.forEach(r=>{
-        const tr = document.createElement('tr');
-        tr.innerHTML = `<td>${r.callsign}</td><td>${r.alt ?? '—'}</td><td>${r.speed ?? '—'}</td>`;
-        tbody.appendChild(tr);
-      });
-    };
-    fillTable('arrivalsTable', arrivals);
-    fillTable('departuresTable', departures);
-    updateMelSnapshot(arrivals, departures);
+      airlineEl.textContent = route.airline ? route.airline.name : 'Airline unknown';
+      const originCode = route.origin ? (route.origin.iata_code || route.origin.icao_code || '???') : '???';
+      const destCode = route.destination ? (route.destination.iata_code || route.destination.icao_code || '???') : '???';
+      const routeText = kind==='arrival' ? `${originCode} \u2192 MEL` : `MEL \u2192 ${destCode}`;
+      routeEl.innerHTML = flapChars(routeText, 'bf-flap bf-flap-sm');
+    });
   }
   function updateMelSnapshot(arrivals, departures){
     const wrap = document.getElementById('melSnapshot');
