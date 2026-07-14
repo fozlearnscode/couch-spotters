@@ -654,9 +654,9 @@
   const AIRPORTS_PER_CYCLE = 3; // keeps each refresh to ~4 search calls total
 
   const YT_KEY_STORE = 'yt-api-key';
-  let ytApiKey = null;
+  let ytApiKey = 'server-managed'; // live search now runs server-side via GitHub Actions; client just reads live-status.json
   let liveRefreshTimer = null;
-  const LIVE_REFRESH_MS = 60 * 60 * 1000; // 60 min — YouTube caps live-search calls at ~100/day; see settings modal
+  const LIVE_REFRESH_MS = 10 * 60 * 1000; // 10 min — cheap since it's just re-reading a static file
   let airportRotationStart = 0;
   let liveResults = []; // merged, deduped, sorted by concurrent viewers desc
   let quotaExceeded = false;
@@ -715,85 +715,29 @@
     return EXCLUDE_CHANNELS.some(x => ch.includes(x));
   }
 
-  async function runOneSearch(query){
-    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(query)}&type=video&eventType=live&order=relevance&maxResults=15&key=${ytApiKey}`;
-    const res = await fetch(url);
-    const data = await res.json();
-    if(data.error){
-      const reason = (data.error.errors && data.error.errors[0] && data.error.errors[0].reason) || data.error.message || '';
-      if(reason === 'quotaExceeded' || reason === 'dailyLimitExceeded'){ throw { quota:true }; }
-      throw { message: reason };
-    }
-    return (data.items||[]).map(it => ({
-      videoId: it.id.videoId,
-      title: it.snippet.title,
-      channel: it.snippet.channelTitle,
-      thumb: it.snippet.thumbnails.medium.url,
-      matchedQuery: query,
-    }));
-  }
-
-  async function fetchViewerCounts(videoIds){
-    if(videoIds.length===0) return {};
-    const url = `https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails,snippet&id=${videoIds.join(',')}&key=${ytApiKey}`;
-    const res = await fetch(url);
-    const data = await res.json();
-    if(data.error) return {};
-    const map = {};
-    (data.items||[]).forEach(v=>{
-      const stillLive = v.snippet && v.snippet.liveBroadcastContent === 'live';
-      map[v.id] = {
-        viewers: stillLive && v.liveStreamingDetails && v.liveStreamingDetails.concurrentViewers
-          ? parseInt(v.liveStreamingDetails.concurrentViewers, 10) : null,
-        stillLive,
-      };
-    });
-    return map;
-  }
+  const LIVE_STATUS_URL = 'https://fozlearnscode.github.io/couch-spotters/live-status.json';
 
   async function runLiveSearch(){
-    if(!ytApiKey){
-      liveResults = [];
-      renderLiveNow(); renderNowPlaying();
-      return;
-    }
-    document.getElementById('npSub').textContent = 'Searching YouTube…';
-    const airportBatch = [];
-    for(let i=0;i<AIRPORTS_PER_CYCLE;i++){
-      airportBatch.push(AIRPORT_QUERIES[(airportRotationStart+i) % AIRPORT_QUERIES.length]);
-    }
-    airportRotationStart = (airportRotationStart + AIRPORTS_PER_CYCLE) % AIRPORT_QUERIES.length;
-    const queries = [...GENERAL_QUERIES, ...airportBatch.map(a=>a.q)];
-
-    let merged = [];
+    document.getElementById('npSub').textContent = 'Checking latest snapshot…';
+    quotaExceeded = false;
     lastSearchError = null;
+
     try{
-      for(const q of queries){
-        const results = await runOneSearch(q);
-        merged.push(...results);
+      const res = await fetch(LIVE_STATUS_URL, { cache: 'no-store' });
+      if(!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+
+      quotaExceeded = !!data.quotaExceeded;
+      lastSearchError = data.lastSearchError || null;
+      liveResults = (quotaExceeded || lastSearchError) ? [] : (data.liveResults || []);
+
+      if(data.updatedAt){
+        const mins = Math.round((Date.now() - new Date(data.updatedAt).getTime()) / 60000);
+        document.getElementById('npSub').textContent =
+          mins < 1 ? 'Updated just now' : `Updated ${mins} min ago`;
       }
-      quotaExceeded = false;
     }catch(e){
-      if(e && e.quota){ quotaExceeded = true; }
-      else { lastSearchError = (e && e.message) || 'Unknown API error'; }
-    }
-
-    // dedupe by videoId, then screen out anything that doesn't look plane-related
-    // or comes from a known news broadcaster
-    const seen = new Map();
-    merged.forEach(r=>{ if(!seen.has(r.videoId)) seen.set(r.videoId, r); });
-    const deduped = [...seen.values()].filter(isPlaneSpottingRelevant).filter(r=>!isExcludedChannel(r));
-
-    if(deduped.length && ytApiKey){
-      const viewerMap = await fetchViewerCounts(deduped.map(r=>r.videoId)).catch(()=>({}));
-      deduped.forEach(r=>{
-        const info = viewerMap[r.videoId];
-        r.viewers = info ? info.viewers : null;
-        r.stillLive = info ? info.stillLive : true;
-      });
-      liveResults = deduped.filter(r=>r.stillLive !== false)
-        .sort((a,b)=> (b.viewers||0) - (a.viewers||0));
-    } else if(!quotaExceeded && !lastSearchError){
+      lastSearchError = 'Could not reach live-status.json — check the site is deployed and the file exists.';
       liveResults = [];
     }
 
@@ -803,7 +747,9 @@
 
   function startAutoRefresh(){
     if(liveRefreshTimer) clearInterval(liveRefreshTimer);
-    if(ytApiKey) liveRefreshTimer = setInterval(runLiveSearch, LIVE_REFRESH_MS);
+    // live-status.json only changes every 2 hours server-side, so this just
+    // re-reads the free static file — no quota cost no matter how often it runs.
+    liveRefreshTimer = setInterval(runLiveSearch, LIVE_REFRESH_MS);
   }
 
   function fmtViewers(n){
