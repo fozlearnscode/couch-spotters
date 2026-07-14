@@ -1,0 +1,37 @@
+name: Prune Stale Streams
+
+on:
+  schedule:
+    # Every 5 minutes. This is safe on quota because videos.list costs only
+    # 1 unit total per call, regardless of how many video IDs are checked —
+    # very different from the 100-unit search.list calls in the main job.
+    - cron: '*/5 * * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  prune-stale-streams:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Check which tracked streams are still live
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: node scripts/prune-stale-streams.js
+
+      - name: Commit updated live-status.json
+        run: |
+          git config user.name "couch-spotters-bot"
+          git config user.email "actions@github.com"
+          git add live-status.json
+          git diff --quiet --cached || git commit -m "Prune stale streams [automated]"
+          git push
