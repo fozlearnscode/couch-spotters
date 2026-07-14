@@ -914,6 +914,8 @@
   }
   function isHeavy(cat){ return cat===5 || cat===6; }
 
+  const OVERHEAD_STATUS_URL = 'https://fozlearnscode.github.io/couch-spotters/overhead-status.json';
+
   async function fetchOverhead(force){
     const now = Date.now();
     if(!force && now-lastFetch < COOLDOWN_MS) return;
@@ -921,20 +923,22 @@
     const btn = document.getElementById('refreshBtn');
     const status = document.getElementById('ohStatus');
     btn.disabled = true;
-    status.textContent = 'Checking OpenSky Network…';
+    status.textContent = 'Checking latest snapshot…';
     try{
-      const url = `https://opensky-network.org/api/states/all?lamin=${BBOX.lamin}&lomin=${BBOX.lomin}&lamax=${BBOX.lamax}&lomax=${BBOX.lomax}&extended=1`;
-      const res = await fetch(url);
+      const res = await fetch(OVERHEAD_STATUS_URL, { cache: 'no-store' });
       if(!res.ok) throw new Error('HTTP '+res.status);
       const data = await res.json();
-      renderFlights(data.states || []);
-      status.textContent = `Updated ${new Date().toLocaleTimeString('en-AU')} · ${((data.states)||[]).length} aircraft in range · via OpenSky Network`;
-      if(data.states && data.states.length){
-        const nearest = [...data.states].filter(s=>s[7]!=null).sort((a,b)=>a[7]-b[7])[0];
+      if(data.overhead && data.overhead.error) throw new Error(data.overhead.error);
+      const states = (data.overhead && data.overhead.states) || [];
+      renderFlights(states);
+      const mins = data.updatedAt ? Math.round((Date.now() - new Date(data.updatedAt).getTime())/60000) : null;
+      status.textContent = `Updated ${mins==null ? '' : (mins<1 ? 'just now' : mins+' min ago')} · ${states.length} aircraft in range · via OpenSky Network`;
+      if(states.length){
+        const nearest = [...states].filter(s=>s[7]!=null).sort((a,b)=>a[7]-b[7])[0];
         if(nearest) setTicker(`${nearest[1] ? nearest[1].trim() : nearest[0]} · ${mToFt(nearest[7])||'—'} FT`);
       }
     }catch(e){
-      status.innerHTML = `Couldn't reach OpenSky Network right now. Coverage depends on volunteer ADS-B receivers, so quiet periods happen too — try <a href="https://www.flightradar24.com/-37.81,144.96/9" target="_blank" rel="noopener" style="color:var(--teal)">a live map instead</a>.`;
+      status.innerHTML = `Couldn't reach the latest snapshot right now. Coverage depends on volunteer ADS-B receivers, so quiet periods happen too — try <a href="https://www.flightradar24.com/-37.81,144.96/9" target="_blank" rel="noopener" style="color:var(--teal)">a live map instead</a>.`;
       document.getElementById('flightList').innerHTML = '';
     }finally{
       setTimeout(()=>{ btn.disabled = false; }, COOLDOWN_MS);
@@ -988,16 +992,18 @@
     const btn = document.getElementById('boardRefreshBtn');
     const status = document.getElementById('boardStatus');
     btn.disabled = true;
-    status.textContent = 'Checking OpenSky Network…';
+    status.textContent = 'Checking latest snapshot…';
     try{
-      const url = `https://opensky-network.org/api/states/all?lamin=${MEL_BBOX.lamin}&lomin=${MEL_BBOX.lomin}&lamax=${MEL_BBOX.lamax}&lomax=${MEL_BBOX.lomax}`;
-      const res = await fetch(url);
+      const res = await fetch(OVERHEAD_STATUS_URL, { cache: 'no-store' });
       if(!res.ok) throw new Error('HTTP '+res.status);
       const data = await res.json();
-      renderMelBoard(data.states || []);
-      status.textContent = `Updated ${new Date().toLocaleTimeString('en-AU')} · via OpenSky Network`;
+      if(data.melBoard && data.melBoard.error) throw new Error(data.melBoard.error);
+      const states = (data.melBoard && data.melBoard.states) || [];
+      renderMelBoard(states);
+      const mins = data.updatedAt ? Math.round((Date.now() - new Date(data.updatedAt).getTime())/60000) : null;
+      status.textContent = `Updated ${mins==null ? '' : (mins<1 ? 'just now' : mins+' min ago')} · via OpenSky Network`;
     }catch(e){
-      status.innerHTML = `Couldn't reach OpenSky Network right now. Try again shortly.`;
+      status.innerHTML = `Couldn't reach the latest snapshot right now. Try again shortly.`;
       document.querySelector('#arrivalsTable tbody').innerHTML = '';
       document.querySelector('#departuresTable tbody').innerHTML = '';
     }finally{
