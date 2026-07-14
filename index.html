@@ -251,25 +251,10 @@
   .oh-status{ font-size:12.5px; color:var(--text-muted); margin-bottom:14px; font-family:'JetBrains Mono',monospace; }
 
   .flight-list{ display:flex; flex-direction:column; gap:8px; }
-  .flight-row{
-    display:grid;
-    grid-template-columns:auto 1fr auto auto auto;
-    gap:14px;
-    align-items:center;
-    background:var(--surface);
-    border:1px solid var(--line);
-    border-radius:8px;
-    padding:12px 14px;
-    font-size:13.5px;
-  }
-  .flight-row .callsign{ font-family:'JetBrains Mono',monospace; font-weight:700; letter-spacing:0.03em; }
-  .flight-row .country{ color:var(--text-muted); font-size:12px; }
   .heavy-badge{
     background:var(--heavy); color:#2a0f08; font-weight:700; font-size:10.5px;
     padding:2px 7px; border-radius:10px; font-family:'JetBrains Mono',monospace;
   }
-  .flight-row .datum{ text-align:right; font-family:'JetBrains Mono',monospace; }
-  .flight-row .datum .dlabel{ display:block; color:var(--text-muted); font-size:10px; text-transform:uppercase; letter-spacing:.05em; }
   .empty-oh{
     text-align:center; padding:34px 16px; color:var(--text-muted);
     font-family:'JetBrains Mono',monospace; font-size:13px;
@@ -410,6 +395,13 @@
     white-space:nowrap; text-align:right;
   }
   .bf-stats .stat-alt{ color:var(--text); font-weight:700; font-size:13px; }
+  .bf-model{ font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--text-muted); opacity:0.85; }
+  .board-row.special{ border-color:var(--teal); background:rgba(79,182,168,0.08); }
+  .board-row.special .bf-flap{ color:var(--teal); border-color:rgba(79,182,168,0.4); }
+  .special-badge{
+    background:var(--teal); color:#06231f; font-weight:700; font-size:10.5px;
+    padding:2px 7px; border-radius:10px; font-family:'JetBrains Mono',monospace; margin-left:4px;
+  }
   .board-empty{ color:var(--text-muted); font-size:12.5px; padding:14px 4px; font-family:'Inter',sans-serif; }
   @media (max-width:700px){ .board-wrap{ grid-template-columns:1fr; } }
 
@@ -492,8 +484,8 @@
   .btn-ghost:hover{ border-color:var(--teal); color:var(--teal); }
 
   @media (max-width:640px){
-    .flight-row{ grid-template-columns:1fr; text-align:left; }
-    .flight-row .datum{ text-align:left; }
+    .board-row{ grid-template-columns:1fr; }
+    .bf-stats{ flex-direction:row; justify-content:flex-start; gap:12px; align-items:baseline; margin-top:6px; }
   }
 </style>
 </head>
@@ -578,6 +570,7 @@
     <div class="oh-status" id="ohStatus">Not checked yet.</div>
     <div class="overhead-map" id="overheadMap"></div>
     <div class="flight-list" id="flightList"></div>
+    <p class="live-note" style="margin-top:16px;">Live positions via <a href="https://airplanes.live" target="_blank" rel="noopener" style="color:var(--teal)">airplanes.live</a>. Airline, route, and aircraft type come from <a href="https://www.adsbdb.com" target="_blank" rel="noopener" style="color:var(--teal)">adsbdb.com</a>'s free lookups and may occasionally be unavailable for a given flight. Teal-highlighted rows are aircraft known to carry a special livery.</p>
   </section>
 
   <!-- MEL BOARD -->
@@ -1044,29 +1037,75 @@
   }
 
   function renderFlights(aircraft){
-    const list = document.getElementById('flightList');
-    list.innerHTML = '';
     const inAir = aircraft.filter(a => a.alt_baro !== 'ground' && a.lat!=null).sort((a,b)=>(numAlt(a)??999999)-(numAlt(b)??999999));
     updateNearestSnapshot(inAir);
-    if(inAir.length===0){
+    fillOverheadList(inAir.slice(0,25));
+  }
+  document.getElementById('refreshBtn').addEventListener('click', ()=>fetchOverhead(true));
+
+  function overheadRowHtml(a){
+    const callsign = a.flight ? a.flight.trim() : (a.hex||'').toUpperCase();
+    const flightCode = (callsign || '———').padEnd(7).slice(0,7);
+    return `
+      <div class="board-row" data-flight="${callsign}" data-hex="${(a.hex||'').toLowerCase()}">
+        <div class="bf-info">
+          <div class="bf-flight-row">${flapChars(flightCode, 'bf-flap')}${isHeavy(a.category) ? '<span class="heavy-badge">HEAVY</span>' : ''}</div>
+          <div class="bf-airline">Looking up flight…</div>
+          <div class="bf-route-row"></div>
+          <div class="bf-model">Looking up aircraft…</div>
+        </div>
+        <div class="bf-stats">
+          <span class="stat-alt">${numAlt(a) ?? '—'} ft</span>
+          <span>${numGs(a) ?? '—'} kt</span>
+          <span>${compass(a.track)}</span>
+        </div>
+      </div>`;
+  }
+
+  function fillOverheadList(rows){
+    const list = document.getElementById('flightList');
+    list.innerHTML = '';
+    if(rows.length===0){
       list.innerHTML = `<div class="empty-oh">Nothing currently visible on ADS-B over Victoria. Check back in a few minutes, or try a <a href="https://www.flightradar24.com/-37.81,144.96/9" target="_blank" rel="noopener">live map</a>.</div>`;
       return;
     }
-    inAir.slice(0,25).forEach(a=>{
+    rows.forEach(a => list.insertAdjacentHTML('beforeend', overheadRowHtml(a)));
+
+    // Enrich each row with airline, route, and aircraft model in the
+    // background — the list renders immediately with live position data,
+    // then fills in the extra detail as lookups resolve.
+    rows.forEach(async a=>{
       const callsign = a.flight ? a.flight.trim() : (a.hex||'').toUpperCase();
-      const row = document.createElement('div');
-      row.className = 'flight-row';
-      row.innerHTML = `
-        <span class="callsign">${callsign}</span>
-        <span class="country">${isHeavy(a.category) ? '<span class=\"heavy-badge\">HEAVY</span>' : '—'}</span>
-        <span class="datum"><span class="dlabel">Alt</span>${numAlt(a) ?? '—'} ft</span>
-        <span class="datum"><span class="dlabel">Speed</span>${numGs(a) ?? '—'} kt</span>
-        <span class="datum"><span class="dlabel">Heading</span>${compass(a.track)}</span>
-      `;
-      list.appendChild(row);
+      const hex = (a.hex||'').toLowerCase();
+      const rowEl = list.querySelector(`.board-row[data-flight="${CSS.escape(callsign)}"][data-hex="${CSS.escape(hex)}"]`);
+      if(!rowEl) return;
+      const airlineEl = rowEl.querySelector('.bf-airline');
+      const routeEl = rowEl.querySelector('.bf-route-row');
+      const modelEl = rowEl.querySelector('.bf-model');
+
+      const [route, acInfo] = await Promise.all([ getRoute(callsign), getAircraftInfo(hex) ]);
+
+      if(route){
+        airlineEl.textContent = route.airline ? route.airline.name : 'Airline unknown';
+        const originCode = route.origin ? (route.origin.iata_code || route.origin.icao_code || '???') : '???';
+        const destCode = route.destination ? (route.destination.iata_code || route.destination.icao_code || '???') : '???';
+        routeEl.innerHTML = flapChars(`${originCode} \u2192 ${destCode}`, 'bf-flap bf-flap-sm');
+      }else{
+        airlineEl.textContent = 'Airline unknown';
+        routeEl.innerHTML = '';
+      }
+
+      if(acInfo){
+        modelEl.textContent = acInfo.type || acInfo.manufacturer || 'Aircraft type unknown';
+        if(isSpecialLivery(acInfo.registration)){
+          rowEl.classList.add('special');
+          airlineEl.insertAdjacentHTML('beforeend', '<span class="special-badge">SPECIAL LIVERY</span>');
+        }
+      }else{
+        modelEl.textContent = 'Aircraft type unknown';
+      }
     });
   }
-  document.getElementById('refreshBtn').addEventListener('click', ()=>fetchOverhead(true));
 
   function updateNearestSnapshot(inAir){
     const box = document.getElementById('nearestSnapshot');
@@ -1130,6 +1169,39 @@
 
   function flapChars(text, cls){
     return [...String(text)].map(ch => `<span class="${cls}">${ch===' ' ? '&nbsp;' : ch}</span>`).join('');
+  }
+
+  // ---- Aircraft type/model lookup (adsbdb.com) — keyed by ICAO24 hex ----
+  const aircraftCache = new Map();
+  async function getAircraftInfo(hex){
+    const key = (hex||'').trim().toLowerCase();
+    if(!key) return null;
+    if(aircraftCache.has(key)) return aircraftCache.get(key);
+    try{
+      const res = await fetch(`https://api.adsbdb.com/v0/aircraft/${encodeURIComponent(key)}`);
+      if(!res.ok){ aircraftCache.set(key, null); return null; }
+      const data = await res.json();
+      const info = (data && data.response) ? (data.response.aircraft || data.response) : null;
+      aircraftCache.set(key, info);
+      return info;
+    }catch(e){
+      aircraftCache.set(key, null);
+      return null;
+    }
+  }
+
+  // Registrations known to carry a special/retro livery. There's no free API
+  // that can detect this automatically (it's not something ADS-B or flight
+  // data captures), so this is a starting point you maintain yourselves as
+  // you spot (or read about) new ones — liveries get repainted and retired
+  // over time, so it's worth double-checking these occasionally too.
+  const SPECIAL_LIVERY_REGOS = [
+    'VH-XZJ', // Qantas 'Mendoowoorrji' 737-800
+    'VH-ZND', // Qantas 'Emily Kame Kngwarreye' 787-9
+  ];
+  function isSpecialLivery(registration){
+    if(!registration) return false;
+    return SPECIAL_LIVERY_REGOS.includes(registration.toUpperCase());
   }
 
   function renderMelBoard(aircraft){
