@@ -442,6 +442,31 @@
     outline:2px solid var(--teal); outline-offset:2px;
   }
 
+  /* ---- Settings modal ---- */
+  .modal-backdrop{
+    position:fixed; inset:0; background:rgba(6,10,20,0.72);
+    display:flex; align-items:center; justify-content:center;
+    padding:20px; z-index:50;
+    opacity:0; pointer-events:none; transition:opacity .15s ease;
+  }
+  .modal-backdrop.show{ opacity:1; pointer-events:auto; }
+  .modal{
+    background:var(--surface); border:1px solid var(--line); border-radius:12px;
+    padding:22px 24px; max-width:440px; width:100%; box-shadow:var(--shadow);
+  }
+  .modal h3{ font-family:'Space Grotesk',sans-serif; margin:0 0 12px; font-size:17px; }
+  .hint{ font-size:12.5px; color:var(--text-muted); line-height:1.55; margin:0 0 10px; }
+  .modal-actions{ display:flex; justify-content:flex-end; gap:8px; margin-top:14px; flex-wrap:wrap; }
+  .btn{
+    background:var(--gold); color:#241a06; border:none; font-weight:700;
+    padding:9px 16px; border-radius:6px; cursor:pointer; font-size:13.5px; font-family:'Inter',sans-serif;
+  }
+  .btn-ghost{
+    background:transparent; border:1px solid var(--line); color:var(--text-muted); font-weight:600;
+    padding:9px 16px; border-radius:6px; cursor:pointer; font-size:13.5px; font-family:'Inter',sans-serif;
+  }
+  .btn-ghost:hover{ border-color:var(--teal); color:var(--teal); }
+
   @media (max-width:640px){
     .flight-row{ grid-template-columns:1fr; text-align:left; }
     .flight-row .datum{ text-align:left; }
@@ -575,20 +600,18 @@
 <!-- SETTINGS MODAL -->
 <div class="modal-backdrop" id="settingsBackdrop">
   <div class="modal">
-    <h3>Live-detection settings</h3>
-    <p class="hint" style="margin-bottom:14px;">
-      Without an API key, "Now Playing" and the Live Now tab can't confirm what's actually live — they'll only let you jump to a channel and check yourself.
-      Adding a free <a href="https://console.cloud.google.com/apis/library/youtube.googleapis.com" target="_blank" rel="noopener" style="color:var(--teal)">YouTube Data API key</a> lets the app genuinely search YouTube for live plane-spotting streams — both airport-specific and worldwide — ranked by live viewer count, with real thumbnails. It re-checks automatically every 60 minutes; YouTube caps live-search calls at roughly 100/day per key, and each refresh uses about 4, so this cadence leaves plenty of room for manual refreshes too.
+    <h3>About live data</h3>
+    <p class="hint">
+      Couch Spotters checks YouTube for live plane-spotting streams automatically every 2 hours, with a quick top-up check every 5 minutes that drops any stream that's since ended — so "Now Playing" stays accurate without you doing anything.
     </p>
-    <div class="field">
-      <label for="ytApiKeyInput">YouTube Data API key</label>
-      <input type="text" id="ytApiKeyInput" placeholder="Paste your key here">
-    </div>
-    <p class="hint">Stored privately in this browser only — not shared with anyone else using this app, and never leaves your device except to call YouTube's API directly.</p>
+    <p class="hint">
+      Flight positions near you and around Melbourne Airport update live whenever you open or refresh those tabs. None of this needs a personal API key anymore — it's all handled automatically behind the scenes.
+    </p>
+    <p class="hint">
+      Data sources: YouTube (live streams), <a href="https://airplanes.live" target="_blank" rel="noopener" style="color:var(--teal)">airplanes.live</a> (flight positions), and <a href="https://www.adsbdb.com" target="_blank" rel="noopener" style="color:var(--teal)">adsbdb.com</a> (airline &amp; route lookups).
+    </p>
     <div class="modal-actions">
-      <button class="btn-ghost" id="settingsClear">Remove key</button>
-      <button class="btn-ghost" id="settingsCancel">Close</button>
-      <button class="btn" id="settingsSave">Save</button>
+      <button class="btn" id="settingsCancel">Close</button>
     </div>
   </div>
 </div>
@@ -683,7 +706,6 @@
   const GENERAL_QUERIES = ['plane spotting live stream', 'airport live cam plane spotting'];
   const AIRPORTS_PER_CYCLE = 3; // keeps each refresh to ~4 search calls total
 
-  const YT_KEY_STORE = 'yt-api-key';
   let ytApiKey = 'server-managed'; // live search now runs server-side via GitHub Actions; client just reads live-status.json
   let liveRefreshTimer = null;
   const LIVE_REFRESH_MS = 10 * 60 * 1000; // 10 min — cheap since it's just re-reading a static file
@@ -691,23 +713,6 @@
   let liveResults = []; // merged, deduped, sorted by concurrent viewers desc
   let quotaExceeded = false;
   let lastSearchError = null;
-
-  async function loadApiKey(){
-    try{
-      const res = await storage.get(YT_KEY_STORE, false);
-      ytApiKey = res && res.value ? res.value : null;
-    }catch(e){ ytApiKey = null; }
-    document.getElementById('ytApiKeyInput').value = ytApiKey || '';
-  }
-  async function saveApiKey(key){
-    ytApiKey = key || null;
-    try{ if(ytApiKey) await storage.set(YT_KEY_STORE, ytApiKey, false); }
-    catch(e){ console.error('Could not save key', e); }
-  }
-  async function clearApiKey(){
-    ytApiKey = null;
-    try{ await storage.set(YT_KEY_STORE, '', false); }catch(e){}
-  }
 
   function errorHint(reason){
     const r = (reason||'').toLowerCase();
@@ -881,30 +886,14 @@
   }
 
   function openSettings(){
-    document.getElementById('ytApiKeyInput').value = ytApiKey || '';
     document.getElementById('settingsBackdrop').classList.add('show');
   }
   document.getElementById('settingsBtn').addEventListener('click', openSettings);
   document.getElementById('npRefreshBtn').addEventListener('click', ()=>{
-    if(!ytApiKey){ openSettings(); return; }
     runLiveSearch();
   });
   document.getElementById('settingsCancel').addEventListener('click', ()=> document.getElementById('settingsBackdrop').classList.remove('show'));
   document.getElementById('settingsBackdrop').addEventListener('click', (e)=>{ if(e.target.id==='settingsBackdrop') e.currentTarget.classList.remove('show'); });
-  document.getElementById('settingsSave').addEventListener('click', async ()=>{
-    const key = document.getElementById('ytApiKeyInput').value.trim();
-    await saveApiKey(key);
-    document.getElementById('settingsBackdrop').classList.remove('show');
-    startAutoRefresh();
-    runLiveSearch();
-  });
-  document.getElementById('settingsClear').addEventListener('click', async ()=>{
-    await clearApiKey();
-    document.getElementById('ytApiKeyInput').value = '';
-    if(liveRefreshTimer) clearInterval(liveRefreshTimer);
-    liveResults = [];
-    runLiveSearch();
-  });
 
   document.querySelectorAll('.link-btn[data-jump]').forEach(btn=>{
     btn.addEventListener('click', ()=>{
@@ -1232,10 +1221,10 @@
   renderVideos();
   loadLog();
   (async ()=>{
-    await loadApiKey();
     renderLiveNow();
     renderNowPlaying();
-    if(ytApiKey){ await runLiveSearch(); startAutoRefresh(); }
+    await runLiveSearch();
+    startAutoRefresh();
   })();
   fetchOverhead(true);
   fetchMelBoard(true);
