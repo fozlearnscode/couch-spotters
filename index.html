@@ -900,21 +900,21 @@
   }
   setTicker('Welcome aboard');
 
-  // ---------- Overhead tracker (OpenSky Network) ----------
-  const BBOX = { lamin:-38.4, lomin:144.2, lamax:-37.3, lomax:145.6 }; // Greater Melbourne & regional Victoria
+  // ---------- Overhead tracker (airplanes.live) ----------
   let lastFetch = 0;
   const COOLDOWN_MS = 20000;
 
-  function msToKnots(v){ return v==null ? null : Math.round(v*1.94384); }
-  function mToFt(v){ return v==null ? null : Math.round(v*3.28084); }
   function compass(deg){
     if(deg==null) return '—';
     const dirs=['N','NNE','NE','ENE','E','ESE','SE','SSE','S','SSW','SW','WSW','W','WNW','NW','NNW'];
     return dirs[Math.round(deg/22.5)%16];
   }
-  function isHeavy(cat){ return cat===5 || cat===6; }
+  function isHeavy(cat){ return cat==='A5' || cat==='A6'; }
+  function numAlt(a){ return typeof a.alt_baro === 'number' ? Math.round(a.alt_baro) : null; }
+  function numGs(a){ return a.gs!=null ? Math.round(a.gs) : null; }
 
-  const OVERHEAD_STATUS_URL = 'https://fozlearnscode.github.io/couch-spotters/overhead-status.json';
+  // Centre point + radius (nm) covering Greater Melbourne & regional Victoria
+  const OVERHEAD_POINT = { lat:-37.85, lon:144.9, radiusNm:70 };
 
   async function fetchOverhead(force){
     const now = Date.now();
@@ -923,47 +923,47 @@
     const btn = document.getElementById('refreshBtn');
     const status = document.getElementById('ohStatus');
     btn.disabled = true;
-    status.textContent = 'Checking latest snapshot…';
+    status.textContent = 'Checking airplanes.live…';
     try{
-      const res = await fetch(OVERHEAD_STATUS_URL, { cache: 'no-store' });
+      const url = `https://api.airplanes.live/v2/point/${OVERHEAD_POINT.lat}/${OVERHEAD_POINT.lon}/${OVERHEAD_POINT.radiusNm}`;
+      const res = await fetch(url);
       if(!res.ok) throw new Error('HTTP '+res.status);
       const data = await res.json();
-      if(data.overhead && data.overhead.error) throw new Error(data.overhead.error);
-      const states = (data.overhead && data.overhead.states) || [];
-      renderFlights(states);
-      const mins = data.updatedAt ? Math.round((Date.now() - new Date(data.updatedAt).getTime())/60000) : null;
-      status.textContent = `Updated ${mins==null ? '' : (mins<1 ? 'just now' : mins+' min ago')} · ${states.length} aircraft in range · via OpenSky Network`;
-      if(states.length){
-        const nearest = [...states].filter(s=>s[7]!=null).sort((a,b)=>a[7]-b[7])[0];
-        if(nearest) setTicker(`${nearest[1] ? nearest[1].trim() : nearest[0]} · ${mToFt(nearest[7])||'—'} FT`);
+      const aircraft = data.ac || data.aircraft || [];
+      renderFlights(aircraft);
+      status.textContent = `Updated ${new Date().toLocaleTimeString('en-AU')} · ${aircraft.length} aircraft in range · via airplanes.live`;
+      const withAlt = aircraft.filter(a=>numAlt(a)!=null).sort((a,b)=>numAlt(a)-numAlt(b));
+      if(withAlt.length){
+        const nearest = withAlt[0];
+        setTicker(`${nearest.flight ? nearest.flight.trim() : (nearest.hex||'').toUpperCase()} · ${numAlt(nearest)||'—'} FT`);
       }
     }catch(e){
-      status.innerHTML = `Couldn't reach the latest snapshot right now. Coverage depends on volunteer ADS-B receivers, so quiet periods happen too — try <a href="https://www.flightradar24.com/-37.81,144.96/9" target="_blank" rel="noopener" style="color:var(--teal)">a live map instead</a>.`;
+      status.innerHTML = `Couldn't reach airplanes.live right now. Coverage depends on volunteer ADS-B receivers, so quiet periods happen too — try <a href="https://www.flightradar24.com/-37.81,144.96/9" target="_blank" rel="noopener" style="color:var(--teal)">a live map instead</a>.`;
       document.getElementById('flightList').innerHTML = '';
     }finally{
       setTimeout(()=>{ btn.disabled = false; }, COOLDOWN_MS);
     }
   }
 
-  function renderFlights(states){
+  function renderFlights(aircraft){
     const list = document.getElementById('flightList');
     list.innerHTML = '';
-    const inAir = states.filter(s => s[8]===false).sort((a,b)=>(a[7]??999999)-(b[7]??999999));
+    const inAir = aircraft.filter(a => a.alt_baro !== 'ground' && a.lat!=null).sort((a,b)=>(numAlt(a)??999999)-(numAlt(b)??999999));
     updateNearestSnapshot(inAir);
     if(inAir.length===0){
       list.innerHTML = `<div class="empty-oh">Nothing currently visible on ADS-B over Victoria. Check back in a few minutes, or try a <a href="https://www.flightradar24.com/-37.81,144.96/9" target="_blank" rel="noopener">live map</a>.</div>`;
       return;
     }
-    inAir.slice(0,25).forEach(s=>{
-      const [icao24, callsign, country, , , , , baroAlt, , velocity, track, , , , , , , category] = s;
+    inAir.slice(0,25).forEach(a=>{
+      const callsign = a.flight ? a.flight.trim() : (a.hex||'').toUpperCase();
       const row = document.createElement('div');
       row.className = 'flight-row';
       row.innerHTML = `
-        <span class="callsign">${callsign ? callsign.trim() : icao24.toUpperCase()}</span>
-        <span class="country">${country || '—'}${isHeavy(category) ? ' <span class=\"heavy-badge\">HEAVY</span>' : ''}</span>
-        <span class="datum"><span class="dlabel">Alt</span>${mToFt(baroAlt) ?? '—'} ft</span>
-        <span class="datum"><span class="dlabel">Speed</span>${msToKnots(velocity) ?? '—'} kt</span>
-        <span class="datum"><span class="dlabel">Heading</span>${compass(track)}</span>
+        <span class="callsign">${callsign}</span>
+        <span class="country">${isHeavy(a.category) ? '<span class=\"heavy-badge\">HEAVY</span>' : '—'}</span>
+        <span class="datum"><span class="dlabel">Alt</span>${numAlt(a) ?? '—'} ft</span>
+        <span class="datum"><span class="dlabel">Speed</span>${numGs(a) ?? '—'} kt</span>
+        <span class="datum"><span class="dlabel">Heading</span>${compass(a.track)}</span>
       `;
       list.appendChild(row);
     });
@@ -976,13 +976,14 @@
       box.innerHTML = `<span class="snap-label">Nearest overhead</span><div class="snap-body">Nothing overhead right now</div>`;
       return;
     }
-    const [icao24, callsign, , , , , , baroAlt, , velocity, track] = inAir[0];
-    box.innerHTML = `<span class="snap-label">Nearest overhead</span><div class="snap-body">${callsign ? callsign.trim() : icao24.toUpperCase()}
-      <span class="sb-sub">${mToFt(baroAlt) ?? '—'} ft · ${msToKnots(velocity) ?? '—'} kt · heading ${compass(track)}</span></div>`;
+    const a = inAir[0];
+    const callsign = a.flight ? a.flight.trim() : (a.hex||'').toUpperCase();
+    box.innerHTML = `<span class="snap-label">Nearest overhead</span><div class="snap-body">${callsign}
+      <span class="sb-sub">${numAlt(a) ?? '—'} ft · ${numGs(a) ?? '—'} kt · heading ${compass(a.track)}</span></div>`;
   }
 
   // ---------- MEL live board ----------
-  const MEL_BBOX = { lamin:-37.86, lomin:144.62, lamax:-37.49, lomax:145.06 }; // tight ring around YMML
+  const MEL_POINT = { lat:-37.673, lon:144.843, radiusNm:15 }; // tight ring around YMML
   let lastBoardFetch = 0;
 
   async function fetchMelBoard(force){
@@ -992,18 +993,17 @@
     const btn = document.getElementById('boardRefreshBtn');
     const status = document.getElementById('boardStatus');
     btn.disabled = true;
-    status.textContent = 'Checking latest snapshot…';
+    status.textContent = 'Checking airplanes.live…';
     try{
-      const res = await fetch(OVERHEAD_STATUS_URL, { cache: 'no-store' });
+      const url = `https://api.airplanes.live/v2/point/${MEL_POINT.lat}/${MEL_POINT.lon}/${MEL_POINT.radiusNm}`;
+      const res = await fetch(url);
       if(!res.ok) throw new Error('HTTP '+res.status);
       const data = await res.json();
-      if(data.melBoard && data.melBoard.error) throw new Error(data.melBoard.error);
-      const states = (data.melBoard && data.melBoard.states) || [];
-      renderMelBoard(states);
-      const mins = data.updatedAt ? Math.round((Date.now() - new Date(data.updatedAt).getTime())/60000) : null;
-      status.textContent = `Updated ${mins==null ? '' : (mins<1 ? 'just now' : mins+' min ago')} · via OpenSky Network`;
+      const aircraft = data.ac || data.aircraft || [];
+      renderMelBoard(aircraft);
+      status.textContent = `Updated ${new Date().toLocaleTimeString('en-AU')} · via airplanes.live`;
     }catch(e){
-      status.innerHTML = `Couldn't reach the latest snapshot right now. Try again shortly.`;
+      status.innerHTML = `Couldn't reach airplanes.live right now. Try again shortly.`;
       document.querySelector('#arrivalsTable tbody').innerHTML = '';
       document.querySelector('#departuresTable tbody').innerHTML = '';
     }finally{
@@ -1011,18 +1011,17 @@
     }
   }
 
-  function renderMelBoard(states){
+  function renderMelBoard(aircraft){
     const arrivals = [];
     const departures = [];
-    states.forEach(s=>{
-      const onGround = s[8];
-      const baroAlt = s[7];
-      const vRate = s[11];
-      if(onGround || baroAlt==null) return;
-      if(baroAlt > 3000) return; // only near-field traffic, not overflights
-      const row = { callsign: s[1] ? s[1].trim() : s[0].toUpperCase(), alt: mToFt(baroAlt), speed: msToKnots(s[9]) };
-      if(vRate!=null && vRate < -1) arrivals.push(row);
-      else if(vRate!=null && vRate > 1) departures.push(row);
+    aircraft.forEach(a=>{
+      if(a.alt_baro === 'ground' || a.alt_baro==null) return;
+      const alt = numAlt(a);
+      if(alt==null || alt > 3000) return; // only near-field traffic, not overflights
+      const vRate = a.baro_rate; // already ft/min, no conversion needed
+      const row = { callsign: a.flight ? a.flight.trim() : (a.hex||'').toUpperCase(), alt, speed: numGs(a) };
+      if(vRate!=null && vRate < -200) arrivals.push(row);
+      else if(vRate!=null && vRate > 200) departures.push(row);
     });
     arrivals.sort((a,b)=>a.alt-b.alt);
     departures.sort((a,b)=>a.alt-b.alt);
