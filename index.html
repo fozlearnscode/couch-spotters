@@ -565,12 +565,15 @@
   <section class="view" id="view-overhead">
     <div class="overhead-head">
       <h2>What's flying near you right now</h2>
-      <button class="refresh-btn" id="refreshBtn">Refresh</button>
+      <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+        <button class="chip active" id="commercialToggle">Commercial only</button>
+        <button class="refresh-btn" id="refreshBtn">Refresh</button>
+      </div>
     </div>
     <div class="oh-status" id="ohStatus">Not checked yet.</div>
     <div class="overhead-map" id="overheadMap"></div>
     <div class="flight-list" id="flightList"></div>
-    <p class="live-note" style="margin-top:16px;">Live positions via <a href="https://airplanes.live" target="_blank" rel="noopener" style="color:var(--teal)">airplanes.live</a>. Airline, route, and aircraft type come from <a href="https://www.adsbdb.com" target="_blank" rel="noopener" style="color:var(--teal)">adsbdb.com</a>'s free lookups and may occasionally be unavailable for a given flight. Teal-highlighted rows are aircraft known to carry a special livery.</p>
+    <p class="live-note" style="margin-top:16px;">Live positions via <a href="https://airplanes.live" target="_blank" rel="noopener" style="color:var(--teal)">airplanes.live</a>. Airline, route, and aircraft type come from <a href="https://www.adsbdb.com" target="_blank" rel="noopener" style="color:var(--teal)">adsbdb.com</a>'s free lookups and may occasionally be unavailable for a given flight. Teal-highlighted rows are aircraft known to carry a special livery. "Commercial only" filters out small private aircraft using callsign pattern and ADS-B category — toggle it off any time to see everything in range.</p>
   </section>
 
   <!-- MEL BOARD -->
@@ -1001,9 +1004,41 @@
   function showOverheadTab(){
     initOverheadMap();
     setTimeout(()=>{
-      if(overheadMap){ overheadMap.invalidateSize(); updateOverheadMap(lastAircraftData); }
+      if(overheadMap){ overheadMap.invalidateSize(); updateOverheadMap(getDisplayAircraft(lastAircraftData)); }
     }, 60);
   }
+
+  // Commercial-only filter: combines callsign shape (airline code + flight
+  // number, vs a private aircraft showing its own registration) with the
+  // ADS-B emitter category the transponder itself reports (Large/High
+  // Vortex Large/Heavy vs Light/Small). Neither signal alone is perfect —
+  // some aircraft don't broadcast category at all — so a plane passes if
+  // either one looks commercial.
+  function looksCommercial(a){
+    const callsign = (a.flight||'').trim();
+    const hasAirlineCallsign = /^[A-Z]{3}\d{1,4}[A-Z]?$/.test(callsign);
+    const commercialCategory = ['A3','A4','A5'].includes(a.category);
+    return hasAirlineCallsign || commercialCategory;
+  }
+  let commercialOnly = true;
+
+  function getDisplayAircraft(aircraft){
+    let inAir = aircraft.filter(a => a.alt_baro !== 'ground' && a.lat!=null);
+    if(commercialOnly) inAir = inAir.filter(looksCommercial);
+    return inAir.sort((a,b)=>(numAlt(a)??999999)-(numAlt(b)??999999));
+  }
+
+  document.getElementById('commercialToggle').addEventListener('click', ()=>{
+    commercialOnly = !commercialOnly;
+    const btn = document.getElementById('commercialToggle');
+    btn.classList.toggle('active', commercialOnly);
+    btn.textContent = commercialOnly ? 'Commercial only' : 'All traffic';
+    // Re-filter instantly from the last fetched data — no need to hit
+    // airplanes.live again just to change what's shown.
+    const displayAircraft = getDisplayAircraft(lastAircraftData);
+    renderFlights(displayAircraft);
+    updateOverheadMap(displayAircraft);
+  });
 
   async function fetchOverhead(force){
     const now = Date.now();
@@ -1020,12 +1055,13 @@
       const data = await res.json();
       const aircraft = data.ac || data.aircraft || [];
       lastAircraftData = aircraft;
-      renderFlights(aircraft);
-      updateOverheadMap(aircraft);
-      status.textContent = `Updated ${new Date().toLocaleTimeString('en-AU')} · ${aircraft.length} aircraft in range · via airplanes.live`;
-      const withAlt = aircraft.filter(a=>numAlt(a)!=null).sort((a,b)=>numAlt(a)-numAlt(b));
-      if(withAlt.length){
-        const nearest = withAlt[0];
+      const displayAircraft = getDisplayAircraft(aircraft);
+      renderFlights(displayAircraft);
+      updateOverheadMap(displayAircraft);
+      const filterNote = commercialOnly ? ` (${displayAircraft.length} of ${aircraft.length} shown, commercial only)` : '';
+      status.textContent = `Updated ${new Date().toLocaleTimeString('en-AU')} · ${displayAircraft.length} aircraft in range${filterNote} · via airplanes.live`;
+      if(displayAircraft.length){
+        const nearest = displayAircraft[0];
         setTicker(`${nearest.flight ? nearest.flight.trim() : (nearest.hex||'').toUpperCase()} · ${numAlt(nearest)||'—'} FT`);
       }
     }catch(e){
@@ -1036,8 +1072,7 @@
     }
   }
 
-  function renderFlights(aircraft){
-    const inAir = aircraft.filter(a => a.alt_baro !== 'ground' && a.lat!=null).sort((a,b)=>(numAlt(a)??999999)-(numAlt(b)??999999));
+  function renderFlights(inAir){
     updateNearestSnapshot(inAir);
     fillOverheadList(inAir.slice(0,25));
   }
