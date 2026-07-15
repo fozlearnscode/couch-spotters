@@ -1,43 +1,16 @@
 {
-  "updatedAt": "2026-07-15T16:53:39.129Z",
+  "updatedAt": "2026-07-15T20:39:42.153Z",
   "airportRotationStart": 2,
   "quotaExceeded": false,
   "lastSearchError": null,
   "liveResults": [
-    {
-      "videoId": "rqENc_i6DTM",
-      "title": "LIVE: London Heathrow Airport",
-      "channel": "BIG JET TV",
-      "thumb": "https://i.ytimg.com/vi/rqENc_i6DTM/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 2196,
-      "stillLive": true
-    },
-    {
-      "videoId": "z1P_xh7Zo4A",
-      "title": "Heathrow Airport Live - Wednesday 15th July 2026",
-      "channel": "Flight Focus 365",
-      "thumb": "https://i.ytimg.com/vi/z1P_xh7Zo4A/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 741,
-      "stillLive": true
-    },
     {
       "videoId": "APb9rS80BPc",
       "title": "🔴LIVE LOS ANGELES LAX AIRPORT! | July 15, 2026 | LAX PLANE SPOTTING | LAX AIRPORT",
       "channel": "L.A FLIGHTS",
       "thumb": "https://i.ytimg.com/vi/APb9rS80BPc/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 735,
-      "stillLive": true
-    },
-    {
-      "videoId": "7yTcLIcAVxA",
-      "title": "LIVE Action at Madeira Island Airport 15.07.2026",
-      "channel": "Madeira Airport Spotting",
-      "thumb": "https://i.ytimg.com/vi/7yTcLIcAVxA/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 508,
+      "viewers": 1021,
       "stillLive": true
     },
     {
@@ -46,25 +19,16 @@
       "channel": "AirlineVideosLive+",
       "thumb": "https://i.ytimg.com/vi/n4I0d44oBEs/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 380,
+      "viewers": 391,
       "stillLive": true
     },
     {
-      "videoId": "KzsNnyN8D_Q",
-      "title": "🔴LIVE 24/7 LAX Airport Action Runways 25L &amp; 25R | LIVE Plane Spotting with ATC!",
-      "channel": "AirlineVideosLive+",
-      "thumb": "https://i.ytimg.com/vi/KzsNnyN8D_Q/mqdefault_live.jpg",
+      "videoId": "z1P_xh7Zo4A",
+      "title": "Heathrow Airport Live - Wednesday 15th July 2026",
+      "channel": "Flight Focus 365",
+      "thumb": "https://i.ytimg.com/vi/z1P_xh7Zo4A/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 278,
-      "stillLive": true
-    },
-    {
-      "videoId": "piM3UGif-II",
-      "title": "✈️ LIVE July 15 | Maho Beach Plane Spotting | SXM Airport St. Maarten (with ATC)",
-      "channel": "SHOWME Caribbean",
-      "thumb": "https://i.ytimg.com/vi/piM3UGif-II/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 265,
+      "viewers": 243,
       "stillLive": true
     },
     {
@@ -73,7 +37,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/V7_orOtu-oo/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 262,
+      "viewers": 226,
       "stillLive": true
     },
     {
@@ -82,7 +46,25 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/OUBslrCqREs/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 244,
+      "viewers": 169,
+      "stillLive": true
+    },
+    {
+      "videoId": "KzsNnyN8D_Q",
+      "title": "🔴LIVE 24/7 LAX Airport Action Runways 25L &amp; 25R | LIVE Plane Spotting with ATC!",
+      "channel": "AirlineVideosLive+",
+      "thumb": "https://i.ytimg.com/vi/KzsNnyN8D_Q/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 126,
+      "stillLive": true
+    },
+    {
+      "videoId": "piM3UGif-II",
+      "title": "✈️ LIVE July 15 | Maho Beach Plane Spotting | SXM Airport St. Maarten (with ATC)",
+      "channel": "SHOWME Caribbean",
+      "thumb": "https://i.ytimg.com/vi/piM3UGif-II/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 119,
       "stillLive": true
     },
     {
@@ -91,16 +73,7 @@
       "channel": "SHOWME Caribbean",
       "thumb": "https://i.ytimg.com/vi/iSeH45R-8R0/mqdefault_live.jpg",
       "matchedQuery": "JFK airport plane spotting live",
-      "viewers": 179,
-      "stillLive": true
-    },
-    {
-      "videoId": "2IQmpCXbOmM",
-      "title": "Iconic SXM Airport LIVE 24/7 – Sint Maarten Maho Beach",
-      "channel": "Flightradar24",
-      "thumb": "https://i.ytimg.com/vi/2IQmpCXbOmM/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 112,
+      "viewers": 109,
       "stillLive": true
     },
     {
@@ -109,25 +82,7 @@
       "channel": "RNO Flights",
       "thumb": "https://i.ytimg.com/vi/VaDbfFG7RhI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 91,
-      "stillLive": true
-    },
-    {
-      "videoId": "h21kQOSsA0U",
-      "title": "🔴 LIVE 24/7 Lisbon Airport 15.07.2026 • Livestream Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
-      "channel": "AVIAÇÃO TV",
-      "thumb": "https://i.ytimg.com/vi/h21kQOSsA0U/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 79,
-      "stillLive": true
-    },
-    {
-      "videoId": "AAlo3eCPVbk",
-      "title": "LIVE 🔴 WEBCAM from LANZAROTE AIRPORT - (Canary Islands, Spain)",
-      "channel": "LanzaroteWebcam",
-      "thumb": "https://i.ytimg.com/vi/AAlo3eCPVbk/mqdefault_live.jpg",
-      "matchedQuery": "JFK airport plane spotting live",
-      "viewers": 79,
+      "viewers": 88,
       "stillLive": true
     },
     {
@@ -136,7 +91,7 @@
       "channel": "StreamTime Live",
       "thumb": "https://i.ytimg.com/vi/67BCsiW-1Io/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 74,
+      "viewers": 81,
       "stillLive": true
     },
     {
@@ -145,7 +100,34 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/MH0_mPt-VXE/mqdefault_live.jpg",
       "matchedQuery": "Heathrow airport plane spotting live",
-      "viewers": 51,
+      "viewers": 75,
+      "stillLive": true
+    },
+    {
+      "videoId": "2IQmpCXbOmM",
+      "title": "Iconic SXM Airport LIVE 24/7 – Sint Maarten Maho Beach",
+      "channel": "Flightradar24",
+      "thumb": "https://i.ytimg.com/vi/2IQmpCXbOmM/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 73,
+      "stillLive": true
+    },
+    {
+      "videoId": "AAlo3eCPVbk",
+      "title": "LIVE 🔴 WEBCAM from LANZAROTE AIRPORT - (Canary Islands, Spain)",
+      "channel": "LanzaroteWebcam",
+      "thumb": "https://i.ytimg.com/vi/AAlo3eCPVbk/mqdefault_live.jpg",
+      "matchedQuery": "JFK airport plane spotting live",
+      "viewers": 57,
+      "stillLive": true
+    },
+    {
+      "videoId": "h21kQOSsA0U",
+      "title": "🔴 LIVE 24/7 Lisbon Airport 15.07.2026 • Livestream Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
+      "channel": "AVIAÇÃO TV",
+      "thumb": "https://i.ytimg.com/vi/h21kQOSsA0U/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 48,
       "stillLive": true
     },
     {
@@ -154,7 +136,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/NtbquzembC8/mqdefault_live.jpg",
       "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": 38,
+      "viewers": 29,
       "stillLive": true
     },
     {
@@ -163,7 +145,7 @@
       "channel": "PTZtv",
       "thumb": "https://i.ytimg.com/vi/_GUsXnlVJmo/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 37,
+      "viewers": 26,
       "stillLive": true
     },
     {
@@ -172,16 +154,7 @@
       "channel": "Greenland Airports",
       "thumb": "https://i.ytimg.com/vi/MApnQlsX5AQ/mqdefault_live.jpg",
       "matchedQuery": "JFK airport plane spotting live",
-      "viewers": 26,
-      "stillLive": true
-    },
-    {
-      "videoId": "1AW6TObhdL0",
-      "title": "🔴Live SFO Plane Spotting | Real-Time Aircraft Tracking and ATC Audio at San Francisco Airport (KSFO)",
-      "channel": "Luftra Aviation",
-      "thumb": "https://i.ytimg.com/vi/1AW6TObhdL0/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 25,
+      "viewers": 24,
       "stillLive": true
     },
     {
@@ -190,7 +163,7 @@
       "channel": "Nippon Television News Japan",
       "thumb": "https://i.ytimg.com/vi/3w4zEyFamuA/mqdefault_live.jpg",
       "matchedQuery": "JFK airport plane spotting live",
-      "viewers": 24,
+      "viewers": 18,
       "stillLive": true
     },
     {
@@ -203,12 +176,30 @@
       "stillLive": true
     },
     {
+      "videoId": "0iDQDwx21Oo",
+      "title": "LIVE Planespotting Madeira Airport by Cassiano&#39;s Snack Bar | Madeira-Web",
+      "channel": "Madeira-Web",
+      "thumb": "https://i.ytimg.com/vi/0iDQDwx21Oo/mqdefault_live.jpg",
+      "matchedQuery": "Heathrow airport plane spotting live",
+      "viewers": 12,
+      "stillLive": true
+    },
+    {
+      "videoId": "K6qxmXyjWxg",
+      "title": "Watertown International Airport",
+      "channel": "Watertown Airport",
+      "thumb": "https://i.ytimg.com/vi/K6qxmXyjWxg/mqdefault_live.jpg",
+      "matchedQuery": "JFK airport plane spotting live",
+      "viewers": 10,
+      "stillLive": true
+    },
+    {
       "videoId": "kLLb-fPOPuk",
       "title": "🔴 Live ATC Feed JFK | Every Takeoff, Landing &amp; Emergency Call",
       "channel": "TurtleAir",
       "thumb": "https://i.ytimg.com/vi/kLLb-fPOPuk/mqdefault_live.jpg",
       "matchedQuery": "JFK airport plane spotting live",
-      "viewers": 12,
+      "viewers": 9,
       "stillLive": true
     },
     {
@@ -217,25 +208,7 @@
       "channel": "Airplane Live",
       "thumb": "https://i.ytimg.com/vi/1CRXoZI-Wdo/mqdefault_live.jpg",
       "matchedQuery": "Heathrow airport plane spotting live",
-      "viewers": 12,
-      "stillLive": true
-    },
-    {
-      "videoId": "PMetnXeBFSk",
-      "title": "✈️ RE-Live Planespotting at Frankfurt Airport – B747 Paradise Takeoffs &amp; Landings - FRA - EDDF 2026",
-      "channel": "Airplane Live",
-      "thumb": "https://i.ytimg.com/vi/PMetnXeBFSk/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 7,
-      "stillLive": true
-    },
-    {
-      "videoId": "0iDQDwx21Oo",
-      "title": "LIVE Planespotting Madeira Airport by Cassiano&#39;s Snack Bar | Madeira-Web",
-      "channel": "Madeira-Web",
-      "thumb": "https://i.ytimg.com/vi/0iDQDwx21Oo/mqdefault_live.jpg",
-      "matchedQuery": "Heathrow airport plane spotting live",
-      "viewers": 7,
+      "viewers": 5,
       "stillLive": true
     },
     {
@@ -248,21 +221,21 @@
       "stillLive": true
     },
     {
+      "videoId": "PMetnXeBFSk",
+      "title": "✈️ RE-Live Planespotting at Frankfurt Airport – B747 Paradise Takeoffs &amp; Landings - FRA - EDDF 2026",
+      "channel": "Airplane Live",
+      "thumb": "https://i.ytimg.com/vi/PMetnXeBFSk/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
+      "viewers": 3,
+      "stillLive": true
+    },
+    {
       "videoId": "11INCtK6uiA",
       "title": "✈️ RE-Live New York Planespotting with Highlights  (JFK) Airport!  #planespotting #twahotel",
       "channel": "Airplane Live",
       "thumb": "https://i.ytimg.com/vi/11INCtK6uiA/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 5,
-      "stillLive": true
-    },
-    {
-      "videoId": "-08omq5TIOY",
-      "title": "👉 🔴 LIVE Heathrow Plane Spotting ✈️ Landings &amp; Takeoffs (LHR) | 15 JUL 2026",
-      "channel": "Little & Great Adventures",
-      "thumb": "https://i.ytimg.com/vi/-08omq5TIOY/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 4,
+      "viewers": 3,
       "stillLive": true
     },
     {
@@ -271,16 +244,7 @@
       "channel": "Information Zulu",
       "thumb": "https://i.ytimg.com/vi/SwmEvMRgSdw/mqdefault_live.jpg",
       "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": 4,
-      "stillLive": true
-    },
-    {
-      "videoId": "K6qxmXyjWxg",
-      "title": "Watertown International Airport",
-      "channel": "Watertown Airport",
-      "thumb": "https://i.ytimg.com/vi/K6qxmXyjWxg/mqdefault_live.jpg",
-      "matchedQuery": "JFK airport plane spotting live",
-      "viewers": 3,
+      "viewers": 2,
       "stillLive": true
     }
   ]
