@@ -1061,15 +1061,38 @@
     return { sunrise: calc(true), sunset: calc(false) };
   }
 
+  function melbourneOffsetHours(date){
+    // Dynamically detects the current UTC offset for Melbourne (+10 AEST /
+    // +11 AEDT) so this keeps working correctly across daylight saving
+    // changes without needing a hardcoded offset.
+    const utcDate = new Date(date.toLocaleString('en-US', { timeZone:'UTC' }));
+    const melDate = new Date(date.toLocaleString('en-US', { timeZone:'Australia/Melbourne' }));
+    return (melDate - utcDate) / 3600000;
+  }
+
+  function melbourneLocalHour(date){
+    const fmt = new Intl.DateTimeFormat('en-GB', { timeZone:'Australia/Melbourne', hour:'2-digit', minute:'2-digit', hour12:false });
+    const [h,m] = fmt.format(date).split(':').map(Number);
+    return h + m/60;
+  }
+
   function getSkyPhase(){
     const now = new Date();
     const { sunrise, sunset } = sunTimesUTC(now, HOME_LAT, HOME_LON);
-    const nowUTC = now.getUTCHours() + now.getUTCMinutes()/60;
     if(sunrise==null || sunset==null) return 'day'; // polar edge case, won't happen at this latitude
+    // Sunrise and sunset can land on different UTC calendar days relative to
+    // each other once you're 10+ hours ahead of UTC — comparing raw UTC hour
+    // numbers breaks in that case, so everything is normalized into
+    // Melbourne local time-of-day (0-24) before comparing.
+    const offset = melbourneOffsetHours(now);
+    const norm = h => ((h + offset) % 24 + 24) % 24;
+    const sunriseLocal = norm(sunrise);
+    const sunsetLocal = norm(sunset);
+    const nowLocal = melbourneLocalHour(now);
     const twilight = 0.75; // ~45 min either side of sunrise/sunset
-    if(nowUTC < sunrise-twilight || nowUTC > sunset+twilight) return 'night';
-    if(nowUTC < sunrise+twilight) return 'dawn';
-    if(nowUTC > sunset-twilight) return 'dusk';
+    if(nowLocal < sunriseLocal-twilight || nowLocal > sunsetLocal+twilight) return 'night';
+    if(nowLocal < sunriseLocal+twilight) return 'dawn';
+    if(nowLocal > sunsetLocal-twilight) return 'dusk';
     return 'day';
   }
 
