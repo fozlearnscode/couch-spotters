@@ -248,6 +248,16 @@
     padding:9px 16px; border-radius:6px; cursor:pointer; font-size:13.5px;
   }
   .refresh-btn:disabled{ background:var(--line); color:var(--text-muted); cursor:default; }
+
+  .history-picker{
+    display:flex; align-items:flex-end; gap:14px; flex-wrap:wrap; margin-bottom:14px;
+  }
+  .history-picker .field{ display:flex; flex-direction:column; gap:5px; }
+  .history-picker label{ font-size:11px; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-muted); font-family:'JetBrains Mono',monospace; }
+  .history-picker input, .history-picker select{
+    background:var(--surface-raised); border:1px solid var(--line); border-radius:5px;
+    padding:8px 9px; color:var(--text); font-family:'Inter',sans-serif; font-size:13.5px;
+  }
   .oh-status{ font-size:12.5px; color:var(--text-muted); margin-bottom:14px; font-family:'JetBrains Mono',monospace; }
 
   .flight-list{ display:flex; flex-direction:column; gap:8px; }
@@ -396,6 +406,14 @@
   }
   .bf-stats .stat-alt{ color:var(--text); font-weight:700; font-size:13px; }
   .bf-model{ font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--text-muted); opacity:0.85; }
+  .board-row.with-photo{ grid-template-columns:auto 1fr auto; }
+  .bf-photo{
+    width:56px; height:56px; border-radius:6px; overflow:hidden; flex-shrink:0;
+    background:var(--surface-raised); border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .bf-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .bf-photo .bf-photo-placeholder{ color:var(--text-muted); font-size:22px; opacity:0.5; }
   .board-row.special{ border-color:var(--teal); background:rgba(79,182,168,0.08); }
   .board-row.special .bf-flap{ color:var(--teal); border-color:rgba(79,182,168,0.4); }
   .special-badge{
@@ -449,6 +467,14 @@
   .log-entry .le-main .le-title{ font-weight:700; font-size:14.5px; }
   .log-entry .le-main .le-sub{ color:var(--text-muted); font-size:12.5px; margin-top:2px; }
   .log-entry .le-main .le-notes{ margin-top:6px; font-size:13px; line-height:1.4; }
+  .log-entry .le-main{ flex:1; min-width:0; }
+  .le-photo{
+    width:64px; height:64px; border-radius:8px; overflow:hidden; flex-shrink:0;
+    background:var(--surface-raised); border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .le-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .le-photo .bf-photo-placeholder{ color:var(--text-muted); font-size:24px; opacity:0.5; }
   .log-entry .le-side{ text-align:right; display:flex; flex-direction:column; align-items:flex-end; gap:6px; }
   .le-stars{ color:var(--gold); font-size:14px; }
   .le-del{ background:transparent; border:1px solid var(--line); color:var(--text-muted); border-radius:5px; padding:3px 9px; font-size:11px; cursor:pointer; }
@@ -511,6 +537,7 @@
     <button class="tab-btn" data-view="live">Live Now</button>
     <button class="tab-btn" data-view="overhead">Overhead</button>
     <button class="tab-btn" data-view="board">MEL Board</button>
+    <button class="tab-btn" data-view="history">History</button>
     <button class="tab-btn" data-view="logbook">Logbook</button>
   </nav>
 
@@ -573,7 +600,7 @@
     <div class="oh-status" id="ohStatus">Not checked yet.</div>
     <div class="overhead-map" id="overheadMap"></div>
     <div class="flight-list" id="flightList"></div>
-    <p class="live-note" style="margin-top:16px;">Live positions via <a href="https://airplanes.live" target="_blank" rel="noopener" style="color:var(--teal)">airplanes.live</a>. Airline, route, and aircraft type come from <a href="https://www.adsbdb.com" target="_blank" rel="noopener" style="color:var(--teal)">adsbdb.com</a>'s free lookups and may occasionally be unavailable for a given flight. Teal-highlighted rows are aircraft known to carry a special livery. "Commercial only" filters out small private aircraft using callsign pattern and ADS-B category — toggle it off any time to see everything in range.</p>
+    <p class="live-note" style="margin-top:16px;">Live positions via <a href="https://airplanes.live" target="_blank" rel="noopener" style="color:var(--teal)">airplanes.live</a>. Airline, route, aircraft type, and photos come from <a href="https://www.adsbdb.com" target="_blank" rel="noopener" style="color:var(--teal)">adsbdb.com</a>'s free lookups (photos sourced from airport-data.com) and may occasionally be unavailable for a given flight. Teal-highlighted rows are aircraft known to carry a special livery. "Commercial only" filters out small private aircraft using callsign pattern and ADS-B category — toggle it off any time to see everything in range.</p>
   </section>
 
   <!-- MEL BOARD -->
@@ -598,11 +625,27 @@
     <p class="live-note" style="margin-top:16px;">Built from live ADS-B positions near MEL (via <a href="https://airplanes.live" target="_blank" rel="noopener" style="color:var(--teal)">airplanes.live</a>), not the official airline schedule — so it shows what's actually in the air around the airport right now, sorted by altitude. Airline and route come from <a href="https://www.adsbdb.com" target="_blank" rel="noopener" style="color:var(--teal)">adsbdb.com</a>'s free flight-route lookup and may occasionally be unavailable for a given flight.</p>
   </section>
 
+  <!-- HISTORY -->
+  <section class="view" id="view-history">
+    <div class="overhead-head">
+      <h2>What flew over, back then</h2>
+    </div>
+    <div class="history-picker">
+      <div class="field"><label for="histDate">Date</label><input type="date" id="histDate"></div>
+      <div class="field"><label for="histTime">Time (Melbourne)</label><select id="histTime"></select></div>
+      <button class="refresh-btn" id="histShowBtn">Show</button>
+    </div>
+    <div class="oh-status" id="histStatus">Pick a date and time, then hit Show.</div>
+    <div class="flight-list" id="historyFlightList"></div>
+    <p class="live-note" style="margin-top:16px;">Snapshots are captured automatically every 15 minutes and kept for 14 days — anything older or before capture started isn't available. Airline, route, aircraft type, and photos are looked up live when you view a snapshot, same as the Overhead tab.</p>
+  </section>
+
   <!-- LOGBOOK -->
   <section class="view" id="view-logbook">
     <div class="log-form">
       <div class="field"><label for="lgDate">Date</label><input type="date" id="lgDate"></div>
       <div class="field"><label for="lgAircraft">Aircraft / callsign</label><input type="text" id="lgAircraft" placeholder="e.g. Qantas A380"></div>
+      <div class="field"><label for="lgRego">Registration (optional)</label><input type="text" id="lgRego" placeholder="e.g. VH-OQA — adds a photo"></div>
       <div class="field"><label for="lgLocation">Location</label><input type="text" id="lgLocation" placeholder="e.g. Tullamarine, home couch"></div>
       <div class="field"><label for="lgSpotter">Spotted by</label><input type="text" id="lgSpotter" placeholder="Your name"></div>
       <div class="field full"><label for="lgNotes">Notes</label><textarea id="lgNotes" placeholder="What made it worth logging?"></textarea></div>
@@ -1082,7 +1125,8 @@
     const callsign = a.flight ? a.flight.trim() : (a.hex||'').toUpperCase();
     const flightCode = (callsign || '———').padEnd(7).slice(0,7);
     return `
-      <div class="board-row" data-flight="${callsign}" data-hex="${(a.hex||'').toLowerCase()}">
+      <div class="board-row with-photo" data-flight="${callsign}" data-hex="${(a.hex||'').toLowerCase()}">
+        <div class="bf-photo"><span class="bf-photo-placeholder">✈</span></div>
         <div class="bf-info">
           <div class="bf-flight-row">${flapChars(flightCode, 'bf-flap')}${isHeavy(a.category) ? '<span class="heavy-badge">HEAVY</span>' : ''}</div>
           <div class="bf-airline">Looking up flight…</div>
@@ -1097,8 +1141,8 @@
       </div>`;
   }
 
-  function fillOverheadList(rows){
-    const list = document.getElementById('flightList');
+  function fillOverheadList(rows, listId){
+    const list = document.getElementById(listId || 'flightList');
     list.innerHTML = '';
     if(rows.length===0){
       list.innerHTML = `<div class="empty-oh">Nothing currently visible on ADS-B over Victoria. Check back in a few minutes, or try a <a href="https://www.flightradar24.com/-37.81,144.96/9" target="_blank" rel="noopener">live map</a>.</div>`;
@@ -1132,6 +1176,10 @@
 
       if(acInfo){
         modelEl.textContent = acInfo.type || acInfo.manufacturer || 'Aircraft type unknown';
+        if(acInfo.url_photo_thumbnail){
+          const photoEl = rowEl.querySelector('.bf-photo');
+          photoEl.innerHTML = `<img src="${acInfo.url_photo_thumbnail}" alt="${acInfo.registration||callsign}" loading="lazy">`;
+        }
         if(isSpecialLivery(acInfo.registration)){
           rowEl.classList.add('special');
           airlineEl.insertAdjacentHTML('beforeend', '<span class="special-badge">SPECIAL LIVERY</span>');
@@ -1344,8 +1392,9 @@
       const el = document.createElement('div');
       el.className = 'log-entry';
       el.innerHTML = `
+        <div class="le-photo">${entry.rego ? '' : '<span class="bf-photo-placeholder">✈</span>'}</div>
         <div class="le-main">
-          <div class="le-title">${entry.aircraft || 'Unlisted aircraft'}</div>
+          <div class="le-title">${entry.aircraft || 'Unlisted aircraft'}${entry.rego ? ' · '+entry.rego.toUpperCase() : ''}</div>
           <div class="le-sub">${entry.date} · ${entry.location || 'location not noted'}${entry.spotter ? ' · spotted by '+entry.spotter : ''}</div>
           ${entry.notes ? `<div class="le-notes">${entry.notes}</div>` : ''}
         </div>
@@ -1359,6 +1408,16 @@
         saveLog(); renderLog();
       });
       box.appendChild(el);
+
+      if(entry.rego){
+        const photoEl = el.querySelector('.le-photo');
+        photoEl.innerHTML = '<span class="bf-photo-placeholder">✈</span>';
+        getAircraftInfo(entry.rego).then(info=>{
+          if(info && info.url_photo_thumbnail){
+            photoEl.innerHTML = `<img src="${info.url_photo_thumbnail}" alt="${entry.rego}" loading="lazy">`;
+          }
+        });
+      }
     });
   }
   document.querySelectorAll('#starPicker span').forEach(s=>{
@@ -1372,22 +1431,97 @@
   document.getElementById('addEntryBtn').addEventListener('click', ()=>{
     const date = document.getElementById('lgDate').value || new Date().toISOString().slice(0,10);
     const aircraft = document.getElementById('lgAircraft').value.trim();
+    const rego = document.getElementById('lgRego').value.trim();
     const location = document.getElementById('lgLocation').value.trim();
     const spotter = document.getElementById('lgSpotter').value.trim();
     const notes = document.getElementById('lgNotes').value.trim();
     if(!aircraft){ document.getElementById('lgAircraft').focus(); return; }
     logEntries.push({
       id: 'e'+Math.random().toString(36).slice(2,10),
-      date, aircraft, location, spotter, notes, rating: selectedStars
+      date, aircraft, rego, location, spotter, notes, rating: selectedStars
     });
     saveLog(); renderLog();
     document.getElementById('lgAircraft').value='';
+    document.getElementById('lgRego').value='';
     document.getElementById('lgLocation').value='';
     document.getElementById('lgSpotter').value='';
     document.getElementById('lgNotes').value='';
     selectedStars = 0;
     document.querySelectorAll('#starPicker span').forEach(x=>x.classList.remove('on'));
   });
+
+  // ---------- History ----------
+  function initHistoryPicker(){
+    const timeSelect = document.getElementById('histTime');
+    if(timeSelect.options.length===0){
+      for(let h=0; h<24; h++){
+        for(let m=0; m<60; m+=15){
+          const val = String(h).padStart(2,'0')+':'+String(m).padStart(2,'0');
+          const opt = document.createElement('option');
+          opt.value = val; opt.textContent = val;
+          timeSelect.appendChild(opt);
+        }
+      }
+    }
+    const dateInput = document.getElementById('histDate');
+    if(!dateInput.value){
+      const nowMel = new Date(new Date().toLocaleString('en-US', { timeZone:'Australia/Melbourne' }));
+      const yesterday = new Date(nowMel); yesterday.setDate(yesterday.getDate()-1);
+      const minDate = new Date(nowMel); minDate.setDate(minDate.getDate()-14);
+      const toISODate = d => d.toISOString().slice(0,10);
+      dateInput.value = toISODate(yesterday);
+      dateInput.min = toISODate(minDate);
+      dateInput.max = toISODate(nowMel);
+      const roundedMin = Math.floor(nowMel.getMinutes()/15)*15;
+      timeSelect.value = String(nowMel.getHours()).padStart(2,'0')+':'+String(roundedMin).padStart(2,'0');
+    }
+  }
+
+  function timeToMinutes(t){ const [h,m] = t.split(':').map(Number); return h*60+m; }
+
+  async function loadHistorySnapshot(){
+    const date = document.getElementById('histDate').value;
+    const time = document.getElementById('histTime').value;
+    const status = document.getElementById('histStatus');
+    const list = document.getElementById('historyFlightList');
+    if(!date){ status.textContent = 'Pick a date first.'; return; }
+    status.textContent = 'Loading snapshot…';
+    list.innerHTML = '';
+    try{
+      const res = await fetch(`https://fozlearnscode.github.io/couch-spotters/history/${date}.json`, { cache:'no-store' });
+      if(!res.ok){
+        status.textContent = res.status===404
+          ? `No history recorded for ${date} — either capture hadn't started yet, or this date has aged out of the 14-day window.`
+          : `Couldn't load that snapshot (HTTP ${res.status}).`;
+        return;
+      }
+      const dayData = await res.json();
+      if(!dayData || dayData.length===0){
+        status.textContent = `No snapshots recorded for ${date}.`;
+        return;
+      }
+      let entry = dayData.find(e=>e.time===time);
+      if(!entry){
+        let best = null, bestDiff = Infinity;
+        dayData.forEach(e=>{
+          const diff = Math.abs(timeToMinutes(e.time) - timeToMinutes(time));
+          if(diff < bestDiff){ bestDiff = diff; best = e; }
+        });
+        entry = best;
+      }
+      if(!entry || entry.aircraft.length===0){
+        status.textContent = `Nothing was overhead around ${entry ? entry.time : time} on ${date}.`;
+        return;
+      }
+      const note = entry.time===time ? '' : ` (closest capture available: ${entry.time})`;
+      status.textContent = `${entry.aircraft.length} aircraft overhead at ${entry.time} on ${date}${note} · Melbourne time`;
+      const sorted = [...entry.aircraft].sort((a,b)=>(numAlt(a)??999999)-(numAlt(b)??999999));
+      fillOverheadList(sorted.slice(0,25), 'historyFlightList');
+    }catch(e){
+      status.textContent = `Couldn't load that snapshot — check your connection and try again.`;
+    }
+  }
+  document.getElementById('histShowBtn').addEventListener('click', loadHistorySnapshot);
 
   // ---------- Tabs ----------
   document.querySelectorAll('.tab-btn').forEach(btn=>{
@@ -1398,11 +1532,13 @@
       document.getElementById('view-'+btn.dataset.view).classList.add('active');
       if(btn.dataset.view==='overhead'){ showOverheadTab(); if(lastFetch===0) fetchOverhead(true); }
       if(btn.dataset.view==='board' && lastBoardFetch===0) fetchMelBoard(true);
+      if(btn.dataset.view==='history' && document.getElementById('historyFlightList').innerHTML===''){ loadHistorySnapshot(); }
     });
   });
 
   // ---------- Init ----------
   document.getElementById('lgDate').value = new Date().toISOString().slice(0,10);
+  initHistoryPicker();
   renderChips();
   renderVideos();
   loadLog();
