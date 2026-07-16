@@ -1,0 +1,35 @@
+name: Capture History
+
+on:
+  schedule:
+    # Every 15 minutes. No API key needed (airplanes.live is anonymous
+    # access, same as the live Overhead tab), so this is just about not
+    # hammering it more than necessary.
+    - cron: '*/15 * * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  capture-history:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Capture snapshot and clean up old files
+        run: node scripts/capture-history.js
+
+      - name: Commit history changes
+        run: |
+          git config user.name "couch-spotters-bot"
+          git config user.email "actions@github.com"
+          git add history/
+          git diff --quiet --cached || git commit -m "Capture history snapshot [automated]"
+          git push
