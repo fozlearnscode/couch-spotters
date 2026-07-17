@@ -4,23 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Couch Spotters</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20140%20200%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%237DD3FC%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%232E93D6%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath%20d%3D%22M70%2C0%20C30%2C0%200%2C30%200%2C70%20C0%2C117.5%2070%2C200%2070%2C200%20C70%2C200%20140%2C117.5%20140%2C70%20C140%2C30%20110%2C0%2070%2C0%20Z%22%20fill%3D%22url%28%23g%29%22/%3E%3Cg%20transform%3D%22translate%2875%2C65%29%20rotate%2835%29%22%3E%3Cellipse%20cx%3D%220%22%20cy%3D%220%22%20rx%3D%226%22%20ry%3D%2255%22%20fill%3D%22%23FFFFFF%22/%3E%3Cpolygon%20points%3D%22-42%2C8%200%2C-12%2042%2C8%200%2C0%22%20fill%3D%22%23FFFFFF%22/%3E%3Cpolygon%20points%3D%22-16%2C48%200%2C34%2016%2C48%200%2C40%22%20fill%3D%22%23FFFFFF%22/%3E%3C/g%3E%3Cpath%20d%3D%22M%2038%2C172%20L%2063%2C198%20L%20112%2C140%22%20stroke%3D%22%23FF8A00%22%20stroke-width%3D%2215%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
   :root{
-    --bg: #0E1830;
-    --surface: #172341;
-    --surface-raised: #1D2B4E;
-    --line: #2C3B63;
-    --text: #F2ECDC;
-    --text-muted: #8D9BC2;
-    --gold: #E8A33D;
-    --gold-deep: #C4841F;
-    --teal: #4FB6A8;
-    --heavy: #E2694F;
-    --special: #A78BDB;
+    /* Rebrand to the uploaded style board's exact 5 colors: navy #103A5C,
+       blue #4DB8FF, orange #FF8A00, light grey #E6ECF2, white #FFFFFF.
+       --bg/--surface-raised/--line/--gold-deep/--teal are derived shades
+       to preserve the app's existing depth/hierarchy system — the board
+       gave a card-level navy, not a full bg/surface/border ramp, so this
+       fills that in while staying in the same hue family. */
+    --bg: #0A2740;
+    --surface: #103A5C;
+    --surface-raised: #17517D;
+    --line: #2C5C82;
+    --text: #FFFFFF;
+    --text-muted: #B9CFE0;
+    --gold: #4DB8FF;
+    --gold-deep: #2E93D6;
+    --teal: #8CCFFF;
+    --heavy: #FF8A00;
+    --special: #E6ECF2;
     --shadow: 0 2px 6px rgba(0,0,0,0.25), 0 8px 24px rgba(0,0,0,0.2);
     /* Type scale — used for nav and the flap-board row rework below.
        Not retrofitted across the whole file (too much surface area to
@@ -35,17 +42,19 @@
   body{
     margin:0;
     background:
-      radial-gradient(ellipse at 20% -10%, rgba(232,163,61,0.08), transparent 45%),
-      radial-gradient(ellipse at 90% 10%, rgba(79,182,168,0.07), transparent 40%),
+      radial-gradient(ellipse at 20% -10%, rgba(77,184,255,0.08), transparent 45%),
+      radial-gradient(ellipse at 90% 10%, rgba(140,207,255,0.07), transparent 40%),
       var(--bg);
     color:var(--text);
-    font-family:'Inter', sans-serif;
+    font-family:'Manrope', sans-serif;
     -webkit-font-smoothing:antialiased;
   }
   .wrap{ max-width:1100px; margin:0 auto; padding:28px 20px 90px; }
 
   header{ margin-bottom:18px; }
   .brand{ display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; justify-content:space-between; }
+  .brand-title{ display:flex; align-items:center; gap:14px; }
+  .brand-logo{ flex-shrink:0; }
   .gear-btn{
     background:var(--surface); border:1px solid var(--line); color:var(--text-muted);
     width:34px; height:34px; border-radius:50%; font-size:15px; cursor:pointer;
@@ -53,7 +62,7 @@
   }
   .gear-btn:hover{ color:var(--gold); border-color:var(--gold); }
   .brand h1{
-    font-family:'Space Grotesk', sans-serif;
+    font-family:'Manrope', sans-serif;
     font-weight:700;
     font-size:clamp(26px,4vw,36px);
     margin:0;
@@ -110,7 +119,7 @@
     background:transparent;
     border:none;
     color:var(--text-muted);
-    font-family:'Space Grotesk', sans-serif;
+    font-family:'Manrope', sans-serif;
     font-weight:700;
     font-size:14.5px;
     padding:10px 4px;
@@ -136,7 +145,7 @@
     .mtab-btn{
       flex:1; display:flex; flex-direction:column; align-items:center; gap:3px;
       background:transparent; border:none; color:var(--text-muted);
-      padding:5px 0 3px; cursor:pointer; font-family:'Inter',sans-serif;
+      padding:5px 0 3px; cursor:pointer; font-family:'Manrope',sans-serif;
       font-size:9.5px; font-weight:600;
     }
     .mtab-btn svg{ width:21px; height:21px; }
@@ -153,7 +162,7 @@
     display:flex; justify-content:space-between; align-items:center;
     margin-bottom:12px;
   }
-  .lounge-block-head h2{ font-family:'Space Grotesk',sans-serif; font-size:18px; margin:0; }
+  .lounge-block-head h2{ font-family:'Manrope',sans-serif; font-size:18px; margin:0; }
   .lounge-sub{ font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--text-muted); }
   .lounge-row{ display:grid; grid-template-columns:1fr 1fr; gap:22px; }
   @media (max-width:760px){ .lounge-row{ grid-template-columns:1fr; } }
@@ -176,13 +185,13 @@
   @keyframes twinkle{ 0%,100%{ opacity:0.2; } 50%{ opacity:0.9; } }
   .drift-light{
     position:absolute; top:20%; left:-10%; width:70px; height:2px;
-    background:linear-gradient(90deg, transparent, rgba(232,163,61,0.55), transparent);
+    background:linear-gradient(90deg, transparent, rgba(77,184,255,0.55), transparent);
     filter:blur(0.5px); z-index:1; opacity:0;
     animation:driftAcross 70s linear infinite;
   }
   .drift-light.dl2{
     top:55%; animation-duration:95s; animation-delay:22s;
-    background:linear-gradient(90deg, transparent, rgba(79,182,168,0.4), transparent);
+    background:linear-gradient(90deg, transparent, rgba(140,207,255,0.4), transparent);
   }
   @keyframes driftAcross{
     0%{ transform:translate(0,0); opacity:0; }
@@ -212,7 +221,7 @@
 
   .link-btn{
     background:transparent; border:none; color:var(--teal); font-size:12.5px;
-    font-weight:600; cursor:pointer; font-family:'Inter',sans-serif;
+    font-weight:600; cursor:pointer; font-family:'Manrope',sans-serif;
   }
   .link-btn:hover{ text-decoration:underline; }
 
@@ -244,7 +253,7 @@
     padding:3px 8px; border-radius:10px; display:inline-flex; align-items:center; gap:5px;
     letter-spacing:0.04em;
   }
-  .live-status-badge.live{ background:var(--heavy); color:#2a0f08; }
+  .live-status-badge.live{ background:var(--heavy); color:#0A2740; }
   .live-status-badge.offline{ background:var(--line); color:var(--text-muted); }
   .airport-stage .live-status-badge{ position:absolute; top:8px; left:8px; }
 
@@ -272,9 +281,9 @@
     padding:7px 13px;
     border-radius:20px;
     cursor:pointer;
-    font-family:'Inter',sans-serif;
+    font-family:'Manrope',sans-serif;
   }
-  .chip.active{ background:var(--gold); border-color:var(--gold); color:#241a06; }
+  .chip.active{ background:var(--gold); border-color:var(--gold); color:#0A2740; }
 
   .video-grid{
     display:grid;
@@ -325,9 +334,9 @@
     display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;
     margin-bottom:16px;
   }
-  .overhead-head h2{ font-family:'Space Grotesk',sans-serif; font-size:20px; margin:0; }
+  .overhead-head h2{ font-family:'Manrope',sans-serif; font-size:20px; margin:0; }
   .refresh-btn{
-    background:var(--gold); color:#241a06; border:none; font-weight:700;
+    background:var(--gold); color:#0A2740; border:none; font-weight:700;
     padding:9px 16px; border-radius:6px; cursor:pointer; font-size:13.5px;
   }
   .refresh-btn:disabled{ background:var(--line); color:var(--text-muted); cursor:default; }
@@ -339,13 +348,13 @@
   .history-picker label{ font-size:11px; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-muted); font-family:'JetBrains Mono',monospace; }
   .history-picker input, .history-picker select{
     background:var(--surface-raised); border:1px solid var(--line); border-radius:5px;
-    padding:8px 9px; color:var(--text); font-family:'Inter',sans-serif; font-size:13.5px;
+    padding:8px 9px; color:var(--text); font-family:'Manrope',sans-serif; font-size:13.5px;
   }
   .oh-status{ font-size:12.5px; color:var(--text-muted); margin-bottom:14px; font-family:'JetBrains Mono',monospace; }
 
   .flight-list{ display:flex; flex-direction:column; gap:8px; }
   .heavy-badge{
-    background:var(--heavy); color:#2a0f08; font-weight:700; font-size:10.5px;
+    background:var(--heavy); color:#0A2740; font-weight:700; font-size:10.5px;
     padding:2px 7px; border-radius:10px; font-family:'JetBrains Mono',monospace;
   }
   .empty-oh{
@@ -390,7 +399,7 @@
   }
   .airport-stage iframe{ width:100%; height:100%; border:0; display:block; }
   .airport-watch-btn{
-    background:var(--gold); color:#241a06; border:none; font-weight:700;
+    background:var(--gold); color:#0A2740; border:none; font-weight:700;
     padding:9px 14px; border-radius:6px; cursor:pointer; font-size:13px;
     display:flex; align-items:center; gap:6px;
   }
@@ -415,12 +424,12 @@
   }
   .home-marker{
     background:var(--teal); width:14px; height:14px; border-radius:50%;
-    border:2px solid #06231f; box-shadow:0 0 0 4px rgba(79,182,168,0.25);
+    border:2px solid #0A1F33; box-shadow:0 0 0 4px rgba(140,207,255,0.25);
   }
   .plane-icon{ filter:drop-shadow(0 0 2px rgba(0,0,0,0.7)); }
   .leaflet-popup-content-wrapper{ background:var(--surface); color:var(--text); border-radius:8px; box-shadow:var(--shadow); }
   .leaflet-popup-tip{ background:var(--surface); }
-  .leaflet-popup-content{ font-family:'Inter',sans-serif; font-size:12.5px; margin:10px 12px; line-height:1.5; }
+  .leaflet-popup-content{ font-family:'Manrope',sans-serif; font-size:12.5px; margin:10px 12px; line-height:1.5; }
   .leaflet-popup-content b{ font-family:'JetBrains Mono',monospace; color:var(--gold); letter-spacing:0.02em; }
   .leaflet-container a.leaflet-popup-close-button{ color:var(--text-muted); }
   .leaflet-control-attribution{ background:rgba(23,35,65,0.85) !important; color:var(--text-muted) !important; font-size:9.5px !important; }
@@ -437,7 +446,7 @@
     gap:18px;
   }
   .board-col h3{
-    font-family:'Space Grotesk',sans-serif; font-size:15px; margin:0 0 10px;
+    font-family:'Manrope',sans-serif; font-size:15px; margin:0 0 10px;
     display:flex; align-items:center; gap:8px;
   }
   .board-col h3 .arrow{ font-size:16px; }
@@ -478,7 +487,7 @@
   @media (prefers-reduced-motion: reduce){ .bf-flap{ animation:none; } }
   .bf-info{ min-width:0; }
   .bf-subline{
-    font-family:'Inter',sans-serif; font-size:var(--fs-xs); color:var(--text-muted);
+    font-family:'Manrope',sans-serif; font-size:var(--fs-xs); color:var(--text-muted);
     white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-bottom:6px;
     opacity:0.8;
   }
@@ -502,10 +511,10 @@
   .board-row.special{ border-color:var(--special); background:rgba(167,139,219,0.08); }
   .board-row.special .bf-flap{ color:var(--special); border-color:rgba(167,139,219,0.4); }
   .special-badge{
-    background:var(--special); color:#1a1330; font-weight:700; font-size:10.5px;
+    background:var(--special); color:#0A2740; font-weight:700; font-size:10.5px;
     padding:2px 7px; border-radius:10px; font-family:'JetBrains Mono',monospace; margin-left:4px;
   }
-  .board-empty{ color:var(--text-muted); font-size:12.5px; padding:14px 4px; font-family:'Inter',sans-serif; }
+  .board-empty{ color:var(--text-muted); font-size:12.5px; padding:14px 4px; font-family:'Manrope',sans-serif; }
   @media (max-width:700px){ .board-wrap{ grid-template-columns:1fr; } }
 
   /* ---- Logbook tab ---- */
@@ -527,7 +536,7 @@
     border-radius:5px;
     padding:8px 9px;
     color:var(--text);
-    font-family:'Inter',sans-serif;
+    font-family:'Manrope',sans-serif;
     font-size:13.5px;
   }
   .log-form textarea{ resize:vertical; min-height:38px; }
@@ -537,7 +546,7 @@
   .star-picker span.on{ color:var(--gold); }
   .add-entry-btn{
     grid-column:1/-1;
-    background:var(--teal); color:#06231f; border:none; font-weight:700;
+    background:var(--teal); color:#0A2740; border:none; font-weight:700;
     padding:10px; border-radius:6px; cursor:pointer; font-size:14px;
   }
 
@@ -581,16 +590,16 @@
     background:var(--surface); border:1px solid var(--line); border-radius:12px;
     padding:22px 24px; max-width:440px; width:100%; box-shadow:var(--shadow);
   }
-  .modal h3{ font-family:'Space Grotesk',sans-serif; margin:0 0 12px; font-size:17px; }
+  .modal h3{ font-family:'Manrope',sans-serif; margin:0 0 12px; font-size:17px; }
   .hint{ font-size:12.5px; color:var(--text-muted); line-height:1.55; margin:0 0 10px; }
   .modal-actions{ display:flex; justify-content:flex-end; gap:8px; margin-top:14px; flex-wrap:wrap; }
   .btn{
-    background:var(--gold); color:#241a06; border:none; font-weight:700;
-    padding:9px 16px; border-radius:6px; cursor:pointer; font-size:13.5px; font-family:'Inter',sans-serif;
+    background:var(--gold); color:#0A2740; border:none; font-weight:700;
+    padding:9px 16px; border-radius:6px; cursor:pointer; font-size:13.5px; font-family:'Manrope',sans-serif;
   }
   .btn-ghost{
     background:transparent; border:1px solid var(--line); color:var(--text-muted); font-weight:600;
-    padding:9px 16px; border-radius:6px; cursor:pointer; font-size:13.5px; font-family:'Inter',sans-serif;
+    padding:9px 16px; border-radius:6px; cursor:pointer; font-size:13.5px; font-family:'Manrope',sans-serif;
   }
   .btn-ghost:hover{ border-color:var(--teal); color:var(--teal); }
 
@@ -604,9 +613,26 @@
 <div class="wrap">
   <header>
     <div class="brand">
-      <div>
-        <h1>Couch Spotters</h1>
-        <p>Your personal flight deck — Victoria, Australia</p>
+      <div class="brand-title">
+        <svg class="brand-logo" viewBox="0 0 140 200" width="44" height="63" aria-hidden="true">
+          <defs>
+            <linearGradient id="pinGrad2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#7DD3FC"/>
+              <stop offset="1" stop-color="#2E93D6"/>
+            </linearGradient>
+          </defs>
+          <path d="M70,0 C30,0 0,30 0,70 C0,117.5 70,200 70,200 C70,200 140,117.5 140,70 C140,30 110,0 70,0 Z" fill="url(#pinGrad2)"/>
+          <g transform="translate(75,65) rotate(35)">
+            <ellipse cx="0" cy="0" rx="6" ry="55" fill="#FFFFFF"/>
+            <polygon points="-42,8 0,-12 42,8 0,0" fill="#FFFFFF"/>
+            <polygon points="-16,48 0,34 16,48 0,40" fill="#FFFFFF"/>
+          </g>
+          <path d="M 38,172 L 63,198 L 112,140" stroke="#FF8A00" stroke-width="15" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div>
+          <h1>Couch Spotters</h1>
+          <p>Your personal flight deck — Victoria, Australia</p>
+        </div>
       </div>
       <button class="gear-btn" id="settingsBtn" title="Live-detection settings">⚙</button>
     </div>
@@ -1155,7 +1181,7 @@
   }
 
   const SKY_GRADIENTS = {
-    night: 'linear-gradient(180deg, #060B18 0%, #0B1428 60%, #0E1830 100%)',
+    night: 'linear-gradient(180deg, #050F1C 0%, #081C30 60%, #0A2740 100%)',
     dawn:  'linear-gradient(180deg, #2b1f3d 0%, #6b3a52 35%, #c97b52 65%, #8a5a3d 100%)',
     day:   'linear-gradient(180deg, #16233f 0%, #182b4a 55%, #14203a 100%)',
     dusk:  'linear-gradient(180deg, #241a3a 0%, #5a3454 35%, #b5563f 65%, #4a2a35 100%)'
@@ -1317,7 +1343,7 @@
 
   function planeIcon(track, heavy){
     const rot = track!=null ? track : 0;
-    const color = heavy ? '#E2694F' : '#E8A33D';
+    const color = heavy ? '#FF8A00' : '#4DB8FF';
     return L.divIcon({
       className: '',
       html: `<svg class="plane-icon" width="22" height="22" viewBox="0 0 24 24" style="transform:rotate(${rot}deg)">
