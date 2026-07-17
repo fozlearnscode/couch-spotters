@@ -1104,6 +1104,7 @@
   };
 
   let currentWeather = null;
+  let melWind = null;
 
   function applySkyBackdrop(){
     const el = document.getElementById('skyBackdrop');
@@ -1134,18 +1135,32 @@
     layer.dataset.rendered='1';
   }
 
+  const MEL_LAT = -37.673, MEL_LON = 144.843; // YMML
+
   async function loadWeather(){
     try{
-      const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${HOME_LAT}&longitude=${HOME_LON}&current=precipitation,cloud_cover,weather_code&timezone=Australia%2FMelbourne`);
+      // Open-Meteo supports multiple locations in one request via
+      // comma-separated coordinates — one call covers both the general
+      // Melbourne sky/rain reading and the MEL-specific wind reading.
+      const url = `https://api.open-meteo.com/v1/forecast?latitude=${HOME_LAT},${MEL_LAT}&longitude=${HOME_LON},${MEL_LON}&current=precipitation,cloud_cover,weather_code,temperature_2m,wind_speed_10m,wind_direction_10m&timezone=Australia%2FMelbourne`;
+      const res = await fetch(url);
       if(!res.ok) throw new Error('HTTP '+res.status);
       const data = await res.json();
+      const cbd = Array.isArray(data) ? data[0]?.current : data.current;
+      const mel = Array.isArray(data) ? data[1]?.current : null;
       currentWeather = {
-        precipitation: data.current?.precipitation ?? 0,
-        cloud: data.current?.cloud_cover ?? 50,
-        code: data.current?.weather_code ?? null
+        precipitation: cbd?.precipitation ?? 0,
+        cloud: cbd?.cloud_cover ?? 50,
+        code: cbd?.weather_code ?? null,
+        temp: cbd?.temperature_2m ?? null
       };
+      melWind = mel ? {
+        speed: mel.wind_speed_10m ?? null,
+        direction: mel.wind_direction_10m ?? null
+      } : null;
     }catch(e){
       currentWeather = null; // graceful fallback — sky backdrop still works without weather
+      melWind = null;
     }
     const hero = document.getElementById('skyHero');
     const rainy = currentWeather && ((currentWeather.code>=51 && currentWeather.code<=67) || (currentWeather.code>=80 && currentWeather.code<=99) || currentWeather.precipitation>0);
@@ -1170,9 +1185,16 @@
     const phase = getSkyPhase();
     const adj = weatherAdjective();
     const phaseWord = { night:'night', dawn:'morning', day:'day', dusk:'evening' }[phase] || 'day';
+    const tempStr = (currentWeather && currentWeather.temp!=null) ? `, ${Math.round(currentWeather.temp)}°C` : '';
     const opening = adj
-      ? `It's a ${adj} ${phaseWord} over Melbourne.`
-      : (phase==='night' ? "It's quiet over Melbourne tonight." : `It's ${phase==='dawn'?'a fresh morning':phase==='dusk'?'a calm evening':'daytime'} over Melbourne.`);
+      ? `It's a ${adj}${tempStr} ${phaseWord} over Melbourne.`
+      : (phase==='night' ? `It's quiet${tempStr} over Melbourne tonight.` : `It's ${phase==='dawn'?'a fresh':phase==='dusk'?'a calm':''} ${phaseWord}${tempStr} over Melbourne.`);
+
+    let windStr = '';
+    if(melWind && melWind.speed!=null){
+      const dir = melWind.direction!=null ? ` ${compass(melWind.direction)}` : '';
+      windStr = ` Wind at MEL is ${Math.round(melWind.speed)} km/h${dir}${inferredRunway ? ` — runway ${inferredRunway} looks to be in use` : ''}.`;
+    }
 
     let streamClause = null;
     if(!quotaExceeded && !lastSearchError){
@@ -1198,7 +1220,7 @@
     else if(clauses.length===2) tail = ` ${cap(clauses[0])}, and ${clauses[1]}.`;
     else if(clauses.length>=3) tail = ` ${cap(clauses[0])}; ${clauses[1]}, and ${clauses[2]}.`;
 
-    el.textContent = opening + tail;
+    el.textContent = opening + windStr + tail;
   }
 
   // ---------- Overhead tracker (airplanes.live) ----------
@@ -1507,7 +1529,7 @@
       const alt = numAlt(a);
       if(alt==null || alt > 3000) return; // only near-field traffic, not overflights
       const vRate = a.baro_rate; // already ft/min, no conversion needed
-      const row = { callsign: a.flight ? a.flight.trim() : (a.hex||'').toUpperCase(), alt, speed: numGs(a) };
+      const row = { callsign: a.flight ? a.flight.trim() : (a.hex||'').toUpperCase(), alt, speed: numGs(a), track: a.track };
       if(vRate!=null && vRate < -200) arrivals.push(row);
       else if(vRate!=null && vRate > 200) departures.push(row);
     });
@@ -1565,10 +1587,36 @@
       routeEl.innerHTML = flapChars(routeText, 'bf-flap bf-flap-sm');
     });
   }
-  let lastMelArrivals = [], lastMelDepartures = [];
+  // YMML's two runway pairs, by magnetic heading. There's no free feed for
+  // which one ATC has actually selected — this infers a likely answer from
+  // the real headings of aircraft currently arriving/departing on the MEL
+  // Board, rather than guessing from wind alone. Needs at least 2 matching
+  // observations before it'll claim anything.
+  const MEL_RUNWAYS = [
+    { name:'16', heading:160 }, { name:'34', heading:340 },
+    { name:'09', heading:90 },  { name:'27', heading:270 }
+  ];
+  function inferActiveRunway(arrivals, departures){
+    const tracks = [...arrivals, ...departures].map(r=>r.track).filter(t=>t!=null);
+    if(tracks.length===0) return null;
+    const counts = {};
+    tracks.forEach(t=>{
+      let best = null, bestDiff = 999;
+      MEL_RUNWAYS.forEach(rwy=>{
+        const diff = Math.min(Math.abs(t-rwy.heading), 360-Math.abs(t-rwy.heading));
+        if(diff < bestDiff){ bestDiff = diff; best = rwy; }
+      });
+      if(best && bestDiff <= 30) counts[best.name] = (counts[best.name]||0) + 1;
+    });
+    const [topName, topCount] = Object.entries(counts).sort((a,b)=>b[1]-a[1])[0] || [null,0];
+    return topCount>=2 ? topName : null;
+  }
+
+  let lastMelArrivals = [], lastMelDepartures = [], inferredRunway = null;
   function updateMelSnapshot(arrivals, departures){
     lastMelArrivals = arrivals || [];
     lastMelDepartures = departures || [];
+    inferredRunway = inferActiveRunway(lastMelArrivals, lastMelDepartures);
     refreshSkyReport();
   }
   document.getElementById('boardRefreshBtn').addEventListener('click', ()=>fetchMelBoard(true));
