@@ -20,7 +20,16 @@
     --gold-deep: #C4841F;
     --teal: #4FB6A8;
     --heavy: #E2694F;
+    --special: #A78BDB;
     --shadow: 0 2px 6px rgba(0,0,0,0.25), 0 8px 24px rgba(0,0,0,0.2);
+    /* Type scale — used for nav and the flap-board row rework below.
+       Not retrofitted across the whole file (too much surface area to
+       safely touch at once), but the reference point for anything new. */
+    --fs-xs: 11px;
+    --fs-sm: 13px;
+    --fs-base: 15px;
+    --fs-md: 18px;
+    --fs-lg: 24px;
   }
   *{ box-sizing:border-box; }
   body{
@@ -111,6 +120,28 @@
     letter-spacing:0.01em;
   }
   .tab-btn.active{ color:var(--gold); border-bottom-color:var(--gold); }
+
+  /* ---- Mobile bottom nav ---- */
+  .mobile-tabs{ display:none; }
+  @media (max-width:760px){
+    nav.tabs{ display:none; }
+    .wrap{ padding-bottom:78px; }
+    .mobile-tabs{
+      display:flex;
+      position:fixed; left:0; right:0; bottom:0; z-index:40;
+      background:var(--surface); border-top:1px solid var(--line);
+      padding:6px 2px calc(6px + env(safe-area-inset-bottom));
+      box-shadow:0 -2px 12px rgba(0,0,0,0.35);
+    }
+    .mtab-btn{
+      flex:1; display:flex; flex-direction:column; align-items:center; gap:3px;
+      background:transparent; border:none; color:var(--text-muted);
+      padding:5px 0 3px; cursor:pointer; font-family:'Inter',sans-serif;
+      font-size:9.5px; font-weight:600;
+    }
+    .mtab-btn svg{ width:21px; height:21px; }
+    .mtab-btn.active{ color:var(--gold); }
+  }
   .tab-btn:focus-visible{ outline:2px solid var(--teal); outline-offset:3px; }
 
   section.view{ display:none; }
@@ -433,9 +464,9 @@
     background:#050B18;
     border:1px solid var(--line);
     border-radius:3px;
-    padding:3px 5px;
+    padding:4px 6px;
     font-family:'JetBrains Mono',monospace;
-    font-size:12.5px;
+    font-size:var(--fs-sm);
     font-weight:700;
     color:var(--gold);
     min-width:12px;
@@ -443,21 +474,22 @@
     line-height:1.2;
     animation:flapIn .35s ease-out both;
   }
-  .bf-flap-sm{ font-size:11px; padding:2px 4px; color:var(--teal); }
+  .bf-flap-sm{ font-size:var(--fs-xs); padding:2px 4px; color:var(--teal); font-weight:600; }
   @media (prefers-reduced-motion: reduce){ .bf-flap{ animation:none; } }
   .bf-info{ min-width:0; }
-  .bf-airline{
-    font-family:'Inter',sans-serif; font-size:11.5px; color:var(--text-muted);
-    white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-bottom:5px;
+  .bf-subline{
+    font-family:'Inter',sans-serif; font-size:var(--fs-xs); color:var(--text-muted);
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-bottom:6px;
+    opacity:0.8;
   }
-  .bf-route-row{ display:flex; gap:2px; flex-wrap:wrap; min-height:20px; }
+  .bf-subline .sep{ margin:0 5px; opacity:0.5; }
+  .bf-route-row{ display:flex; gap:2px; flex-wrap:wrap; min-height:18px; }
   .bf-stats{
     display:flex; flex-direction:column; align-items:flex-end; gap:2px;
-    font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--text-muted);
+    font-family:'JetBrains Mono',monospace; font-size:var(--fs-xs); color:var(--text-muted);
     white-space:nowrap; text-align:right;
   }
-  .bf-stats .stat-alt{ color:var(--text); font-weight:700; font-size:13px; }
-  .bf-model{ font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--text-muted); opacity:0.85; }
+  .bf-stats .stat-alt{ color:var(--text); font-weight:700; font-size:var(--fs-sm); }
   .board-row.with-photo{ grid-template-columns:auto 1fr auto; }
   .bf-photo{
     width:56px; height:56px; border-radius:6px; overflow:hidden; flex-shrink:0;
@@ -466,10 +498,10 @@
   }
   .bf-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
   .bf-photo .bf-photo-placeholder{ color:var(--text-muted); font-size:22px; opacity:0.5; }
-  .board-row.special{ border-color:var(--teal); background:rgba(79,182,168,0.08); }
-  .board-row.special .bf-flap{ color:var(--teal); border-color:rgba(79,182,168,0.4); }
+  .board-row.special{ border-color:var(--special); background:rgba(167,139,219,0.08); }
+  .board-row.special .bf-flap{ color:var(--special); border-color:rgba(167,139,219,0.4); }
   .special-badge{
-    background:var(--teal); color:#06231f; font-weight:700; font-size:10.5px;
+    background:var(--special); color:#1a1330; font-weight:700; font-size:10.5px;
     padding:2px 7px; border-radius:10px; font-family:'JetBrains Mono',monospace; margin-left:4px;
   }
   .board-empty{ color:var(--text-muted); font-size:12.5px; padding:14px 4px; font-family:'Inter',sans-serif; }
@@ -591,6 +623,37 @@
     <button class="tab-btn" data-view="board">MEL Board</button>
     <button class="tab-btn" data-view="history">History</button>
     <button class="tab-btn" data-view="logbook">Logbook</button>
+  </nav>
+
+  <nav class="mobile-tabs" id="mobileTabs">
+    <button class="mtab-btn active" data-view="lounge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11 L12 4 L20 11"/><path d="M6 10 V19 H18 V10"/></svg>
+      <span>Lounge</span>
+    </button>
+    <button class="mtab-btn" data-view="watch">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M10 8.5 L16 12 L10 15.5 Z" fill="currentColor" stroke="none"/></svg>
+      <span>Watch</span>
+    </button>
+    <button class="mtab-btn" data-view="live">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.1" fill="currentColor" stroke="none"/><path d="M8.2 8.2a5.4 5.4 0 0 0 0 7.6"/><path d="M15.8 8.2a5.4 5.4 0 0 1 0 7.6"/><path d="M5.6 5.6a9.2 9.2 0 0 0 0 12.8"/><path d="M18.4 5.6a9.2 9.2 0 0 1 0 12.8"/></svg>
+      <span>Live</span>
+    </button>
+    <button class="mtab-btn" data-view="overhead">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="3" x2="12" y2="21"/><path d="M4 10 L12 12 L20 10"/><path d="M9 18 L12 17 L15 18"/></svg>
+      <span>Overhead</span>
+    </button>
+    <button class="mtab-btn" data-view="board">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="14" rx="1.5"/><line x1="6" y1="9" x2="18" y2="9"/><line x1="6" y1="12.5" x2="18" y2="12.5"/><line x1="6" y1="16" x2="14" y2="16"/></svg>
+      <span>Board</span>
+    </button>
+    <button class="mtab-btn" data-view="history">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5 V12 L15.5 14"/></svg>
+      <span>History</span>
+    </button>
+    <button class="mtab-btn" data-view="logbook">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5c2-1 5-1 8 0 3-1 6-1 8 0v13c-2-1-5-1-8 0-3-1-6-1-8 0z"/><line x1="12" y1="5.5" x2="12" y2="18.5"/></svg>
+      <span>Log</span>
+    </button>
   </nav>
 
   <!-- LOUNGE -->
@@ -1006,13 +1069,7 @@
   document.getElementById('settingsBackdrop').addEventListener('click', (e)=>{ if(e.target.id==='settingsBackdrop') e.currentTarget.classList.remove('show'); });
 
   document.querySelectorAll('.link-btn[data-jump]').forEach(btn=>{
-    btn.addEventListener('click', ()=>{
-      const view = btn.dataset.jump;
-      document.querySelectorAll('.tab-btn').forEach(b=>b.classList.toggle('active', b.dataset.view===view));
-      document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active', v.id==='view-'+view));
-      if(view==='overhead'){ showOverheadTab(); if(lastFetch===0) fetchOverhead(true); }
-      if(view==='board' && lastBoardFetch===0) fetchMelBoard(true);
-    });
+    btn.addEventListener('click', ()=>switchToView(btn.dataset.jump));
   });
 
   // ---------- Ticker (signature flip element) ----------
@@ -1369,9 +1426,8 @@
         <div class="bf-photo"><span class="bf-photo-placeholder">✈</span></div>
         <div class="bf-info">
           <div class="bf-flight-row">${flapChars(flightCode, 'bf-flap')}${isHeavy(a.category) ? '<span class="heavy-badge">HEAVY</span>' : ''}</div>
-          <div class="bf-airline">Looking up flight…</div>
+          <div class="bf-subline">Looking up flight…</div>
           <div class="bf-route-row"></div>
-          <div class="bf-model">Looking up aircraft…</div>
         </div>
         <div class="bf-stats">
           <span class="stat-alt">${numAlt(a) ?? '—'} ft</span>
@@ -1392,41 +1448,41 @@
 
     // Enrich each row with airline, route, and aircraft model in the
     // background — the list renders immediately with live position data,
-    // then fills in the extra detail as lookups resolve.
+    // then fills in the extra detail as lookups resolve. Airline and
+    // model share one quieter subline so the flight code and route stay
+    // the visual focus of the row.
     rows.forEach(async a=>{
       const callsign = a.flight ? a.flight.trim() : (a.hex||'').toUpperCase();
       const hex = (a.hex||'').toLowerCase();
       const rowEl = list.querySelector(`.board-row[data-flight="${CSS.escape(callsign)}"][data-hex="${CSS.escape(hex)}"]`);
       if(!rowEl) return;
-      const airlineEl = rowEl.querySelector('.bf-airline');
+      const sublineEl = rowEl.querySelector('.bf-subline');
       const routeEl = rowEl.querySelector('.bf-route-row');
-      const modelEl = rowEl.querySelector('.bf-model');
 
       const [route, acInfo] = await Promise.all([ getRoute(callsign), getAircraftInfo(hex) ]);
 
       if(route){
-        airlineEl.textContent = route.airline ? route.airline.name : 'Airline unknown';
         const originCode = route.origin ? (route.origin.iata_code || route.origin.icao_code || '???') : '???';
         const destCode = route.destination ? (route.destination.iata_code || route.destination.icao_code || '???') : '???';
         routeEl.innerHTML = flapChars(`${originCode} \u2192 ${destCode}`, 'bf-flap bf-flap-sm');
       }else{
-        airlineEl.textContent = 'Airline unknown';
         routeEl.innerHTML = '';
       }
 
+      const airlineText = route && route.airline ? route.airline.name : 'Airline unknown';
+      const modelText = acInfo ? (acInfo.type || acInfo.manufacturer || 'Aircraft type unknown') : 'Aircraft type unknown';
+      let special = false;
       if(acInfo){
-        modelEl.textContent = acInfo.type || acInfo.manufacturer || 'Aircraft type unknown';
         if(acInfo.url_photo_thumbnail){
           const photoEl = rowEl.querySelector('.bf-photo');
           photoEl.innerHTML = `<img src="${acInfo.url_photo_thumbnail}" alt="${acInfo.registration||callsign}" loading="lazy">`;
         }
         if(isSpecialLivery(acInfo.registration)){
           rowEl.classList.add('special');
-          airlineEl.insertAdjacentHTML('beforeend', '<span class="special-badge">SPECIAL LIVERY</span>');
+          special = true;
         }
-      }else{
-        modelEl.textContent = 'Aircraft type unknown';
       }
+      sublineEl.innerHTML = `${airlineText}<span class="sep">·</span>${modelText}` + (special ? '<span class="special-badge">SPECIAL LIVERY</span>' : '');
     });
   }
 
@@ -1547,7 +1603,7 @@
       <div class="board-row" data-flight="${row.callsign||''}">
         <div class="bf-info">
           <div class="bf-flight-row">${flapChars(flightCode, 'bf-flap')}</div>
-          <div class="bf-airline">Looking up flight…</div>
+          <div class="bf-subline">Looking up flight…</div>
           <div class="bf-route-row"></div>
         </div>
         <div class="bf-stats">
@@ -1573,14 +1629,14 @@
       const rowEl = list.querySelector(`.board-row[data-flight="${CSS.escape(row.callsign)}"]`);
       if(!rowEl) return;
       const route = await getRoute(row.callsign);
-      const airlineEl = rowEl.querySelector('.bf-airline');
+      const sublineEl = rowEl.querySelector('.bf-subline');
       const routeEl = rowEl.querySelector('.bf-route-row');
       if(!route){
-        airlineEl.textContent = 'Airline unknown';
+        sublineEl.textContent = 'Airline unknown';
         routeEl.innerHTML = '';
         return;
       }
-      airlineEl.textContent = route.airline ? route.airline.name : 'Airline unknown';
+      sublineEl.textContent = route.airline ? route.airline.name : 'Airline unknown';
       const originCode = route.origin ? (route.origin.iata_code || route.origin.icao_code || '???') : '???';
       const destCode = route.destination ? (route.destination.iata_code || route.destination.icao_code || '???') : '???';
       const routeText = kind==='arrival' ? `${originCode} \u2192 MEL` : `MEL \u2192 ${destCode}`;
@@ -1778,17 +1834,16 @@
   }
   document.getElementById('histShowBtn').addEventListener('click', loadHistorySnapshot);
 
-  // ---------- Tabs ----------
-  document.querySelectorAll('.tab-btn').forEach(btn=>{
-    btn.addEventListener('click', ()=>{
-      document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-      document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
-      btn.classList.add('active');
-      document.getElementById('view-'+btn.dataset.view).classList.add('active');
-      if(btn.dataset.view==='overhead'){ showOverheadTab(); if(lastFetch===0) fetchOverhead(true); }
-      if(btn.dataset.view==='board' && lastBoardFetch===0) fetchMelBoard(true);
-      if(btn.dataset.view==='history' && document.getElementById('historyFlightList').innerHTML===''){ loadHistorySnapshot(); }
-    });
+  // ---------- Tabs (shared by desktop nav, mobile nav, and jump links) ----------
+  function switchToView(view){
+    document.querySelectorAll('.tab-btn, .mtab-btn').forEach(b=>b.classList.toggle('active', b.dataset.view===view));
+    document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active', v.id==='view-'+view));
+    if(view==='overhead'){ showOverheadTab(); if(lastFetch===0) fetchOverhead(true); }
+    if(view==='board' && lastBoardFetch===0) fetchMelBoard(true);
+    if(view==='history' && document.getElementById('historyFlightList').innerHTML===''){ loadHistorySnapshot(); }
+  }
+  document.querySelectorAll('.tab-btn, .mtab-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>switchToView(btn.dataset.view));
   });
 
   // ---------- Init ----------
