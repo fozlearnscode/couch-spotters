@@ -483,7 +483,8 @@
     opacity:0.8;
   }
   .bf-subline .sep{ margin:0 5px; opacity:0.5; }
-  .bf-route-row{ display:flex; gap:2px; flex-wrap:wrap; min-height:18px; }
+  .bf-route-row{ display:flex; gap:6px; row-gap:4px; flex-wrap:wrap; align-items:center; min-height:18px; }
+  .bf-flap-group{ display:inline-flex; gap:2px; }
   .bf-stats{
     display:flex; flex-direction:column; align-items:flex-end; gap:2px;
     font-family:'JetBrains Mono',monospace; font-size:var(--fs-xs); color:var(--text-muted);
@@ -605,7 +606,7 @@
     <div class="brand">
       <div>
         <h1>Couch Spotters</h1>
-        <p>Your weekend flight deck — Victoria, Australia</p>
+        <p>Your personal flight deck — Victoria, Australia</p>
       </div>
       <button class="gear-btn" id="settingsBtn" title="Live-detection settings">⚙</button>
     </div>
@@ -1464,7 +1465,7 @@
       if(route){
         const originCode = route.origin ? (route.origin.iata_code || route.origin.icao_code || '???') : '???';
         const destCode = route.destination ? (route.destination.iata_code || route.destination.icao_code || '???') : '???';
-        routeEl.innerHTML = flapChars(`${originCode} \u2192 ${destCode}`, 'bf-flap bf-flap-sm');
+        routeEl.innerHTML = flapRouteHtml(originCode, destCode, 'bf-flap bf-flap-sm');
       }else{
         routeEl.innerHTML = '';
       }
@@ -1542,6 +1543,15 @@
 
   function flapChars(text, cls){
     return [...String(text)].map(ch => `<span class="${cls}">${ch===' ' ? '&nbsp;' : ch}</span>`).join('');
+  }
+
+  // Builds a route display as two atomic groups ("ORIGIN →" and "DEST")
+  // rather than one long run of individual character tiles. Wrapping a
+  // route char-by-char could split it mid-code on narrow screens (e.g.
+  // "ADL →" on one line, "MEL" orphaned on the next) — grouping means if
+  // it has to wrap at all, it breaks cleanly between the two codes.
+  function flapRouteHtml(left, right, cls){
+    return `<span class="bf-flap-group">${flapChars(left+' \u2192', cls)}</span><span class="bf-flap-group">${flapChars(right, cls)}</span>`;
   }
 
   // ---- Aircraft type/model lookup (adsbdb.com) — keyed by ICAO24 hex ----
@@ -1639,8 +1649,9 @@
       sublineEl.textContent = route.airline ? route.airline.name : 'Airline unknown';
       const originCode = route.origin ? (route.origin.iata_code || route.origin.icao_code || '???') : '???';
       const destCode = route.destination ? (route.destination.iata_code || route.destination.icao_code || '???') : '???';
-      const routeText = kind==='arrival' ? `${originCode} \u2192 MEL` : `MEL \u2192 ${destCode}`;
-      routeEl.innerHTML = flapChars(routeText, 'bf-flap bf-flap-sm');
+      routeEl.innerHTML = kind==='arrival'
+        ? flapRouteHtml(originCode, 'MEL', 'bf-flap bf-flap-sm')
+        : flapRouteHtml('MEL', destCode, 'bf-flap bf-flap-sm');
     });
   }
   // YMML's two runway pairs, by magnetic heading. There's no free feed for
