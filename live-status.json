@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-21T07:42:02.701Z",
+  "updatedAt": "2026-07-21T09:39:52.592Z",
   "airportRotationStart": 7,
   "quotaExceeded": false,
   "lastSearchError": null,
@@ -10,7 +10,7 @@
       "channel": "Simon Lowe Aviation ",
       "thumb": "https://i.ytimg.com/vi/3ssxrqUKTQk/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1323,
+      "viewers": 1643,
       "stillLive": true
     },
     {
@@ -19,34 +19,7 @@
       "channel": "Flight Focus 365",
       "thumb": "https://i.ytimg.com/vi/x3j_55NPDJU/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 629,
-      "stillLive": true
-    },
-    {
-      "videoId": "n4I0d44oBEs",
-      "title": "🔴LIVE 24/7 LAX Airport Action Runways 24L &amp; 24R | LIVE Plane Spotting with ATC!",
-      "channel": "AirlineVideosLive+",
-      "thumb": "https://i.ytimg.com/vi/n4I0d44oBEs/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 210,
-      "stillLive": true
-    },
-    {
-      "videoId": "KzsNnyN8D_Q",
-      "title": "🔴LIVE 24/7 LAX Airport Action Runways 25L &amp; 25R | LIVE Plane Spotting with ATC!",
-      "channel": "AirlineVideosLive+",
-      "thumb": "https://i.ytimg.com/vi/KzsNnyN8D_Q/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 173,
-      "stillLive": true
-    },
-    {
-      "videoId": "V7_orOtu-oo",
-      "title": "LAS Vegas Airport LIVE 24/7 with views of 26R &amp; 26L",
-      "channel": "Flightradar24",
-      "thumb": "https://i.ytimg.com/vi/V7_orOtu-oo/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 169,
+      "viewers": 855,
       "stillLive": true
     },
     {
@@ -55,16 +28,34 @@
       "channel": "AirportWings",
       "thumb": "https://i.ytimg.com/vi/mGqawt4uid0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 147,
+      "viewers": 192,
       "stillLive": true
     },
     {
-      "videoId": "7SrWNgwOHZ0",
-      "title": "🔴 LIVE 24/7 Lisbon Airport 21.07.2026 • Livestream Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
-      "channel": "AVIAÇÃO TV",
-      "thumb": "https://i.ytimg.com/vi/7SrWNgwOHZ0/mqdefault_live.jpg",
+      "videoId": "n4I0d44oBEs",
+      "title": "🔴LIVE 24/7 LAX Airport Action Runways 24L &amp; 24R | LIVE Plane Spotting with ATC!",
+      "channel": "AirlineVideosLive+",
+      "thumb": "https://i.ytimg.com/vi/n4I0d44oBEs/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 61,
+      "viewers": 167,
+      "stillLive": true
+    },
+    {
+      "videoId": "KzsNnyN8D_Q",
+      "title": "🔴LIVE 24/7 LAX Airport Action Runways 25L &amp; 25R | LIVE Plane Spotting with ATC!",
+      "channel": "AirlineVideosLive+",
+      "thumb": "https://i.ytimg.com/vi/KzsNnyN8D_Q/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 154,
+      "stillLive": true
+    },
+    {
+      "videoId": "V7_orOtu-oo",
+      "title": "LAS Vegas Airport LIVE 24/7 with views of 26R &amp; 26L",
+      "channel": "Flightradar24",
+      "thumb": "https://i.ytimg.com/vi/V7_orOtu-oo/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
+      "viewers": 144,
       "stillLive": true
     },
     {
@@ -73,7 +64,16 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/OUBslrCqREs/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 55,
+      "viewers": 69,
+      "stillLive": true
+    },
+    {
+      "videoId": "7SrWNgwOHZ0",
+      "title": "🔴 LIVE 24/7 Lisbon Airport 21.07.2026 • Livestream Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
+      "channel": "AVIAÇÃO TV",
+      "thumb": "https://i.ytimg.com/vi/7SrWNgwOHZ0/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 64,
       "stillLive": true
     },
     {
@@ -82,7 +82,7 @@
       "channel": "SHOWME Caribbean",
       "thumb": "https://i.ytimg.com/vi/iSeH45R-8R0/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 45,
+      "viewers": 52,
       "stillLive": true
     },
     {
@@ -91,7 +91,7 @@
       "channel": "Nippon Television News Japan",
       "thumb": "https://i.ytimg.com/vi/3w4zEyFamuA/mqdefault_live.jpg",
       "matchedQuery": "SFO airport plane spotting live",
-      "viewers": 38,
+      "viewers": 40,
       "stillLive": true
     },
     {
@@ -100,7 +100,7 @@
       "channel": "StreamTime Live",
       "thumb": "https://i.ytimg.com/vi/67BCsiW-1Io/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 36,
+      "viewers": 39,
       "stillLive": true
     },
     {
@@ -109,7 +109,7 @@
       "channel": "StreamTime Live",
       "thumb": "https://i.ytimg.com/vi/61pi8UjLOlo/mqdefault_live.jpg",
       "matchedQuery": "DFW airport plane spotting live",
-      "viewers": 26,
+      "viewers": 28,
       "stillLive": true
     },
     {
@@ -118,16 +118,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/2IQmpCXbOmM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 22,
-      "stillLive": true
-    },
-    {
-      "videoId": "0iDQDwx21Oo",
-      "title": "LIVE Planespotting Madeira Airport by Cassiano&#39;s Snack Bar | Madeira-Web",
-      "channel": "Madeira-Web",
-      "thumb": "https://i.ytimg.com/vi/0iDQDwx21Oo/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 20,
+      "viewers": 24,
       "stillLive": true
     },
     {
@@ -136,16 +127,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/MH0_mPt-VXE/mqdefault_live.jpg",
       "matchedQuery": "DFW airport plane spotting live",
-      "viewers": 20,
-      "stillLive": true
-    },
-    {
-      "videoId": "WrO78DjLkeQ",
-      "title": "🔴Live SFO Plane Spotting | Real-Time Aircraft Tracking and ATC Audio at San Francisco Airport (KSFO)",
-      "channel": "Luftra Aviation",
-      "thumb": "https://i.ytimg.com/vi/WrO78DjLkeQ/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 19,
+      "viewers": 22,
       "stillLive": true
     },
     {
@@ -154,7 +136,25 @@
       "channel": "PTZtv",
       "thumb": "https://i.ytimg.com/vi/_GUsXnlVJmo/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 12,
+      "viewers": 17,
+      "stillLive": true
+    },
+    {
+      "videoId": "0iDQDwx21Oo",
+      "title": "LIVE Planespotting Madeira Airport by Cassiano&#39;s Snack Bar | Madeira-Web",
+      "channel": "Madeira-Web",
+      "thumb": "https://i.ytimg.com/vi/0iDQDwx21Oo/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 13,
+      "stillLive": true
+    },
+    {
+      "videoId": "WrO78DjLkeQ",
+      "title": "🔴Live SFO Plane Spotting | Real-Time Aircraft Tracking and ATC Audio at San Francisco Airport (KSFO)",
+      "channel": "Luftra Aviation",
+      "thumb": "https://i.ytimg.com/vi/WrO78DjLkeQ/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 13,
       "stillLive": true
     },
     {
@@ -163,7 +163,7 @@
       "channel": "TurtleAir",
       "thumb": "https://i.ytimg.com/vi/kLLb-fPOPuk/mqdefault_live.jpg",
       "matchedQuery": "DFW airport plane spotting live",
-      "viewers": 12,
+      "viewers": 10,
       "stillLive": true
     },
     {
@@ -172,7 +172,7 @@
       "channel": "Information Zulu",
       "thumb": "https://i.ytimg.com/vi/t0GrpAgdBFI/mqdefault_live.jpg",
       "matchedQuery": "SFO airport plane spotting live",
-      "viewers": 9,
+      "viewers": 8,
       "stillLive": true
     },
     {
@@ -181,7 +181,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/fFl0qD108sk/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 5,
+      "viewers": 4,
       "stillLive": true
     },
     {
@@ -190,7 +190,7 @@
       "channel": "Airplane Live",
       "thumb": "https://i.ytimg.com/vi/1CRXoZI-Wdo/mqdefault_live.jpg",
       "matchedQuery": "SFO airport plane spotting live",
-      "viewers": 5,
+      "viewers": 4,
       "stillLive": true
     },
     {
@@ -199,15 +199,6 @@
       "channel": "Information Zulu",
       "thumb": "https://i.ytimg.com/vi/WzpjI2QYdvE/mqdefault_live.jpg",
       "matchedQuery": "LAX airport plane spotting live",
-      "viewers": 4,
-      "stillLive": true
-    },
-    {
-      "videoId": "yaVHJCi1UAY",
-      "title": "🔴 LIVE: Boston Logan (BOS) International Airport Plane Tracking &amp; ATC audio (Arr/Dep)",
-      "channel": "Rob's Aviation",
-      "thumb": "https://i.ytimg.com/vi/yaVHJCi1UAY/mqdefault_live.jpg",
-      "matchedQuery": "SFO airport plane spotting live",
       "viewers": 2,
       "stillLive": true
     },
