@@ -1,25 +1,25 @@
 {
-  "updatedAt": "2026-07-22T09:17:55.616Z",
+  "updatedAt": "2026-07-22T09:35:42.349Z",
   "airportRotationStart": 3,
   "quotaExceeded": false,
   "lastSearchError": null,
   "liveResults": [
-    {
-      "videoId": "YSYsJXSMpDw",
-      "title": "Heathrow Airport Live - Wednesday 22nd July 2026",
-      "channel": "Flight Focus 365",
-      "thumb": "https://i.ytimg.com/vi/YSYsJXSMpDw/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 817,
-      "stillLive": true
-    },
     {
       "videoId": "0R3bxdWNYJU",
       "title": "🔴 LIVE Wacky Wednesday 🤪 Manchester Airport Plane Spotting ✈️ Part 1",
       "channel": "Livin' It Large Aviation",
       "thumb": "https://i.ytimg.com/vi/0R3bxdWNYJU/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 816,
+      "viewers": 804,
+      "stillLive": true
+    },
+    {
+      "videoId": "YSYsJXSMpDw",
+      "title": "Heathrow Airport Live - Wednesday 22nd July 2026",
+      "channel": "Flight Focus 365",
+      "thumb": "https://i.ytimg.com/vi/YSYsJXSMpDw/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 788,
       "stillLive": true
     },
     {
@@ -28,7 +28,7 @@
       "channel": "FRANK AVIATION",
       "thumb": "https://i.ytimg.com/vi/_GYOcbeuQx8/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 276,
+      "viewers": 312,
       "stillLive": true
     },
     {
@@ -37,7 +37,7 @@
       "channel": "Darmstadt98Flyer",
       "thumb": "https://i.ytimg.com/vi/56IKVcrMsqs/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 244,
+      "viewers": 245,
       "stillLive": true
     },
     {
@@ -46,7 +46,7 @@
       "channel": "AirlineVideosLive+",
       "thumb": "https://i.ytimg.com/vi/KzsNnyN8D_Q/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 175,
+      "viewers": 162,
       "stillLive": true
     },
     {
@@ -55,7 +55,7 @@
       "channel": "AirlineVideosLive+",
       "thumb": "https://i.ytimg.com/vi/n4I0d44oBEs/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 170,
+      "viewers": 158,
       "stillLive": true
     },
     {
@@ -64,7 +64,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/V7_orOtu-oo/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 114,
+      "viewers": 110,
       "stillLive": true
     },
     {
@@ -73,16 +73,7 @@
       "channel": "LanzaroteWebcam",
       "thumb": "https://i.ytimg.com/vi/AAlo3eCPVbk/mqdefault_live.jpg",
       "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": 104,
-      "stillLive": true
-    },
-    {
-      "videoId": "37ndTPRWY4A",
-      "title": "🔴 LIVE 24/7 Lisbon Airport 22.07.2026 • Livestream Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
-      "channel": "AVIAÇÃO TV",
-      "thumb": "https://i.ytimg.com/vi/37ndTPRWY4A/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 77,
+      "viewers": 109,
       "stillLive": true
     },
     {
@@ -95,11 +86,20 @@
       "stillLive": true
     },
     {
-      "videoId": "A6R81wOlQqs",
-      "title": "🔵 LIVE from Malaga Airport (AGP/LEMG) - Costa del Sol - Andalucía - Spain - 24/7",
-      "channel": "meteo365es",
-      "thumb": "https://i.ytimg.com/vi/A6R81wOlQqs/mqdefault_live.jpg",
-      "matchedQuery": "Melbourne airport plane spotting live",
+      "videoId": "37ndTPRWY4A",
+      "title": "🔴 LIVE 24/7 Lisbon Airport 22.07.2026 • Livestream Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
+      "channel": "AVIAÇÃO TV",
+      "thumb": "https://i.ytimg.com/vi/37ndTPRWY4A/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 74,
+      "stillLive": true
+    },
+    {
+      "videoId": "3w4zEyFamuA",
+      "title": "【Live】Tokyo International Airport ,Haneda Plane Spotting (NipponTV News24)  IATA: HND, ICAO: RJTT",
+      "channel": "Nippon Television News Japan",
+      "thumb": "https://i.ytimg.com/vi/3w4zEyFamuA/mqdefault_live.jpg",
+      "matchedQuery": "Heathrow airport plane spotting live",
       "viewers": 50,
       "stillLive": true
     },
@@ -109,25 +109,7 @@
       "channel": "SHOWME Caribbean",
       "thumb": "https://i.ytimg.com/vi/iSeH45R-8R0/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 46,
-      "stillLive": true
-    },
-    {
-      "videoId": "MApnQlsX5AQ",
-      "title": "Nuuk Airport South",
-      "channel": "Greenland Airports",
-      "thumb": "https://i.ytimg.com/vi/MApnQlsX5AQ/mqdefault_live.jpg",
-      "matchedQuery": "Melbourne airport plane spotting live",
-      "viewers": 46,
-      "stillLive": true
-    },
-    {
-      "videoId": "3w4zEyFamuA",
-      "title": "【Live】Tokyo International Airport ,Haneda Plane Spotting (NipponTV News24)  IATA: HND, ICAO: RJTT",
-      "channel": "Nippon Television News Japan",
-      "thumb": "https://i.ytimg.com/vi/3w4zEyFamuA/mqdefault_live.jpg",
-      "matchedQuery": "Heathrow airport plane spotting live",
-      "viewers": 43,
+      "viewers": 48,
       "stillLive": true
     },
     {
@@ -136,7 +118,25 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/NtbquzembC8/mqdefault_live.jpg",
       "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": 41,
+      "viewers": 48,
+      "stillLive": true
+    },
+    {
+      "videoId": "MApnQlsX5AQ",
+      "title": "Nuuk Airport South",
+      "channel": "Greenland Airports",
+      "thumb": "https://i.ytimg.com/vi/MApnQlsX5AQ/mqdefault_live.jpg",
+      "matchedQuery": "Melbourne airport plane spotting live",
+      "viewers": 47,
+      "stillLive": true
+    },
+    {
+      "videoId": "A6R81wOlQqs",
+      "title": "🔵 LIVE from Malaga Airport (AGP/LEMG) - Costa del Sol - Andalucía - Spain - 24/7",
+      "channel": "meteo365es",
+      "thumb": "https://i.ytimg.com/vi/A6R81wOlQqs/mqdefault_live.jpg",
+      "matchedQuery": "Melbourne airport plane spotting live",
+      "viewers": 42,
       "stillLive": true
     },
     {
@@ -154,7 +154,7 @@
       "channel": "RNO Flights",
       "thumb": "https://i.ytimg.com/vi/VaDbfFG7RhI/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 27,
+      "viewers": 26,
       "stillLive": true
     },
     {
@@ -163,7 +163,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/2IQmpCXbOmM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 22,
+      "viewers": 26,
       "stillLive": true
     },
     {
@@ -172,16 +172,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/MH0_mPt-VXE/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 21,
-      "stillLive": true
-    },
-    {
-      "videoId": "_GUsXnlVJmo",
-      "title": "LIVE Miami Airport -- Watch runway 9/27 with tower radio traffic!",
-      "channel": "PTZtv",
-      "thumb": "https://i.ytimg.com/vi/_GUsXnlVJmo/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 14,
+      "viewers": 15,
       "stillLive": true
     },
     {
@@ -191,6 +182,15 @@
       "thumb": "https://i.ytimg.com/vi/WrO78DjLkeQ/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
       "viewers": 13,
+      "stillLive": true
+    },
+    {
+      "videoId": "_GUsXnlVJmo",
+      "title": "LIVE Miami Airport -- Watch runway 9/27 with tower radio traffic!",
+      "channel": "PTZtv",
+      "thumb": "https://i.ytimg.com/vi/_GUsXnlVJmo/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
+      "viewers": 11,
       "stillLive": true
     },
     {
@@ -208,7 +208,7 @@
       "channel": "MNCam",
       "thumb": "https://i.ytimg.com/vi/wWm-kbryDDQ/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 10,
+      "viewers": 9,
       "stillLive": true
     },
     {
@@ -217,7 +217,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/fFl0qD108sk/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 9,
+      "viewers": 8,
       "stillLive": true
     },
     {
@@ -226,7 +226,7 @@
       "channel": "Information Zulu",
       "thumb": "https://i.ytimg.com/vi/t0GrpAgdBFI/mqdefault_live.jpg",
       "matchedQuery": "Heathrow airport plane spotting live",
-      "viewers": 5,
+      "viewers": 6,
       "stillLive": true
     },
     {
@@ -235,7 +235,7 @@
       "channel": "Information Zulu",
       "thumb": "https://i.ytimg.com/vi/OkqUGlnC-U8/mqdefault_live.jpg",
       "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": 4,
+      "viewers": 3,
       "stillLive": true
     },
     {
@@ -253,7 +253,7 @@
       "channel": "Airplane Live",
       "thumb": "https://i.ytimg.com/vi/11INCtK6uiA/mqdefault_live.jpg",
       "matchedQuery": "Heathrow airport plane spotting live",
-      "viewers": 2,
+      "viewers": 3,
       "stillLive": true
     },
     {
@@ -262,7 +262,7 @@
       "channel": "Airplane Live",
       "thumb": "https://i.ytimg.com/vi/1CRXoZI-Wdo/mqdefault_live.jpg",
       "matchedQuery": "Heathrow airport plane spotting live",
-      "viewers": 2,
+      "viewers": 3,
       "stillLive": true
     },
     {
@@ -271,7 +271,7 @@
       "channel": "Little & Great Adventures",
       "thumb": "https://i.ytimg.com/vi/nHGUOce1UoE/mqdefault_live.jpg",
       "matchedQuery": "Heathrow airport plane spotting live",
-      "viewers": 1,
+      "viewers": 2,
       "stillLive": true
     },
     {
