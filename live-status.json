@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-13T21:02:13.198Z",
+  "updatedAt": "2026-08-13T21:58:16.782Z",
   "airportRotationStart": 1,
   "quotaExceeded": false,
   "lastSearchError": null,
@@ -10,16 +10,7 @@
       "channel": "L.A FLIGHTS",
       "thumb": "https://i.ytimg.com/vi/k4hQzeMPxRU/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 2746,
-      "stillLive": true
-    },
-    {
-      "videoId": "Y6G1Rjq9aTI",
-      "title": "Huge A380, PIA 777 &amp; Evening Heavies! 🧡 Manchester Airport LIVE",
-      "channel": "flght",
-      "thumb": "https://i.ytimg.com/vi/Y6G1Rjq9aTI/mqdefault_live.jpg",
-      "matchedQuery": "Heathrow airport plane spotting live",
-      "viewers": 928,
+      "viewers": 2602,
       "stillLive": true
     },
     {
@@ -28,16 +19,7 @@
       "channel": "AirlineVideosLive+",
       "thumb": "https://i.ytimg.com/vi/n4I0d44oBEs/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 619,
-      "stillLive": true
-    },
-    {
-      "videoId": "RSIaw41Y-mQ",
-      "title": "Heathrow Airport Live - Thursday 13th August 2026",
-      "channel": "Flight Focus 365",
-      "thumb": "https://i.ytimg.com/vi/RSIaw41Y-mQ/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 334,
+      "viewers": 615,
       "stillLive": true
     },
     {
@@ -46,7 +28,7 @@
       "channel": "AirlineVideosLive+",
       "thumb": "https://i.ytimg.com/vi/KzsNnyN8D_Q/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 326,
+      "viewers": 317,
       "stillLive": true
     },
     {
@@ -55,7 +37,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/V7_orOtu-oo/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 282,
+      "viewers": 262,
       "stillLive": true
     },
     {
@@ -64,7 +46,16 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/OUBslrCqREs/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 227,
+      "viewers": 218,
+      "stillLive": true
+    },
+    {
+      "videoId": "RSIaw41Y-mQ",
+      "title": "Heathrow Airport Live - Thursday 13th August 2026",
+      "channel": "Flight Focus 365",
+      "thumb": "https://i.ytimg.com/vi/RSIaw41Y-mQ/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 172,
       "stillLive": true
     },
     {
@@ -73,7 +64,7 @@
       "channel": "RNO Flights",
       "thumb": "https://i.ytimg.com/vi/VaDbfFG7RhI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 111,
+      "viewers": 83,
       "stillLive": true
     },
     {
@@ -82,16 +73,7 @@
       "channel": "SHOWME Caribbean",
       "thumb": "https://i.ytimg.com/vi/iSeH45R-8R0/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 101,
-      "stillLive": true
-    },
-    {
-      "videoId": "2IQmpCXbOmM",
-      "title": "Iconic SXM Airport LIVE 24/7 – Sint Maarten Maho Beach",
-      "channel": "Flightradar24",
-      "thumb": "https://i.ytimg.com/vi/2IQmpCXbOmM/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 93,
+      "viewers": 79,
       "stillLive": true
     },
     {
@@ -100,16 +82,16 @@
       "channel": "StreamTime Live",
       "thumb": "https://i.ytimg.com/vi/67BCsiW-1Io/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 85,
+      "viewers": 78,
       "stillLive": true
     },
     {
-      "videoId": "nDd2zsNj6Nk",
-      "title": "✈️ LIVE August 13 | Maho Beach Plane Spotting | SXM Airport St. Maarten (with ATC)",
-      "channel": "SHOWME Caribbean",
-      "thumb": "https://i.ytimg.com/vi/nDd2zsNj6Nk/mqdefault_live.jpg",
+      "videoId": "2IQmpCXbOmM",
+      "title": "Iconic SXM Airport LIVE 24/7 – Sint Maarten Maho Beach",
+      "channel": "Flightradar24",
+      "thumb": "https://i.ytimg.com/vi/2IQmpCXbOmM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 80,
+      "viewers": 71,
       "stillLive": true
     },
     {
@@ -118,7 +100,16 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/MH0_mPt-VXE/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 68,
+      "viewers": 66,
+      "stillLive": true
+    },
+    {
+      "videoId": "nDd2zsNj6Nk",
+      "title": "✈️ LIVE August 13 | Maho Beach Plane Spotting | SXM Airport St. Maarten (with ATC)",
+      "channel": "SHOWME Caribbean",
+      "thumb": "https://i.ytimg.com/vi/nDd2zsNj6Nk/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 55,
       "stillLive": true
     },
     {
@@ -127,7 +118,7 @@
       "channel": "AVIAÇÃO TV",
       "thumb": "https://i.ytimg.com/vi/f1utuHenMsE/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 56,
+      "viewers": 45,
       "stillLive": true
     },
     {
@@ -136,7 +127,7 @@
       "channel": "PTZtv",
       "thumb": "https://i.ytimg.com/vi/_GUsXnlVJmo/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 35,
+      "viewers": 40,
       "stillLive": true
     },
     {
@@ -145,7 +136,7 @@
       "channel": "LAS Vegas Airport LIVE",
       "thumb": "https://i.ytimg.com/vi/iIUCaiiMmNs/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 31,
+      "viewers": 38,
       "stillLive": true
     },
     {
@@ -154,7 +145,7 @@
       "channel": "Nippon Television News Japan",
       "thumb": "https://i.ytimg.com/vi/3w4zEyFamuA/mqdefault_live.jpg",
       "matchedQuery": "LAX airport plane spotting live",
-      "viewers": 28,
+      "viewers": 32,
       "stillLive": true
     },
     {
@@ -172,7 +163,7 @@
       "channel": "TurtleAir",
       "thumb": "https://i.ytimg.com/vi/kLLb-fPOPuk/mqdefault_live.jpg",
       "matchedQuery": "JFK airport plane spotting live",
-      "viewers": 16,
+      "viewers": 19,
       "stillLive": true
     },
     {
@@ -190,16 +181,7 @@
       "channel": "Airplane Live",
       "thumb": "https://i.ytimg.com/vi/11INCtK6uiA/mqdefault_live.jpg",
       "matchedQuery": "LAX airport plane spotting live",
-      "viewers": 5,
-      "stillLive": true
-    },
-    {
-      "videoId": "K6qxmXyjWxg",
-      "title": "Watertown International Airport",
-      "channel": "Watertown Airport",
-      "thumb": "https://i.ytimg.com/vi/K6qxmXyjWxg/mqdefault_live.jpg",
-      "matchedQuery": "JFK airport plane spotting live",
-      "viewers": 5,
+      "viewers": 8,
       "stillLive": true
     },
     {
@@ -208,7 +190,16 @@
       "channel": "Beaker & Honeydew",
       "thumb": "https://i.ytimg.com/vi/doJM-TUyorQ/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 4,
+      "viewers": 6,
+      "stillLive": true
+    },
+    {
+      "videoId": "K6qxmXyjWxg",
+      "title": "Watertown International Airport",
+      "channel": "Watertown Airport",
+      "thumb": "https://i.ytimg.com/vi/K6qxmXyjWxg/mqdefault_live.jpg",
+      "matchedQuery": "JFK airport plane spotting live",
+      "viewers": 2,
       "stillLive": true
     },
     {
@@ -226,7 +217,7 @@
       "channel": "Airplane Live",
       "thumb": "https://i.ytimg.com/vi/PMetnXeBFSk/mqdefault_live.jpg",
       "matchedQuery": "JFK airport plane spotting live",
-      "viewers": 1,
+      "viewers": 2,
       "stillLive": true
     },
     {
@@ -235,7 +226,7 @@
       "channel": "Information Zulu",
       "thumb": "https://i.ytimg.com/vi/quMjeKWcwjA/mqdefault_live.jpg",
       "matchedQuery": "LAX airport plane spotting live",
-      "viewers": 1,
+      "viewers": 2,
       "stillLive": true
     },
     {
