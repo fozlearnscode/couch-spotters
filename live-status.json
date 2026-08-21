@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T22:57:10.470Z",
+  "updatedAt": "2026-08-21T23:31:26.322Z",
   "airportRotationStart": 1,
   "quotaExceeded": false,
   "lastSearchError": null,
@@ -10,7 +10,7 @@
       "channel": "AIRLINE VIDEOS",
       "thumb": "https://i.ytimg.com/vi/ZL8WDDsseiI/mqdefault_live.jpg",
       "matchedQuery": "LAX airport plane spotting live",
-      "viewers": 1163,
+      "viewers": 1329,
       "stillLive": true
     },
     {
@@ -19,7 +19,7 @@
       "channel": "AirlineVideosLive+",
       "thumb": "https://i.ytimg.com/vi/n4I0d44oBEs/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 523,
+      "viewers": 462,
       "stillLive": true
     },
     {
@@ -28,7 +28,7 @@
       "channel": "AirlineVideosLive+",
       "thumb": "https://i.ytimg.com/vi/KzsNnyN8D_Q/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 270,
+      "viewers": 240,
       "stillLive": true
     },
     {
@@ -37,7 +37,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/V7_orOtu-oo/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 248,
+      "viewers": 237,
       "stillLive": true
     },
     {
@@ -46,16 +46,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/OUBslrCqREs/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 139,
-      "stillLive": true
-    },
-    {
-      "videoId": "67BCsiW-1Io",
-      "title": "Midway Airport | Chicago, IL USA | StreamTime LIVE  4K",
-      "channel": "StreamTime Live",
-      "thumb": "https://i.ytimg.com/vi/67BCsiW-1Io/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 79,
+      "viewers": 124,
       "stillLive": true
     },
     {
@@ -64,7 +55,16 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/MH0_mPt-VXE/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 66,
+      "viewers": 79,
+      "stillLive": true
+    },
+    {
+      "videoId": "67BCsiW-1Io",
+      "title": "Midway Airport | Chicago, IL USA | StreamTime LIVE  4K",
+      "channel": "StreamTime Live",
+      "thumb": "https://i.ytimg.com/vi/67BCsiW-1Io/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 70,
       "stillLive": true
     },
     {
@@ -77,30 +77,21 @@
       "stillLive": true
     },
     {
-      "videoId": "2IQmpCXbOmM",
-      "title": "Iconic SXM Airport LIVE 24/7 – Sint Maarten Maho Beach",
-      "channel": "Flightradar24",
-      "thumb": "https://i.ytimg.com/vi/2IQmpCXbOmM/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 61,
-      "stillLive": true
-    },
-    {
       "videoId": "iSeH45R-8R0",
       "title": "✈️  Maho Beach Saint Martin | Princess Juliana Airport Beach 24/7 | LIVE Cam",
       "channel": "SHOWME Caribbean",
       "thumb": "https://i.ytimg.com/vi/iSeH45R-8R0/mqdefault_live.jpg",
       "matchedQuery": "JFK airport plane spotting live",
-      "viewers": 59,
+      "viewers": 51,
       "stillLive": true
     },
     {
-      "videoId": "iIUCaiiMmNs",
-      "title": "OFFICIAL LAS Vegas Airport LIVE Camera: Departures, Arrivals, and the Strip - All in One!",
-      "channel": "LAS Vegas Airport LIVE",
-      "thumb": "https://i.ytimg.com/vi/iIUCaiiMmNs/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 48,
+      "videoId": "2IQmpCXbOmM",
+      "title": "Iconic SXM Airport LIVE 24/7 – Sint Maarten Maho Beach",
+      "channel": "Flightradar24",
+      "thumb": "https://i.ytimg.com/vi/2IQmpCXbOmM/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 42,
       "stillLive": true
     },
     {
@@ -109,6 +100,15 @@
       "channel": "Nippon Television News Japan",
       "thumb": "https://i.ytimg.com/vi/3w4zEyFamuA/mqdefault_live.jpg",
       "matchedQuery": "LAX airport plane spotting live",
+      "viewers": 41,
+      "stillLive": true
+    },
+    {
+      "videoId": "iIUCaiiMmNs",
+      "title": "OFFICIAL LAS Vegas Airport LIVE Camera: Departures, Arrivals, and the Strip - All in One!",
+      "channel": "LAS Vegas Airport LIVE",
+      "thumb": "https://i.ytimg.com/vi/iIUCaiiMmNs/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
       "viewers": 38,
       "stillLive": true
     },
@@ -118,25 +118,7 @@
       "channel": "PTZtv",
       "thumb": "https://i.ytimg.com/vi/_GUsXnlVJmo/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 37,
-      "stillLive": true
-    },
-    {
-      "videoId": "_iostBznD7k",
-      "title": "🔴 LIVE 24/7 Lisbon Airport Live Cam 21.08.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
-      "channel": "AVIAÇÃO TV",
-      "thumb": "https://i.ytimg.com/vi/_iostBznD7k/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 36,
-      "stillLive": true
-    },
-    {
-      "videoId": "g0hyN0QBFLw",
-      "title": "✈️ LIVE August 21| Maho Beach Plane Spotting | SXM Airport St. Maarten (with ATC)",
-      "channel": "SHOWME Caribbean",
-      "thumb": "https://i.ytimg.com/vi/g0hyN0QBFLw/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 33,
+      "viewers": 32,
       "stillLive": true
     },
     {
@@ -145,7 +127,25 @@
       "channel": "Luftra Aviation",
       "thumb": "https://i.ytimg.com/vi/wdFQvKAlyA4/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 26,
+      "viewers": 27,
+      "stillLive": true
+    },
+    {
+      "videoId": "_iostBznD7k",
+      "title": "🔴 LIVE 24/7 Lisbon Airport Live Cam 21.08.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
+      "channel": "AVIAÇÃO TV",
+      "thumb": "https://i.ytimg.com/vi/_iostBznD7k/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 24,
+      "stillLive": true
+    },
+    {
+      "videoId": "g0hyN0QBFLw",
+      "title": "✈️ LIVE August 21| Maho Beach Plane Spotting | SXM Airport St. Maarten (with ATC)",
+      "channel": "SHOWME Caribbean",
+      "thumb": "https://i.ytimg.com/vi/g0hyN0QBFLw/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 23,
       "stillLive": true
     },
     {
@@ -154,7 +154,7 @@
       "channel": "SlowTV",
       "thumb": "https://i.ytimg.com/vi/kuOmmVkOGN8/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 24,
+      "viewers": 21,
       "stillLive": true
     },
     {
@@ -163,7 +163,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/fFl0qD108sk/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 18,
+      "viewers": 20,
       "stillLive": true
     },
     {
@@ -181,7 +181,7 @@
       "channel": "TurtleAir",
       "thumb": "https://i.ytimg.com/vi/kLLb-fPOPuk/mqdefault_live.jpg",
       "matchedQuery": "JFK airport plane spotting live",
-      "viewers": 12,
+      "viewers": 14,
       "stillLive": true
     },
     {
@@ -190,7 +190,7 @@
       "channel": "Madeira-Web",
       "thumb": "https://i.ytimg.com/vi/8Drrabk3h6M/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 10,
+      "viewers": 9,
       "stillLive": true
     },
     {
@@ -208,7 +208,7 @@
       "channel": "Airplane Live",
       "thumb": "https://i.ytimg.com/vi/1CRXoZI-Wdo/mqdefault_live.jpg",
       "matchedQuery": "Heathrow airport plane spotting live",
-      "viewers": 3,
+      "viewers": 2,
       "stillLive": true
     },
     {
@@ -226,7 +226,7 @@
       "channel": "Airplane Live",
       "thumb": "https://i.ytimg.com/vi/PMetnXeBFSk/mqdefault_live.jpg",
       "matchedQuery": "JFK airport plane spotting live",
-      "viewers": 1,
+      "viewers": 2,
       "stillLive": true
     },
     {
