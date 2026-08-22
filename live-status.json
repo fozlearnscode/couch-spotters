@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T04:28:16.757Z",
+  "updatedAt": "2026-08-22T04:49:33.729Z",
   "airportRotationStart": 2,
   "quotaExceeded": false,
   "lastSearchError": null,
@@ -10,7 +10,7 @@
       "channel": "AirlineVideosLive+",
       "thumb": "https://i.ytimg.com/vi/n4I0d44oBEs/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 409,
+      "viewers": 381,
       "stillLive": true
     },
     {
@@ -19,7 +19,7 @@
       "channel": "Love Flight Jack",
       "thumb": "https://i.ytimg.com/vi/P-Ui2zI5PEw/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 360,
+      "viewers": 366,
       "stillLive": true
     },
     {
@@ -28,7 +28,7 @@
       "channel": "AirlineVideosLive+",
       "thumb": "https://i.ytimg.com/vi/KzsNnyN8D_Q/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 215,
+      "viewers": 229,
       "stillLive": true
     },
     {
@@ -37,7 +37,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/V7_orOtu-oo/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 209,
+      "viewers": 206,
       "stillLive": true
     },
     {
@@ -46,7 +46,7 @@
       "channel": "Metal Birds Aviation",
       "thumb": "https://i.ytimg.com/vi/8NGLgyieecI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 140,
+      "viewers": 118,
       "stillLive": true
     },
     {
@@ -55,16 +55,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/OUBslrCqREs/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 83,
-      "stillLive": true
-    },
-    {
-      "videoId": "MH0_mPt-VXE",
-      "title": "FR24 - MSY New Orleans LIVE 24/7",
-      "channel": "Flightradar24",
-      "thumb": "https://i.ytimg.com/vi/MH0_mPt-VXE/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 46,
+      "viewers": 74,
       "stillLive": true
     },
     {
@@ -73,7 +64,16 @@
       "channel": "StreamTime Live",
       "thumb": "https://i.ytimg.com/vi/67BCsiW-1Io/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 46,
+      "viewers": 43,
+      "stillLive": true
+    },
+    {
+      "videoId": "MH0_mPt-VXE",
+      "title": "FR24 - MSY New Orleans LIVE 24/7",
+      "channel": "Flightradar24",
+      "thumb": "https://i.ytimg.com/vi/MH0_mPt-VXE/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 42,
       "stillLive": true
     },
     {
@@ -82,7 +82,7 @@
       "channel": "Nippon Television News Japan",
       "thumb": "https://i.ytimg.com/vi/3w4zEyFamuA/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 41,
+      "viewers": 42,
       "stillLive": true
     },
     {
@@ -100,7 +100,7 @@
       "channel": "RNO Flights",
       "thumb": "https://i.ytimg.com/vi/VaDbfFG7RhI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 36,
+      "viewers": 34,
       "stillLive": true
     },
     {
@@ -109,34 +109,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/2IQmpCXbOmM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 20,
-      "stillLive": true
-    },
-    {
-      "videoId": "AAlo3eCPVbk",
-      "title": "LIVE 🔴 WEBCAM from LANZAROTE AIRPORT - (Canary Islands, Spain)",
-      "channel": "LanzaroteWebcam",
-      "thumb": "https://i.ytimg.com/vi/AAlo3eCPVbk/mqdefault_live.jpg",
-      "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": 20,
-      "stillLive": true
-    },
-    {
-      "videoId": "fFl0qD108sk",
-      "title": "RNO Reno Airport LIVE 24/7",
-      "channel": "Flightradar24",
-      "thumb": "https://i.ytimg.com/vi/fFl0qD108sk/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 18,
-      "stillLive": true
-    },
-    {
-      "videoId": "_GUsXnlVJmo",
-      "title": "LIVE Miami Airport -- Watch runway 9/27 with tower radio traffic!",
-      "channel": "PTZtv",
-      "thumb": "https://i.ytimg.com/vi/_GUsXnlVJmo/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 18,
+      "viewers": 23,
       "stillLive": true
     },
     {
@@ -145,16 +118,34 @@
       "channel": "AVIAÇÃO TV",
       "thumb": "https://i.ytimg.com/vi/_iostBznD7k/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 17,
+      "viewers": 20,
       "stillLive": true
     },
     {
-      "videoId": "wWm-kbryDDQ",
-      "title": "24/7 MSP Webcam - Minneapolis / St. Paul Airport - You Control The Cams!",
-      "channel": "MNCam",
-      "thumb": "https://i.ytimg.com/vi/wWm-kbryDDQ/mqdefault_live.jpg",
+      "videoId": "_GUsXnlVJmo",
+      "title": "LIVE Miami Airport -- Watch runway 9/27 with tower radio traffic!",
+      "channel": "PTZtv",
+      "thumb": "https://i.ytimg.com/vi/_GUsXnlVJmo/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
+      "viewers": 19,
+      "stillLive": true
+    },
+    {
+      "videoId": "AAlo3eCPVbk",
+      "title": "LIVE 🔴 WEBCAM from LANZAROTE AIRPORT - (Canary Islands, Spain)",
+      "channel": "LanzaroteWebcam",
+      "thumb": "https://i.ytimg.com/vi/AAlo3eCPVbk/mqdefault_live.jpg",
+      "matchedQuery": "Sydney airport plane spotting live",
+      "viewers": 18,
+      "stillLive": true
+    },
+    {
+      "videoId": "fFl0qD108sk",
+      "title": "RNO Reno Airport LIVE 24/7",
+      "channel": "Flightradar24",
+      "thumb": "https://i.ytimg.com/vi/fFl0qD108sk/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 11,
+      "viewers": 14,
       "stillLive": true
     },
     {
@@ -163,6 +154,15 @@
       "channel": "TurtleAir",
       "thumb": "https://i.ytimg.com/vi/kLLb-fPOPuk/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
+      "viewers": 11,
+      "stillLive": true
+    },
+    {
+      "videoId": "wWm-kbryDDQ",
+      "title": "24/7 MSP Webcam - Minneapolis / St. Paul Airport - You Control The Cams!",
+      "channel": "MNCam",
+      "thumb": "https://i.ytimg.com/vi/wWm-kbryDDQ/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
       "viewers": 10,
       "stillLive": true
     },
@@ -190,7 +190,16 @@
       "channel": "Information Zulu",
       "thumb": "https://i.ytimg.com/vi/t0GrpAgdBFI/mqdefault_live.jpg",
       "matchedQuery": "JFK airport plane spotting live",
-      "viewers": 2,
+      "viewers": 3,
+      "stillLive": true
+    },
+    {
+      "videoId": "PMetnXeBFSk",
+      "title": "✈️ RE-Live Planespotting at Frankfurt Airport – B747 Paradise Takeoffs &amp; Landings - FRA - EDDF 2026",
+      "channel": "Airplane Live",
+      "thumb": "https://i.ytimg.com/vi/PMetnXeBFSk/mqdefault_live.jpg",
+      "matchedQuery": "JFK airport plane spotting live",
+      "viewers": 3,
       "stillLive": true
     },
     {
@@ -208,15 +217,6 @@
       "channel": "Airplane Live",
       "thumb": "https://i.ytimg.com/vi/11INCtK6uiA/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1,
-      "stillLive": true
-    },
-    {
-      "videoId": "PMetnXeBFSk",
-      "title": "✈️ RE-Live Planespotting at Frankfurt Airport – B747 Paradise Takeoffs &amp; Landings - FRA - EDDF 2026",
-      "channel": "Airplane Live",
-      "thumb": "https://i.ytimg.com/vi/PMetnXeBFSk/mqdefault_live.jpg",
-      "matchedQuery": "JFK airport plane spotting live",
       "viewers": 1,
       "stillLive": true
     },
