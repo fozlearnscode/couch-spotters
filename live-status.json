@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T18:23:30.665Z",
+  "updatedAt": "2026-08-23T18:32:41.209Z",
   "airportRotationStart": 3,
   "quotaExceeded": false,
   "lastSearchError": null,
@@ -10,7 +10,7 @@
       "channel": "Flight Focus 365",
       "thumb": "https://i.ytimg.com/vi/fiS0AohSoj8/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 671,
+      "viewers": 668,
       "stillLive": true
     },
     {
@@ -19,7 +19,7 @@
       "channel": "AirlineVideosLive+",
       "thumb": "https://i.ytimg.com/vi/n4I0d44oBEs/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 363,
+      "viewers": 391,
       "stillLive": true
     },
     {
@@ -28,7 +28,7 @@
       "channel": "DubJet Aviation Videos",
       "thumb": "https://i.ytimg.com/vi/HDOkaHK0pxo/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 275,
+      "viewers": 278,
       "stillLive": true
     },
     {
@@ -46,88 +46,7 @@
       "channel": "AirlineVideosLive+",
       "thumb": "https://i.ytimg.com/vi/KzsNnyN8D_Q/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 198,
-      "stillLive": true
-    },
-    {
-      "videoId": "OoEVShbbtdA",
-      "title": "✈️ LIVE August 23 | Maho Beach Plane Spotting | SXM Airport St. Maarten (with ATC)",
-      "channel": "SHOWME Caribbean",
-      "thumb": "https://i.ytimg.com/vi/OoEVShbbtdA/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 150,
-      "stillLive": true
-    },
-    {
-      "videoId": "OUBslrCqREs",
-      "title": "LGA Airport LIVE 24/7 • LaGuardia, New York",
-      "channel": "Flightradar24",
-      "thumb": "https://i.ytimg.com/vi/OUBslrCqREs/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 136,
-      "stillLive": true
-    },
-    {
-      "videoId": "AAlo3eCPVbk",
-      "title": "LIVE 🔴 WEBCAM from LANZAROTE AIRPORT - (Canary Islands, Spain)",
-      "channel": "LanzaroteWebcam",
-      "thumb": "https://i.ytimg.com/vi/AAlo3eCPVbk/mqdefault_live.jpg",
-      "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": 129,
-      "stillLive": true
-    },
-    {
-      "videoId": "iSeH45R-8R0",
-      "title": "✈️  Maho Beach Saint Martin | Princess Juliana Airport Beach 24/7 | LIVE Cam",
-      "channel": "SHOWME Caribbean",
-      "thumb": "https://i.ytimg.com/vi/iSeH45R-8R0/mqdefault_live.jpg",
-      "matchedQuery": "Melbourne airport plane spotting live",
-      "viewers": 126,
-      "stillLive": true
-    },
-    {
-      "videoId": "gbMu5H5gCnU",
-      "title": "🔴 LIVE 24/7 Lisbon Airport Live Cam 23.08.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
-      "channel": "AVIAÇÃO TV",
-      "thumb": "https://i.ytimg.com/vi/gbMu5H5gCnU/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 90,
-      "stillLive": true
-    },
-    {
-      "videoId": "67BCsiW-1Io",
-      "title": "Midway Airport | Chicago, IL USA | StreamTime LIVE  4K",
-      "channel": "StreamTime Live",
-      "thumb": "https://i.ytimg.com/vi/67BCsiW-1Io/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 88,
-      "stillLive": true
-    },
-    {
-      "videoId": "56Vl9X39D_A",
-      "title": "🔴LIVE MUNICH AIRPORT PLANESPOTTING 23.08.26 (MUC/EDDM) #aviation #livestream",
-      "channel": "FlorianR17",
-      "thumb": "https://i.ytimg.com/vi/56Vl9X39D_A/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 64,
-      "stillLive": true
-    },
-    {
-      "videoId": "MH0_mPt-VXE",
-      "title": "FR24 - MSY New Orleans LIVE 24/7",
-      "channel": "Flightradar24",
-      "thumb": "https://i.ytimg.com/vi/MH0_mPt-VXE/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 63,
-      "stillLive": true
-    },
-    {
-      "videoId": "VaDbfFG7RhI",
-      "title": "🔴 LIVE 24/7 Reno-Tahoe International Airport Plane Spotting - Grand Sierra Resort",
-      "channel": "RNO Flights",
-      "thumb": "https://i.ytimg.com/vi/VaDbfFG7RhI/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 62,
+      "viewers": 190,
       "stillLive": true
     },
     {
@@ -136,7 +55,79 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/2IQmpCXbOmM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 55,
+      "viewers": 156,
+      "stillLive": true
+    },
+    {
+      "videoId": "AAlo3eCPVbk",
+      "title": "LIVE 🔴 WEBCAM from LANZAROTE AIRPORT - (Canary Islands, Spain)",
+      "channel": "LanzaroteWebcam",
+      "thumb": "https://i.ytimg.com/vi/AAlo3eCPVbk/mqdefault_live.jpg",
+      "matchedQuery": "Sydney airport plane spotting live",
+      "viewers": 137,
+      "stillLive": true
+    },
+    {
+      "videoId": "OoEVShbbtdA",
+      "title": "✈️ LIVE August 23 | Maho Beach Plane Spotting | SXM Airport St. Maarten (with ATC)",
+      "channel": "SHOWME Caribbean",
+      "thumb": "https://i.ytimg.com/vi/OoEVShbbtdA/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 132,
+      "stillLive": true
+    },
+    {
+      "videoId": "iSeH45R-8R0",
+      "title": "✈️  Maho Beach Saint Martin | Princess Juliana Airport Beach 24/7 | LIVE Cam",
+      "channel": "SHOWME Caribbean",
+      "thumb": "https://i.ytimg.com/vi/iSeH45R-8R0/mqdefault_live.jpg",
+      "matchedQuery": "Melbourne airport plane spotting live",
+      "viewers": 128,
+      "stillLive": true
+    },
+    {
+      "videoId": "OUBslrCqREs",
+      "title": "LGA Airport LIVE 24/7 • LaGuardia, New York",
+      "channel": "Flightradar24",
+      "thumb": "https://i.ytimg.com/vi/OUBslrCqREs/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 123,
+      "stillLive": true
+    },
+    {
+      "videoId": "gbMu5H5gCnU",
+      "title": "🔴 LIVE 24/7 Lisbon Airport Live Cam 23.08.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
+      "channel": "AVIAÇÃO TV",
+      "thumb": "https://i.ytimg.com/vi/gbMu5H5gCnU/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
+      "viewers": 95,
+      "stillLive": true
+    },
+    {
+      "videoId": "67BCsiW-1Io",
+      "title": "Midway Airport | Chicago, IL USA | StreamTime LIVE  4K",
+      "channel": "StreamTime Live",
+      "thumb": "https://i.ytimg.com/vi/67BCsiW-1Io/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 75,
+      "stillLive": true
+    },
+    {
+      "videoId": "MH0_mPt-VXE",
+      "title": "FR24 - MSY New Orleans LIVE 24/7",
+      "channel": "Flightradar24",
+      "thumb": "https://i.ytimg.com/vi/MH0_mPt-VXE/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 64,
+      "stillLive": true
+    },
+    {
+      "videoId": "VaDbfFG7RhI",
+      "title": "🔴 LIVE 24/7 Reno-Tahoe International Airport Plane Spotting - Grand Sierra Resort",
+      "channel": "RNO Flights",
+      "thumb": "https://i.ytimg.com/vi/VaDbfFG7RhI/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 61,
       "stillLive": true
     },
     {
@@ -145,7 +136,25 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/NtbquzembC8/mqdefault_live.jpg",
       "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": 50,
+      "viewers": 58,
+      "stillLive": true
+    },
+    {
+      "videoId": "56Vl9X39D_A",
+      "title": "🔴LIVE MUNICH AIRPORT PLANESPOTTING 23.08.26 (MUC/EDDM) #aviation #livestream",
+      "channel": "FlorianR17",
+      "thumb": "https://i.ytimg.com/vi/56Vl9X39D_A/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 49,
+      "stillLive": true
+    },
+    {
+      "videoId": "_GUsXnlVJmo",
+      "title": "LIVE Miami Airport -- Watch runway 9/27 with tower radio traffic!",
+      "channel": "PTZtv",
+      "thumb": "https://i.ytimg.com/vi/_GUsXnlVJmo/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
+      "viewers": 48,
       "stillLive": true
     },
     {
@@ -158,21 +167,12 @@
       "stillLive": true
     },
     {
-      "videoId": "_GUsXnlVJmo",
-      "title": "LIVE Miami Airport -- Watch runway 9/27 with tower radio traffic!",
-      "channel": "PTZtv",
-      "thumb": "https://i.ytimg.com/vi/_GUsXnlVJmo/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 43,
-      "stillLive": true
-    },
-    {
       "videoId": "fFl0qD108sk",
       "title": "RNO Reno Airport LIVE 24/7",
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/fFl0qD108sk/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 34,
+      "viewers": 37,
       "stillLive": true
     },
     {
@@ -181,7 +181,7 @@
       "channel": "meteo365es",
       "thumb": "https://i.ytimg.com/vi/A6R81wOlQqs/mqdefault_live.jpg",
       "matchedQuery": "Melbourne airport plane spotting live",
-      "viewers": 32,
+      "viewers": 33,
       "stillLive": true
     },
     {
@@ -190,7 +190,7 @@
       "channel": "MNCam",
       "thumb": "https://i.ytimg.com/vi/wWm-kbryDDQ/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 25,
+      "viewers": 24,
       "stillLive": true
     },
     {
@@ -199,7 +199,7 @@
       "channel": "Madeira-Web",
       "thumb": "https://i.ytimg.com/vi/8Drrabk3h6M/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 24,
+      "viewers": 23,
       "stillLive": true
     },
     {
@@ -208,16 +208,7 @@
       "channel": "Nippon Television News Japan",
       "thumb": "https://i.ytimg.com/vi/3w4zEyFamuA/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 20,
-      "stillLive": true
-    },
-    {
-      "videoId": "zQO5R3K_cFM",
-      "title": "🔴 LIVE Sunday Night At Tokyo Haneda Airport (HND)+ ATC Audio | 日曜の夜、東京羽田空港（HND）にて+航空管制音声",
-      "channel": "Sydney Airways",
-      "thumb": "https://i.ytimg.com/vi/zQO5R3K_cFM/mqdefault_live.jpg",
-      "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": 10,
+      "viewers": 23,
       "stillLive": true
     },
     {
@@ -230,21 +221,12 @@
       "stillLive": true
     },
     {
-      "videoId": "dxfgydoX3_k",
-      "title": "👉 🔴 LIVE Heathrow Plane Spotting ✈️ Landings &amp; Takeoffs (LHR) | 23 AUG 2026",
-      "channel": "Little & Great Adventures",
-      "thumb": "https://i.ytimg.com/vi/dxfgydoX3_k/mqdefault_live.jpg",
-      "matchedQuery": "Heathrow airport plane spotting live",
-      "viewers": 3,
-      "stillLive": true
-    },
-    {
       "videoId": "t0GrpAgdBFI",
       "title": "Live ADS-B Data and ATC at LAX | 24HR Chat | MSFS24 + PSXT",
       "channel": "Information Zulu",
       "thumb": "https://i.ytimg.com/vi/t0GrpAgdBFI/mqdefault_live.jpg",
       "matchedQuery": "Heathrow airport plane spotting live",
-      "viewers": 2,
+      "viewers": 3,
       "stillLive": true
     },
     {
@@ -257,12 +239,21 @@
       "stillLive": true
     },
     {
+      "videoId": "dxfgydoX3_k",
+      "title": "👉 🔴 LIVE Heathrow Plane Spotting ✈️ Landings &amp; Takeoffs (LHR) | 23 AUG 2026",
+      "channel": "Little & Great Adventures",
+      "thumb": "https://i.ytimg.com/vi/dxfgydoX3_k/mqdefault_live.jpg",
+      "matchedQuery": "Heathrow airport plane spotting live",
+      "viewers": 1,
+      "stillLive": true
+    },
+    {
       "videoId": "-xo-UX-u3k4",
       "title": "✈️ LAX LIVE | Sunday Aug 23 | Morning Arrivals | ADS-B + Real ATC | KLAX",
       "channel": "Information Zulu",
       "thumb": "https://i.ytimg.com/vi/-xo-UX-u3k4/mqdefault_live.jpg",
       "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": 2,
+      "viewers": 1,
       "stillLive": true
     },
     {
