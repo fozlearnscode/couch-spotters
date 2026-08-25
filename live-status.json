@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-25T08:37:01.613Z",
+  "updatedAt": "2026-08-25T08:56:16.881Z",
   "airportRotationStart": 4,
   "quotaExceeded": false,
   "lastSearchError": null,
@@ -10,7 +10,7 @@
       "channel": "Simon Lowe Aviation ",
       "thumb": "https://i.ytimg.com/vi/lUHlfNdErPo/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1827,
+      "viewers": 1860,
       "stillLive": true
     },
     {
@@ -19,7 +19,7 @@
       "channel": "Flight Focus 365",
       "thumb": "https://i.ytimg.com/vi/Nc-_LTFSZjo/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 749,
+      "viewers": 771,
       "stillLive": true
     },
     {
@@ -28,16 +28,7 @@
       "channel": "LPMA Spotter",
       "thumb": "https://i.ytimg.com/vi/OkuDhlTg72s/mqdefault_live.jpg",
       "matchedQuery": "Madeira airport plane spotting live",
-      "viewers": 336,
-      "stillLive": true
-    },
-    {
-      "videoId": "n4I0d44oBEs",
-      "title": "🔴LIVE 24/7 LAX Airport Action Runways 24L &amp; 24R | LIVE Plane Spotting with ATC!",
-      "channel": "AirlineVideosLive+",
-      "thumb": "https://i.ytimg.com/vi/n4I0d44oBEs/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 227,
+      "viewers": 340,
       "stillLive": true
     },
     {
@@ -46,7 +37,7 @@
       "channel": "SlowTV",
       "thumb": "https://i.ytimg.com/vi/kuOmmVkOGN8/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 217,
+      "viewers": 278,
       "stillLive": true
     },
     {
@@ -55,7 +46,16 @@
       "channel": "AirportWings",
       "thumb": "https://i.ytimg.com/vi/BTmOhyW1vdY/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 209,
+      "viewers": 234,
+      "stillLive": true
+    },
+    {
+      "videoId": "n4I0d44oBEs",
+      "title": "🔴LIVE 24/7 LAX Airport Action Runways 24L &amp; 24R | LIVE Plane Spotting with ATC!",
+      "channel": "AirlineVideosLive+",
+      "thumb": "https://i.ytimg.com/vi/n4I0d44oBEs/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 217,
       "stillLive": true
     },
     {
@@ -64,7 +64,7 @@
       "channel": "AirlineVideosLive+",
       "thumb": "https://i.ytimg.com/vi/KzsNnyN8D_Q/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 174,
+      "viewers": 167,
       "stillLive": true
     },
     {
@@ -73,7 +73,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/V7_orOtu-oo/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 148,
+      "viewers": 151,
       "stillLive": true
     },
     {
@@ -82,7 +82,7 @@
       "channel": "LanzaroteWebcam",
       "thumb": "https://i.ytimg.com/vi/AAlo3eCPVbk/mqdefault_live.jpg",
       "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": 92,
+      "viewers": 107,
       "stillLive": true
     },
     {
@@ -91,16 +91,7 @@
       "channel": "AVIAÇÃO TV",
       "thumb": "https://i.ytimg.com/vi/MGBRANdL2Jw/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 69,
-      "stillLive": true
-    },
-    {
-      "videoId": "hRw1_JQMQoE",
-      "title": "LIVE MALLORCA – PORT | AIRPORT | CITY | BEACH",
-      "channel": "WingCam",
-      "thumb": "https://i.ytimg.com/vi/hRw1_JQMQoE/mqdefault_live.jpg",
-      "matchedQuery": "Madeira airport plane spotting live",
-      "viewers": 66,
+      "viewers": 70,
       "stillLive": true
     },
     {
@@ -109,7 +100,16 @@
       "channel": "meteo365es",
       "thumb": "https://i.ytimg.com/vi/A6R81wOlQqs/mqdefault_live.jpg",
       "matchedQuery": "Melbourne airport plane spotting live",
-      "viewers": 64,
+      "viewers": 55,
+      "stillLive": true
+    },
+    {
+      "videoId": "hRw1_JQMQoE",
+      "title": "LIVE MALLORCA – PORT | AIRPORT | CITY | BEACH",
+      "channel": "WingCam",
+      "thumb": "https://i.ytimg.com/vi/hRw1_JQMQoE/mqdefault_live.jpg",
+      "matchedQuery": "Madeira airport plane spotting live",
+      "viewers": 50,
       "stillLive": true
     },
     {
@@ -118,7 +118,7 @@
       "channel": "Nippon Television News Japan",
       "thumb": "https://i.ytimg.com/vi/3w4zEyFamuA/mqdefault_live.jpg",
       "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": 44,
+      "viewers": 43,
       "stillLive": true
     },
     {
@@ -136,7 +136,7 @@
       "channel": "SHOWME Caribbean",
       "thumb": "https://i.ytimg.com/vi/iSeH45R-8R0/mqdefault_live.jpg",
       "matchedQuery": "Melbourne airport plane spotting live",
-      "viewers": 41,
+      "viewers": 40,
       "stillLive": true
     },
     {
@@ -145,7 +145,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/NtbquzembC8/mqdefault_live.jpg",
       "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": 37,
+      "viewers": 31,
       "stillLive": true
     },
     {
@@ -158,15 +158,6 @@
       "stillLive": true
     },
     {
-      "videoId": "yrx0fvj-4QI",
-      "title": "LIVE 🔴 WEBCAM from TENERIFE AIRPORT - (Canary Islands, Spain)",
-      "channel": "LanzaroteWebcam",
-      "thumb": "https://i.ytimg.com/vi/yrx0fvj-4QI/mqdefault_live.jpg",
-      "matchedQuery": "Madeira airport plane spotting live",
-      "viewers": 22,
-      "stillLive": true
-    },
-    {
       "videoId": "MH0_mPt-VXE",
       "title": "FR24 - MSY New Orleans LIVE 24/7",
       "channel": "Flightradar24",
@@ -176,11 +167,11 @@
       "stillLive": true
     },
     {
-      "videoId": "wdFQvKAlyA4",
-      "title": "🔴Live SFO Plane Spotting | Real-Time Aircraft Tracking and ATC Audio at San Francisco Airport (KSFO)",
-      "channel": "Luftra Aviation",
-      "thumb": "https://i.ytimg.com/vi/wdFQvKAlyA4/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
+      "videoId": "yrx0fvj-4QI",
+      "title": "LIVE 🔴 WEBCAM from TENERIFE AIRPORT - (Canary Islands, Spain)",
+      "channel": "LanzaroteWebcam",
+      "thumb": "https://i.ytimg.com/vi/yrx0fvj-4QI/mqdefault_live.jpg",
+      "matchedQuery": "Madeira airport plane spotting live",
       "viewers": 19,
       "stillLive": true
     },
@@ -200,6 +191,15 @@
       "thumb": "https://i.ytimg.com/vi/2IQmpCXbOmM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
       "viewers": 17,
+      "stillLive": true
+    },
+    {
+      "videoId": "wdFQvKAlyA4",
+      "title": "🔴Live SFO Plane Spotting | Real-Time Aircraft Tracking and ATC Audio at San Francisco Airport (KSFO)",
+      "channel": "Luftra Aviation",
+      "thumb": "https://i.ytimg.com/vi/wdFQvKAlyA4/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 13,
       "stillLive": true
     },
     {
@@ -226,7 +226,7 @@
       "channel": "TurtleAir",
       "thumb": "https://i.ytimg.com/vi/kLLb-fPOPuk/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 10,
+      "viewers": 9,
       "stillLive": true
     },
     {
@@ -235,7 +235,7 @@
       "channel": "Madeira-Web",
       "thumb": "https://i.ytimg.com/vi/8Drrabk3h6M/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 7,
+      "viewers": 9,
       "stillLive": true
     },
     {
@@ -271,7 +271,7 @@
       "channel": "Airplane Live",
       "thumb": "https://i.ytimg.com/vi/1CRXoZI-Wdo/mqdefault_live.jpg",
       "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": 2,
+      "viewers": 1,
       "stillLive": true
     },
     {
@@ -280,7 +280,7 @@
       "channel": "Madeira-Web",
       "thumb": "https://i.ytimg.com/vi/MXpNSJWuqa0/mqdefault_live.jpg",
       "matchedQuery": "Madeira airport plane spotting live",
-      "viewers": 2,
+      "viewers": 1,
       "stillLive": true
     },
     {
