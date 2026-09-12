@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-12T20:08:06.939Z",
+  "updatedAt": "2026-09-12T21:01:19.713Z",
   "airportRotationStart": 3,
   "quotaExceeded": false,
   "lastSearchError": null,
@@ -10,7 +10,7 @@
       "channel": "L.A FLIGHTS",
       "thumb": "https://i.ytimg.com/vi/FlcFwdwpz7U/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 838,
+      "viewers": 962,
       "stillLive": true
     },
     {
@@ -19,16 +19,7 @@
       "channel": "AirlineVideosLive+",
       "thumb": "https://i.ytimg.com/vi/n4I0d44oBEs/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 440,
-      "stillLive": true
-    },
-    {
-      "videoId": "CmjDiQ6ueBc",
-      "title": "Heathrow Airport Live - CROSSWIND Saturday 12th September 2026",
-      "channel": "Flight Focus 365",
-      "thumb": "https://i.ytimg.com/vi/CmjDiQ6ueBc/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 358,
+      "viewers": 460,
       "stillLive": true
     },
     {
@@ -37,7 +28,7 @@
       "channel": "Reverse Ops",
       "thumb": "https://i.ytimg.com/vi/s8xaYKh3ZoM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 283,
+      "viewers": 277,
       "stillLive": true
     },
     {
@@ -46,7 +37,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/V7_orOtu-oo/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 269,
+      "viewers": 275,
       "stillLive": true
     },
     {
@@ -55,7 +46,16 @@
       "channel": "AirlineVideosLive+",
       "thumb": "https://i.ytimg.com/vi/KzsNnyN8D_Q/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 268,
+      "viewers": 272,
+      "stillLive": true
+    },
+    {
+      "videoId": "CmjDiQ6ueBc",
+      "title": "Heathrow Airport Live - CROSSWIND Saturday 12th September 2026",
+      "channel": "Flight Focus 365",
+      "thumb": "https://i.ytimg.com/vi/CmjDiQ6ueBc/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 173,
       "stillLive": true
     },
     {
@@ -64,16 +64,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/OUBslrCqREs/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 122,
-      "stillLive": true
-    },
-    {
-      "videoId": "iSeH45R-8R0",
-      "title": "✈️  Maho Beach Saint Martin | Princess Juliana Airport Beach 24/7 | LIVE Cam",
-      "channel": "SHOWME Caribbean",
-      "thumb": "https://i.ytimg.com/vi/iSeH45R-8R0/mqdefault_live.jpg",
-      "matchedQuery": "Heathrow airport plane spotting live",
-      "viewers": 81,
+      "viewers": 98,
       "stillLive": true
     },
     {
@@ -82,34 +73,16 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/2IQmpCXbOmM/mqdefault_live.jpg",
       "matchedQuery": "Heathrow airport plane spotting live",
-      "viewers": 76,
+      "viewers": 97,
       "stillLive": true
     },
     {
-      "videoId": "MH0_mPt-VXE",
-      "title": "FR24 - MSY New Orleans LIVE 24/7",
-      "channel": "Flightradar24",
-      "thumb": "https://i.ytimg.com/vi/MH0_mPt-VXE/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 68,
-      "stillLive": true
-    },
-    {
-      "videoId": "YLSYgem3JOs",
-      "title": "LIVE Stream Toronto Airport Lufthansa747 and more!✈️ | 12.09.2026",
-      "channel": "flightdisp",
-      "thumb": "https://i.ytimg.com/vi/YLSYgem3JOs/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 63,
-      "stillLive": true
-    },
-    {
-      "videoId": "XiSQVTPri1I",
-      "title": "✈️ LIVE September 12 | Maho Beach Plane Spotting | SXM Airport St. Maarten (with ATC)",
+      "videoId": "iSeH45R-8R0",
+      "title": "✈️  Maho Beach Saint Martin | Princess Juliana Airport Beach 24/7 | LIVE Cam",
       "channel": "SHOWME Caribbean",
-      "thumb": "https://i.ytimg.com/vi/XiSQVTPri1I/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 63,
+      "thumb": "https://i.ytimg.com/vi/iSeH45R-8R0/mqdefault_live.jpg",
+      "matchedQuery": "Heathrow airport plane spotting live",
+      "viewers": 87,
       "stillLive": true
     },
     {
@@ -118,16 +91,43 @@
       "channel": "LanzaroteWebcam",
       "thumb": "https://i.ytimg.com/vi/AAlo3eCPVbk/mqdefault_live.jpg",
       "matchedQuery": "Sydney airport plane spotting live",
+      "viewers": 72,
+      "stillLive": true
+    },
+    {
+      "videoId": "MH0_mPt-VXE",
+      "title": "FR24 - MSY New Orleans LIVE 24/7",
+      "channel": "Flightradar24",
+      "thumb": "https://i.ytimg.com/vi/MH0_mPt-VXE/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
       "viewers": 63,
       "stillLive": true
     },
     {
-      "videoId": "VaDbfFG7RhI",
-      "title": "🔴 LIVE 24/7 Reno-Tahoe International Airport Plane Spotting - Grand Sierra Resort",
-      "channel": "RNO Flights",
-      "thumb": "https://i.ytimg.com/vi/VaDbfFG7RhI/mqdefault_live.jpg",
+      "videoId": "YLSYgem3JOs",
+      "title": "LIVE Stream Toronto Airport Lufthansa747 and more!✈️ | 12.09.2026",
+      "channel": "flightdisp",
+      "thumb": "https://i.ytimg.com/vi/YLSYgem3JOs/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 48,
+      "viewers": 56,
+      "stillLive": true
+    },
+    {
+      "videoId": "XiSQVTPri1I",
+      "title": "✈️ LIVE September 12 | Maho Beach Plane Spotting | SXM Airport St. Maarten (with ATC)",
+      "channel": "SHOWME Caribbean",
+      "thumb": "https://i.ytimg.com/vi/XiSQVTPri1I/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 55,
+      "stillLive": true
+    },
+    {
+      "videoId": "Qf4VT7SB45w",
+      "title": "🔴 LIVE 24/7 Lisbon Airport Live Cam 12.09.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
+      "channel": "AVIAÇÃO TV",
+      "thumb": "https://i.ytimg.com/vi/Qf4VT7SB45w/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 49,
       "stillLive": true
     },
     {
@@ -145,16 +145,7 @@
       "channel": "StreamTime Live",
       "thumb": "https://i.ytimg.com/vi/67BCsiW-1Io/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 47,
-      "stillLive": true
-    },
-    {
-      "videoId": "Qf4VT7SB45w",
-      "title": "🔴 LIVE 24/7 Lisbon Airport Live Cam 12.09.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
-      "channel": "AVIAÇÃO TV",
-      "thumb": "https://i.ytimg.com/vi/Qf4VT7SB45w/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 46,
+      "viewers": 42,
       "stillLive": true
     },
     {
@@ -163,16 +154,16 @@
       "channel": "Nippon Television News Japan",
       "thumb": "https://i.ytimg.com/vi/3w4zEyFamuA/mqdefault_live.jpg",
       "matchedQuery": "Heathrow airport plane spotting live",
-      "viewers": 35,
+      "viewers": 42,
       "stillLive": true
     },
     {
-      "videoId": "Deo_lcwn8lk",
-      "title": "🔴 LIVE: Planespotting at Prague Vaclav Havel Airport, Prague | 24/7 LIVE",
-      "channel": "SlowTV",
-      "thumb": "https://i.ytimg.com/vi/Deo_lcwn8lk/mqdefault_live.jpg",
+      "videoId": "VaDbfFG7RhI",
+      "title": "🔴 LIVE 24/7 Reno-Tahoe International Airport Plane Spotting - Grand Sierra Resort",
+      "channel": "RNO Flights",
+      "thumb": "https://i.ytimg.com/vi/VaDbfFG7RhI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 33,
+      "viewers": 40,
       "stillLive": true
     },
     {
@@ -181,7 +172,7 @@
       "channel": "PTZtv",
       "thumb": "https://i.ytimg.com/vi/_GUsXnlVJmo/mqdefault_live.jpg",
       "matchedQuery": "Heathrow airport plane spotting live",
-      "viewers": 32,
+      "viewers": 36,
       "stillLive": true
     },
     {
@@ -194,21 +185,21 @@
       "stillLive": true
     },
     {
-      "videoId": "4zWDgiC3ZSU",
-      "title": "LIVE PTFS Plane Spotting ✈️ INSANE Landings!",
-      "channel": "St4r_fall",
-      "thumb": "https://i.ytimg.com/vi/4zWDgiC3ZSU/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 22,
-      "stillLive": true
-    },
-    {
       "videoId": "NtbquzembC8",
       "title": "ACE Lanzarote Airport LIVE 24/7 - Canary Islands SPAIN",
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/NtbquzembC8/mqdefault_live.jpg",
       "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": 19,
+      "viewers": 29,
+      "stillLive": true
+    },
+    {
+      "videoId": "4zWDgiC3ZSU",
+      "title": "LIVE PTFS Plane Spotting ✈️ INSANE Landings!",
+      "channel": "St4r_fall",
+      "thumb": "https://i.ytimg.com/vi/4zWDgiC3ZSU/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 23,
       "stillLive": true
     },
     {
@@ -226,7 +217,16 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/fFl0qD108sk/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 12,
+      "viewers": 16,
+      "stillLive": true
+    },
+    {
+      "videoId": "Deo_lcwn8lk",
+      "title": "🔴 LIVE: Planespotting at Prague Vaclav Havel Airport, Prague | 24/7 LIVE",
+      "channel": "SlowTV",
+      "thumb": "https://i.ytimg.com/vi/Deo_lcwn8lk/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 15,
       "stillLive": true
     },
     {
@@ -235,15 +235,6 @@
       "channel": "Rainier Aviation",
       "thumb": "https://i.ytimg.com/vi/XO6qQv7EYtM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 10,
-      "stillLive": true
-    },
-    {
-      "videoId": "t0GrpAgdBFI",
-      "title": "Live ADS-B Data and ATC at LAX | 24HR Chat | MSFS24 + PSXT",
-      "channel": "Information Zulu",
-      "thumb": "https://i.ytimg.com/vi/t0GrpAgdBFI/mqdefault_live.jpg",
-      "matchedQuery": "Heathrow airport plane spotting live",
       "viewers": 4,
       "stillLive": true
     },
@@ -253,25 +244,7 @@
       "channel": "Information Zulu",
       "thumb": "https://i.ytimg.com/vi/WnTwhH1Cpv0/mqdefault_live.jpg",
       "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": 3,
-      "stillLive": true
-    },
-    {
-      "videoId": "ZRaAt6alLng",
-      "title": "LIVE Plane Spotting at New York JFK (JFK) | MSFS Airport Ambience",
-      "channel": "Always On Final",
-      "thumb": "https://i.ytimg.com/vi/ZRaAt6alLng/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 2,
-      "stillLive": true
-    },
-    {
-      "videoId": "1CRXoZI-Wdo",
-      "title": "✈️ RE-LIVE Planespotting Munich Airport MUC | Heavy Landings &amp; Takeoffs | A380, A350, B777 Close-Ups",
-      "channel": "Airplane Live",
-      "thumb": "https://i.ytimg.com/vi/1CRXoZI-Wdo/mqdefault_live.jpg",
-      "matchedQuery": "Heathrow airport plane spotting live",
-      "viewers": 2,
+      "viewers": 4,
       "stillLive": true
     },
     {
@@ -280,6 +253,24 @@
       "channel": "Sydney Airways",
       "thumb": "https://i.ytimg.com/vi/xb5sscmawBg/mqdefault_live.jpg",
       "matchedQuery": "Sydney airport plane spotting live",
+      "viewers": 4,
+      "stillLive": true
+    },
+    {
+      "videoId": "t0GrpAgdBFI",
+      "title": "Live ADS-B Data and ATC at LAX | 24HR Chat | MSFS24 + PSXT",
+      "channel": "Information Zulu",
+      "thumb": "https://i.ytimg.com/vi/t0GrpAgdBFI/mqdefault_live.jpg",
+      "matchedQuery": "Heathrow airport plane spotting live",
+      "viewers": 3,
+      "stillLive": true
+    },
+    {
+      "videoId": "1CRXoZI-Wdo",
+      "title": "✈️ RE-LIVE Planespotting Munich Airport MUC | Heavy Landings &amp; Takeoffs | A380, A350, B777 Close-Ups",
+      "channel": "Airplane Live",
+      "thumb": "https://i.ytimg.com/vi/1CRXoZI-Wdo/mqdefault_live.jpg",
+      "matchedQuery": "Heathrow airport plane spotting live",
       "viewers": 2,
       "stillLive": true
     },
