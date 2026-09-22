@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T17:54:08.314Z",
+  "updatedAt": "2026-09-22T18:06:46.576Z",
   "airportRotationStart": 1,
   "quotaExceeded": false,
   "lastSearchError": null,
@@ -10,7 +10,7 @@
       "channel": "Flight Focus 365",
       "thumb": "https://i.ytimg.com/vi/3UZInIkqUJo/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1067,
+      "viewers": 1050,
       "stillLive": true
     },
     {
@@ -19,7 +19,7 @@
       "channel": "AirlineVideosLive+",
       "thumb": "https://i.ytimg.com/vi/n4I0d44oBEs/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 574,
+      "viewers": 567,
       "stillLive": true
     },
     {
@@ -28,7 +28,7 @@
       "channel": "Fluggesellschaft",
       "thumb": "https://i.ytimg.com/vi/b-XEigAvTgU/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 563,
+      "viewers": 556,
       "stillLive": true
     },
     {
@@ -37,7 +37,7 @@
       "channel": "The Curious Spotter",
       "thumb": "https://i.ytimg.com/vi/i04Xz_fI8ck/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 548,
+      "viewers": 529,
       "stillLive": true
     },
     {
@@ -46,7 +46,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/V7_orOtu-oo/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 300,
+      "viewers": 299,
       "stillLive": true
     },
     {
@@ -55,7 +55,7 @@
       "channel": "AirlineVideosLive+",
       "thumb": "https://i.ytimg.com/vi/KzsNnyN8D_Q/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 295,
+      "viewers": 289,
       "stillLive": true
     },
     {
@@ -64,7 +64,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/OUBslrCqREs/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 252,
+      "viewers": 227,
       "stillLive": true
     },
     {
@@ -73,7 +73,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/2IQmpCXbOmM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 96,
+      "viewers": 102,
       "stillLive": true
     },
     {
@@ -82,7 +82,7 @@
       "channel": "AVIAÇÃO TV",
       "thumb": "https://i.ytimg.com/vi/Bh-Hvgv6xdo/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 73,
+      "viewers": 71,
       "stillLive": true
     },
     {
@@ -91,7 +91,7 @@
       "channel": "StreamTime Live",
       "thumb": "https://i.ytimg.com/vi/67BCsiW-1Io/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 61,
+      "viewers": 66,
       "stillLive": true
     },
     {
@@ -100,25 +100,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/MH0_mPt-VXE/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 58,
-      "stillLive": true
-    },
-    {
-      "videoId": "VaDbfFG7RhI",
-      "title": "🔴 LIVE 24/7 Reno-Tahoe International Airport Plane Spotting - Grand Sierra Resort",
-      "channel": "RNO Flights",
-      "thumb": "https://i.ytimg.com/vi/VaDbfFG7RhI/mqdefault_live.jpg",
-      "matchedQuery": "Heathrow airport plane spotting live",
-      "viewers": 53,
-      "stillLive": true
-    },
-    {
-      "videoId": "eEGiqgSy29M",
-      "title": "🔴 LIVE Heathrow Plane Spotting | Evening Arrivals, A380s &amp; Global Airlines ✈️",
-      "channel": "BritReady Aviation | Plane Spotting UK",
-      "thumb": "https://i.ytimg.com/vi/eEGiqgSy29M/mqdefault_live.jpg",
-      "matchedQuery": "Heathrow airport plane spotting live",
-      "viewers": 51,
+      "viewers": 64,
       "stillLive": true
     },
     {
@@ -127,7 +109,16 @@
       "channel": "LAS Vegas Airport LIVE",
       "thumb": "https://i.ytimg.com/vi/iIUCaiiMmNs/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 44,
+      "viewers": 51,
+      "stillLive": true
+    },
+    {
+      "videoId": "VaDbfFG7RhI",
+      "title": "🔴 LIVE 24/7 Reno-Tahoe International Airport Plane Spotting - Grand Sierra Resort",
+      "channel": "RNO Flights",
+      "thumb": "https://i.ytimg.com/vi/VaDbfFG7RhI/mqdefault_live.jpg",
+      "matchedQuery": "Heathrow airport plane spotting live",
+      "viewers": 50,
       "stillLive": true
     },
     {
@@ -140,12 +131,21 @@
       "stillLive": true
     },
     {
+      "videoId": "eEGiqgSy29M",
+      "title": "🔴 LIVE Heathrow Plane Spotting | Evening Arrivals, A380s &amp; Global Airlines ✈️",
+      "channel": "BritReady Aviation | Plane Spotting UK",
+      "thumb": "https://i.ytimg.com/vi/eEGiqgSy29M/mqdefault_live.jpg",
+      "matchedQuery": "Heathrow airport plane spotting live",
+      "viewers": 36,
+      "stillLive": true
+    },
+    {
       "videoId": "_GUsXnlVJmo",
       "title": "LIVE Miami Airport -- Watch runway 9/27 with tower radio traffic!",
       "channel": "PTZtv",
       "thumb": "https://i.ytimg.com/vi/_GUsXnlVJmo/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 35,
+      "viewers": 30,
       "stillLive": true
     },
     {
@@ -154,7 +154,7 @@
       "channel": "Madeira-Web",
       "thumb": "https://i.ytimg.com/vi/8Drrabk3h6M/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 17,
+      "viewers": 20,
       "stillLive": true
     },
     {
@@ -163,7 +163,7 @@
       "channel": "Nippon Television News Japan",
       "thumb": "https://i.ytimg.com/vi/3w4zEyFamuA/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 15,
+      "viewers": 14,
       "stillLive": true
     },
     {
@@ -181,7 +181,7 @@
       "channel": "TurtleAir",
       "thumb": "https://i.ytimg.com/vi/kLLb-fPOPuk/mqdefault_live.jpg",
       "matchedQuery": "JFK airport plane spotting live",
-      "viewers": 11,
+      "viewers": 13,
       "stillLive": true
     },
     {
@@ -190,7 +190,7 @@
       "channel": "Information Zulu",
       "thumb": "https://i.ytimg.com/vi/t0GrpAgdBFI/mqdefault_live.jpg",
       "matchedQuery": "LAX airport plane spotting live",
-      "viewers": 5,
+      "viewers": 6,
       "stillLive": true
     },
     {
@@ -199,7 +199,7 @@
       "channel": "Little & Great Adventures",
       "thumb": "https://i.ytimg.com/vi/rs9WikLgg40/mqdefault_live.jpg",
       "matchedQuery": "Heathrow airport plane spotting live",
-      "viewers": 5,
+      "viewers": 4,
       "stillLive": true
     },
     {
@@ -208,25 +208,7 @@
       "channel": "Airplane Live",
       "thumb": "https://i.ytimg.com/vi/11INCtK6uiA/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 3,
-      "stillLive": true
-    },
-    {
-      "videoId": "skv8WzjdSJI",
-      "title": "✈️ LAX LIVE | Tuesday Sep 22 | Morning Arrivals | ADS-B + Real ATC | KLAX",
-      "channel": "Information Zulu",
-      "thumb": "https://i.ytimg.com/vi/skv8WzjdSJI/mqdefault_live.jpg",
-      "matchedQuery": "LAX airport plane spotting live",
-      "viewers": 3,
-      "stillLive": true
-    },
-    {
-      "videoId": "x-ZDfsBD20M",
-      "title": "LIVE Plane Spotting: JFK &amp; LAX | MSFS Airport Ambience",
-      "channel": "Always On Final",
-      "thumb": "https://i.ytimg.com/vi/x-ZDfsBD20M/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 2,
+      "viewers": 4,
       "stillLive": true
     },
     {
@@ -236,6 +218,24 @@
       "thumb": "https://i.ytimg.com/vi/PMetnXeBFSk/mqdefault_live.jpg",
       "matchedQuery": "JFK airport plane spotting live",
       "viewers": 2,
+      "stillLive": true
+    },
+    {
+      "videoId": "skv8WzjdSJI",
+      "title": "✈️ LAX LIVE | Tuesday Sep 22 | Morning Arrivals | ADS-B + Real ATC | KLAX",
+      "channel": "Information Zulu",
+      "thumb": "https://i.ytimg.com/vi/skv8WzjdSJI/mqdefault_live.jpg",
+      "matchedQuery": "LAX airport plane spotting live",
+      "viewers": 1,
+      "stillLive": true
+    },
+    {
+      "videoId": "x-ZDfsBD20M",
+      "title": "LIVE Plane Spotting: JFK &amp; LAX | MSFS Airport Ambience",
+      "channel": "Always On Final",
+      "thumb": "https://i.ytimg.com/vi/x-ZDfsBD20M/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
+      "viewers": 1,
       "stillLive": true
     },
     {
