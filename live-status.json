@@ -1,34 +1,16 @@
 {
-  "updatedAt": "2026-10-10T11:50:34.980Z",
+  "updatedAt": "2026-10-10T15:03:36.801Z",
   "airportRotationStart": 2,
   "quotaExceeded": false,
   "lastSearchError": null,
   "liveResults": [
-    {
-      "videoId": "67drovDxU_k",
-      "title": "Spraytacular runway action | takeoffs &amp; landings - LIVE | A380s, 777s, A350s  | 10th October 26",
-      "channel": "Simon Lowe Aviation ",
-      "thumb": "https://i.ytimg.com/vi/67drovDxU_k/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 1781,
-      "stillLive": true
-    },
     {
       "videoId": "pB9rhhpAtKg",
       "title": "Heathrow Airport Live - WINDY Saturday 10th October 2026",
       "channel": "Flight Focus 365",
       "thumb": "https://i.ytimg.com/vi/pB9rhhpAtKg/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 974,
-      "stillLive": true
-    },
-    {
-      "videoId": "F9v67px4gRM",
-      "title": "Road-Trip to Aviation Retail Direct Model Store",
-      "channel": "BIG JET TV",
-      "thumb": "https://i.ytimg.com/vi/F9v67px4gRM/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 687,
+      "viewers": 1063,
       "stillLive": true
     },
     {
@@ -37,25 +19,7 @@
       "channel": "BIG JET TV",
       "thumb": "https://i.ytimg.com/vi/uDBYuEV4zjI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 602,
-      "stillLive": true
-    },
-    {
-      "videoId": "ePNRH7DH4SY",
-      "title": "🔴LIVE at NARITA International Airport Plane Spotting　2026.10.10 成田空港ライブカメラ 成田空港　NRT/RJAA",
-      "channel": "Love Flight Jack",
-      "thumb": "https://i.ytimg.com/vi/ePNRH7DH4SY/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 420,
-      "stillLive": true
-    },
-    {
-      "videoId": "ix7f8DqlqH0",
-      "title": "MADEIRA AIRPORT LIVE ACTION SHOW / LPMA",
-      "channel": "Madeira Runway Spotting",
-      "thumb": "https://i.ytimg.com/vi/ix7f8DqlqH0/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 365,
+      "viewers": 805,
       "stillLive": true
     },
     {
@@ -64,34 +28,7 @@
       "channel": "Madeira Airport Spotting",
       "thumb": "https://i.ytimg.com/vi/NBljAIh-gJg/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 297,
-      "stillLive": true
-    },
-    {
-      "videoId": "A5UonNA16aA",
-      "title": "🔴 LIVE London Heathrow Plane Spotting | Saturday Landings &amp; International Jets ✈️",
-      "channel": "BritReady Aviation | Plane Spotting UK",
-      "thumb": "https://i.ytimg.com/vi/A5UonNA16aA/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 286,
-      "stillLive": true
-    },
-    {
-      "videoId": "rSgvZt5nMsE",
-      "title": "🔴 LIVE Gatwick Airport LIVE | Weekend Stream | Plane Spotting | LGW/EGKK | 10th October",
-      "channel": "London Planespotting",
-      "thumb": "https://i.ytimg.com/vi/rSgvZt5nMsE/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 134,
-      "stillLive": true
-    },
-    {
-      "videoId": "UcAUNky7JPY",
-      "title": "Behind the scenes camera |  Saturday 10th  October 2026",
-      "channel": "Simon Lowe Aviation ",
-      "thumb": "https://i.ytimg.com/vi/UcAUNky7JPY/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 124,
+      "viewers": 545,
       "stillLive": true
     },
     {
@@ -100,7 +37,7 @@
       "channel": "KC Rally & Planes",
       "thumb": "https://i.ytimg.com/vi/C2-nKsysCDs/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 70,
+      "viewers": 104,
       "stillLive": true
     },
     {
@@ -109,7 +46,7 @@
       "channel": "AVIAÇÃO TV",
       "thumb": "https://i.ytimg.com/vi/8RDThblG0tE/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 60,
+      "viewers": 63,
       "stillLive": true
     },
     {
@@ -118,7 +55,16 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/iZRbml7fnXI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 14,
+      "viewers": 37,
+      "stillLive": true
+    },
+    {
+      "videoId": "VNwgk1xIeUc",
+      "title": "✈️ LAX LIVE | Monday Oct 5 | Morning Arrivals | ADS-B + Real ATC | KLAX",
+      "channel": "Information Zulu",
+      "thumb": "https://i.ytimg.com/vi/VNwgk1xIeUc/mqdefault_live.jpg",
+      "matchedQuery": "Sydney airport plane spotting live",
+      "viewers": 4,
       "stillLive": true
     },
     {
@@ -131,30 +77,12 @@
       "stillLive": true
     },
     {
-      "videoId": "VNwgk1xIeUc",
-      "title": "✈️ LAX LIVE | Monday Oct 5 | Morning Arrivals | ADS-B + Real ATC | KLAX",
-      "channel": "Information Zulu",
-      "thumb": "https://i.ytimg.com/vi/VNwgk1xIeUc/mqdefault_live.jpg",
-      "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": 3,
-      "stillLive": true
-    },
-    {
       "videoId": "Hc-SWGwJivM",
       "title": "🔴 LIVE LAX AIRPORT TRACKER! | Real-Time 3D Plane Spotting",
       "channel": "LAX Plane Spotters",
       "thumb": "https://i.ytimg.com/vi/Hc-SWGwJivM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1,
-      "stillLive": true
-    },
-    {
-      "videoId": "TfAuvmONok0",
-      "title": "LIVE Plane Spotting Seattle Airport (SEA) | 4K Broadcast with | Original ATC Audio | Rainer Sunrise",
-      "channel": "Rainier Aviation",
-      "thumb": "https://i.ytimg.com/vi/TfAuvmONok0/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 1,
+      "viewers": 3,
       "stillLive": true
     },
     {
@@ -163,6 +91,15 @@
       "channel": "Little & Great Adventures",
       "thumb": "https://i.ytimg.com/vi/3bBnwWmxOZA/mqdefault_live.jpg",
       "matchedQuery": "Heathrow airport plane spotting live",
+      "viewers": 2,
+      "stillLive": true
+    },
+    {
+      "videoId": "TfAuvmONok0",
+      "title": "LIVE Plane Spotting Seattle Airport (SEA) | 4K Broadcast with | Original ATC Audio | Rainer Sunrise",
+      "channel": "Rainier Aviation",
+      "thumb": "https://i.ytimg.com/vi/TfAuvmONok0/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
       "viewers": 1,
       "stillLive": true
     },
