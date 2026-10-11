@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T21:25:53.543Z",
+  "updatedAt": "2026-10-11T22:49:51.329Z",
   "airportRotationStart": 4,
   "quotaExceeded": false,
   "lastSearchError": null,
@@ -10,16 +10,7 @@
       "channel": "AIRLINE VIDEOS",
       "thumb": "https://i.ytimg.com/vi/bh6kks9agQo/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 2078,
-      "stillLive": true
-    },
-    {
-      "videoId": "uDBYuEV4zjI",
-      "title": "Heathrow Airport LIVE 24/7",
-      "channel": "BIG JET TV",
-      "thumb": "https://i.ytimg.com/vi/uDBYuEV4zjI/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 358,
+      "viewers": 1810,
       "stillLive": true
     },
     {
@@ -28,7 +19,7 @@
       "channel": "MSP Airport LIVE",
       "thumb": "https://i.ytimg.com/vi/b853Hu9Zg8E/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 312,
+      "viewers": 337,
       "stillLive": true
     },
     {
@@ -37,7 +28,16 @@
       "channel": "Carolina Aviation",
       "thumb": "https://i.ytimg.com/vi/MSJUswiI59A/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 275,
+      "viewers": 245,
+      "stillLive": true
+    },
+    {
+      "videoId": "uDBYuEV4zjI",
+      "title": "Heathrow Airport LIVE 24/7",
+      "channel": "BIG JET TV",
+      "thumb": "https://i.ytimg.com/vi/uDBYuEV4zjI/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 217,
       "stillLive": true
     },
     {
@@ -46,43 +46,7 @@
       "channel": "SDVIBEZ",
       "thumb": "https://i.ytimg.com/vi/x0dQ1xadhak/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 128,
-      "stillLive": true
-    },
-    {
-      "videoId": "3hXiSEvrE_4",
-      "title": "Heathrow Airport Live - Sunday 11th October 2026",
-      "channel": "Flight Focus 365",
-      "thumb": "https://i.ytimg.com/vi/3hXiSEvrE_4/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 111,
-      "stillLive": true
-    },
-    {
-      "videoId": "Bq6GmDLhJT0",
-      "title": "🔴LIVE Plane Spotting | MONTRÉAL Airport   11.10.2026 |",
-      "channel": "flightdisp",
-      "thumb": "https://i.ytimg.com/vi/Bq6GmDLhJT0/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 62,
-      "stillLive": true
-    },
-    {
-      "videoId": "Nyu5jUH9tUM",
-      "title": "✈️ LIVE October 11 | Maho Beach | SXM Airport St. Maarten (with ATC &amp; Jetblasts)",
-      "channel": "SHOWME Caribbean",
-      "thumb": "https://i.ytimg.com/vi/Nyu5jUH9tUM/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 52,
-      "stillLive": true
-    },
-    {
-      "videoId": "AE-KhGb-GNg",
-      "title": "🔴 LOUISVILLE GONE WILD LIVE! | SDF PLANESPOTTING 4TH BUSIEST CARGO HUB IN THE WORLD | HEAVY MANIA",
-      "channel": "Pip Hastings Aviation",
-      "thumb": "https://i.ytimg.com/vi/AE-KhGb-GNg/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 50,
+      "viewers": 66,
       "stillLive": true
     },
     {
@@ -91,7 +55,16 @@
       "channel": "AVIAÇÃO TV",
       "thumb": "https://i.ytimg.com/vi/fH_oDSD3Y3I/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 45,
+      "viewers": 34,
+      "stillLive": true
+    },
+    {
+      "videoId": "Nyu5jUH9tUM",
+      "title": "✈️ LIVE October 11 | Maho Beach | SXM Airport St. Maarten (with ATC &amp; Jetblasts)",
+      "channel": "SHOWME Caribbean",
+      "thumb": "https://i.ytimg.com/vi/Nyu5jUH9tUM/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 33,
       "stillLive": true
     },
     {
@@ -100,7 +73,7 @@
       "channel": "Moore Equipment Ltd.",
       "thumb": "https://i.ytimg.com/vi/TPpuWYRjU1k/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 15,
+      "viewers": 17,
       "stillLive": true
     },
     {
@@ -109,7 +82,7 @@
       "channel": "NeightWolf49",
       "thumb": "https://i.ytimg.com/vi/I25_6X-uuQQ/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 2,
+      "viewers": 6,
       "stillLive": true
     },
     {
@@ -118,7 +91,7 @@
       "channel": "Watertown Airport",
       "thumb": "https://i.ytimg.com/vi/K6qxmXyjWxg/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 1,
+      "viewers": 2,
       "stillLive": true
     },
     {
@@ -127,7 +100,7 @@
       "channel": "Information Zulu",
       "thumb": "https://i.ytimg.com/vi/VNwgk1xIeUc/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 1,
+      "viewers": 2,
       "stillLive": true
     },
     {
@@ -145,7 +118,7 @@
       "channel": "Flight Path Museum LAX",
       "thumb": "https://i.ytimg.com/vi/AG7VP0PglqQ/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": null,
+      "viewers": 1,
       "stillLive": true
     },
     {
