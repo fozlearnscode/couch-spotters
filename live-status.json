@@ -1,25 +1,115 @@
 {
-  "updatedAt": "2026-10-11T07:25:56.641Z",
-  "airportRotationStart": 3,
+  "updatedAt": "2026-10-11T08:14:33.493Z",
+  "airportRotationStart": 6,
   "quotaExceeded": false,
   "lastSearchError": null,
   "liveResults": [
+    {
+      "videoId": "yF8hQLqKHT4",
+      "title": "🔴LIVE Manchester Airport Plane Spotting | Early Morning Heavy Arrivals &amp; Departures 🛫",
+      "channel": "Think Planes",
+      "thumb": "https://i.ytimg.com/vi/yF8hQLqKHT4/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 2058,
+      "stillLive": true
+    },
+    {
+      "videoId": "sPpImBCydUA",
+      "title": "🔴 LIVE RAAF KC-30’s | Sunday Hangout @ Brisbane Airport w/ James &amp; Matty + ATC 🔴",
+      "channel": "Only Planes Network",
+      "thumb": "https://i.ytimg.com/vi/sPpImBCydUA/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 1905,
+      "stillLive": true
+    },
+    {
+      "videoId": "3hXiSEvrE_4",
+      "title": "Heathrow Airport Live - Sunday 11th October 2026",
+      "channel": "Flight Focus 365",
+      "thumb": "https://i.ytimg.com/vi/3hXiSEvrE_4/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 897,
+      "stillLive": true
+    },
+    {
+      "videoId": "DyxTvJIg3jE",
+      "title": "🔴 LIVE MUNICH AIRPORT HEAVY SUNDAY ACTION - PLANE SPOTTING LIVESTREAM",
+      "channel": "PLM AVIATION",
+      "thumb": "https://i.ytimg.com/vi/DyxTvJIg3jE/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 802,
+      "stillLive": true
+    },
     {
       "videoId": "uDBYuEV4zjI",
       "title": "Heathrow Airport LIVE 24/7",
       "channel": "BIG JET TV",
       "thumb": "https://i.ytimg.com/vi/uDBYuEV4zjI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 529,
+      "viewers": 647,
       "stillLive": true
     },
     {
-      "videoId": "K6qxmXyjWxg",
-      "title": "Watertown International Airport",
-      "channel": "Watertown Airport",
-      "thumb": "https://i.ytimg.com/vi/K6qxmXyjWxg/mqdefault_live.jpg",
+      "videoId": "zcWH7tqqPI4",
+      "title": "🔴 Manchester Airport LIVE ✈️ Super Sunday Show",
+      "channel": "Airliners Live",
+      "thumb": "https://i.ytimg.com/vi/zcWH7tqqPI4/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 3,
+      "viewers": 592,
+      "stillLive": true
+    },
+    {
+      "videoId": "1SNYIcvxgGg",
+      "title": "【2026/10/111️⃣ 】✈️ 成田空港🛬生📸中継 【✈️Tokyo Narita airport 📸 Live Busy runway&#39;s‼️🛬🛫📸】",
+      "channel": "Gibson Narita ",
+      "thumb": "https://i.ytimg.com/vi/1SNYIcvxgGg/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 224,
+      "stillLive": true
+    },
+    {
+      "videoId": "5Hkseb17okc",
+      "title": "Special Live Animal Causes LPMA Spotter ✈️11/10/2026",
+      "channel": "LPMA Spotter",
+      "thumb": "https://i.ytimg.com/vi/5Hkseb17okc/mqdefault_live.jpg",
+      "matchedQuery": "Madeira airport plane spotting live",
+      "viewers": 182,
+      "stillLive": true
+    },
+    {
+      "videoId": "1KD5S0u_mQs",
+      "title": "🔴 LIVE 24/7 Lisbon Airport Live Cam 11.10.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
+      "channel": "AVIAÇÃO TV",
+      "thumb": "https://i.ytimg.com/vi/1KD5S0u_mQs/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 51,
+      "stillLive": true
+    },
+    {
+      "videoId": "mxmJ9-oWsl8",
+      "title": "🔴🇨🇿 Prague Airport Plane Spotting LIVE | Živé vysílání z letiště Praha",
+      "channel": "City Walk Prague",
+      "thumb": "https://i.ytimg.com/vi/mxmJ9-oWsl8/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 45,
+      "stillLive": true
+    },
+    {
+      "videoId": "fnznViYzHhY",
+      "title": "🔴 Roblox PTFS LIVE ✈️ | Plane Spotting, ATC &amp; Flying With Viewers! 😀",
+      "channel": "AdamDAuria",
+      "thumb": "https://i.ytimg.com/vi/fnznViYzHhY/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 13,
+      "stillLive": true
+    },
+    {
+      "videoId": "TPpuWYRjU1k",
+      "title": "LIVE Montreal Trudeau Airport CYUL 24/7 Webcam Runway 24R",
+      "channel": "Moore Equipment Ltd.",
+      "thumb": "https://i.ytimg.com/vi/TPpuWYRjU1k/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
+      "viewers": 7,
       "stillLive": true
     },
     {
@@ -36,8 +126,26 @@
       "title": "✈️ LAX LIVE | Monday Oct 5 | Morning Arrivals | ADS-B + Real ATC | KLAX",
       "channel": "Information Zulu",
       "thumb": "https://i.ytimg.com/vi/VNwgk1xIeUc/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
+      "matchedQuery": "airport live cam plane spotting",
       "viewers": 2,
+      "stillLive": true
+    },
+    {
+      "videoId": "QHAuRPROKGE",
+      "title": "Newark EWR plane spotting, rail fanning, New Jersey Drone UFO Watch LIVE Sunday 10/11/26",
+      "channel": "JerseyJoe50",
+      "thumb": "https://i.ytimg.com/vi/QHAuRPROKGE/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 1,
+      "stillLive": true
+    },
+    {
+      "videoId": "K6qxmXyjWxg",
+      "title": "Watertown International Airport",
+      "channel": "Watertown Airport",
+      "thumb": "https://i.ytimg.com/vi/K6qxmXyjWxg/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
+      "viewers": 1,
       "stillLive": true
     },
     {
@@ -45,8 +153,8 @@
       "title": "Los Angeles Airport Live Plane Spotting: 24 hours with ATC #planespotting #lax #aviation",
       "channel": "Flight Path Museum LAX",
       "thumb": "https://i.ytimg.com/vi/AG7VP0PglqQ/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 1,
+      "matchedQuery": "plane spotting live stream",
+      "viewers": null,
       "stillLive": true
     },
     {
@@ -54,16 +162,7 @@
       "title": "Bucharest LROP Flightradar24 Livestream with Live Air Traffic Control 11/10/2026",
       "channel": "Cleared Visual Approach",
       "thumb": "https://i.ytimg.com/vi/TrfWmMpOFBg/mqdefault_live.jpg",
-      "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": 1,
-      "stillLive": true
-    },
-    {
-      "videoId": "Hc-SWGwJivM",
-      "title": "🔴 LIVE LAX AIRPORT TRACKER! | Real-Time 3D Plane Spotting",
-      "channel": "LAX Plane Spotters",
-      "thumb": "https://i.ytimg.com/vi/Hc-SWGwJivM/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
+      "matchedQuery": "SFO airport plane spotting live",
       "viewers": null,
       "stillLive": true
     }
