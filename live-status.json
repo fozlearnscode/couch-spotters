@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-12T00:56:01.552Z",
+  "updatedAt": "2026-10-12T01:55:46.105Z",
   "airportRotationStart": 7,
   "quotaExceeded": false,
   "lastSearchError": null,
@@ -10,16 +10,7 @@
       "channel": "JIRO film。",
       "thumb": "https://i.ytimg.com/vi/y18TuCup5po/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 778,
-      "stillLive": true
-    },
-    {
-      "videoId": "uDBYuEV4zjI",
-      "title": "Heathrow Airport LIVE 24/7",
-      "channel": "BIG JET TV",
-      "thumb": "https://i.ytimg.com/vi/uDBYuEV4zjI/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 153,
+      "viewers": 954,
       "stillLive": true
     },
     {
@@ -28,7 +19,16 @@
       "channel": "Love Flight Jack",
       "thumb": "https://i.ytimg.com/vi/XYz7KBBHYR0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 101,
+      "viewers": 255,
+      "stillLive": true
+    },
+    {
+      "videoId": "uDBYuEV4zjI",
+      "title": "Heathrow Airport LIVE 24/7",
+      "channel": "BIG JET TV",
+      "thumb": "https://i.ytimg.com/vi/uDBYuEV4zjI/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 136,
       "stillLive": true
     },
     {
@@ -37,16 +37,7 @@
       "channel": "Pretend Media",
       "thumb": "https://i.ytimg.com/vi/uxwuXrnDBZo/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 84,
-      "stillLive": true
-    },
-    {
-      "videoId": "kHJuW2ctQJo",
-      "title": "🔴 Sunday Arrival Superfest! | LIVE Seattle Plane Spotting at SEA + ATC",
-      "channel": "Geaux Flying",
-      "thumb": "https://i.ytimg.com/vi/kHJuW2ctQJo/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 49,
+      "viewers": 69,
       "stillLive": true
     },
     {
@@ -64,7 +55,7 @@
       "channel": "SHOWME Caribbean",
       "thumb": "https://i.ytimg.com/vi/Nyu5jUH9tUM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 13,
+      "viewers": 8,
       "stillLive": true
     },
     {
@@ -77,19 +68,10 @@
       "stillLive": true
     },
     {
-      "videoId": "K6qxmXyjWxg",
-      "title": "Watertown International Airport",
-      "channel": "Watertown Airport",
-      "thumb": "https://i.ytimg.com/vi/K6qxmXyjWxg/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 3,
-      "stillLive": true
-    },
-    {
-      "videoId": "I25_6X-uuQQ",
-      "title": "Virtual Airline Flights | NEW MK Studios MIAMI | Flying the Synaptic A220",
-      "channel": "NeightWolf49",
-      "thumb": "https://i.ytimg.com/vi/I25_6X-uuQQ/mqdefault_live.jpg",
+      "videoId": "-VYCNCbp3jo",
+      "title": "SkyWatch - 24/7 Live Flights across South Wales &amp; South West England",
+      "channel": "Planecaster SkyWatch",
+      "thumb": "https://i.ytimg.com/vi/-VYCNCbp3jo/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
       "viewers": 3,
       "stillLive": true
@@ -118,14 +100,23 @@
       "channel": "JerseyJoe50",
       "thumb": "https://i.ytimg.com/vi/QHAuRPROKGE/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1,
+      "viewers": 2,
       "stillLive": true
     },
     {
-      "videoId": "-VYCNCbp3jo",
-      "title": "SkyWatch - 24/7 Live Flights across South Wales &amp; South West England",
-      "channel": "Planecaster SkyWatch",
-      "thumb": "https://i.ytimg.com/vi/-VYCNCbp3jo/mqdefault_live.jpg",
+      "videoId": "ysLCAaHj990",
+      "title": "🔴 LIVE LAX AIRPORT TRACKER! | Real-Time 3D Plane Spotting",
+      "channel": "LAX Plane Spotters",
+      "thumb": "https://i.ytimg.com/vi/ysLCAaHj990/mqdefault_live.jpg",
+      "matchedQuery": "LAX airport plane spotting live",
+      "viewers": 2,
+      "stillLive": true
+    },
+    {
+      "videoId": "K6qxmXyjWxg",
+      "title": "Watertown International Airport",
+      "channel": "Watertown Airport",
+      "thumb": "https://i.ytimg.com/vi/K6qxmXyjWxg/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
       "viewers": 1,
       "stillLive": true
@@ -145,15 +136,6 @@
       "channel": "Joseph Shenouda",
       "thumb": "https://i.ytimg.com/vi/vnGuW9kuJv4/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": null,
-      "stillLive": true
-    },
-    {
-      "videoId": "ysLCAaHj990",
-      "title": "🔴 LIVE LAX AIRPORT TRACKER! | Real-Time 3D Plane Spotting",
-      "channel": "LAX Plane Spotters",
-      "thumb": "https://i.ytimg.com/vi/ysLCAaHj990/mqdefault_live.jpg",
-      "matchedQuery": "LAX airport plane spotting live",
       "viewers": null,
       "stillLive": true
     }
