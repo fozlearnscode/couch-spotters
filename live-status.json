@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-12T19:35:40.879Z",
+  "updatedAt": "2026-10-13T01:14:24.882Z",
   "airportRotationStart": 5,
   "quotaExceeded": false,
   "lastSearchError": null,
@@ -10,16 +10,7 @@
       "channel": "L.A FLIGHTS",
       "thumb": "https://i.ytimg.com/vi/tqaa_vh23U0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1859,
-      "stillLive": true
-    },
-    {
-      "videoId": "_Sw7A6jl_m8",
-      "title": "GIANT A380, PIA 777 &amp; Evening Jets! 🧡 Manchester Airport LIVE",
-      "channel": "flght",
-      "thumb": "https://i.ytimg.com/vi/_Sw7A6jl_m8/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 587,
+      "viewers": 1190,
       "stillLive": true
     },
     {
@@ -28,52 +19,7 @@
       "channel": "BIG JET TV",
       "thumb": "https://i.ytimg.com/vi/uDBYuEV4zjI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 433,
-      "stillLive": true
-    },
-    {
-      "videoId": "0eHyboh-Yek",
-      "title": "Heathrow Airport Live - CROSSWIND Monday 12th October 2026",
-      "channel": "Flight Focus 365",
-      "thumb": "https://i.ytimg.com/vi/0eHyboh-Yek/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 261,
-      "stillLive": true
-    },
-    {
-      "videoId": "XVS1kd-bpVo",
-      "title": "🔴🔴LIVE CROSS WIND MONDAY PLANE SPOTTING PART 2 FROM: RDU RALEIGH DURHAM INT |10/12/26 |🔴🔴",
-      "channel": "Carolina Aviation",
-      "thumb": "https://i.ytimg.com/vi/XVS1kd-bpVo/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 252,
-      "stillLive": true
-    },
-    {
-      "videoId": "HJRqPEea5ds",
-      "title": "🔴 LIVE Plane Spotting | SCATTERED RAIN | Phoenix Sky Harbor International Airport (PHX) | 10/12/26",
-      "channel": "ThePlaneSpotter",
-      "thumb": "https://i.ytimg.com/vi/HJRqPEea5ds/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 208,
-      "stillLive": true
-    },
-    {
-      "videoId": "eodbov8KxYU",
-      "title": "✈️ LIVE October 12 | Maho Beach | SXM Airport St. Maarten (with ATC &amp; Jetblasts)",
-      "channel": "SHOWME Caribbean",
-      "thumb": "https://i.ytimg.com/vi/eodbov8KxYU/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 166,
-      "stillLive": true
-    },
-    {
-      "videoId": "DsCyt07oD0M",
-      "title": "🔴 LIVE 24/7 Lisbon Airport Live Cam 12.10.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
-      "channel": "AVIAÇÃO TV",
-      "thumb": "https://i.ytimg.com/vi/DsCyt07oD0M/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 61,
+      "viewers": 135,
       "stillLive": true
     },
     {
@@ -82,7 +28,16 @@
       "channel": "Moore Equipment Ltd.",
       "thumb": "https://i.ytimg.com/vi/TPpuWYRjU1k/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 16,
+      "viewers": 10,
+      "stillLive": true
+    },
+    {
+      "videoId": "eodbov8KxYU",
+      "title": "✈️ LIVE October 12 | Maho Beach | SXM Airport St. Maarten (with ATC &amp; Jetblasts)",
+      "channel": "SHOWME Caribbean",
+      "thumb": "https://i.ytimg.com/vi/eodbov8KxYU/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 8,
       "stillLive": true
     },
     {
@@ -91,7 +46,25 @@
       "channel": "KyvoxAvi",
       "thumb": "https://i.ytimg.com/vi/1Ta0ruMcprA/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 10,
+      "viewers": 8,
+      "stillLive": true
+    },
+    {
+      "videoId": "K6qxmXyjWxg",
+      "title": "Watertown International Airport",
+      "channel": "Watertown Airport",
+      "thumb": "https://i.ytimg.com/vi/K6qxmXyjWxg/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 2,
+      "stillLive": true
+    },
+    {
+      "videoId": "cvM4Svs5k-A",
+      "title": "Newark EWR plane spotting, rail fanning, New Jersey Drone UFO Watch LIVE Monday 10/12/26",
+      "channel": "JerseyJoe50",
+      "thumb": "https://i.ytimg.com/vi/cvM4Svs5k-A/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 2,
       "stillLive": true
     },
     {
@@ -101,42 +74,6 @@
       "thumb": "https://i.ytimg.com/vi/VNwgk1xIeUc/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
       "viewers": 1,
-      "stillLive": true
-    },
-    {
-      "videoId": "K6qxmXyjWxg",
-      "title": "Watertown International Airport",
-      "channel": "Watertown Airport",
-      "thumb": "https://i.ytimg.com/vi/K6qxmXyjWxg/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 1,
-      "stillLive": true
-    },
-    {
-      "videoId": "QI_P54QOG0Y",
-      "title": "LIVE AIRPORT BROADCAST | Watching Departures and Arrivals at Ashgabat | InfiniteJordan",
-      "channel": "InfiniteJordan ",
-      "thumb": "https://i.ytimg.com/vi/QI_P54QOG0Y/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": null,
-      "stillLive": true
-    },
-    {
-      "videoId": "cvM4Svs5k-A",
-      "title": "Newark EWR plane spotting, rail fanning, New Jersey Drone UFO Watch LIVE Monday 10/12/26",
-      "channel": "JerseyJoe50",
-      "thumb": "https://i.ytimg.com/vi/cvM4Svs5k-A/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": null,
-      "stillLive": true
-    },
-    {
-      "videoId": "NJGquGo5UGo",
-      "title": "New York - Kennedy KJFK Flightradar24 Livestream with Live Air Traffic Control 12/10/2026",
-      "channel": "Cleared Visual Approach",
-      "thumb": "https://i.ytimg.com/vi/NJGquGo5UGo/mqdefault_live.jpg",
-      "matchedQuery": "Melbourne airport plane spotting live",
-      "viewers": null,
       "stillLive": true
     }
   ]
