@@ -1,25 +1,52 @@
 {
-  "updatedAt": "2026-10-13T20:45:45.222Z",
-  "airportRotationStart": 6,
+  "updatedAt": "2026-10-13T22:15:12.855Z",
+  "airportRotationStart": 1,
   "quotaExceeded": false,
   "lastSearchError": null,
   "liveResults": [
+    {
+      "videoId": "MvmPvgG_DwI",
+      "title": "🔴LIVE LOS ANGELES (LAX) AIRPORT ACTION! (October 13th, 2026)",
+      "channel": "AIRLINE VIDEOS",
+      "thumb": "https://i.ytimg.com/vi/MvmPvgG_DwI/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 2016,
+      "stillLive": true
+    },
+    {
+      "videoId": "d83FJz_i2r4",
+      "title": "Sydney Airport LIVE | 14th OCT 2026 | Planespotting | SYD - YSSY",
+      "channel": "OzPlanes",
+      "thumb": "https://i.ytimg.com/vi/d83FJz_i2r4/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 437,
+      "stillLive": true
+    },
+    {
+      "videoId": "2H7DOvZqhcw",
+      "title": "🔴LIVE CHASING BIG PLANES at CHICAGO O&#39;HARE AIRPORT | ORD AVGEEK PLANE SPOTTING | B747 B777 A340 B787",
+      "channel": "CHICAGO FLIGHTS",
+      "thumb": "https://i.ytimg.com/vi/2H7DOvZqhcw/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 345,
+      "stillLive": true
+    },
     {
       "videoId": "uDBYuEV4zjI",
       "title": "Heathrow Airport LIVE 24/7",
       "channel": "BIG JET TV",
       "thumb": "https://i.ytimg.com/vi/uDBYuEV4zjI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 405,
+      "viewers": 334,
       "stillLive": true
     },
     {
-      "videoId": "IXBGPVcSngE",
-      "title": "Heathrow Airport Live - WINDY Tuesday 13th October 2026",
-      "channel": "Flight Focus 365",
-      "thumb": "https://i.ytimg.com/vi/IXBGPVcSngE/mqdefault_live.jpg",
+      "videoId": "A3Mx5TKtfu0",
+      "title": "🔴LIVE  PLANE SPOTTING FROM: RDU RALEIGH DURHAM INT |10/13/26|🔴",
+      "channel": "Carolina Aviation",
+      "thumb": "https://i.ytimg.com/vi/A3Mx5TKtfu0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 172,
+      "viewers": 168,
       "stillLive": true
     },
     {
@@ -28,7 +55,16 @@
       "channel": "SHOWME Caribbean",
       "thumb": "https://i.ytimg.com/vi/9vri4zbJDxw/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 83,
+      "viewers": 47,
+      "stillLive": true
+    },
+    {
+      "videoId": "yRvZMnZgkEY",
+      "title": "LIVE at BWI! Tuesday afternoon planespotting and golden hour! | Baltimore | October 13, 2026",
+      "channel": "Pennsy Planes",
+      "thumb": "https://i.ytimg.com/vi/yRvZMnZgkEY/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 37,
       "stillLive": true
     },
     {
@@ -37,7 +73,7 @@
       "channel": "AVIAÇÃO TV",
       "thumb": "https://i.ytimg.com/vi/U1oUZPayw8A/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 35,
+      "viewers": 26,
       "stillLive": true
     },
     {
@@ -46,7 +82,25 @@
       "channel": "Moore Equipment Ltd.",
       "thumb": "https://i.ytimg.com/vi/TPpuWYRjU1k/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 31,
+      "viewers": 19,
+      "stillLive": true
+    },
+    {
+      "videoId": "-VYCNCbp3jo",
+      "title": "Planecaster SkyWatch LIVE: planes over Bristol and Cardiff in 3D 24/7",
+      "channel": "Planecaster SkyWatch",
+      "thumb": "https://i.ytimg.com/vi/-VYCNCbp3jo/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 8,
+      "stillLive": true
+    },
+    {
+      "videoId": "qgloCjRz0fc",
+      "title": "Virtual Airline Flights | NEW MK Studios MIAMI | Flying the PMDG 777 Freighter",
+      "channel": "NeightWolf49",
+      "thumb": "https://i.ytimg.com/vi/qgloCjRz0fc/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 5,
       "stillLive": true
     },
     {
@@ -59,30 +113,39 @@
       "stillLive": true
     },
     {
-      "videoId": "VNwgk1xIeUc",
-      "title": "✈️ LAX LIVE | Monday Oct 5 | Morning Arrivals | ADS-B + Real ATC | KLAX",
-      "channel": "Information Zulu",
-      "thumb": "https://i.ytimg.com/vi/VNwgk1xIeUc/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 2,
-      "stillLive": true
-    },
-    {
-      "videoId": "ysLCAaHj990",
-      "title": "🔴 LIVE LAX AIRPORT TRACKER! | Real-Time 3D Plane Spotting",
-      "channel": "LAX Plane Spotters",
-      "thumb": "https://i.ytimg.com/vi/ysLCAaHj990/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 1,
-      "stillLive": true
-    },
-    {
       "videoId": "85QTD-Nby58",
       "title": "Newark EWR plane spotting, rail fanning, New Jersey Drone UFO Watch LIVE Tuesday 10/13/26",
       "channel": "JerseyJoe50",
       "thumb": "https://i.ytimg.com/vi/85QTD-Nby58/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": null,
+      "viewers": 1,
+      "stillLive": true
+    },
+    {
+      "videoId": "VNwgk1xIeUc",
+      "title": "✈️ LAX LIVE | Monday Oct 5 | Morning Arrivals | ADS-B + Real ATC | KLAX",
+      "channel": "Information Zulu",
+      "thumb": "https://i.ytimg.com/vi/VNwgk1xIeUc/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 1,
+      "stillLive": true
+    },
+    {
+      "videoId": "VqBdsDQZ6lw",
+      "title": "🔴 LIVE Plane Spotting ✈️ | Airport Live | پرواز زنده",
+      "channel": "IntGamingPro",
+      "thumb": "https://i.ytimg.com/vi/VqBdsDQZ6lw/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
+      "viewers": 1,
+      "stillLive": true
+    },
+    {
+      "videoId": "NdAyRlYxw3M",
+      "title": "LIVE Tokyo Bay, Traffic between ships and planes - Sea and Sky / japan travel / Live cam",
+      "channel": "EN DAIBA GLOBAL",
+      "thumb": "https://i.ytimg.com/vi/NdAyRlYxw3M/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
+      "viewers": 1,
       "stillLive": true
     },
     {
@@ -91,6 +154,15 @@
       "channel": "Joseph Shenouda",
       "thumb": "https://i.ytimg.com/vi/vnGuW9kuJv4/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
+      "viewers": null,
+      "stillLive": true
+    },
+    {
+      "videoId": "ysLCAaHj990",
+      "title": "🔴 LIVE LAX AIRPORT TRACKER! | Real-Time 3D Plane Spotting",
+      "channel": "LAX Plane Spotters",
+      "thumb": "https://i.ytimg.com/vi/ysLCAaHj990/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
       "viewers": null,
       "stillLive": true
     }
