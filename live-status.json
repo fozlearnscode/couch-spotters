@@ -1,34 +1,16 @@
 {
-  "updatedAt": "2026-10-13T08:53:44.104Z",
+  "updatedAt": "2026-10-13T15:21:35.529Z",
   "airportRotationStart": 3,
   "quotaExceeded": false,
   "lastSearchError": null,
   "liveResults": [
-    {
-      "videoId": "LlSbgY0Xpi4",
-      "title": "Airport watch - LIVE from Manchester Airport  |  A380s, 777s, A350s &amp; more  | 13th Oct 26",
-      "channel": "Simon Lowe Aviation ",
-      "thumb": "https://i.ytimg.com/vi/LlSbgY0Xpi4/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 1818,
-      "stillLive": true
-    },
-    {
-      "videoId": "4JgQK9cZ_80",
-      "title": "🔴 No Storms...⛈️ | 747-8F, QF A330 Freighter &amp; NBA380 🏀 @ Brisbane Airport w/ James &amp; Matty + ATC 🔴",
-      "channel": "Only Planes Network",
-      "thumb": "https://i.ytimg.com/vi/4JgQK9cZ_80/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 1356,
-      "stillLive": true
-    },
     {
       "videoId": "IXBGPVcSngE",
       "title": "Heathrow Airport Live - WINDY Tuesday 13th October 2026",
       "channel": "Flight Focus 365",
       "thumb": "https://i.ytimg.com/vi/IXBGPVcSngE/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1025,
+      "viewers": 1249,
       "stillLive": true
     },
     {
@@ -37,34 +19,7 @@
       "channel": "BIG JET TV",
       "thumb": "https://i.ytimg.com/vi/uDBYuEV4zjI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 674,
-      "stillLive": true
-    },
-    {
-      "videoId": "te4Iv4J4vps",
-      "title": "🔶LIVE📡 &#39;26/10/13 羽田空港 T2 Tokyo International Airport HANEDA T2  plane spotting",
-      "channel": "BIG WINGS",
-      "thumb": "https://i.ytimg.com/vi/te4Iv4J4vps/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 674,
-      "stillLive": true
-    },
-    {
-      "videoId": "E4_FtuSEgao",
-      "title": "LIVE🔴 Frankfurt Airport Planespotting | Morning Traffic | Runway 18 &amp; 25C",
-      "channel": "Planespotter-Rhein-Main ",
-      "thumb": "https://i.ytimg.com/vi/E4_FtuSEgao/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 549,
-      "stillLive": true
-    },
-    {
-      "videoId": "4nCz7eIuzX4",
-      "title": "Madeira Airport Live Action LPMA Spotter ✈️13/10/2026",
-      "channel": "LPMA Spotter",
-      "thumb": "https://i.ytimg.com/vi/4nCz7eIuzX4/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 431,
+      "viewers": 696,
       "stillLive": true
     },
     {
@@ -73,16 +28,7 @@
       "channel": "AVIAÇÃO TV",
       "thumb": "https://i.ytimg.com/vi/Ac2s0sjqVjc/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 78,
-      "stillLive": true
-    },
-    {
-      "videoId": "z4nCLcAglwg",
-      "title": "🔴🇨🇿 Prague Airport Plane Spotting LIVE | Živé vysílání z letiště Praha",
-      "channel": "City Walk Prague",
-      "thumb": "https://i.ytimg.com/vi/z4nCLcAglwg/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 34,
+      "viewers": 62,
       "stillLive": true
     },
     {
@@ -91,7 +37,7 @@
       "channel": "Moore Equipment Ltd.",
       "thumb": "https://i.ytimg.com/vi/TPpuWYRjU1k/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 7,
+      "viewers": 28,
       "stillLive": true
     },
     {
@@ -100,16 +46,7 @@
       "channel": "Planecaster SkyWatch",
       "thumb": "https://i.ytimg.com/vi/-VYCNCbp3jo/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 4,
-      "stillLive": true
-    },
-    {
-      "videoId": "zIqyyVtLwgQ",
-      "title": "🔴 LIVE: (BOS) Boston Logan Airport Plane Tracking &amp; ATC audio (Tower)",
-      "channel": "Rob's Aviation",
-      "thumb": "https://i.ytimg.com/vi/zIqyyVtLwgQ/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 3,
+      "viewers": 6,
       "stillLive": true
     },
     {
@@ -118,7 +55,7 @@
       "channel": "Little & Great Adventures",
       "thumb": "https://i.ytimg.com/vi/FKoWYPdKt8A/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 3,
+      "viewers": 2,
       "stillLive": true
     },
     {
@@ -136,7 +73,7 @@
       "channel": "Information Zulu",
       "thumb": "https://i.ytimg.com/vi/VNwgk1xIeUc/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1,
+      "viewers": 2,
       "stillLive": true
     },
     {
@@ -154,15 +91,6 @@
       "channel": "Joseph Shenouda",
       "thumb": "https://i.ytimg.com/vi/vnGuW9kuJv4/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": null,
-      "stillLive": true
-    },
-    {
-      "videoId": "iZMivTycAfY",
-      "title": "Dublin EIDW Flightradar24 Livestream with Live Air Traffic Control 13/10/2026",
-      "channel": "Cleared Visual Approach",
-      "thumb": "https://i.ytimg.com/vi/iZMivTycAfY/mqdefault_live.jpg",
-      "matchedQuery": "Sydney airport plane spotting live",
       "viewers": null,
       "stillLive": true
     }
