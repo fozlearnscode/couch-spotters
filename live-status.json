@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-14T22:12:28.984Z",
-  "airportRotationStart": 5,
+  "updatedAt": "2026-10-14T23:00:51.090Z",
+  "airportRotationStart": 0,
   "quotaExceeded": false,
   "lastSearchError": null,
   "liveResults": [
@@ -10,7 +10,16 @@
       "channel": "L.A FLIGHTS",
       "thumb": "https://i.ytimg.com/vi/9L090LC3A8E/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1670,
+      "viewers": 1443,
+      "stillLive": true
+    },
+    {
+      "videoId": "AL8dRbBly4c",
+      "title": "LIVE Plane Spotting at Boston Logan International Airport | KBOS",
+      "channel": "Logan in Flight",
+      "thumb": "https://i.ytimg.com/vi/AL8dRbBly4c/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 231,
       "stillLive": true
     },
     {
@@ -19,7 +28,7 @@
       "channel": "BIG JET TV",
       "thumb": "https://i.ytimg.com/vi/uDBYuEV4zjI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 349,
+      "viewers": 230,
       "stillLive": true
     },
     {
@@ -28,16 +37,25 @@
       "channel": "Wake Turbulence Aviation",
       "thumb": "https://i.ytimg.com/vi/IvJmTgjDpFw/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 127,
+      "viewers": 159,
       "stillLive": true
     },
     {
-      "videoId": "pAEbB1Gy50E",
-      "title": "✈️ LIVE October 14 | Maho Beach | SXM Airport St. Maarten (with ATC &amp; Jetblasts)",
-      "channel": "SHOWME Caribbean",
-      "thumb": "https://i.ytimg.com/vi/pAEbB1Gy50E/mqdefault_live.jpg",
+      "videoId": "ufJyGqw7o_4",
+      "title": "🔴LIVE at Itami Airport Plane Spotting　2026.10.15 伊丹空港ライブカメラ 伊丹空港　ITM/RJOO",
+      "channel": "Love Flight Jack",
+      "thumb": "https://i.ytimg.com/vi/ufJyGqw7o_4/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 57,
+      "viewers": 143,
+      "stillLive": true
+    },
+    {
+      "videoId": "tIt1AFljrlE",
+      "title": "毎朝7時！ボーイング777！ エアバスA350迫力の離陸！早朝ラッシュ🔴777 7:30離陸 🔴エアバスA350！8:15 離陸 🔴人気の動画！14機の スプラッシュ集！ジェット機は概要欄のURLへ🔴",
+      "channel": "誕生日ジェット  ",
+      "thumb": "https://i.ytimg.com/vi/tIt1AFljrlE/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 130,
       "stillLive": true
     },
     {
@@ -46,25 +64,16 @@
       "channel": "AVIAÇÃO TV",
       "thumb": "https://i.ytimg.com/vi/foDQnWodDUM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 48,
+      "viewers": 38,
       "stillLive": true
     },
     {
-      "videoId": "TPpuWYRjU1k",
-      "title": "LIVE Montreal Trudeau Airport CYUL 24/7 Webcam Runway 24R",
-      "channel": "Moore Equipment Ltd.",
-      "thumb": "https://i.ytimg.com/vi/TPpuWYRjU1k/mqdefault_live.jpg",
+      "videoId": "pAEbB1Gy50E",
+      "title": "✈️ LIVE October 14 | Maho Beach | SXM Airport St. Maarten (with ATC &amp; Jetblasts)",
+      "channel": "SHOWME Caribbean",
+      "thumb": "https://i.ytimg.com/vi/pAEbB1Gy50E/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 17,
-      "stillLive": true
-    },
-    {
-      "videoId": "-VYCNCbp3jo",
-      "title": "Planecaster SkyWatch LIVE: planes over Bristol and Cardiff in 3D 24/7",
-      "channel": "Planecaster SkyWatch",
-      "thumb": "https://i.ytimg.com/vi/-VYCNCbp3jo/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 4,
+      "viewers": 30,
       "stillLive": true
     },
     {
@@ -73,25 +82,16 @@
       "channel": "Rob's Aviation",
       "thumb": "https://i.ytimg.com/vi/Q4jWnsAKTlY/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 3,
+      "viewers": 5,
       "stillLive": true
     },
     {
-      "videoId": "HHcZkzvgWW0",
-      "title": "Plane Hijack News LIVE : जयपुर एयरपोर्ट पर प्लेन हाईजैक | Breaking News | Jaipur airport News |",
-      "channel": "News18 Rajasthan",
-      "thumb": "https://i.ytimg.com/vi/HHcZkzvgWW0/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 1,
-      "stillLive": true
-    },
-    {
-      "videoId": "VNwgk1xIeUc",
-      "title": "✈️ LAX LIVE | Monday Oct 5 | Morning Arrivals | ADS-B + Real ATC | KLAX",
-      "channel": "Information Zulu",
-      "thumb": "https://i.ytimg.com/vi/VNwgk1xIeUc/mqdefault_live.jpg",
+      "videoId": "-VYCNCbp3jo",
+      "title": "Planecaster SkyWatch LIVE: planes over Bristol and Cardiff in 3D 24/7",
+      "channel": "Planecaster SkyWatch",
+      "thumb": "https://i.ytimg.com/vi/-VYCNCbp3jo/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1,
+      "viewers": 3,
       "stillLive": true
     },
     {
@@ -104,11 +104,38 @@
       "stillLive": true
     },
     {
+      "videoId": "VNwgk1xIeUc",
+      "title": "✈️ LAX LIVE | Monday Oct 5 | Morning Arrivals | ADS-B + Real ATC | KLAX",
+      "channel": "Information Zulu",
+      "thumb": "https://i.ytimg.com/vi/VNwgk1xIeUc/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": null,
+      "stillLive": true
+    },
+    {
+      "videoId": "ysLCAaHj990",
+      "title": "🔴 LIVE LAX AIRPORT TRACKER! | Real-Time 3D Plane Spotting",
+      "channel": "LAX Plane Spotters",
+      "thumb": "https://i.ytimg.com/vi/ysLCAaHj990/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
+      "viewers": null,
+      "stillLive": true
+    },
+    {
+      "videoId": "rJ6PQ2k3wHM",
+      "title": "🔴 Phuket Intl Airport (HKT / VTSP) สนามบินนานาชาติภูเก็ต Live Stream, Live Camera, Weather, ATC ASMR",
+      "channel": "Asia Aircraft Spotter LIVE Stream",
+      "thumb": "https://i.ytimg.com/vi/rJ6PQ2k3wHM/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
+      "viewers": null,
+      "stillLive": true
+    },
+    {
       "videoId": "e2HRTj-Mp0s",
       "title": "Houston KIAH Flightradar24 Livestream with Live Air Traffic Control 14/10/2026",
       "channel": "Cleared Visual Approach",
       "thumb": "https://i.ytimg.com/vi/e2HRTj-Mp0s/mqdefault_live.jpg",
-      "matchedQuery": "Melbourne airport plane spotting live",
+      "matchedQuery": "SFO airport plane spotting live",
       "viewers": null,
       "stillLive": true
     }
