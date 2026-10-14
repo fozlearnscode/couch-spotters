@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-14T09:15:14.893Z",
+  "updatedAt": "2026-10-14T09:46:09.353Z",
   "airportRotationStart": 7,
   "quotaExceeded": false,
   "lastSearchError": null,
@@ -10,16 +10,7 @@
       "channel": "SydSquad",
       "thumb": "https://i.ytimg.com/vi/peZSdslcrAc/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 2204,
-      "stillLive": true
-    },
-    {
-      "videoId": "5Eg-UfK5Ldc",
-      "title": "🔴LIVE Manchester Airport Plane Spotting | Amazing Up Close Heavy Arrivals &amp; Departures  🛫",
-      "channel": "Think Planes",
-      "thumb": "https://i.ytimg.com/vi/5Eg-UfK5Ldc/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 1472,
+      "viewers": 2553,
       "stillLive": true
     },
     {
@@ -28,7 +19,16 @@
       "channel": "One and More Aviation ",
       "thumb": "https://i.ytimg.com/vi/8sx1369kwyQ/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1335,
+      "viewers": 1439,
+      "stillLive": true
+    },
+    {
+      "videoId": "5Eg-UfK5Ldc",
+      "title": "🔴LIVE Manchester Airport Plane Spotting | Amazing Up Close Heavy Arrivals &amp; Departures  🛫",
+      "channel": "Think Planes",
+      "thumb": "https://i.ytimg.com/vi/5Eg-UfK5Ldc/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 1190,
       "stillLive": true
     },
     {
@@ -37,25 +37,7 @@
       "channel": "Flight Focus 365",
       "thumb": "https://i.ytimg.com/vi/vIsvFgOtSUo/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 943,
-      "stillLive": true
-    },
-    {
-      "videoId": "uDBYuEV4zjI",
-      "title": "Heathrow Airport LIVE 24/7",
-      "channel": "BIG JET TV",
-      "thumb": "https://i.ytimg.com/vi/uDBYuEV4zjI/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 611,
-      "stillLive": true
-    },
-    {
-      "videoId": "4lszXmJ7ZVA",
-      "title": "Birmingham Airport 2K LIVE - 747 Departure Wednesday 14th Oct 2026",
-      "channel": "Airport Action",
-      "thumb": "https://i.ytimg.com/vi/4lszXmJ7ZVA/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 476,
+      "viewers": 954,
       "stillLive": true
     },
     {
@@ -64,7 +46,16 @@
       "channel": "Airliners Live",
       "thumb": "https://i.ytimg.com/vi/_1xpIO0vqtU/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 440,
+      "viewers": 757,
+      "stillLive": true
+    },
+    {
+      "videoId": "uDBYuEV4zjI",
+      "title": "Heathrow Airport LIVE 24/7",
+      "channel": "BIG JET TV",
+      "thumb": "https://i.ytimg.com/vi/uDBYuEV4zjI/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 641,
       "stillLive": true
     },
     {
@@ -73,7 +64,16 @@
       "channel": "Live Jet",
       "thumb": "https://i.ytimg.com/vi/bV2dxuOnlSc/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 424,
+      "viewers": 478,
+      "stillLive": true
+    },
+    {
+      "videoId": "4lszXmJ7ZVA",
+      "title": "Birmingham Airport 2K LIVE - 747 Departure Wednesday 14th Oct 2026",
+      "channel": "Airport Action",
+      "thumb": "https://i.ytimg.com/vi/4lszXmJ7ZVA/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 407,
       "stillLive": true
     },
     {
@@ -82,7 +82,7 @@
       "channel": "AVIAÇÃO TV",
       "thumb": "https://i.ytimg.com/vi/foDQnWodDUM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 75,
+      "viewers": 92,
       "stillLive": true
     },
     {
@@ -91,7 +91,7 @@
       "channel": "City Walk Prague",
       "thumb": "https://i.ytimg.com/vi/Kt4f0WDpRIQ/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 34,
+      "viewers": 38,
       "stillLive": true
     },
     {
@@ -104,19 +104,28 @@
       "stillLive": true
     },
     {
+      "videoId": "-VYCNCbp3jo",
+      "title": "Planecaster SkyWatch LIVE: planes over Bristol and Cardiff in 3D 24/7",
+      "channel": "Planecaster SkyWatch",
+      "thumb": "https://i.ytimg.com/vi/-VYCNCbp3jo/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 3,
+      "stillLive": true
+    },
+    {
       "videoId": "y6ZjRqpJxqU",
       "title": "👉 🔴 LIVE Heathrow Plane Spotting ✈️ Landings &amp; Takeoffs (LHR) | 14 OCT 2026",
       "channel": "Little & Great Adventures",
       "thumb": "https://i.ytimg.com/vi/y6ZjRqpJxqU/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 3,
+      "viewers": 2,
       "stillLive": true
     },
     {
-      "videoId": "-VYCNCbp3jo",
-      "title": "Planecaster SkyWatch LIVE: planes over Bristol and Cardiff in 3D 24/7",
-      "channel": "Planecaster SkyWatch",
-      "thumb": "https://i.ytimg.com/vi/-VYCNCbp3jo/mqdefault_live.jpg",
+      "videoId": "VNwgk1xIeUc",
+      "title": "✈️ LAX LIVE | Monday Oct 5 | Morning Arrivals | ADS-B + Real ATC | KLAX",
+      "channel": "Information Zulu",
+      "thumb": "https://i.ytimg.com/vi/VNwgk1xIeUc/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
       "viewers": 2,
       "stillLive": true
@@ -144,15 +153,6 @@
       "title": "Newark EWR plane spotting, rail fanning, New Jersey Drone UFO Watch LIVE Wednesday 10/14/26",
       "channel": "JerseyJoe50",
       "thumb": "https://i.ytimg.com/vi/mLPFM1rjxRI/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": null,
-      "stillLive": true
-    },
-    {
-      "videoId": "VNwgk1xIeUc",
-      "title": "✈️ LAX LIVE | Monday Oct 5 | Morning Arrivals | ADS-B + Real ATC | KLAX",
-      "channel": "Information Zulu",
-      "thumb": "https://i.ytimg.com/vi/VNwgk1xIeUc/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
       "viewers": null,
       "stillLive": true
