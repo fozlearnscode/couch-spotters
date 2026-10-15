@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T08:47:50.093Z",
+  "updatedAt": "2026-10-15T09:58:45.799Z",
   "airportRotationStart": 6,
   "quotaExceeded": false,
   "lastSearchError": null,
@@ -10,7 +10,7 @@
       "channel": "Flight Focus 365",
       "thumb": "https://i.ytimg.com/vi/TPuHVC-D_YM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1003,
+      "viewers": 1030,
       "stillLive": true
     },
     {
@@ -19,7 +19,7 @@
       "channel": "Fluggesellschaft",
       "thumb": "https://i.ytimg.com/vi/xLFc6dTX-O8/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 818,
+      "viewers": 808,
       "stillLive": true
     },
     {
@@ -28,16 +28,7 @@
       "channel": "BIG JET TV",
       "thumb": "https://i.ytimg.com/vi/uDBYuEV4zjI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 710,
-      "stillLive": true
-    },
-    {
-      "videoId": "EpwQ5eEjVko",
-      "title": "Madeira Airport Live Action LPMA Spotter ✈️15/10/2026",
-      "channel": "LPMA Spotter",
-      "thumb": "https://i.ytimg.com/vi/EpwQ5eEjVko/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 373,
+      "viewers": 632,
       "stillLive": true
     },
     {
@@ -46,7 +37,16 @@
       "channel": "Live Jet",
       "thumb": "https://i.ytimg.com/vi/3YtrdgMgNJI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 300,
+      "viewers": 526,
+      "stillLive": true
+    },
+    {
+      "videoId": "EpwQ5eEjVko",
+      "title": "Madeira Airport Live Action LPMA Spotter ✈️15/10/2026",
+      "channel": "LPMA Spotter",
+      "thumb": "https://i.ytimg.com/vi/EpwQ5eEjVko/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 425,
       "stillLive": true
     },
     {
@@ -55,25 +55,7 @@
       "channel": "Simon Lowe Aviation ",
       "thumb": "https://i.ytimg.com/vi/ikDhzNx0IBI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 285,
-      "stillLive": true
-    },
-    {
-      "videoId": "ufJyGqw7o_4",
-      "title": "🔴LIVE at Itami Airport Plane Spotting　2026.10.15 伊丹空港ライブカメラ 伊丹空港　ITM/RJOO",
-      "channel": "Love Flight Jack",
-      "thumb": "https://i.ytimg.com/vi/ufJyGqw7o_4/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 194,
-      "stillLive": true
-    },
-    {
-      "videoId": "X8xAif56wlA",
-      "title": "🔴LIVE! ⚡️Lightning storm ⚡️AKL Plane Spotting - Kiwi Does Plane Spotting @ Auckland Airport",
-      "channel": "Kiwi Does Stuff",
-      "thumb": "https://i.ytimg.com/vi/X8xAif56wlA/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 174,
+      "viewers": 274,
       "stillLive": true
     },
     {
@@ -82,7 +64,7 @@
       "channel": "RankUpAviation ",
       "thumb": "https://i.ytimg.com/vi/nfC7P8-gtis/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 139,
+      "viewers": 128,
       "stillLive": true
     },
     {
@@ -91,7 +73,7 @@
       "channel": "AVIAÇÃO TV",
       "thumb": "https://i.ytimg.com/vi/4G3bEaLnbmg/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 83,
+      "viewers": 88,
       "stillLive": true
     },
     {
@@ -100,7 +82,7 @@
       "channel": "Live 3D Airport ATC + WX",
       "thumb": "https://i.ytimg.com/vi/9g8fksct8zg/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 14,
+      "viewers": 21,
       "stillLive": true
     },
     {
@@ -109,16 +91,7 @@
       "channel": "Planecaster SkyWatch",
       "thumb": "https://i.ytimg.com/vi/-VYCNCbp3jo/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 6,
-      "stillLive": true
-    },
-    {
-      "videoId": "sjV3Z5q6Y2g",
-      "title": "👉 🔴 LIVE Heathrow Plane Spotting ✈️ Landings &amp; Takeoffs (LHR) | 15 OCT 2026",
-      "channel": "Little & Great Adventures",
-      "thumb": "https://i.ytimg.com/vi/sjV3Z5q6Y2g/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 3,
+      "viewers": 7,
       "stillLive": true
     },
     {
@@ -127,6 +100,15 @@
       "channel": "LAX Plane Spotters",
       "thumb": "https://i.ytimg.com/vi/ysLCAaHj990/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
+      "viewers": 2,
+      "stillLive": true
+    },
+    {
+      "videoId": "sjV3Z5q6Y2g",
+      "title": "👉 🔴 LIVE Heathrow Plane Spotting ✈️ Landings &amp; Takeoffs (LHR) | 15 OCT 2026",
+      "channel": "Little & Great Adventures",
+      "thumb": "https://i.ytimg.com/vi/sjV3Z5q6Y2g/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
       "viewers": 1,
       "stillLive": true
     },
@@ -145,15 +127,6 @@
       "channel": "Information Zulu",
       "thumb": "https://i.ytimg.com/vi/VNwgk1xIeUc/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": null,
-      "stillLive": true
-    },
-    {
-      "videoId": "oBJ4KAistwY",
-      "title": "AEROPORTO INTERNACIONAL DE MADEIRA - LPMA - FNC - RADAR E ATC",
-      "channel": "BRAVO YANKEE TANGO",
-      "thumb": "https://i.ytimg.com/vi/oBJ4KAistwY/mqdefault_live.jpg",
-      "matchedQuery": "Madeira airport plane spotting live",
       "viewers": null,
       "stillLive": true
     },
