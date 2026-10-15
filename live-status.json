@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-14T23:00:51.090Z",
+  "updatedAt": "2026-10-15T00:34:17.375Z",
   "airportRotationStart": 0,
   "quotaExceeded": false,
   "lastSearchError": null,
@@ -10,34 +10,7 @@
       "channel": "L.A FLIGHTS",
       "thumb": "https://i.ytimg.com/vi/9L090LC3A8E/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1443,
-      "stillLive": true
-    },
-    {
-      "videoId": "AL8dRbBly4c",
-      "title": "LIVE Plane Spotting at Boston Logan International Airport | KBOS",
-      "channel": "Logan in Flight",
-      "thumb": "https://i.ytimg.com/vi/AL8dRbBly4c/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 231,
-      "stillLive": true
-    },
-    {
-      "videoId": "uDBYuEV4zjI",
-      "title": "Heathrow Airport LIVE 24/7",
-      "channel": "BIG JET TV",
-      "thumb": "https://i.ytimg.com/vi/uDBYuEV4zjI/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 230,
-      "stillLive": true
-    },
-    {
-      "videoId": "IvJmTgjDpFw",
-      "title": "🔴 LIVE Plane Spotting at Toronto Pearson (YYZ) | Holiday Inn Express Exclusive View | Oct 14",
-      "channel": "Wake Turbulence Aviation",
-      "thumb": "https://i.ytimg.com/vi/IvJmTgjDpFw/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 159,
+      "viewers": 1145,
       "stillLive": true
     },
     {
@@ -46,25 +19,16 @@
       "channel": "Love Flight Jack",
       "thumb": "https://i.ytimg.com/vi/ufJyGqw7o_4/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 143,
+      "viewers": 182,
       "stillLive": true
     },
     {
-      "videoId": "tIt1AFljrlE",
-      "title": "毎朝7時！ボーイング777！ エアバスA350迫力の離陸！早朝ラッシュ🔴777 7:30離陸 🔴エアバスA350！8:15 離陸 🔴人気の動画！14機の スプラッシュ集！ジェット機は概要欄のURLへ🔴",
-      "channel": "誕生日ジェット  ",
-      "thumb": "https://i.ytimg.com/vi/tIt1AFljrlE/mqdefault_live.jpg",
+      "videoId": "uDBYuEV4zjI",
+      "title": "Heathrow Airport LIVE 24/7",
+      "channel": "BIG JET TV",
+      "thumb": "https://i.ytimg.com/vi/uDBYuEV4zjI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 130,
-      "stillLive": true
-    },
-    {
-      "videoId": "foDQnWodDUM",
-      "title": "🔴 LIVE 24/7 Lisbon Airport Live Cam 14.10.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
-      "channel": "AVIAÇÃO TV",
-      "thumb": "https://i.ytimg.com/vi/foDQnWodDUM/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 38,
+      "viewers": 164,
       "stillLive": true
     },
     {
@@ -73,7 +37,16 @@
       "channel": "SHOWME Caribbean",
       "thumb": "https://i.ytimg.com/vi/pAEbB1Gy50E/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 30,
+      "viewers": 22,
+      "stillLive": true
+    },
+    {
+      "videoId": "foDQnWodDUM",
+      "title": "🔴 LIVE 24/7 Lisbon Airport Live Cam 14.10.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
+      "channel": "AVIAÇÃO TV",
+      "thumb": "https://i.ytimg.com/vi/foDQnWodDUM/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 18,
       "stillLive": true
     },
     {
@@ -82,7 +55,7 @@
       "channel": "Rob's Aviation",
       "thumb": "https://i.ytimg.com/vi/Q4jWnsAKTlY/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 5,
+      "viewers": 3,
       "stillLive": true
     },
     {
@@ -100,7 +73,7 @@
       "channel": "JerseyJoe50",
       "thumb": "https://i.ytimg.com/vi/mLPFM1rjxRI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": null,
+      "viewers": 1,
       "stillLive": true
     },
     {
@@ -109,7 +82,7 @@
       "channel": "Information Zulu",
       "thumb": "https://i.ytimg.com/vi/VNwgk1xIeUc/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": null,
+      "viewers": 1,
       "stillLive": true
     },
     {
@@ -127,15 +100,6 @@
       "channel": "Asia Aircraft Spotter LIVE Stream",
       "thumb": "https://i.ytimg.com/vi/rJ6PQ2k3wHM/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": null,
-      "stillLive": true
-    },
-    {
-      "videoId": "e2HRTj-Mp0s",
-      "title": "Houston KIAH Flightradar24 Livestream with Live Air Traffic Control 14/10/2026",
-      "channel": "Cleared Visual Approach",
-      "thumb": "https://i.ytimg.com/vi/e2HRTj-Mp0s/mqdefault_live.jpg",
-      "matchedQuery": "SFO airport plane spotting live",
       "viewers": null,
       "stillLive": true
     }
