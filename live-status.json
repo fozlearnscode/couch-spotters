@@ -1,16 +1,34 @@
 {
-  "updatedAt": "2026-10-15T18:53:54.748Z",
-  "airportRotationStart": 1,
+  "updatedAt": "2026-10-15T19:40:11.846Z",
+  "airportRotationStart": 4,
   "quotaExceeded": false,
   "lastSearchError": null,
   "liveResults": [
+    {
+      "videoId": "gXB8CMFo9Po",
+      "title": "MIGHTY A380, PIA 777, Rain &amp; Evening Jets! 🧡 Manchester Airport LIVE",
+      "channel": "flght",
+      "thumb": "https://i.ytimg.com/vi/gXB8CMFo9Po/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 644,
+      "stillLive": true
+    },
     {
       "videoId": "uDBYuEV4zjI",
       "title": "Heathrow Airport LIVE 24/7",
       "channel": "BIG JET TV",
       "thumb": "https://i.ytimg.com/vi/uDBYuEV4zjI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 487,
+      "viewers": 427,
+      "stillLive": true
+    },
+    {
+      "videoId": "kH6hNRLbn7g",
+      "title": "🔴ZRH LIVE Thursday Evening Plane Spotting at Zurich Airport🔴",
+      "channel": "ZurichAirportSpotter",
+      "thumb": "https://i.ytimg.com/vi/kH6hNRLbn7g/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 335,
       "stillLive": true
     },
     {
@@ -19,16 +37,7 @@
       "channel": "Flight Focus 365",
       "thumb": "https://i.ytimg.com/vi/TPuHVC-D_YM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 353,
-      "stillLive": true
-    },
-    {
-      "videoId": "G2fm-oM55m8",
-      "title": "🔴 LIVE FROM SEYMOUR JOHNSON! FIGHTER JETS IN ACTION!  |10/15/26|🔴",
-      "channel": "Carolina Aviation",
-      "thumb": "https://i.ytimg.com/vi/G2fm-oM55m8/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 254,
+      "viewers": 284,
       "stillLive": true
     },
     {
@@ -37,7 +46,25 @@
       "channel": "SHOWME Caribbean",
       "thumb": "https://i.ytimg.com/vi/zl-K_XGYJes/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 160,
+      "viewers": 131,
+      "stillLive": true
+    },
+    {
+      "videoId": "Mp_sZ_dRzC0",
+      "title": "LIVE! EXCLUSIVE PLANESPOTTING FROM INDIANAPOLIS | RAIN AND THUNDERSTORMS FEDEX HUB | CONSTANT DELAYS",
+      "channel": "Pip Hastings Aviation",
+      "thumb": "https://i.ytimg.com/vi/Mp_sZ_dRzC0/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 80,
+      "stillLive": true
+    },
+    {
+      "videoId": "9hwFe5g1HVs",
+      "title": "🔴 LIVE 24/7 Lisbon Airport Live Cam 15.10.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
+      "channel": "AVIAÇÃO TV",
+      "thumb": "https://i.ytimg.com/vi/9hwFe5g1HVs/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 46,
       "stillLive": true
     },
     {
@@ -46,7 +73,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/iZRbml7fnXI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 55,
+      "viewers": 46,
       "stillLive": true
     },
     {
@@ -55,7 +82,34 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/sJl7PsdHxWM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 31,
+      "viewers": 29,
+      "stillLive": true
+    },
+    {
+      "videoId": "21DZhOc_-KA",
+      "title": "Hong Kong Airport Live - 15 October 2026",
+      "channel": "Hong Kong Airport Live Cam",
+      "thumb": "https://i.ytimg.com/vi/21DZhOc_-KA/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 10,
+      "stillLive": true
+    },
+    {
+      "videoId": "chE9_4kt8mc",
+      "title": "🔴 LIVE | WingWatchAviation – 1 Year of Aviation Highlights &amp; Mixed Footage",
+      "channel": "WingWatchAviation",
+      "thumb": "https://i.ytimg.com/vi/chE9_4kt8mc/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 4,
+      "stillLive": true
+    },
+    {
+      "videoId": "NdAyRlYxw3M",
+      "title": "LIVE Tokyo Bay, Traffic between ships and planes - Sea and Sky / japan travel / Live cam",
+      "channel": "EN DAIBA GLOBAL",
+      "thumb": "https://i.ytimg.com/vi/NdAyRlYxw3M/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
+      "viewers": 3,
       "stillLive": true
     },
     {
@@ -63,8 +117,17 @@
       "title": "Planecaster SkyWatch LIVE: planes over Bristol and Cardiff in 3D 24/7",
       "channel": "Planecaster SkyWatch",
       "thumb": "https://i.ytimg.com/vi/-VYCNCbp3jo/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 3,
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 2,
+      "stillLive": true
+    },
+    {
+      "videoId": "exByLNTSBMQ",
+      "title": "LIVE | MSFS 2024 Full Flight | Embraer E-175 (by FSS) NEW AIRCRAFT | London to Amsterdam",
+      "channel": "The Glideslope",
+      "thumb": "https://i.ytimg.com/vi/exByLNTSBMQ/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 2,
       "stillLive": true
     },
     {
@@ -73,16 +136,7 @@
       "channel": "LAX Plane Spotters",
       "thumb": "https://i.ytimg.com/vi/ysLCAaHj990/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 3,
-      "stillLive": true
-    },
-    {
-      "videoId": "qQZTqSE0od4",
-      "title": "3D LIVE 成田空港ライブカメラNARITA International Airport ATC/WX",
-      "channel": "Live 3D Airport ATC + WX",
-      "thumb": "https://i.ytimg.com/vi/qQZTqSE0od4/mqdefault_live.jpg",
-      "matchedQuery": "LAX airport plane spotting live",
-      "viewers": 2,
+      "viewers": null,
       "stillLive": true
     },
     {
@@ -91,7 +145,7 @@
       "channel": "JerseyJoe50",
       "thumb": "https://i.ytimg.com/vi/koXJ4suevuI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1,
+      "viewers": null,
       "stillLive": true
     }
   ]
