@@ -1,52 +1,16 @@
 {
-  "updatedAt": "2026-10-15T19:40:11.846Z",
+  "updatedAt": "2026-10-15T21:59:32.781Z",
   "airportRotationStart": 4,
   "quotaExceeded": false,
   "lastSearchError": null,
   "liveResults": [
-    {
-      "videoId": "gXB8CMFo9Po",
-      "title": "MIGHTY A380, PIA 777, Rain &amp; Evening Jets! 🧡 Manchester Airport LIVE",
-      "channel": "flght",
-      "thumb": "https://i.ytimg.com/vi/gXB8CMFo9Po/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 644,
-      "stillLive": true
-    },
     {
       "videoId": "uDBYuEV4zjI",
       "title": "Heathrow Airport LIVE 24/7",
       "channel": "BIG JET TV",
       "thumb": "https://i.ytimg.com/vi/uDBYuEV4zjI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 427,
-      "stillLive": true
-    },
-    {
-      "videoId": "kH6hNRLbn7g",
-      "title": "🔴ZRH LIVE Thursday Evening Plane Spotting at Zurich Airport🔴",
-      "channel": "ZurichAirportSpotter",
-      "thumb": "https://i.ytimg.com/vi/kH6hNRLbn7g/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 335,
-      "stillLive": true
-    },
-    {
-      "videoId": "TPuHVC-D_YM",
-      "title": "Heathrow Airport Live - Thursday 15th October 2026",
-      "channel": "Flight Focus 365",
-      "thumb": "https://i.ytimg.com/vi/TPuHVC-D_YM/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 284,
-      "stillLive": true
-    },
-    {
-      "videoId": "zl-K_XGYJes",
-      "title": "✈️ LIVE October 15 | Maho Beach | SXM Airport St. Maarten (with ATC &amp; Jetblasts)",
-      "channel": "SHOWME Caribbean",
-      "thumb": "https://i.ytimg.com/vi/zl-K_XGYJes/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 131,
+      "viewers": 412,
       "stillLive": true
     },
     {
@@ -55,7 +19,25 @@
       "channel": "Pip Hastings Aviation",
       "thumb": "https://i.ytimg.com/vi/Mp_sZ_dRzC0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 80,
+      "viewers": 197,
+      "stillLive": true
+    },
+    {
+      "videoId": "zl-K_XGYJes",
+      "title": "✈️ LIVE October 15 | Maho Beach | SXM Airport St. Maarten (with ATC &amp; Jetblasts)",
+      "channel": "SHOWME Caribbean",
+      "thumb": "https://i.ytimg.com/vi/zl-K_XGYJes/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 82,
+      "stillLive": true
+    },
+    {
+      "videoId": "TPuHVC-D_YM",
+      "title": "Heathrow Airport Live - Thursday 15th October 2026",
+      "channel": "Flight Focus 365",
+      "thumb": "https://i.ytimg.com/vi/TPuHVC-D_YM/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 81,
       "stillLive": true
     },
     {
@@ -64,7 +46,7 @@
       "channel": "AVIAÇÃO TV",
       "thumb": "https://i.ytimg.com/vi/9hwFe5g1HVs/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 46,
+      "viewers": 45,
       "stillLive": true
     },
     {
@@ -73,7 +55,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/iZRbml7fnXI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 46,
+      "viewers": 43,
       "stillLive": true
     },
     {
@@ -82,34 +64,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/sJl7PsdHxWM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 29,
-      "stillLive": true
-    },
-    {
-      "videoId": "21DZhOc_-KA",
-      "title": "Hong Kong Airport Live - 15 October 2026",
-      "channel": "Hong Kong Airport Live Cam",
-      "thumb": "https://i.ytimg.com/vi/21DZhOc_-KA/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 10,
-      "stillLive": true
-    },
-    {
-      "videoId": "chE9_4kt8mc",
-      "title": "🔴 LIVE | WingWatchAviation – 1 Year of Aviation Highlights &amp; Mixed Footage",
-      "channel": "WingWatchAviation",
-      "thumb": "https://i.ytimg.com/vi/chE9_4kt8mc/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 4,
-      "stillLive": true
-    },
-    {
-      "videoId": "NdAyRlYxw3M",
-      "title": "LIVE Tokyo Bay, Traffic between ships and planes - Sea and Sky / japan travel / Live cam",
-      "channel": "EN DAIBA GLOBAL",
-      "thumb": "https://i.ytimg.com/vi/NdAyRlYxw3M/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 3,
+      "viewers": 36,
       "stillLive": true
     },
     {
@@ -118,16 +73,25 @@
       "channel": "Planecaster SkyWatch",
       "thumb": "https://i.ytimg.com/vi/-VYCNCbp3jo/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 2,
+      "viewers": 7,
       "stillLive": true
     },
     {
-      "videoId": "exByLNTSBMQ",
-      "title": "LIVE | MSFS 2024 Full Flight | Embraer E-175 (by FSS) NEW AIRCRAFT | London to Amsterdam",
-      "channel": "The Glideslope",
-      "thumb": "https://i.ytimg.com/vi/exByLNTSBMQ/mqdefault_live.jpg",
+      "videoId": "chE9_4kt8mc",
+      "title": "🔴 LIVE | WingWatchAviation – 1 Year of Aviation Highlights &amp; Mixed Footage",
+      "channel": "WingWatchAviation",
+      "thumb": "https://i.ytimg.com/vi/chE9_4kt8mc/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 2,
+      "viewers": 1,
+      "stillLive": true
+    },
+    {
+      "videoId": "NdAyRlYxw3M",
+      "title": "LIVE Tokyo Bay, Traffic between ships and planes - Sea and Sky / japan travel / Live cam",
+      "channel": "EN DAIBA GLOBAL",
+      "thumb": "https://i.ytimg.com/vi/NdAyRlYxw3M/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
+      "viewers": 1,
       "stillLive": true
     },
     {
@@ -136,7 +100,7 @@
       "channel": "LAX Plane Spotters",
       "thumb": "https://i.ytimg.com/vi/ysLCAaHj990/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": null,
+      "viewers": 1,
       "stillLive": true
     },
     {
@@ -145,7 +109,7 @@
       "channel": "JerseyJoe50",
       "thumb": "https://i.ytimg.com/vi/koXJ4suevuI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": null,
+      "viewers": 1,
       "stillLive": true
     }
   ]
