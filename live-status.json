@@ -1,61 +1,25 @@
 {
-  "updatedAt": "2026-10-15T14:53:12.685Z",
+  "updatedAt": "2026-10-15T18:53:54.748Z",
   "airportRotationStart": 1,
   "quotaExceeded": false,
   "lastSearchError": null,
   "liveResults": [
-    {
-      "videoId": "TPuHVC-D_YM",
-      "title": "Heathrow Airport Live - Thursday 15th October 2026",
-      "channel": "Flight Focus 365",
-      "thumb": "https://i.ytimg.com/vi/TPuHVC-D_YM/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 1301,
-      "stillLive": true
-    },
-    {
-      "videoId": "hUvz-xHwwtA",
-      "title": "LIVE 🔴 Morning Rush at San Diego Airport ✈️ | KSAN Plane Spotting",
-      "channel": "SDVIBEZ",
-      "thumb": "https://i.ytimg.com/vi/hUvz-xHwwtA/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 1063,
-      "stillLive": true
-    },
-    {
-      "videoId": "bDcYHfexbxE",
-      "title": "LONDON HEATHROW LIVE - Thursday Show - Super heavies, Super busy ops 15.10.26",
-      "channel": "Airplane Video Guy",
-      "thumb": "https://i.ytimg.com/vi/bDcYHfexbxE/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 832,
-      "stillLive": true
-    },
-    {
-      "videoId": "OD_AUmyiPaI",
-      "title": "Birmingham Airport LIVE - Blustery BHX 🚩✈️ - Thurs 15th Oct 2026",
-      "channel": "Airport Action",
-      "thumb": "https://i.ytimg.com/vi/OD_AUmyiPaI/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 763,
-      "stillLive": true
-    },
-    {
-      "videoId": "trdei8mOBhA",
-      "title": "LIVE RCAF C130 Action at Madeira Island Airport 15.10.2026",
-      "channel": "Madeira Airport Spotting",
-      "thumb": "https://i.ytimg.com/vi/trdei8mOBhA/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 727,
-      "stillLive": true
-    },
     {
       "videoId": "uDBYuEV4zjI",
       "title": "Heathrow Airport LIVE 24/7",
       "channel": "BIG JET TV",
       "thumb": "https://i.ytimg.com/vi/uDBYuEV4zjI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 638,
+      "viewers": 487,
+      "stillLive": true
+    },
+    {
+      "videoId": "TPuHVC-D_YM",
+      "title": "Heathrow Airport Live - Thursday 15th October 2026",
+      "channel": "Flight Focus 365",
+      "thumb": "https://i.ytimg.com/vi/TPuHVC-D_YM/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 353,
       "stillLive": true
     },
     {
@@ -64,34 +28,7 @@
       "channel": "Carolina Aviation",
       "thumb": "https://i.ytimg.com/vi/G2fm-oM55m8/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 412,
-      "stillLive": true
-    },
-    {
-      "videoId": "EpwQ5eEjVko",
-      "title": "Madeira Airport Live Action LPMA Spotter ✈️15/10/2026",
-      "channel": "LPMA Spotter",
-      "thumb": "https://i.ytimg.com/vi/EpwQ5eEjVko/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 279,
-      "stillLive": true
-    },
-    {
-      "videoId": "stmDil5zqYY",
-      "title": "🔴LIVE Planespotting BCN Airport Emirates A380 New Livery 15/10/2026✈️",
-      "channel": "Mikel",
-      "thumb": "https://i.ytimg.com/vi/stmDil5zqYY/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 80,
-      "stillLive": true
-    },
-    {
-      "videoId": "4G3bEaLnbmg",
-      "title": "🔴 LIVE 24/7 Lisbon Airport Live Cam 15.10.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
-      "channel": "AVIAÇÃO TV",
-      "thumb": "https://i.ytimg.com/vi/4G3bEaLnbmg/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 75,
+      "viewers": 254,
       "stillLive": true
     },
     {
@@ -100,7 +37,7 @@
       "channel": "SHOWME Caribbean",
       "thumb": "https://i.ytimg.com/vi/zl-K_XGYJes/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 59,
+      "viewers": 160,
       "stillLive": true
     },
     {
@@ -109,7 +46,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/iZRbml7fnXI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 50,
+      "viewers": 55,
       "stillLive": true
     },
     {
@@ -118,7 +55,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/sJl7PsdHxWM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 23,
+      "viewers": 31,
       "stillLive": true
     },
     {
@@ -127,16 +64,7 @@
       "channel": "Planecaster SkyWatch",
       "thumb": "https://i.ytimg.com/vi/-VYCNCbp3jo/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 4,
-      "stillLive": true
-    },
-    {
-      "videoId": "qQZTqSE0od4",
-      "title": "3D LIVE 成田空港ライブカメラNARITA International Airport ATC/WX",
-      "channel": "Live 3D Airport ATC + WX",
-      "thumb": "https://i.ytimg.com/vi/qQZTqSE0od4/mqdefault_live.jpg",
-      "matchedQuery": "LAX airport plane spotting live",
-      "viewers": 4,
+      "viewers": 3,
       "stillLive": true
     },
     {
@@ -149,11 +77,11 @@
       "stillLive": true
     },
     {
-      "videoId": "sjV3Z5q6Y2g",
-      "title": "👉 🔴 LIVE Heathrow Plane Spotting ✈️ Landings &amp; Takeoffs (LHR) | 15 OCT 2026",
-      "channel": "Little & Great Adventures",
-      "thumb": "https://i.ytimg.com/vi/sjV3Z5q6Y2g/mqdefault_live.jpg",
-      "matchedQuery": "Heathrow airport plane spotting live",
+      "videoId": "qQZTqSE0od4",
+      "title": "3D LIVE 成田空港ライブカメラNARITA International Airport ATC/WX",
+      "channel": "Live 3D Airport ATC + WX",
+      "thumb": "https://i.ytimg.com/vi/qQZTqSE0od4/mqdefault_live.jpg",
+      "matchedQuery": "LAX airport plane spotting live",
       "viewers": 2,
       "stillLive": true
     },
