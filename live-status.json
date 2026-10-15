@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T03:01:42.470Z",
+  "updatedAt": "2026-10-15T05:10:18.172Z",
   "airportRotationStart": 3,
   "quotaExceeded": false,
   "lastSearchError": null,
@@ -10,25 +10,7 @@
       "channel": "Kiwi Does Stuff",
       "thumb": "https://i.ytimg.com/vi/X8xAif56wlA/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 429,
-      "stillLive": true
-    },
-    {
-      "videoId": "K7xe08JMDJk",
-      "title": "🔴 LIVE DFW Plane Spotting ✈️ RUNWAY 18R • HEAVY JETS &amp; SURPRISES | LIVE ATC",
-      "channel": "Metal Birds Aviation",
-      "thumb": "https://i.ytimg.com/vi/K7xe08JMDJk/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 182,
-      "stillLive": true
-    },
-    {
-      "videoId": "ufJyGqw7o_4",
-      "title": "🔴LIVE at Itami Airport Plane Spotting　2026.10.15 伊丹空港ライブカメラ 伊丹空港　ITM/RJOO",
-      "channel": "Love Flight Jack",
-      "thumb": "https://i.ytimg.com/vi/ufJyGqw7o_4/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 174,
+      "viewers": 436,
       "stillLive": true
     },
     {
@@ -37,7 +19,16 @@
       "channel": "BIG JET TV",
       "thumb": "https://i.ytimg.com/vi/uDBYuEV4zjI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 148,
+      "viewers": 348,
+      "stillLive": true
+    },
+    {
+      "videoId": "ufJyGqw7o_4",
+      "title": "🔴LIVE at Itami Airport Plane Spotting　2026.10.15 伊丹空港ライブカメラ 伊丹空港　ITM/RJOO",
+      "channel": "Love Flight Jack",
+      "thumb": "https://i.ytimg.com/vi/ufJyGqw7o_4/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 142,
       "stillLive": true
     },
     {
@@ -46,7 +37,25 @@
       "channel": "AVIAÇÃO TV",
       "thumb": "https://i.ytimg.com/vi/4G3bEaLnbmg/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 16,
+      "viewers": 27,
+      "stillLive": true
+    },
+    {
+      "videoId": "WW7gbsURyhE",
+      "title": "🔴 Phuket International Airport (HKT / VTSP) สนามบินนานาชาติภูเก็ต Live Stream, Live Camera, ATC ASMR",
+      "channel": "Phuket Intl Airport (HKT-VTSP) LIVE STREAM",
+      "thumb": "https://i.ytimg.com/vi/WW7gbsURyhE/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
+      "viewers": 7,
+      "stillLive": true
+    },
+    {
+      "videoId": "-VYCNCbp3jo",
+      "title": "Planecaster SkyWatch LIVE: planes over Bristol and Cardiff in 3D 24/7",
+      "channel": "Planecaster SkyWatch",
+      "thumb": "https://i.ytimg.com/vi/-VYCNCbp3jo/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 3,
       "stillLive": true
     },
     {
@@ -59,20 +68,11 @@
       "stillLive": true
     },
     {
-      "videoId": "mLPFM1rjxRI",
-      "title": "Newark EWR plane spotting, rail fanning, New Jersey Drone UFO Watch LIVE Wednesday 10/14/26",
-      "channel": "JerseyJoe50",
-      "thumb": "https://i.ytimg.com/vi/mLPFM1rjxRI/mqdefault_live.jpg",
+      "videoId": "VNwgk1xIeUc",
+      "title": "✈️ LAX LIVE | Monday Oct 5 | Morning Arrivals | ADS-B + Real ATC | KLAX",
+      "channel": "Information Zulu",
+      "thumb": "https://i.ytimg.com/vi/VNwgk1xIeUc/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 2,
-      "stillLive": true
-    },
-    {
-      "videoId": "-fyy6jvDhV4",
-      "title": "Houston KIAH Flightradar24 Livestream with Live Air Traffic Control 14/10/2026",
-      "channel": "Cleared Visual Approach",
-      "thumb": "https://i.ytimg.com/vi/-fyy6jvDhV4/mqdefault_live.jpg",
-      "matchedQuery": "Sydney airport plane spotting live",
       "viewers": 2,
       "stillLive": true
     },
@@ -86,38 +86,11 @@
       "stillLive": true
     },
     {
-      "videoId": "VNwgk1xIeUc",
-      "title": "✈️ LAX LIVE | Monday Oct 5 | Morning Arrivals | ADS-B + Real ATC | KLAX",
-      "channel": "Information Zulu",
-      "thumb": "https://i.ytimg.com/vi/VNwgk1xIeUc/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": null,
-      "stillLive": true
-    },
-    {
-      "videoId": "-VYCNCbp3jo",
-      "title": "Planecaster SkyWatch LIVE: planes over Bristol and Cardiff in 3D 24/7",
-      "channel": "Planecaster SkyWatch",
-      "thumb": "https://i.ytimg.com/vi/-VYCNCbp3jo/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": null,
-      "stillLive": true
-    },
-    {
       "videoId": "rJ6PQ2k3wHM",
       "title": "🔴 Phuket Intl Airport (HKT / VTSP) สนามบินนานาชาติภูเก็ต Live Stream, Live Camera, Weather, ATC ASMR",
       "channel": "Asia Aircraft Spotter LIVE Stream",
       "thumb": "https://i.ytimg.com/vi/rJ6PQ2k3wHM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": null,
-      "stillLive": true
-    },
-    {
-      "videoId": "WW7gbsURyhE",
-      "title": "🔴 Phuket International Airport (HKT / VTSP) สนามบินนานาชาติภูเก็ต Live Stream, Live Camera, ATC ASMR",
-      "channel": "Phuket Intl Airport (HKT-VTSP) LIVE STREAM",
-      "thumb": "https://i.ytimg.com/vi/WW7gbsURyhE/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
       "viewers": null,
       "stillLive": true
     },
