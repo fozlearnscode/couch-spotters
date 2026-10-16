@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T22:52:31.057Z",
+  "updatedAt": "2026-10-16T00:18:10.537Z",
   "airportRotationStart": 7,
   "quotaExceeded": false,
   "lastSearchError": null,
@@ -10,7 +10,16 @@
       "channel": "Julia Flights",
       "thumb": "https://i.ytimg.com/vi/DtUEHVXDowI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 599,
+      "viewers": 483,
+      "stillLive": true
+    },
+    {
+      "videoId": "2zs6Lshp_IA",
+      "title": "🇯🇵✈️羽田空港 ライブカメラ Haneda Airport Live October 16, 2026 生中継 2026年10月16日 羽田空港ライブ",
+      "channel": "AeroEye Japan",
+      "thumb": "https://i.ytimg.com/vi/2zs6Lshp_IA/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 283,
       "stillLive": true
     },
     {
@@ -19,25 +28,7 @@
       "channel": "BIG JET TV",
       "thumb": "https://i.ytimg.com/vi/uDBYuEV4zjI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 235,
-      "stillLive": true
-    },
-    {
-      "videoId": "4nsrfunZITg",
-      "title": "🔴LIVE at Itami Airport Plane Spotting　2026.10.16 伊丹空港ライブカメラ 伊丹空港　ITM/RJOO",
-      "channel": "Love Flight Jack",
-      "thumb": "https://i.ytimg.com/vi/4nsrfunZITg/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 201,
-      "stillLive": true
-    },
-    {
-      "videoId": "Mp_sZ_dRzC0",
-      "title": "LIVE! EXCLUSIVE PLANESPOTTING FROM INDIANAPOLIS | RAIN AND THUNDERSTORMS FEDEX HUB | CONSTANT DELAYS",
-      "channel": "Pip Hastings Aviation",
-      "thumb": "https://i.ytimg.com/vi/Mp_sZ_dRzC0/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 169,
+      "viewers": 176,
       "stillLive": true
     },
     {
@@ -46,7 +37,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/T_QsY01tIK0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 169,
+      "viewers": 111,
       "stillLive": true
     },
     {
@@ -59,21 +50,12 @@
       "stillLive": true
     },
     {
-      "videoId": "zl-K_XGYJes",
-      "title": "✈️ LIVE October 15 | Maho Beach | SXM Airport St. Maarten (with ATC &amp; Jetblasts)",
-      "channel": "SHOWME Caribbean",
-      "thumb": "https://i.ytimg.com/vi/zl-K_XGYJes/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 47,
-      "stillLive": true
-    },
-    {
       "videoId": "9hwFe5g1HVs",
       "title": "🔴 LIVE 24/7 Lisbon Airport Live Cam 15.10.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
       "channel": "AVIAÇÃO TV",
       "thumb": "https://i.ytimg.com/vi/9hwFe5g1HVs/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 39,
+      "viewers": 25,
       "stillLive": true
     },
     {
@@ -82,25 +64,16 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/sJl7PsdHxWM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 31,
+      "viewers": 23,
       "stillLive": true
     },
     {
-      "videoId": "2zs6Lshp_IA",
-      "title": "🇯🇵✈️羽田空港 ライブカメラ Haneda Airport Live October 16, 2026 生中継 2026年10月16日 羽田空港ライブ",
-      "channel": "AeroEye Japan",
-      "thumb": "https://i.ytimg.com/vi/2zs6Lshp_IA/mqdefault_live.jpg",
+      "videoId": "zl-K_XGYJes",
+      "title": "✈️ LIVE October 15 | Maho Beach | SXM Airport St. Maarten (with ATC &amp; Jetblasts)",
+      "channel": "SHOWME Caribbean",
+      "thumb": "https://i.ytimg.com/vi/zl-K_XGYJes/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 20,
-      "stillLive": true
-    },
-    {
-      "videoId": "-VYCNCbp3jo",
-      "title": "Planecaster SkyWatch LIVE: planes over Bristol and Cardiff in 3D 24/7",
-      "channel": "Planecaster SkyWatch",
-      "thumb": "https://i.ytimg.com/vi/-VYCNCbp3jo/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 4,
+      "viewers": 22,
       "stillLive": true
     },
     {
@@ -109,7 +82,16 @@
       "channel": "Live 3D Airport ATC + WX",
       "thumb": "https://i.ytimg.com/vi/qQZTqSE0od4/mqdefault_live.jpg",
       "matchedQuery": "LAX airport plane spotting live",
-      "viewers": 3,
+      "viewers": 6,
+      "stillLive": true
+    },
+    {
+      "videoId": "-VYCNCbp3jo",
+      "title": "Planecaster SkyWatch LIVE: planes over Bristol and Cardiff in 3D 24/7",
+      "channel": "Planecaster SkyWatch",
+      "thumb": "https://i.ytimg.com/vi/-VYCNCbp3jo/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 2,
       "stillLive": true
     },
     {
@@ -131,21 +113,12 @@
       "stillLive": true
     },
     {
-      "videoId": "VtR7sg4Zaf8",
-      "title": "Infinite flight LIVE | London to Tblisi | British Airways A321NEO",
-      "channel": "InfiniteJordan ",
-      "thumb": "https://i.ytimg.com/vi/VtR7sg4Zaf8/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 1,
-      "stillLive": true
-    },
-    {
       "videoId": "koXJ4suevuI",
       "title": "Newark EWR plane spotting, rail fanning, New Jersey Drone UFO Watch LIVE Thursday 10/15/26",
       "channel": "JerseyJoe50",
       "thumb": "https://i.ytimg.com/vi/koXJ4suevuI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": null,
+      "viewers": 1,
       "stillLive": true
     },
     {
