@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16T22:27:47.483Z",
+  "updatedAt": "2026-10-16T23:29:39.667Z",
   "airportRotationStart": 6,
   "quotaExceeded": false,
   "lastSearchError": null,
@@ -10,16 +10,7 @@
       "channel": "AIRLINE VIDEOS",
       "thumb": "https://i.ytimg.com/vi/WEKGSAa3PJU/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1925,
-      "stillLive": true
-    },
-    {
-      "videoId": "aa7G3xLBrOQ",
-      "title": "🔴LIVE REVERSE OPS LAX! | October 16, 2026 | LAX PLANE SPOTTING",
-      "channel": "L.A FLIGHTS",
-      "thumb": "https://i.ytimg.com/vi/aa7G3xLBrOQ/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 1191,
+      "viewers": 1747,
       "stillLive": true
     },
     {
@@ -28,7 +19,7 @@
       "channel": "Caveman Aviation ",
       "thumb": "https://i.ytimg.com/vi/jvHABS6jAdk/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 1142,
+      "viewers": 1056,
       "stillLive": true
     },
     {
@@ -37,16 +28,7 @@
       "channel": "CHICAGO FLIGHTS",
       "thumb": "https://i.ytimg.com/vi/d_Y_OyjuFmw/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 495,
-      "stillLive": true
-    },
-    {
-      "videoId": "iXScH_HSLa8",
-      "title": "🔴💨 LIVE HIGH WINDS &amp; NONSTOP AIRPORT ACTION FROM MINNEAPOLIS! ✈ MSP/KMSP AIRPORT ✈ 10/16/26",
-      "channel": "MSP Airport LIVE",
-      "thumb": "https://i.ytimg.com/vi/iXScH_HSLa8/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 308,
+      "viewers": 489,
       "stillLive": true
     },
     {
@@ -55,7 +37,16 @@
       "channel": "Melbourne Flyer",
       "thumb": "https://i.ytimg.com/vi/aQPmuyH4JLg/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 206,
+      "viewers": 356,
+      "stillLive": true
+    },
+    {
+      "videoId": "iXScH_HSLa8",
+      "title": "🔴💨 LIVE HIGH WINDS &amp; NONSTOP AIRPORT ACTION FROM MINNEAPOLIS! ✈ MSP/KMSP AIRPORT ✈ 10/16/26",
+      "channel": "MSP Airport LIVE",
+      "thumb": "https://i.ytimg.com/vi/iXScH_HSLa8/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 216,
       "stillLive": true
     },
     {
@@ -64,7 +55,7 @@
       "channel": "Metal Birds Aviation",
       "thumb": "https://i.ytimg.com/vi/32JuW9dkEmk/mqdefault_live.jpg",
       "matchedQuery": "DFW airport plane spotting live",
-      "viewers": 114,
+      "viewers": 135,
       "stillLive": true
     },
     {
@@ -73,34 +64,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/T_QsY01tIK0/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 74,
-      "stillLive": true
-    },
-    {
-      "videoId": "iZRbml7fnXI",
-      "title": "MSY Airport  LIVE 24/7 • New Orleans",
-      "channel": "Flightradar24",
-      "thumb": "https://i.ytimg.com/vi/iZRbml7fnXI/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 59,
-      "stillLive": true
-    },
-    {
-      "videoId": "_WieghbWwsg",
-      "title": "🔴 LIVE 24/7 Lisbon Airport Live Cam 16.10.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
-      "channel": "AVIAÇÃO TV",
-      "thumb": "https://i.ytimg.com/vi/_WieghbWwsg/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 39,
-      "stillLive": true
-    },
-    {
-      "videoId": "9tNbJDUIQSw",
-      "title": "✈️ LIVE October 16 | Maho Beach | SXM Airport St. Maarten (with ATC &amp; Jetblasts)",
-      "channel": "SHOWME Caribbean",
-      "thumb": "https://i.ytimg.com/vi/9tNbJDUIQSw/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 31,
+      "viewers": 71,
       "stillLive": true
     },
     {
@@ -109,7 +73,34 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/sJl7PsdHxWM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 27,
+      "viewers": 67,
+      "stillLive": true
+    },
+    {
+      "videoId": "iZRbml7fnXI",
+      "title": "MSY Airport  LIVE 24/7 • New Orleans",
+      "channel": "Flightradar24",
+      "thumb": "https://i.ytimg.com/vi/iZRbml7fnXI/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 61,
+      "stillLive": true
+    },
+    {
+      "videoId": "_WieghbWwsg",
+      "title": "🔴 LIVE 24/7 Lisbon Airport Live Cam 16.10.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
+      "channel": "AVIAÇÃO TV",
+      "thumb": "https://i.ytimg.com/vi/_WieghbWwsg/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 30,
+      "stillLive": true
+    },
+    {
+      "videoId": "9tNbJDUIQSw",
+      "title": "✈️ LIVE October 16 | Maho Beach | SXM Airport St. Maarten (with ATC &amp; Jetblasts)",
+      "channel": "SHOWME Caribbean",
+      "thumb": "https://i.ytimg.com/vi/9tNbJDUIQSw/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 20,
       "stillLive": true
     },
     {
@@ -118,16 +109,7 @@
       "channel": "Rainier Aviation",
       "thumb": "https://i.ytimg.com/vi/r4ybjCfKHhA/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 6,
-      "stillLive": true
-    },
-    {
-      "videoId": "ME9x7MrLbcI",
-      "title": "🔴 LIVE SEATTLE TACOMA INTERNATIONAL AIRPORT | PLANE SPOTTING |",
-      "channel": "SEATTLE FLIGHTS",
-      "thumb": "https://i.ytimg.com/vi/ME9x7MrLbcI/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 3,
+      "viewers": 7,
       "stillLive": true
     },
     {
@@ -154,15 +136,6 @@
       "channel": "JerseyJoe50",
       "thumb": "https://i.ytimg.com/vi/O50K7_hfYiw/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": null,
-      "stillLive": true
-    },
-    {
-      "videoId": "q5O2LPlgaak",
-      "title": "Toronto Pearson CYYZ Flightradar24 Livestream with Live Air Traffic Control 16/10/2026",
-      "channel": "Cleared Visual Approach",
-      "thumb": "https://i.ytimg.com/vi/q5O2LPlgaak/mqdefault_live.jpg",
-      "matchedQuery": "SFO airport plane spotting live",
       "viewers": null,
       "stillLive": true
     }
