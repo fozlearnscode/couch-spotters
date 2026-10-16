@@ -1,34 +1,16 @@
 {
-  "updatedAt": "2026-10-16T09:20:41.971Z",
+  "updatedAt": "2026-10-16T14:05:36.571Z",
   "airportRotationStart": 5,
   "quotaExceeded": false,
   "lastSearchError": null,
   "liveResults": [
-    {
-      "videoId": "rh2mkY5C1Kc",
-      "title": "🔴 Arsenal EK A380 | Plane Spotting @ Brisbane Airport w/ James &amp; Matty + ATC 🔴",
-      "channel": "Only Planes Network",
-      "thumb": "https://i.ytimg.com/vi/rh2mkY5C1Kc/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 2487,
-      "stillLive": true
-    },
     {
       "videoId": "s44UdEa6KL0",
       "title": "Heathrow Airport Live - Friday 16th October 2026",
       "channel": "Flight Focus 365",
       "thumb": "https://i.ytimg.com/vi/s44UdEa6KL0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1189,
-      "stillLive": true
-    },
-    {
-      "videoId": "QpS2luTQqF0",
-      "title": "Manchester Airport Live Plane Spotting Action - Friday Morning Rush and Massive Heavies - A380 777",
-      "channel": "Drones and Planes",
-      "thumb": "https://i.ytimg.com/vi/QpS2luTQqF0/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 1053,
+      "viewers": 1298,
       "stillLive": true
     },
     {
@@ -37,52 +19,7 @@
       "channel": "BIG JET TV",
       "thumb": "https://i.ytimg.com/vi/uDBYuEV4zjI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 633,
-      "stillLive": true
-    },
-    {
-      "videoId": "xndyYSK1A_8",
-      "title": "🔴 LIVE: PLANE SPOTTING at Amsterdam Schiphol Airport | Oct 16, 2026",
-      "channel": "AMS LIVE",
-      "thumb": "https://i.ytimg.com/vi/xndyYSK1A_8/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 534,
-      "stillLive": true
-    },
-    {
-      "videoId": "0VSYlbnj-WA",
-      "title": "Madeira Airport Live Action LPMA Spotter ✈️16/10/2026",
-      "channel": "LPMA Spotter",
-      "thumb": "https://i.ytimg.com/vi/0VSYlbnj-WA/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 431,
-      "stillLive": true
-    },
-    {
-      "videoId": "j6znVtYJdG4",
-      "title": "- LIVE - 羽田空港 ＠T2 ライブカメラ 2026/10/16 TOKYO HANEDA International Airport HND Plane Spotting",
-      "channel": "Live Jet",
-      "thumb": "https://i.ytimg.com/vi/j6znVtYJdG4/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 426,
-      "stillLive": true
-    },
-    {
-      "videoId": "YALkWceiTUM",
-      "title": "LIVE ✈️ Heathrow Airport Early Morning Plane Spotting | USA, Canada &amp; Worldwide Arrivals",
-      "channel": "JET VIEW AND SNAPS UK",
-      "thumb": "https://i.ytimg.com/vi/YALkWceiTUM/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 283,
-      "stillLive": true
-    },
-    {
-      "videoId": "6bFVgf7f2Hc",
-      "title": "🔴LIVE at Itami Airport Plane Spotting　2026.10.16 伊丹空港ライブカメラ 伊丹空港　ITM/RJOO",
-      "channel": "Love Flight Jack",
-      "thumb": "https://i.ytimg.com/vi/6bFVgf7f2Hc/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 233,
+      "viewers": 791,
       "stillLive": true
     },
     {
@@ -91,16 +28,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/T_QsY01tIK0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 23,
-      "stillLive": true
-    },
-    {
-      "videoId": "iZRbml7fnXI",
-      "title": "MSY Airport  LIVE 24/7 • New Orleans",
-      "channel": "Flightradar24",
-      "thumb": "https://i.ytimg.com/vi/iZRbml7fnXI/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 23,
+      "viewers": 128,
       "stillLive": true
     },
     {
@@ -109,7 +37,16 @@
       "channel": "Zurich Action",
       "thumb": "https://i.ytimg.com/vi/5Ape32dN3Fc/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 12,
+      "viewers": 61,
+      "stillLive": true
+    },
+    {
+      "videoId": "iZRbml7fnXI",
+      "title": "MSY Airport  LIVE 24/7 • New Orleans",
+      "channel": "Flightradar24",
+      "thumb": "https://i.ytimg.com/vi/iZRbml7fnXI/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 54,
       "stillLive": true
     },
     {
@@ -118,7 +55,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/sJl7PsdHxWM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 7,
+      "viewers": 27,
       "stillLive": true
     },
     {
@@ -127,7 +64,7 @@
       "channel": "Planecaster SkyWatch",
       "thumb": "https://i.ytimg.com/vi/-VYCNCbp3jo/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 3,
+      "viewers": 6,
       "stillLive": true
     },
     {
@@ -136,7 +73,7 @@
       "channel": "LAX Plane Spotters",
       "thumb": "https://i.ytimg.com/vi/ysLCAaHj990/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1,
+      "viewers": 2,
       "stillLive": true
     },
     {
