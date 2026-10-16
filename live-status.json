@@ -1,34 +1,16 @@
 {
-  "updatedAt": "2026-10-16T02:58:56.332Z",
+  "updatedAt": "2026-10-16T04:44:56.917Z",
   "airportRotationStart": 2,
   "quotaExceeded": false,
   "lastSearchError": null,
   "liveResults": [
-    {
-      "videoId": "68f46EP6G3E",
-      "title": "LIVE ♥️ Dallas Love Field ✈️ plane spotting at night 🌙 October 15, 2026",
-      "channel": "Runway DFW",
-      "thumb": "https://i.ytimg.com/vi/68f46EP6G3E/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 379,
-      "stillLive": true
-    },
-    {
-      "videoId": "2zs6Lshp_IA",
-      "title": "🇯🇵✈️羽田空港 ライブカメラ Haneda Airport Live October 16, 2026 生中継 2026年10月16日 羽田空港ライブ",
-      "channel": "AeroEye Japan",
-      "thumb": "https://i.ytimg.com/vi/2zs6Lshp_IA/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 147,
-      "stillLive": true
-    },
     {
       "videoId": "uDBYuEV4zjI",
       "title": "Heathrow Airport LIVE 24/7",
       "channel": "BIG JET TV",
       "thumb": "https://i.ytimg.com/vi/uDBYuEV4zjI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 137,
+      "viewers": 291,
       "stillLive": true
     },
     {
@@ -37,7 +19,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/T_QsY01tIK0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 79,
+      "viewers": 53,
       "stillLive": true
     },
     {
@@ -46,24 +28,15 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/iZRbml7fnXI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 50,
+      "viewers": 38,
       "stillLive": true
     },
     {
-      "videoId": "6chqieZVpbw",
-      "title": "🔴 LIVE: Sunset Plane Spotting  ✈️  Thursday Night Flights | Portland International Airport",
-      "channel": "Pretend Media",
-      "thumb": "https://i.ytimg.com/vi/6chqieZVpbw/mqdefault_live.jpg",
+      "videoId": "9hwFe5g1HVs",
+      "title": "🔴 LIVE 24/7 Lisbon Airport Live Cam 15.10.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
+      "channel": "AVIAÇÃO TV",
+      "thumb": "https://i.ytimg.com/vi/9hwFe5g1HVs/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 42,
-      "stillLive": true
-    },
-    {
-      "videoId": "BXqNFFVxpr8",
-      "title": "TORONTO THURSDAY NIGHT → MIAMI | 737 MAX 8 VATSIM",
-      "channel": "「OFS」Old Fashioned Simmer",
-      "thumb": "https://i.ytimg.com/vi/BXqNFFVxpr8/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
       "viewers": 24,
       "stillLive": true
     },
@@ -73,7 +46,7 @@
       "channel": "Live 3D Airport ATC + WX",
       "thumb": "https://i.ytimg.com/vi/8fHrDSqHy54/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 22,
+      "viewers": 23,
       "stillLive": true
     },
     {
@@ -82,25 +55,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/sJl7PsdHxWM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 14,
-      "stillLive": true
-    },
-    {
-      "videoId": "9hwFe5g1HVs",
-      "title": "🔴 LIVE 24/7 Lisbon Airport Live Cam 15.10.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
-      "channel": "AVIAÇÃO TV",
-      "thumb": "https://i.ytimg.com/vi/9hwFe5g1HVs/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 12,
-      "stillLive": true
-    },
-    {
-      "videoId": "dkvrvwMkSkI",
-      "title": "Explore Flight is live Morning Plane Spotting Kota Kinabalu City Sabah Malaysia",
-      "channel": "Explore Flight",
-      "thumb": "https://i.ytimg.com/vi/dkvrvwMkSkI/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 9,
+      "viewers": 15,
       "stillLive": true
     },
     {
@@ -109,15 +64,15 @@
       "channel": "Planecaster SkyWatch",
       "thumb": "https://i.ytimg.com/vi/-VYCNCbp3jo/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 3,
+      "viewers": 2,
       "stillLive": true
     },
     {
-      "videoId": "koXJ4suevuI",
-      "title": "Newark EWR plane spotting, rail fanning, New Jersey Drone UFO Watch LIVE Thursday 10/15/26",
-      "channel": "JerseyJoe50",
-      "thumb": "https://i.ytimg.com/vi/koXJ4suevuI/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
+      "videoId": "GBB8NaAT2pQ",
+      "title": "Phoenix Sky Harbor KPHX Flightradar24 Livestream with Live Air Traffic Control 15/10/2026",
+      "channel": "Cleared Visual Approach",
+      "thumb": "https://i.ytimg.com/vi/GBB8NaAT2pQ/mqdefault_live.jpg",
+      "matchedQuery": "Sydney airport plane spotting live",
       "viewers": 2,
       "stillLive": true
     },
@@ -128,15 +83,6 @@
       "thumb": "https://i.ytimg.com/vi/ysLCAaHj990/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
       "viewers": 1,
-      "stillLive": true
-    },
-    {
-      "videoId": "GBB8NaAT2pQ",
-      "title": "Phoenix Sky Harbor KPHX Flightradar24 Livestream with Live Air Traffic Control 15/10/2026",
-      "channel": "Cleared Visual Approach",
-      "thumb": "https://i.ytimg.com/vi/GBB8NaAT2pQ/mqdefault_live.jpg",
-      "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": null,
       "stillLive": true
     }
   ]
