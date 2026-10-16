@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16T08:43:06.582Z",
+  "updatedAt": "2026-10-16T09:20:41.971Z",
   "airportRotationStart": 5,
   "quotaExceeded": false,
   "lastSearchError": null,
@@ -10,7 +10,7 @@
       "channel": "Only Planes Network",
       "thumb": "https://i.ytimg.com/vi/rh2mkY5C1Kc/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1996,
+      "viewers": 2487,
       "stillLive": true
     },
     {
@@ -19,7 +19,7 @@
       "channel": "Flight Focus 365",
       "thumb": "https://i.ytimg.com/vi/s44UdEa6KL0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1087,
+      "viewers": 1189,
       "stillLive": true
     },
     {
@@ -28,7 +28,7 @@
       "channel": "Drones and Planes",
       "thumb": "https://i.ytimg.com/vi/QpS2luTQqF0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 940,
+      "viewers": 1053,
       "stillLive": true
     },
     {
@@ -37,7 +37,7 @@
       "channel": "BIG JET TV",
       "thumb": "https://i.ytimg.com/vi/uDBYuEV4zjI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 666,
+      "viewers": 633,
       "stillLive": true
     },
     {
@@ -46,16 +46,7 @@
       "channel": "AMS LIVE",
       "thumb": "https://i.ytimg.com/vi/xndyYSK1A_8/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 486,
-      "stillLive": true
-    },
-    {
-      "videoId": "j6znVtYJdG4",
-      "title": "- LIVE - 羽田空港 ＠T2 ライブカメラ 2026/10/16 TOKYO HANEDA International Airport HND Plane Spotting",
-      "channel": "Live Jet",
-      "thumb": "https://i.ytimg.com/vi/j6znVtYJdG4/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 404,
+      "viewers": 534,
       "stillLive": true
     },
     {
@@ -64,16 +55,16 @@
       "channel": "LPMA Spotter",
       "thumb": "https://i.ytimg.com/vi/0VSYlbnj-WA/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 389,
+      "viewers": 431,
       "stillLive": true
     },
     {
-      "videoId": "6bFVgf7f2Hc",
-      "title": "🔴LIVE at Itami Airport Plane Spotting　2026.10.16 伊丹空港ライブカメラ 伊丹空港　ITM/RJOO",
-      "channel": "Love Flight Jack",
-      "thumb": "https://i.ytimg.com/vi/6bFVgf7f2Hc/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 230,
+      "videoId": "j6znVtYJdG4",
+      "title": "- LIVE - 羽田空港 ＠T2 ライブカメラ 2026/10/16 TOKYO HANEDA International Airport HND Plane Spotting",
+      "channel": "Live Jet",
+      "thumb": "https://i.ytimg.com/vi/j6znVtYJdG4/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 426,
       "stillLive": true
     },
     {
@@ -82,25 +73,16 @@
       "channel": "JET VIEW AND SNAPS UK",
       "thumb": "https://i.ytimg.com/vi/YALkWceiTUM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 227,
+      "viewers": 283,
       "stillLive": true
     },
     {
-      "videoId": "5Ape32dN3Fc",
-      "title": "Zurich Airport ZRH 🔴 LIVE Planespotting 16.10.2026 ✈️ Zürich Switzerland",
-      "channel": "Zurich Action",
-      "thumb": "https://i.ytimg.com/vi/5Ape32dN3Fc/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 71,
-      "stillLive": true
-    },
-    {
-      "videoId": "9hwFe5g1HVs",
-      "title": "🔴 LIVE 24/7 Lisbon Airport Live Cam 15.10.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
-      "channel": "AVIAÇÃO TV",
-      "thumb": "https://i.ytimg.com/vi/9hwFe5g1HVs/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 50,
+      "videoId": "6bFVgf7f2Hc",
+      "title": "🔴LIVE at Itami Airport Plane Spotting　2026.10.16 伊丹空港ライブカメラ 伊丹空港　ITM/RJOO",
+      "channel": "Love Flight Jack",
+      "thumb": "https://i.ytimg.com/vi/6bFVgf7f2Hc/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
+      "viewers": 233,
       "stillLive": true
     },
     {
@@ -118,7 +100,16 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/iZRbml7fnXI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 20,
+      "viewers": 23,
+      "stillLive": true
+    },
+    {
+      "videoId": "5Ape32dN3Fc",
+      "title": "Zurich Airport ZRH 🔴 LIVE Planespotting 16.10.2026 ✈️ Zürich Switzerland",
+      "channel": "Zurich Action",
+      "thumb": "https://i.ytimg.com/vi/5Ape32dN3Fc/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 12,
       "stillLive": true
     },
     {
@@ -127,7 +118,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/sJl7PsdHxWM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 9,
+      "viewers": 7,
       "stillLive": true
     },
     {
