@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-17T21:31:53.528Z",
+  "updatedAt": "2026-10-17T23:22:16.443Z",
   "airportRotationStart": 5,
   "quotaExceeded": false,
   "lastSearchError": null,
@@ -10,43 +10,7 @@
       "channel": "L.A FLIGHTS",
       "thumb": "https://i.ytimg.com/vi/ClDJs6WU1S0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1434,
-      "stillLive": true
-    },
-    {
-      "videoId": "r9Dh7xFzefc",
-      "title": "Live 🔴 Super Heavy Saturday, Military, A380s, 747s in Paradise - HNL PHNL",
-      "channel": "Reverse Ops",
-      "thumb": "https://i.ytimg.com/vi/r9Dh7xFzefc/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 361,
-      "stillLive": true
-    },
-    {
-      "videoId": "vlFxm3OrpFw",
-      "title": "🔴EXCLUSIVE LIVE ACTION FROM CHICAGO OHARE INTERNATIONAL AIRPORT | AIRPORT ACTION FROM ORD",
-      "channel": "Pip Hastings Aviation",
-      "thumb": "https://i.ytimg.com/vi/vlFxm3OrpFw/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 159,
-      "stillLive": true
-    },
-    {
-      "videoId": "5hRIfJr69x0",
-      "title": "🔴LIVE AFTERNOON Plane Spotting | Toronto Airport Action  17.10.2026",
-      "channel": "flightdisp",
-      "thumb": "https://i.ytimg.com/vi/5hRIfJr69x0/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 97,
-      "stillLive": true
-    },
-    {
-      "videoId": "tY-FFLw8tsw",
-      "title": "Heathrow Airport Live -  Saturday 17th October 2026",
-      "channel": "Flight Focus 365",
-      "thumb": "https://i.ytimg.com/vi/tY-FFLw8tsw/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 85,
+      "viewers": 1226,
       "stillLive": true
     },
     {
@@ -55,16 +19,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/T_QsY01tIK0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 56,
-      "stillLive": true
-    },
-    {
-      "videoId": "LUCWrO4oPxA",
-      "title": "✈️ LIVE October 17 | Maho Beach | SXM Airport St. Maarten (with ATC &amp; Jetblasts)",
-      "channel": "SHOWME Caribbean",
-      "thumb": "https://i.ytimg.com/vi/LUCWrO4oPxA/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 55,
+      "viewers": 72,
       "stillLive": true
     },
     {
@@ -73,16 +28,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/iZRbml7fnXI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 44,
-      "stillLive": true
-    },
-    {
-      "videoId": "oio7IY9QNAU",
-      "title": "🔴 LIVE 24/7 Lisbon Airport Live Cam 17.10.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
-      "channel": "AVIAÇÃO TV",
-      "thumb": "https://i.ytimg.com/vi/oio7IY9QNAU/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 42,
+      "viewers": 49,
       "stillLive": true
     },
     {
@@ -91,7 +37,16 @@
       "channel": "Over The Horizon Aviation",
       "thumb": "https://i.ytimg.com/vi/bU3QLgaDqlQ/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 37,
+      "viewers": 41,
+      "stillLive": true
+    },
+    {
+      "videoId": "LUCWrO4oPxA",
+      "title": "✈️ LIVE October 17 | Maho Beach | SXM Airport St. Maarten (with ATC &amp; Jetblasts)",
+      "channel": "SHOWME Caribbean",
+      "thumb": "https://i.ytimg.com/vi/LUCWrO4oPxA/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 28,
       "stillLive": true
     },
     {
@@ -100,16 +55,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/sJl7PsdHxWM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 18,
-      "stillLive": true
-    },
-    {
-      "videoId": "eM7ZKd71cf4",
-      "title": "Hong Kong Airport Live - 17 October 2026",
-      "channel": "Hong Kong Airport Live Cam",
-      "thumb": "https://i.ytimg.com/vi/eM7ZKd71cf4/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 9,
+      "viewers": 16,
       "stillLive": true
     },
     {
@@ -118,7 +64,7 @@
       "channel": "Rainier Aviation",
       "thumb": "https://i.ytimg.com/vi/r4ybjCfKHhA/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 3,
+      "viewers": 2,
       "stillLive": true
     },
     {
@@ -136,7 +82,7 @@
       "channel": "Information Zulu",
       "thumb": "https://i.ytimg.com/vi/1Plr8TBU5vY/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 1,
+      "viewers": 2,
       "stillLive": true
     },
     {
@@ -145,7 +91,7 @@
       "channel": "LAX Plane Spotters",
       "thumb": "https://i.ytimg.com/vi/ysLCAaHj990/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": null,
+      "viewers": 2,
       "stillLive": true
     },
     {
@@ -154,7 +100,7 @@
       "channel": "JerseyJoe50",
       "thumb": "https://i.ytimg.com/vi/N0pkG_M4L8A/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": null,
+      "viewers": 1,
       "stillLive": true
     },
     {
