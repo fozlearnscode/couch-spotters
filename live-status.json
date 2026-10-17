@@ -1,43 +1,16 @@
 {
-  "updatedAt": "2026-10-17T08:13:48.807Z",
+  "updatedAt": "2026-10-17T10:39:21.562Z",
   "airportRotationStart": 4,
   "quotaExceeded": false,
   "lastSearchError": null,
   "liveResults": [
-    {
-      "videoId": "xbbmmtD7g50",
-      "title": "Giant A380 &amp; Close-Up Landings! 🧡 Manchester Airport LIVE",
-      "channel": "flght",
-      "thumb": "https://i.ytimg.com/vi/xbbmmtD7g50/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 1280,
-      "stillLive": true
-    },
-    {
-      "videoId": "j6J5lbwqIEA",
-      "title": "🔴 LIVE FRANKFURT AIRPORT WATERSPRAY A340-600 HEAVY ACTION - PLANE SPOTTING LIVESTREAM",
-      "channel": "PLM AVIATION",
-      "thumb": "https://i.ytimg.com/vi/j6J5lbwqIEA/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 1079,
-      "stillLive": true
-    },
     {
       "videoId": "tY-FFLw8tsw",
       "title": "Heathrow Airport Live -  Saturday 17th October 2026",
       "channel": "Flight Focus 365",
       "thumb": "https://i.ytimg.com/vi/tY-FFLw8tsw/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 854,
-      "stillLive": true
-    },
-    {
-      "videoId": "7N5m870JC1M",
-      "title": "- LIVE - 羽田空港＠ソラムナード  ライブカメラ 2026/10/17 TOKYO HANEDA International Airport HND Plane Spotting",
-      "channel": "Live Jet",
-      "thumb": "https://i.ytimg.com/vi/7N5m870JC1M/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 345,
+      "viewers": 922,
       "stillLive": true
     },
     {
@@ -46,25 +19,25 @@
       "channel": "Fluggesellschaft",
       "thumb": "https://i.ytimg.com/vi/JewmB19iQmA/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 294,
+      "viewers": 901,
       "stillLive": true
     },
     {
-      "videoId": "3LO2DC3ymgI",
-      "title": "🔴 LIVE: STRIKES CANCELLED! ✈️ Close-Up Plane Spotting at Leeds Bradford Airport | LBA",
-      "channel": "AXIS Productions",
-      "thumb": "https://i.ytimg.com/vi/3LO2DC3ymgI/mqdefault_live.jpg",
+      "videoId": "j6J5lbwqIEA",
+      "title": "🔴 LIVE FRANKFURT AIRPORT WATERSPRAY A340-600 HEAVY ACTION - PLANE SPOTTING LIVESTREAM",
+      "channel": "PLM AVIATION",
+      "thumb": "https://i.ytimg.com/vi/j6J5lbwqIEA/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 107,
+      "viewers": 794,
       "stillLive": true
     },
     {
-      "videoId": "nr73F6q9VOs",
-      "title": "🔴 LIVE Sydney Airport Saturday Afternoon Movements | Planespotting Show | SYD/YSSY",
-      "channel": "Sydney Airways",
-      "thumb": "https://i.ytimg.com/vi/nr73F6q9VOs/mqdefault_live.jpg",
+      "videoId": "7N5m870JC1M",
+      "title": "- LIVE - 羽田空港＠ソラムナード  ライブカメラ 2026/10/17 TOKYO HANEDA International Airport HND Plane Spotting",
+      "channel": "Live Jet",
+      "thumb": "https://i.ytimg.com/vi/7N5m870JC1M/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 103,
+      "viewers": 349,
       "stillLive": true
     },
     {
@@ -73,16 +46,7 @@
       "channel": "AVIAÇÃO TV",
       "thumb": "https://i.ytimg.com/vi/oio7IY9QNAU/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 50,
-      "stillLive": true
-    },
-    {
-      "videoId": "pX9gKKpv-5c",
-      "title": "Livestream Startbahn West #live #planespotting #asmrsounds",
-      "channel": "Planespotting Brofumbel",
-      "thumb": "https://i.ytimg.com/vi/pX9gKKpv-5c/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 34,
+      "viewers": 83,
       "stillLive": true
     },
     {
@@ -91,16 +55,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/T_QsY01tIK0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 29,
-      "stillLive": true
-    },
-    {
-      "videoId": "B1tboASU8fA",
-      "title": "🔴🇨🇿 Prague Airport Plane Spotting LIVE | Živé vysílání z letiště Praha",
-      "channel": "City Walk Prague",
-      "thumb": "https://i.ytimg.com/vi/B1tboASU8fA/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 26,
+      "viewers": 44,
       "stillLive": true
     },
     {
@@ -109,7 +64,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/iZRbml7fnXI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 24,
+      "viewers": 21,
       "stillLive": true
     },
     {
@@ -118,7 +73,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/sJl7PsdHxWM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 11,
+      "viewers": 16,
       "stillLive": true
     },
     {
@@ -127,7 +82,7 @@
       "channel": "EN DAIBA GLOBAL",
       "thumb": "https://i.ytimg.com/vi/NdAyRlYxw3M/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 5,
+      "viewers": 4,
       "stillLive": true
     },
     {
@@ -149,30 +104,21 @@
       "stillLive": true
     },
     {
+      "videoId": "qmm4SWyhDZY",
+      "title": "Toronto Pearson CYYZ Flightradar24 Livestream with Live Air Traffic Control 17/10/2026",
+      "channel": "Cleared Visual Approach",
+      "thumb": "https://i.ytimg.com/vi/qmm4SWyhDZY/mqdefault_live.jpg",
+      "matchedQuery": "Sydney airport plane spotting live",
+      "viewers": 2,
+      "stillLive": true
+    },
+    {
       "videoId": "N0pkG_M4L8A",
       "title": "Newark EWR plane spotting, rail fanning, New Jersey Drone UFO Watch LIVE Saturday 10/17/26",
       "channel": "JerseyJoe50",
       "thumb": "https://i.ytimg.com/vi/N0pkG_M4L8A/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
       "viewers": 1,
-      "stillLive": true
-    },
-    {
-      "videoId": "IJaICpfLIOI",
-      "title": "🔴 LIVE ✈️ Plane Spotting Toulouse-Blagnac (LFBO) | avec PassengerFlight",
-      "channel": "PassengerFlight",
-      "thumb": "https://i.ytimg.com/vi/IJaICpfLIOI/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 1,
-      "stillLive": true
-    },
-    {
-      "videoId": "qmm4SWyhDZY",
-      "title": "Toronto Pearson CYYZ Flightradar24 Livestream with Live Air Traffic Control 17/10/2026",
-      "channel": "Cleared Visual Approach",
-      "thumb": "https://i.ytimg.com/vi/qmm4SWyhDZY/mqdefault_live.jpg",
-      "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": null,
       "stillLive": true
     }
   ]
