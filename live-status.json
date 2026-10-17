@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-17T23:22:16.443Z",
-  "airportRotationStart": 5,
+  "updatedAt": "2026-10-17T23:43:08.146Z",
+  "airportRotationStart": 0,
   "quotaExceeded": false,
   "lastSearchError": null,
   "liveResults": [
@@ -10,7 +10,16 @@
       "channel": "L.A FLIGHTS",
       "thumb": "https://i.ytimg.com/vi/ClDJs6WU1S0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1226,
+      "viewers": 1108,
+      "stillLive": true
+    },
+    {
+      "videoId": "g8-OjrFugdQ",
+      "title": "🔴LIVE BRISBANE AIRPORT ✈️ SUNDAY Plane Spotting | 18/10/26",
+      "channel": "Julia Flights",
+      "thumb": "https://i.ytimg.com/vi/g8-OjrFugdQ/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 571,
       "stillLive": true
     },
     {
@@ -19,7 +28,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/T_QsY01tIK0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 72,
+      "viewers": 64,
       "stillLive": true
     },
     {
@@ -28,7 +37,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/iZRbml7fnXI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 49,
+      "viewers": 57,
       "stillLive": true
     },
     {
@@ -37,7 +46,16 @@
       "channel": "Over The Horizon Aviation",
       "thumb": "https://i.ytimg.com/vi/bU3QLgaDqlQ/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 41,
+      "viewers": 35,
+      "stillLive": true
+    },
+    {
+      "videoId": "l3VTONjBmAY",
+      "title": "ChChChilax- it&#39;s a 4K Aircraft 🔴 LIVE Stream from Christchurch International Airport",
+      "channel": "4K Aircraft Live",
+      "thumb": "https://i.ytimg.com/vi/l3VTONjBmAY/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 33,
       "stillLive": true
     },
     {
@@ -46,7 +64,16 @@
       "channel": "SHOWME Caribbean",
       "thumb": "https://i.ytimg.com/vi/LUCWrO4oPxA/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 28,
+      "viewers": 23,
+      "stillLive": true
+    },
+    {
+      "videoId": "1pIBRrPjrTQ",
+      "title": "🔴 LIVE 24/7 Lisbon Airport Live Cam 18.10.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
+      "channel": "AVIAÇÃO TV",
+      "thumb": "https://i.ytimg.com/vi/1pIBRrPjrTQ/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 19,
       "stillLive": true
     },
     {
@@ -55,7 +82,34 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/sJl7PsdHxWM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 16,
+      "viewers": 14,
+      "stillLive": true
+    },
+    {
+      "videoId": "K58bvo3hJn4",
+      "title": "🔴 LIVE Sunset Plane Spotting Toronto YYZ | Oct 17 2026 | Planes",
+      "channel": "JAC Planespotting",
+      "thumb": "https://i.ytimg.com/vi/K58bvo3hJn4/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 7,
+      "stillLive": true
+    },
+    {
+      "videoId": "NdAyRlYxw3M",
+      "title": "LIVE Tokyo Bay, Traffic between ships and planes - Sea and Sky / japan travel / Live cam",
+      "channel": "EN DAIBA GLOBAL",
+      "thumb": "https://i.ytimg.com/vi/NdAyRlYxw3M/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
+      "viewers": 5,
+      "stillLive": true
+    },
+    {
+      "videoId": "iXFViPt7OZM",
+      "title": "🔴 LIVE: (BOS) Boston Logan Airport Plane Tracking &amp; ATC audio (Tower)",
+      "channel": "Rob's Aviation",
+      "thumb": "https://i.ytimg.com/vi/iXFViPt7OZM/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 4,
       "stillLive": true
     },
     {
@@ -68,11 +122,11 @@
       "stillLive": true
     },
     {
-      "videoId": "b8QvT398J_M",
-      "title": "Birmingham Airport LIVE Saturday 17/10/26",
-      "channel": "Speedbird 009",
-      "thumb": "https://i.ytimg.com/vi/b8QvT398J_M/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
+      "videoId": "ysLCAaHj990",
+      "title": "🔴 LIVE LAX AIRPORT TRACKER! | Real-Time 3D Plane Spotting",
+      "channel": "LAX Plane Spotters",
+      "thumb": "https://i.ytimg.com/vi/ysLCAaHj990/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
       "viewers": 2,
       "stillLive": true
     },
@@ -81,15 +135,6 @@
       "title": "✈️ LAX LIVE | Monday Oct 5 2026 | Archival | ADS-B + Real ATC | KLAX",
       "channel": "Information Zulu",
       "thumb": "https://i.ytimg.com/vi/1Plr8TBU5vY/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 2,
-      "stillLive": true
-    },
-    {
-      "videoId": "ysLCAaHj990",
-      "title": "🔴 LIVE LAX AIRPORT TRACKER! | Real-Time 3D Plane Spotting",
-      "channel": "LAX Plane Spotters",
-      "thumb": "https://i.ytimg.com/vi/ysLCAaHj990/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
       "viewers": 2,
       "stillLive": true
@@ -108,7 +153,7 @@
       "title": "Toronto Pearson CYYZ Flightradar24 Livestream with Live Air Traffic Control 17/10/2026",
       "channel": "Cleared Visual Approach",
       "thumb": "https://i.ytimg.com/vi/x0wjCb6h2YI/mqdefault_live.jpg",
-      "matchedQuery": "Melbourne airport plane spotting live",
+      "matchedQuery": "SFO airport plane spotting live",
       "viewers": null,
       "stillLive": true
     }
