@@ -1,25 +1,16 @@
 {
-  "updatedAt": "2026-10-16T23:29:39.667Z",
+  "updatedAt": "2026-10-17T01:29:42.422Z",
   "airportRotationStart": 6,
   "quotaExceeded": false,
   "lastSearchError": null,
   "liveResults": [
-    {
-      "videoId": "WEKGSAa3PJU",
-      "title": "🔴LIVE LOS ANGELES (LAX) WINDY AIRPORT ACTION! (October 16th, 2026)",
-      "channel": "AIRLINE VIDEOS",
-      "thumb": "https://i.ytimg.com/vi/WEKGSAa3PJU/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 1747,
-      "stillLive": true
-    },
     {
       "videoId": "jvHABS6jAdk",
       "title": "🔴LIVE NONSTOP B747s ANCHORAGE (ANC) AIRPORT ACTION! | Anchorage Plane Spotting | October 16, 2026",
       "channel": "Caveman Aviation ",
       "thumb": "https://i.ytimg.com/vi/jvHABS6jAdk/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 1056,
+      "viewers": 800,
       "stillLive": true
     },
     {
@@ -28,7 +19,7 @@
       "channel": "CHICAGO FLIGHTS",
       "thumb": "https://i.ytimg.com/vi/d_Y_OyjuFmw/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 489,
+      "viewers": 515,
       "stillLive": true
     },
     {
@@ -37,43 +28,7 @@
       "channel": "Melbourne Flyer",
       "thumb": "https://i.ytimg.com/vi/aQPmuyH4JLg/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 356,
-      "stillLive": true
-    },
-    {
-      "videoId": "iXScH_HSLa8",
-      "title": "🔴💨 LIVE HIGH WINDS &amp; NONSTOP AIRPORT ACTION FROM MINNEAPOLIS! ✈ MSP/KMSP AIRPORT ✈ 10/16/26",
-      "channel": "MSP Airport LIVE",
-      "thumb": "https://i.ytimg.com/vi/iXScH_HSLa8/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 216,
-      "stillLive": true
-    },
-    {
-      "videoId": "32JuW9dkEmk",
-      "title": "🔴 LIVE Windy Landings at Dallas Love Field ✈️ Southwest Jets + LIVE ATC",
-      "channel": "Metal Birds Aviation",
-      "thumb": "https://i.ytimg.com/vi/32JuW9dkEmk/mqdefault_live.jpg",
-      "matchedQuery": "DFW airport plane spotting live",
-      "viewers": 135,
-      "stillLive": true
-    },
-    {
-      "videoId": "T_QsY01tIK0",
-      "title": "LGA Airport LIVE 24/7 • LaGuardia, New York",
-      "channel": "Flightradar24",
-      "thumb": "https://i.ytimg.com/vi/T_QsY01tIK0/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 71,
-      "stillLive": true
-    },
-    {
-      "videoId": "sJl7PsdHxWM",
-      "title": "MKE Airport LIVE 24/7 • Milwaukee, Wisconsin",
-      "channel": "Flightradar24",
-      "thumb": "https://i.ytimg.com/vi/sJl7PsdHxWM/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 67,
+      "viewers": 337,
       "stillLive": true
     },
     {
@@ -82,7 +37,25 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/iZRbml7fnXI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
+      "viewers": 73,
+      "stillLive": true
+    },
+    {
+      "videoId": "T_QsY01tIK0",
+      "title": "LGA Airport LIVE 24/7 • LaGuardia, New York",
+      "channel": "Flightradar24",
+      "thumb": "https://i.ytimg.com/vi/T_QsY01tIK0/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
       "viewers": 61,
+      "stillLive": true
+    },
+    {
+      "videoId": "sJl7PsdHxWM",
+      "title": "MKE Airport LIVE 24/7 • Milwaukee, Wisconsin",
+      "channel": "Flightradar24",
+      "thumb": "https://i.ytimg.com/vi/sJl7PsdHxWM/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 16,
       "stillLive": true
     },
     {
@@ -91,7 +64,7 @@
       "channel": "AVIAÇÃO TV",
       "thumb": "https://i.ytimg.com/vi/_WieghbWwsg/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 30,
+      "viewers": 14,
       "stillLive": true
     },
     {
@@ -100,7 +73,7 @@
       "channel": "SHOWME Caribbean",
       "thumb": "https://i.ytimg.com/vi/9tNbJDUIQSw/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 20,
+      "viewers": 13,
       "stillLive": true
     },
     {
@@ -109,16 +82,7 @@
       "channel": "Rainier Aviation",
       "thumb": "https://i.ytimg.com/vi/r4ybjCfKHhA/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 7,
-      "stillLive": true
-    },
-    {
-      "videoId": "ysLCAaHj990",
-      "title": "🔴 LIVE LAX AIRPORT TRACKER! | Real-Time 3D Plane Spotting",
-      "channel": "LAX Plane Spotters",
-      "thumb": "https://i.ytimg.com/vi/ysLCAaHj990/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 1,
+      "viewers": 6,
       "stillLive": true
     },
     {
@@ -126,6 +90,15 @@
       "title": "🔴 LIVE: (LAX) Los Angeles Airport Plane Tracking &amp; ATC audio (North/South)",
       "channel": "Rob's Aviation",
       "thumb": "https://i.ytimg.com/vi/vHee2IaMFWU/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 2,
+      "stillLive": true
+    },
+    {
+      "videoId": "ysLCAaHj990",
+      "title": "🔴 LIVE LAX AIRPORT TRACKER! | Real-Time 3D Plane Spotting",
+      "channel": "LAX Plane Spotters",
+      "thumb": "https://i.ytimg.com/vi/ysLCAaHj990/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
       "viewers": 1,
       "stillLive": true
