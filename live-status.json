@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-18T17:35:14.538Z",
+  "updatedAt": "2026-10-18T19:40:01.858Z",
   "airportRotationStart": 4,
   "quotaExceeded": false,
   "lastSearchError": null,
@@ -10,7 +10,7 @@
       "channel": "AIRLINE VIDEOS",
       "thumb": "https://i.ytimg.com/vi/5j58sHRQDo0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 2143,
+      "viewers": 2352,
       "stillLive": true
     },
     {
@@ -19,7 +19,7 @@
       "channel": "Carolina Aviation",
       "thumb": "https://i.ytimg.com/vi/Udp0NAIpwpk/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1016,
+      "viewers": 1163,
       "stillLive": true
     },
     {
@@ -28,25 +28,7 @@
       "channel": "Flight Focus 365",
       "thumb": "https://i.ytimg.com/vi/0ubEy0lRWNo/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 571,
-      "stillLive": true
-    },
-    {
-      "videoId": "Z4YYCZW4_d4",
-      "title": "🔴 LIVE SUNDAY MIAMI AIRPORT Close ✈️ and 🚂 Action  | October 18, 2026",
-      "channel": "HORI's BOX",
-      "thumb": "https://i.ytimg.com/vi/Z4YYCZW4_d4/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 530,
-      "stillLive": true
-    },
-    {
-      "videoId": "20n-jmnh2Z4",
-      "title": "🔴 LIVE London Heathrow Plane Spotting ✈️ Sunday Evening Landings &amp; Arrivals",
-      "channel": "BritReady Aviation | Plane Spotting UK",
-      "thumb": "https://i.ytimg.com/vi/20n-jmnh2Z4/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 413,
+      "viewers": 183,
       "stillLive": true
     },
     {
@@ -55,7 +37,7 @@
       "channel": "SHOWME Caribbean",
       "thumb": "https://i.ytimg.com/vi/kAxmUDt6Zx4/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 153,
+      "viewers": 122,
       "stillLive": true
     },
     {
@@ -64,7 +46,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/T_QsY01tIK0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 66,
+      "viewers": 86,
       "stillLive": true
     },
     {
@@ -82,16 +64,7 @@
       "channel": "AirlineVideosLive+",
       "thumb": "https://i.ytimg.com/vi/WnVpcWa5zio/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 48,
-      "stillLive": true
-    },
-    {
-      "videoId": "oDmok3DIH1w",
-      "title": "🔴 LIVE: Sunday Plane Spotting at RSW ✈️ | 🩹 Injured Edition! 🌴☀️",
-      "channel": "Sunshine State Aviation ",
-      "thumb": "https://i.ytimg.com/vi/oDmok3DIH1w/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 29,
+      "viewers": 58,
       "stillLive": true
     },
     {
@@ -100,7 +73,7 @@
       "channel": "Rainier Aviation",
       "thumb": "https://i.ytimg.com/vi/r4ybjCfKHhA/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 5,
+      "viewers": 9,
       "stillLive": true
     },
     {
@@ -118,7 +91,7 @@
       "channel": "Information Zulu",
       "thumb": "https://i.ytimg.com/vi/1Plr8TBU5vY/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": null,
+      "viewers": 1,
       "stillLive": true
     },
     {
@@ -127,7 +100,7 @@
       "channel": "Cleared Visual Approach",
       "thumb": "https://i.ytimg.com/vi/WZr4vjP5anw/mqdefault_live.jpg",
       "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": null,
+      "viewers": 1,
       "stillLive": true
     }
   ]
