@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-18T19:40:01.858Z",
-  "airportRotationStart": 4,
+  "updatedAt": "2026-10-18T20:02:08.815Z",
+  "airportRotationStart": 7,
   "quotaExceeded": false,
   "lastSearchError": null,
   "liveResults": [
@@ -10,7 +10,7 @@
       "channel": "AIRLINE VIDEOS",
       "thumb": "https://i.ytimg.com/vi/5j58sHRQDo0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 2352,
+      "viewers": 2857,
       "stillLive": true
     },
     {
@@ -19,7 +19,7 @@
       "channel": "Carolina Aviation",
       "thumb": "https://i.ytimg.com/vi/Udp0NAIpwpk/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1163,
+      "viewers": 777,
       "stillLive": true
     },
     {
@@ -28,7 +28,7 @@
       "channel": "Flight Focus 365",
       "thumb": "https://i.ytimg.com/vi/0ubEy0lRWNo/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 183,
+      "viewers": 152,
       "stillLive": true
     },
     {
@@ -37,7 +37,7 @@
       "channel": "SHOWME Caribbean",
       "thumb": "https://i.ytimg.com/vi/kAxmUDt6Zx4/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 122,
+      "viewers": 94,
       "stillLive": true
     },
     {
@@ -46,16 +46,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/T_QsY01tIK0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 86,
-      "stillLive": true
-    },
-    {
-      "videoId": "UGLL_NgsK7c",
-      "title": "🔴 LIVE 24/7 Lisbon Airport Live Cam 18.10.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
-      "channel": "AVIAÇÃO TV",
-      "thumb": "https://i.ytimg.com/vi/UGLL_NgsK7c/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 62,
+      "viewers": 77,
       "stillLive": true
     },
     {
@@ -64,7 +55,43 @@
       "channel": "AirlineVideosLive+",
       "thumb": "https://i.ytimg.com/vi/WnVpcWa5zio/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 58,
+      "viewers": 56,
+      "stillLive": true
+    },
+    {
+      "videoId": "UGLL_NgsK7c",
+      "title": "🔴 LIVE 24/7 Lisbon Airport Live Cam 18.10.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
+      "channel": "AVIAÇÃO TV",
+      "thumb": "https://i.ytimg.com/vi/UGLL_NgsK7c/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 50,
+      "stillLive": true
+    },
+    {
+      "videoId": "vLBvQfiblTo",
+      "title": "LIVE - Backyard planespotting - last 2 Lufthansa A340 arrivals into Dulles! October 18, 2026",
+      "channel": "Pennsy Planes",
+      "thumb": "https://i.ytimg.com/vi/vLBvQfiblTo/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 12,
+      "stillLive": true
+    },
+    {
+      "videoId": "I_c1FYSQjQc",
+      "title": "Hong Kong Airport Live - 18 October 2026 - Part 2",
+      "channel": "Hong Kong Airport Live Cam",
+      "thumb": "https://i.ytimg.com/vi/I_c1FYSQjQc/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
+      "viewers": 10,
+      "stillLive": true
+    },
+    {
+      "videoId": "WZr4vjP5anw",
+      "title": "Las Vegas KLAS Flightradar24 Livestream with Live Air Traffic Control 18/10/2026",
+      "channel": "Cleared Visual Approach",
+      "thumb": "https://i.ytimg.com/vi/WZr4vjP5anw/mqdefault_live.jpg",
+      "matchedQuery": "SFO airport plane spotting live",
+      "viewers": 1,
       "stillLive": true
     },
     {
@@ -73,7 +100,7 @@
       "channel": "Rainier Aviation",
       "thumb": "https://i.ytimg.com/vi/r4ybjCfKHhA/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 9,
+      "viewers": null,
       "stillLive": true
     },
     {
@@ -82,7 +109,7 @@
       "channel": "JerseyJoe50",
       "thumb": "https://i.ytimg.com/vi/N0pkG_M4L8A/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 2,
+      "viewers": null,
       "stillLive": true
     },
     {
@@ -91,16 +118,16 @@
       "channel": "Information Zulu",
       "thumb": "https://i.ytimg.com/vi/1Plr8TBU5vY/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1,
+      "viewers": null,
       "stillLive": true
     },
     {
-      "videoId": "WZr4vjP5anw",
-      "title": "Las Vegas KLAS Flightradar24 Livestream with Live Air Traffic Control 18/10/2026",
-      "channel": "Cleared Visual Approach",
-      "thumb": "https://i.ytimg.com/vi/WZr4vjP5anw/mqdefault_live.jpg",
-      "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": 1,
+      "videoId": "DeGM7A5ETUA",
+      "title": "🔴 LIVE LAX AIRPORT TRACKER! | Real-Time 3D Plane Spotting",
+      "channel": "LAX Plane Spotters",
+      "thumb": "https://i.ytimg.com/vi/DeGM7A5ETUA/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
+      "viewers": null,
       "stillLive": true
     }
   ]
