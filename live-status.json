@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-18T20:02:08.815Z",
+  "updatedAt": "2026-10-18T21:54:58.709Z",
   "airportRotationStart": 7,
   "quotaExceeded": false,
   "lastSearchError": null,
@@ -10,7 +10,7 @@
       "channel": "AIRLINE VIDEOS",
       "thumb": "https://i.ytimg.com/vi/5j58sHRQDo0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 2857,
+      "viewers": 2191,
       "stillLive": true
     },
     {
@@ -19,7 +19,7 @@
       "channel": "Carolina Aviation",
       "thumb": "https://i.ytimg.com/vi/Udp0NAIpwpk/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 777,
+      "viewers": 1168,
       "stillLive": true
     },
     {
@@ -28,16 +28,7 @@
       "channel": "Flight Focus 365",
       "thumb": "https://i.ytimg.com/vi/0ubEy0lRWNo/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 152,
-      "stillLive": true
-    },
-    {
-      "videoId": "kAxmUDt6Zx4",
-      "title": "✈️ LIVE October 18 | Maho Beach | SXM Airport St. Maarten (with ATC &amp; Jetblasts)",
-      "channel": "SHOWME Caribbean",
-      "thumb": "https://i.ytimg.com/vi/kAxmUDt6Zx4/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 94,
+      "viewers": 89,
       "stillLive": true
     },
     {
@@ -46,7 +37,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/T_QsY01tIK0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 77,
+      "viewers": 69,
       "stillLive": true
     },
     {
@@ -55,7 +46,7 @@
       "channel": "AirlineVideosLive+",
       "thumb": "https://i.ytimg.com/vi/WnVpcWa5zio/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 56,
+      "viewers": 50,
       "stillLive": true
     },
     {
@@ -64,16 +55,16 @@
       "channel": "AVIAÇÃO TV",
       "thumb": "https://i.ytimg.com/vi/UGLL_NgsK7c/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 50,
+      "viewers": 47,
       "stillLive": true
     },
     {
-      "videoId": "vLBvQfiblTo",
-      "title": "LIVE - Backyard planespotting - last 2 Lufthansa A340 arrivals into Dulles! October 18, 2026",
-      "channel": "Pennsy Planes",
-      "thumb": "https://i.ytimg.com/vi/vLBvQfiblTo/mqdefault_live.jpg",
+      "videoId": "kAxmUDt6Zx4",
+      "title": "✈️ LIVE October 18 | Maho Beach | SXM Airport St. Maarten (with ATC &amp; Jetblasts)",
+      "channel": "SHOWME Caribbean",
+      "thumb": "https://i.ytimg.com/vi/kAxmUDt6Zx4/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 12,
+      "viewers": 41,
       "stillLive": true
     },
     {
@@ -82,7 +73,7 @@
       "channel": "Hong Kong Airport Live Cam",
       "thumb": "https://i.ytimg.com/vi/I_c1FYSQjQc/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 10,
+      "viewers": 13,
       "stillLive": true
     },
     {
