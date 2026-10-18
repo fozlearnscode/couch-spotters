@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-18T17:03:17.916Z",
+  "updatedAt": "2026-10-18T17:35:14.538Z",
   "airportRotationStart": 4,
   "quotaExceeded": false,
   "lastSearchError": null,
@@ -10,43 +10,7 @@
       "channel": "AIRLINE VIDEOS",
       "thumb": "https://i.ytimg.com/vi/5j58sHRQDo0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1808,
-      "stillLive": true
-    },
-    {
-      "videoId": "ZrttbzU7OXI",
-      "title": "🔴LIVE - MANCHESTER AIRPORT (Reverse op&#39;s) ,  Plane Spotting + chat",
-      "channel": "Blue Sky Live Aviation",
-      "thumb": "https://i.ytimg.com/vi/ZrttbzU7OXI/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 1222,
-      "stillLive": true
-    },
-    {
-      "videoId": "BBkpiXhY7wU",
-      "title": "FRA Airport Livestream 🇩🇪 Spezial-Sonntag am Flughafen Frankfurt | 18.10.2026",
-      "channel": "Fluggesellschaft",
-      "thumb": "https://i.ytimg.com/vi/BBkpiXhY7wU/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 856,
-      "stillLive": true
-    },
-    {
-      "videoId": "0ubEy0lRWNo",
-      "title": "Heathrow Airport Live -  Sunday 18th October 2026",
-      "channel": "Flight Focus 365",
-      "thumb": "https://i.ytimg.com/vi/0ubEy0lRWNo/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 787,
-      "stillLive": true
-    },
-    {
-      "videoId": "Z4YYCZW4_d4",
-      "title": "🔴 LIVE SUNDAY MIAMI AIRPORT Close ✈️ and 🚂 Action  | October 18, 2026",
-      "channel": "HORI's BOX",
-      "thumb": "https://i.ytimg.com/vi/Z4YYCZW4_d4/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 553,
+      "viewers": 2143,
       "stillLive": true
     },
     {
@@ -55,7 +19,25 @@
       "channel": "Carolina Aviation",
       "thumb": "https://i.ytimg.com/vi/Udp0NAIpwpk/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 363,
+      "viewers": 1016,
+      "stillLive": true
+    },
+    {
+      "videoId": "0ubEy0lRWNo",
+      "title": "Heathrow Airport Live -  Sunday 18th October 2026",
+      "channel": "Flight Focus 365",
+      "thumb": "https://i.ytimg.com/vi/0ubEy0lRWNo/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 571,
+      "stillLive": true
+    },
+    {
+      "videoId": "Z4YYCZW4_d4",
+      "title": "🔴 LIVE SUNDAY MIAMI AIRPORT Close ✈️ and 🚂 Action  | October 18, 2026",
+      "channel": "HORI's BOX",
+      "thumb": "https://i.ytimg.com/vi/Z4YYCZW4_d4/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 530,
       "stillLive": true
     },
     {
@@ -64,7 +46,7 @@
       "channel": "BritReady Aviation | Plane Spotting UK",
       "thumb": "https://i.ytimg.com/vi/20n-jmnh2Z4/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 235,
+      "viewers": 413,
       "stillLive": true
     },
     {
@@ -73,16 +55,7 @@
       "channel": "SHOWME Caribbean",
       "thumb": "https://i.ytimg.com/vi/kAxmUDt6Zx4/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 114,
-      "stillLive": true
-    },
-    {
-      "videoId": "WnVpcWa5zio",
-      "title": "🔴 LIVE LAX Plane Spotting — Behind-the-Scenes with the Plane Jockey Kevin (October 18th, 2026)",
-      "channel": "AirlineVideosLive+",
-      "thumb": "https://i.ytimg.com/vi/WnVpcWa5zio/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 62,
+      "viewers": 153,
       "stillLive": true
     },
     {
@@ -91,7 +64,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/T_QsY01tIK0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 60,
+      "viewers": 66,
       "stillLive": true
     },
     {
@@ -100,7 +73,16 @@
       "channel": "AVIAÇÃO TV",
       "thumb": "https://i.ytimg.com/vi/UGLL_NgsK7c/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 60,
+      "viewers": 62,
+      "stillLive": true
+    },
+    {
+      "videoId": "WnVpcWa5zio",
+      "title": "🔴 LIVE LAX Plane Spotting — Behind-the-Scenes with the Plane Jockey Kevin (October 18th, 2026)",
+      "channel": "AirlineVideosLive+",
+      "thumb": "https://i.ytimg.com/vi/WnVpcWa5zio/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 48,
       "stillLive": true
     },
     {
@@ -109,7 +91,7 @@
       "channel": "Sunshine State Aviation ",
       "thumb": "https://i.ytimg.com/vi/oDmok3DIH1w/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 59,
+      "viewers": 29,
       "stillLive": true
     },
     {
@@ -118,7 +100,7 @@
       "channel": "Rainier Aviation",
       "thumb": "https://i.ytimg.com/vi/r4ybjCfKHhA/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 3,
+      "viewers": 5,
       "stillLive": true
     },
     {
@@ -127,15 +109,6 @@
       "channel": "JerseyJoe50",
       "thumb": "https://i.ytimg.com/vi/N0pkG_M4L8A/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 2,
-      "stillLive": true
-    },
-    {
-      "videoId": "ysLCAaHj990",
-      "title": "🔴 LIVE LAX AIRPORT TRACKER! | Real-Time 3D Plane Spotting",
-      "channel": "LAX Plane Spotters",
-      "thumb": "https://i.ytimg.com/vi/ysLCAaHj990/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
       "viewers": 2,
       "stillLive": true
     },
