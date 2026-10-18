@@ -1,34 +1,16 @@
 {
-  "updatedAt": "2026-10-18T02:52:32.383Z",
+  "updatedAt": "2026-10-18T06:20:21.974Z",
   "airportRotationStart": 3,
   "quotaExceeded": false,
   "lastSearchError": null,
   "liveResults": [
-    {
-      "videoId": "O_feUtOeT3k",
-      "title": "LIVE 🔴 DFW Airport ✈️ plane spotting at night 🌙 October 17, 2026",
-      "channel": "Runway DFW",
-      "thumb": "https://i.ytimg.com/vi/O_feUtOeT3k/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 323,
-      "stillLive": true
-    },
     {
       "videoId": "I_qJoMe9_vQ",
       "title": "🔴LIVE at NARITA International Airport Plane Spotting　2026.10.18 成田空港ライブカメラ 成田空港　NRT/RJAA",
       "channel": "Love Flight Jack",
       "thumb": "https://i.ytimg.com/vi/I_qJoMe9_vQ/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 138,
-      "stillLive": true
-    },
-    {
-      "videoId": "T_QsY01tIK0",
-      "title": "LGA Airport LIVE 24/7 • LaGuardia, New York",
-      "channel": "Flightradar24",
-      "thumb": "https://i.ytimg.com/vi/T_QsY01tIK0/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 53,
+      "viewers": 375,
       "stillLive": true
     },
     {
@@ -37,16 +19,16 @@
       "channel": "Hong Kong Airport Live Cam",
       "thumb": "https://i.ytimg.com/vi/CXci9zprFpA/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 47,
+      "viewers": 46,
       "stillLive": true
     },
     {
-      "videoId": "iZRbml7fnXI",
-      "title": "MSY Airport  LIVE 24/7 • New Orleans",
+      "videoId": "T_QsY01tIK0",
+      "title": "LGA Airport LIVE 24/7 • LaGuardia, New York",
       "channel": "Flightradar24",
-      "thumb": "https://i.ytimg.com/vi/iZRbml7fnXI/mqdefault_live.jpg",
+      "thumb": "https://i.ytimg.com/vi/T_QsY01tIK0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 39,
+      "viewers": 38,
       "stillLive": true
     },
     {
@@ -55,7 +37,16 @@
       "channel": "AVIAÇÃO TV",
       "thumb": "https://i.ytimg.com/vi/1pIBRrPjrTQ/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 15,
+      "viewers": 25,
+      "stillLive": true
+    },
+    {
+      "videoId": "iZRbml7fnXI",
+      "title": "MSY Airport  LIVE 24/7 • New Orleans",
+      "channel": "Flightradar24",
+      "thumb": "https://i.ytimg.com/vi/iZRbml7fnXI/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 23,
       "stillLive": true
     },
     {
@@ -64,16 +55,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/sJl7PsdHxWM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 7,
-      "stillLive": true
-    },
-    {
-      "videoId": "ysLCAaHj990",
-      "title": "🔴 LIVE LAX AIRPORT TRACKER! | Real-Time 3D Plane Spotting",
-      "channel": "LAX Plane Spotters",
-      "thumb": "https://i.ytimg.com/vi/ysLCAaHj990/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 4,
+      "viewers": 9,
       "stillLive": true
     },
     {
@@ -82,7 +64,16 @@
       "channel": "Rainier Aviation",
       "thumb": "https://i.ytimg.com/vi/r4ybjCfKHhA/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 2,
+      "viewers": 4,
+      "stillLive": true
+    },
+    {
+      "videoId": "NdAyRlYxw3M",
+      "title": "LIVE Tokyo Bay, Traffic between ships and planes - Sea and Sky / japan travel / Live cam",
+      "channel": "EN DAIBA GLOBAL",
+      "thumb": "https://i.ytimg.com/vi/NdAyRlYxw3M/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
+      "viewers": 3,
       "stillLive": true
     },
     {
@@ -92,6 +83,15 @@
       "thumb": "https://i.ytimg.com/vi/iXFViPt7OZM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
       "viewers": 2,
+      "stillLive": true
+    },
+    {
+      "videoId": "ysLCAaHj990",
+      "title": "🔴 LIVE LAX AIRPORT TRACKER! | Real-Time 3D Plane Spotting",
+      "channel": "LAX Plane Spotters",
+      "thumb": "https://i.ytimg.com/vi/ysLCAaHj990/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 1,
       "stillLive": true
     },
     {
@@ -110,24 +110,6 @@
       "thumb": "https://i.ytimg.com/vi/1Plr8TBU5vY/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
       "viewers": 1,
-      "stillLive": true
-    },
-    {
-      "videoId": "UJis6-FjBwE",
-      "title": "Toronto Pearson CYYZ Flightradar24 Livestream with Live Air Traffic Control 17/10/2026",
-      "channel": "Cleared Visual Approach",
-      "thumb": "https://i.ytimg.com/vi/UJis6-FjBwE/mqdefault_live.jpg",
-      "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": 1,
-      "stillLive": true
-    },
-    {
-      "videoId": "NdAyRlYxw3M",
-      "title": "LIVE Tokyo Bay, Traffic between ships and planes - Sea and Sky / japan travel / Live cam",
-      "channel": "EN DAIBA GLOBAL",
-      "thumb": "https://i.ytimg.com/vi/NdAyRlYxw3M/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": null,
       "stillLive": true
     },
     {
