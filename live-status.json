@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-17T23:43:08.146Z",
+  "updatedAt": "2026-10-18T01:22:15.471Z",
   "airportRotationStart": 0,
   "quotaExceeded": false,
   "lastSearchError": null,
@@ -10,7 +10,7 @@
       "channel": "L.A FLIGHTS",
       "thumb": "https://i.ytimg.com/vi/ClDJs6WU1S0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1108,
+      "viewers": 771,
       "stillLive": true
     },
     {
@@ -19,7 +19,7 @@
       "channel": "Julia Flights",
       "thumb": "https://i.ytimg.com/vi/g8-OjrFugdQ/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 571,
+      "viewers": 504,
       "stillLive": true
     },
     {
@@ -28,7 +28,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/T_QsY01tIK0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 64,
+      "viewers": 54,
       "stillLive": true
     },
     {
@@ -37,16 +37,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/iZRbml7fnXI/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 57,
-      "stillLive": true
-    },
-    {
-      "videoId": "bU3QLgaDqlQ",
-      "title": "🔴🎥✈️**LIVE  Sydney International Airport Plane Spotting W/ Sardiieee &amp; ATC",
-      "channel": "Over The Horizon Aviation",
-      "thumb": "https://i.ytimg.com/vi/bU3QLgaDqlQ/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 35,
+      "viewers": 45,
       "stillLive": true
     },
     {
@@ -59,21 +50,21 @@
       "stillLive": true
     },
     {
-      "videoId": "LUCWrO4oPxA",
-      "title": "✈️ LIVE October 17 | Maho Beach | SXM Airport St. Maarten (with ATC &amp; Jetblasts)",
-      "channel": "SHOWME Caribbean",
-      "thumb": "https://i.ytimg.com/vi/LUCWrO4oPxA/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 23,
-      "stillLive": true
-    },
-    {
       "videoId": "1pIBRrPjrTQ",
       "title": "🔴 LIVE 24/7 Lisbon Airport Live Cam 18.10.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
       "channel": "AVIAÇÃO TV",
       "thumb": "https://i.ytimg.com/vi/1pIBRrPjrTQ/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 19,
+      "viewers": 15,
+      "stillLive": true
+    },
+    {
+      "videoId": "LUCWrO4oPxA",
+      "title": "✈️ LIVE October 17 | Maho Beach | SXM Airport St. Maarten (with ATC &amp; Jetblasts)",
+      "channel": "SHOWME Caribbean",
+      "thumb": "https://i.ytimg.com/vi/LUCWrO4oPxA/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 8,
       "stillLive": true
     },
     {
@@ -82,25 +73,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/sJl7PsdHxWM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 14,
-      "stillLive": true
-    },
-    {
-      "videoId": "K58bvo3hJn4",
-      "title": "🔴 LIVE Sunset Plane Spotting Toronto YYZ | Oct 17 2026 | Planes",
-      "channel": "JAC Planespotting",
-      "thumb": "https://i.ytimg.com/vi/K58bvo3hJn4/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 7,
-      "stillLive": true
-    },
-    {
-      "videoId": "NdAyRlYxw3M",
-      "title": "LIVE Tokyo Bay, Traffic between ships and planes - Sea and Sky / japan travel / Live cam",
-      "channel": "EN DAIBA GLOBAL",
-      "thumb": "https://i.ytimg.com/vi/NdAyRlYxw3M/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 5,
+      "viewers": 8,
       "stillLive": true
     },
     {
@@ -109,7 +82,7 @@
       "channel": "Rob's Aviation",
       "thumb": "https://i.ytimg.com/vi/iXFViPt7OZM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 4,
+      "viewers": 5,
       "stillLive": true
     },
     {
@@ -118,7 +91,7 @@
       "channel": "Rainier Aviation",
       "thumb": "https://i.ytimg.com/vi/r4ybjCfKHhA/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 2,
+      "viewers": 3,
       "stillLive": true
     },
     {
@@ -145,16 +118,16 @@
       "channel": "JerseyJoe50",
       "thumb": "https://i.ytimg.com/vi/N0pkG_M4L8A/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1,
+      "viewers": 2,
       "stillLive": true
     },
     {
-      "videoId": "x0wjCb6h2YI",
-      "title": "Toronto Pearson CYYZ Flightradar24 Livestream with Live Air Traffic Control 17/10/2026",
-      "channel": "Cleared Visual Approach",
-      "thumb": "https://i.ytimg.com/vi/x0wjCb6h2YI/mqdefault_live.jpg",
-      "matchedQuery": "SFO airport plane spotting live",
-      "viewers": null,
+      "videoId": "NdAyRlYxw3M",
+      "title": "LIVE Tokyo Bay, Traffic between ships and planes - Sea and Sky / japan travel / Live cam",
+      "channel": "EN DAIBA GLOBAL",
+      "thumb": "https://i.ytimg.com/vi/NdAyRlYxw3M/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
+      "viewers": 1,
       "stillLive": true
     }
   ]
