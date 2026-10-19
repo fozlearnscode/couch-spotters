@@ -1,25 +1,25 @@
 {
-  "updatedAt": "2026-10-19T16:46:13.990Z",
+  "updatedAt": "2026-10-19T17:01:11.838Z",
   "airportRotationStart": 3,
   "quotaExceeded": false,
   "lastSearchError": null,
   "liveResults": [
-    {
-      "videoId": "mrafALsHOj4",
-      "title": "Heathrow Airport Live - Monday 19th October 2026",
-      "channel": "Flight Focus 365",
-      "thumb": "https://i.ytimg.com/vi/mrafALsHOj4/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 944,
-      "stillLive": true
-    },
     {
       "videoId": "7hyETgCWFGM",
       "title": "🔴LIVE LOS ANGELES LAX AIRPORT! | October 19, 2026 | LAX PLANE SPOTTING",
       "channel": "L.A FLIGHTS",
       "thumb": "https://i.ytimg.com/vi/7hyETgCWFGM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 773,
+      "viewers": 929,
+      "stillLive": true
+    },
+    {
+      "videoId": "mrafALsHOj4",
+      "title": "Heathrow Airport Live - Monday 19th October 2026",
+      "channel": "Flight Focus 365",
+      "thumb": "https://i.ytimg.com/vi/mrafALsHOj4/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 871,
       "stillLive": true
     },
     {
@@ -28,7 +28,7 @@
       "channel": "RankUpAviation ",
       "thumb": "https://i.ytimg.com/vi/sChdpdhU90E/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 414,
+      "viewers": 355,
       "stillLive": true
     },
     {
@@ -37,7 +37,7 @@
       "channel": "Carolina Aviation",
       "thumb": "https://i.ytimg.com/vi/yc4KKbdqSaY/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 161,
+      "viewers": 178,
       "stillLive": true
     },
     {
@@ -46,7 +46,7 @@
       "channel": "Metal Birds Aviation",
       "thumb": "https://i.ytimg.com/vi/jO8sc0pBahg/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 137,
+      "viewers": 134,
       "stillLive": true
     },
     {
@@ -55,7 +55,7 @@
       "channel": "SHOWME Caribbean",
       "thumb": "https://i.ytimg.com/vi/BLLbJc1ZPSg/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 136,
+      "viewers": 125,
       "stillLive": true
     },
     {
@@ -64,7 +64,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/T_QsY01tIK0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 123,
+      "viewers": 120,
       "stillLive": true
     },
     {
@@ -73,7 +73,7 @@
       "channel": "AVIAÇÃO TV",
       "thumb": "https://i.ytimg.com/vi/AW42CYkZup4/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 69,
+      "viewers": 62,
       "stillLive": true
     },
     {
@@ -82,7 +82,7 @@
       "channel": "SkyJet TV",
       "thumb": "https://i.ytimg.com/vi/tPGVNzLEUyk/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 38,
+      "viewers": 30,
       "stillLive": true
     },
     {
@@ -91,7 +91,7 @@
       "channel": "Hong Kong Airport Live Cam",
       "thumb": "https://i.ytimg.com/vi/36tHS7KOeQU/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 13,
+      "viewers": 17,
       "stillLive": true
     },
     {
@@ -100,7 +100,7 @@
       "channel": "Beaker & Honeydew",
       "thumb": "https://i.ytimg.com/vi/J5X8Tlj0tZw/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 5,
+      "viewers": 6,
       "stillLive": true
     },
     {
@@ -118,6 +118,15 @@
       "channel": "Sky Center Live",
       "thumb": "https://i.ytimg.com/vi/egTRd9QVeFA/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
+      "viewers": 2,
+      "stillLive": true
+    },
+    {
+      "videoId": "U9G4TtAWcf8",
+      "title": "Bucharest LROP Flightradar24 Livestream with Live Air Traffic Control 19/10/2026",
+      "channel": "Cleared Visual Approach",
+      "thumb": "https://i.ytimg.com/vi/U9G4TtAWcf8/mqdefault_live.jpg",
+      "matchedQuery": "Sydney airport plane spotting live",
       "viewers": 1,
       "stillLive": true
     },
@@ -154,15 +163,6 @@
       "channel": "Asia Aircraft Spotter LIVE Stream",
       "thumb": "https://i.ytimg.com/vi/-1cf1UdfvcY/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": null,
-      "stillLive": true
-    },
-    {
-      "videoId": "U9G4TtAWcf8",
-      "title": "Bucharest LROP Flightradar24 Livestream with Live Air Traffic Control 19/10/2026",
-      "channel": "Cleared Visual Approach",
-      "thumb": "https://i.ytimg.com/vi/U9G4TtAWcf8/mqdefault_live.jpg",
-      "matchedQuery": "Sydney airport plane spotting live",
       "viewers": null,
       "stillLive": true
     }
