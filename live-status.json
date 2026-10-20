@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-20T07:06:02.413Z",
+  "updatedAt": "2026-10-20T10:11:24.219Z",
   "airportRotationStart": 4,
   "quotaExceeded": false,
   "lastSearchError": null,
@@ -10,7 +10,7 @@
       "channel": "Simon Lowe Aviation ",
       "thumb": "https://i.ytimg.com/vi/IEWmTD9BvVs/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 949,
+      "viewers": 1809,
       "stillLive": true
     },
     {
@@ -19,25 +19,7 @@
       "channel": "Flight Focus 365",
       "thumb": "https://i.ytimg.com/vi/V_royqIDgIM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 556,
-      "stillLive": true
-    },
-    {
-      "videoId": "bMqffckQH_k",
-      "title": "【生放送】🇯🇵✈️羽田空港 ライブカメラ Haneda Airport Live October 20, 2026 生中継 2026年10月20日 羽田空港ライブ",
-      "channel": "AeroEye Japan",
-      "thumb": "https://i.ytimg.com/vi/bMqffckQH_k/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 467,
-      "stillLive": true
-    },
-    {
-      "videoId": "ylLx-lssSbY",
-      "title": "🔴LIVE at NARITA International Airport Plane Spotting　2026.10.20 成田空港ライブカメラ 成田空港　NRT/RJAA",
-      "channel": "Love Flight Jack",
-      "thumb": "https://i.ytimg.com/vi/ylLx-lssSbY/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 355,
+      "viewers": 1033,
       "stillLive": true
     },
     {
@@ -46,16 +28,16 @@
       "channel": "LPMA Spotter",
       "thumb": "https://i.ytimg.com/vi/KbhCT7o59Ik/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 202,
+      "viewers": 348,
       "stillLive": true
     },
     {
-      "videoId": "T_QsY01tIK0",
-      "title": "LGA Airport LIVE 24/7 • LaGuardia, New York",
-      "channel": "Flightradar24",
-      "thumb": "https://i.ytimg.com/vi/T_QsY01tIK0/mqdefault_live.jpg",
+      "videoId": "ylLx-lssSbY",
+      "title": "🔴LIVE at NARITA International Airport Plane Spotting　2026.10.20 成田空港ライブカメラ 成田空港　NRT/RJAA",
+      "channel": "Love Flight Jack",
+      "thumb": "https://i.ytimg.com/vi/ylLx-lssSbY/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 55,
+      "viewers": 233,
       "stillLive": true
     },
     {
@@ -64,7 +46,16 @@
       "channel": "AVIAÇÃO TV",
       "thumb": "https://i.ytimg.com/vi/wc9i5dNKA9U/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 48,
+      "viewers": 67,
+      "stillLive": true
+    },
+    {
+      "videoId": "T_QsY01tIK0",
+      "title": "LGA Airport LIVE 24/7 • LaGuardia, New York",
+      "channel": "Flightradar24",
+      "thumb": "https://i.ytimg.com/vi/T_QsY01tIK0/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 63,
       "stillLive": true
     },
     {
@@ -73,7 +64,7 @@
       "channel": "Captain JNT",
       "thumb": "https://i.ytimg.com/vi/0wTammcGRkY/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 30,
+      "viewers": 20,
       "stillLive": true
     },
     {
@@ -82,16 +73,16 @@
       "channel": "Adelaide Airport Limited",
       "thumb": "https://i.ytimg.com/vi/H3W5vZbp0Yc/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 4,
+      "viewers": 11,
       "stillLive": true
     },
     {
-      "videoId": "Opt0WBedWN0",
-      "title": "🔴 LIVE: (BOS) Boston Logan Airport Plane Tracking &amp; ATC audio (Tower)",
-      "channel": "Rob's Aviation",
-      "thumb": "https://i.ytimg.com/vi/Opt0WBedWN0/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 1,
+      "videoId": "UBNkRtIcEYM",
+      "title": "Bucharest LROP Flightradar24 Livestream with Live Air Traffic Control 20/10/2026",
+      "channel": "Cleared Visual Approach",
+      "thumb": "https://i.ytimg.com/vi/UBNkRtIcEYM/mqdefault_live.jpg",
+      "matchedQuery": "Sydney airport plane spotting live",
+      "viewers": 2,
       "stillLive": true
     },
     {
@@ -104,11 +95,11 @@
       "stillLive": true
     },
     {
-      "videoId": "UBNkRtIcEYM",
-      "title": "Bucharest LROP Flightradar24 Livestream with Live Air Traffic Control 20/10/2026",
-      "channel": "Cleared Visual Approach",
-      "thumb": "https://i.ytimg.com/vi/UBNkRtIcEYM/mqdefault_live.jpg",
-      "matchedQuery": "Sydney airport plane spotting live",
+      "videoId": "V2t1EV0sZNc",
+      "title": "HD Video of Tower/Runway | Atlanta Airport (KATL) Air Traffic | ADS-B Flight Tracking, &amp; ATC",
+      "channel": "Southern Radar",
+      "thumb": "https://i.ytimg.com/vi/V2t1EV0sZNc/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
       "viewers": 1,
       "stillLive": true
     },
@@ -144,15 +135,6 @@
       "title": "LIVE 24/7 - DFW Airport (EAST side camera with East or West Tower ATC)",
       "channel": "Beaker & Honeydew",
       "thumb": "https://i.ytimg.com/vi/J5X8Tlj0tZw/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": null,
-      "stillLive": true
-    },
-    {
-      "videoId": "V2t1EV0sZNc",
-      "title": "HD Video of Tower/Runway | Atlanta Airport (KATL) Air Traffic | ADS-B Flight Tracking, &amp; ATC",
-      "channel": "Southern Radar",
-      "thumb": "https://i.ytimg.com/vi/V2t1EV0sZNc/mqdefault_live.jpg",
       "matchedQuery": "airport live cam plane spotting",
       "viewers": null,
       "stillLive": true
