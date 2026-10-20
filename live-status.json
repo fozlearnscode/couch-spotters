@@ -1,61 +1,16 @@
 {
-  "updatedAt": "2026-10-20T00:56:23.353Z",
+  "updatedAt": "2026-10-20T05:16:30.090Z",
   "airportRotationStart": 1,
   "quotaExceeded": false,
   "lastSearchError": null,
   "liveResults": [
-    {
-      "videoId": "7hyETgCWFGM",
-      "title": "🔴LIVE LOS ANGELES LAX AIRPORT! | October 19, 2026 | LAX PLANE SPOTTING",
-      "channel": "L.A FLIGHTS",
-      "thumb": "https://i.ytimg.com/vi/7hyETgCWFGM/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 1129,
-      "stillLive": true
-    },
     {
       "videoId": "T_QsY01tIK0",
       "title": "LGA Airport LIVE 24/7 • LaGuardia, New York",
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/T_QsY01tIK0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 64,
-      "stillLive": true
-    },
-    {
-      "videoId": "8y4lsIIWLjU",
-      "title": "🔴 LIVE: Plane Spotting at PDX Portland, OR  ✈️  Sunset Landings and Takeoffs",
-      "channel": "Pretend Media",
-      "thumb": "https://i.ytimg.com/vi/8y4lsIIWLjU/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 46,
-      "stillLive": true
-    },
-    {
-      "videoId": "AW42CYkZup4",
-      "title": "🔴 LIVE 24/7 Lisbon Airport Live Cam 19.10.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
-      "channel": "AVIAÇÃO TV",
-      "thumb": "https://i.ytimg.com/vi/AW42CYkZup4/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 19,
-      "stillLive": true
-    },
-    {
-      "videoId": "BLLbJc1ZPSg",
-      "title": "✈️ LIVE October 19 | Maho Beach | SXM Airport St. Maarten (with ATC &amp; Jetblasts)",
-      "channel": "SHOWME Caribbean",
-      "thumb": "https://i.ytimg.com/vi/BLLbJc1ZPSg/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 11,
-      "stillLive": true
-    },
-    {
-      "videoId": "Opt0WBedWN0",
-      "title": "🔴 LIVE: (BOS) Boston Logan Airport Plane Tracking &amp; ATC audio (Tower)",
-      "channel": "Rob's Aviation",
-      "thumb": "https://i.ytimg.com/vi/Opt0WBedWN0/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 6,
+      "viewers": 54,
       "stillLive": true
     },
     {
@@ -77,19 +32,10 @@
       "stillLive": true
     },
     {
-      "videoId": "U77B5FZKOxs",
-      "title": "INFINITE FLIGHT LIVE | Cairo to Barcelona | EgyptAir A321NEO",
-      "channel": "InfiniteJordan ",
-      "thumb": "https://i.ytimg.com/vi/U77B5FZKOxs/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 1,
-      "stillLive": true
-    },
-    {
-      "videoId": "FiMQu5tqocs",
-      "title": "HD Video of Tower/Runway | Atlanta Airport (KATL) Air Traffic | ADS-B Flight Tracking, &amp; ATC",
-      "channel": "Southern Radar",
-      "thumb": "https://i.ytimg.com/vi/FiMQu5tqocs/mqdefault_live.jpg",
+      "videoId": "Opt0WBedWN0",
+      "title": "🔴 LIVE: (BOS) Boston Logan Airport Plane Tracking &amp; ATC audio (Tower)",
+      "channel": "Rob's Aviation",
+      "thumb": "https://i.ytimg.com/vi/Opt0WBedWN0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
       "viewers": 1,
       "stillLive": true
@@ -118,7 +64,7 @@
       "channel": "Information Zulu",
       "thumb": "https://i.ytimg.com/vi/1Plr8TBU5vY/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": null,
+      "viewers": 1,
       "stillLive": true
     },
     {
