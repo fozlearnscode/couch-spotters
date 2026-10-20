@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-20T00:34:55.007Z",
-  "airportRotationStart": 6,
+  "updatedAt": "2026-10-20T00:56:23.353Z",
+  "airportRotationStart": 1,
   "quotaExceeded": false,
   "lastSearchError": null,
   "liveResults": [
@@ -10,7 +10,7 @@
       "channel": "L.A FLIGHTS",
       "thumb": "https://i.ytimg.com/vi/7hyETgCWFGM/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1079,
+      "viewers": 1129,
       "stillLive": true
     },
     {
@@ -19,7 +19,16 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/T_QsY01tIK0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 53,
+      "viewers": 64,
+      "stillLive": true
+    },
+    {
+      "videoId": "8y4lsIIWLjU",
+      "title": "🔴 LIVE: Plane Spotting at PDX Portland, OR  ✈️  Sunset Landings and Takeoffs",
+      "channel": "Pretend Media",
+      "thumb": "https://i.ytimg.com/vi/8y4lsIIWLjU/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 46,
       "stillLive": true
     },
     {
@@ -28,7 +37,7 @@
       "channel": "AVIAÇÃO TV",
       "thumb": "https://i.ytimg.com/vi/AW42CYkZup4/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 22,
+      "viewers": 19,
       "stillLive": true
     },
     {
@@ -37,16 +46,7 @@
       "channel": "SHOWME Caribbean",
       "thumb": "https://i.ytimg.com/vi/BLLbJc1ZPSg/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 12,
-      "stillLive": true
-    },
-    {
-      "videoId": "J5X8Tlj0tZw",
-      "title": "LIVE 24/7 - DFW Airport (EAST side camera with East or West Tower ATC)",
-      "channel": "Beaker & Honeydew",
-      "thumb": "https://i.ytimg.com/vi/J5X8Tlj0tZw/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 4,
+      "viewers": 11,
       "stillLive": true
     },
     {
@@ -55,7 +55,7 @@
       "channel": "Rob's Aviation",
       "thumb": "https://i.ytimg.com/vi/Opt0WBedWN0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 4,
+      "viewers": 6,
       "stillLive": true
     },
     {
@@ -68,12 +68,48 @@
       "stillLive": true
     },
     {
+      "videoId": "J5X8Tlj0tZw",
+      "title": "LIVE 24/7 - DFW Airport (EAST side camera with East or West Tower ATC)",
+      "channel": "Beaker & Honeydew",
+      "thumb": "https://i.ytimg.com/vi/J5X8Tlj0tZw/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 2,
+      "stillLive": true
+    },
+    {
       "videoId": "U77B5FZKOxs",
       "title": "INFINITE FLIGHT LIVE | Cairo to Barcelona | EgyptAir A321NEO",
       "channel": "InfiniteJordan ",
       "thumb": "https://i.ytimg.com/vi/U77B5FZKOxs/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 2,
+      "viewers": 1,
+      "stillLive": true
+    },
+    {
+      "videoId": "FiMQu5tqocs",
+      "title": "HD Video of Tower/Runway | Atlanta Airport (KATL) Air Traffic | ADS-B Flight Tracking, &amp; ATC",
+      "channel": "Southern Radar",
+      "thumb": "https://i.ytimg.com/vi/FiMQu5tqocs/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 1,
+      "stillLive": true
+    },
+    {
+      "videoId": "VbBTsC9KKp4",
+      "title": "LIVE 24/7 - SEA-TAC Airport (SEA)",
+      "channel": "Beaker & Honeydew",
+      "thumb": "https://i.ytimg.com/vi/VbBTsC9KKp4/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
+      "viewers": 1,
+      "stillLive": true
+    },
+    {
+      "videoId": "OCPqQGmMA9U",
+      "title": "LIVE 24/7 | Philadelphia International Airport (PHL)",
+      "channel": "Beaker & Honeydew",
+      "thumb": "https://i.ytimg.com/vi/OCPqQGmMA9U/mqdefault_live.jpg",
+      "matchedQuery": "airport live cam plane spotting",
+      "viewers": 1,
       "stillLive": true
     },
     {
@@ -82,7 +118,7 @@
       "channel": "Information Zulu",
       "thumb": "https://i.ytimg.com/vi/1Plr8TBU5vY/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 2,
+      "viewers": null,
       "stillLive": true
     },
     {
@@ -90,7 +126,16 @@
       "title": "🔴 Phuket Intl Airport (HKT / VTSP) สนามบินนานาชาติภูเก็ต Live Stream, Live Camera, Weather, ATC ASMR",
       "channel": "Asia Aircraft Spotter LIVE Stream",
       "thumb": "https://i.ytimg.com/vi/-1cf1UdfvcY/mqdefault_live.jpg",
-      "matchedQuery": "airport live cam plane spotting",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": null,
+      "stillLive": true
+    },
+    {
+      "videoId": "E-K1XbUJWmI",
+      "title": "LIVE: LAX Airport Arrivals &amp; Departures | 24/7 Plane Tracker",
+      "channel": "Wings Above",
+      "thumb": "https://i.ytimg.com/vi/E-K1XbUJWmI/mqdefault_live.jpg",
+      "matchedQuery": "plane spotting live stream",
       "viewers": null,
       "stillLive": true
     }
