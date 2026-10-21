@@ -1,52 +1,16 @@
 {
-  "updatedAt": "2026-10-20T22:54:27.612Z",
+  "updatedAt": "2026-10-21T00:49:07.158Z",
   "airportRotationStart": 5,
   "quotaExceeded": false,
   "lastSearchError": null,
   "liveResults": [
-    {
-      "videoId": "SZtp-ydegdI",
-      "title": "LIVE Plane Spotting Toronto Pearson Airport !!!! (YYZ)! A380, B777, B747 and more!",
-      "channel": "Temporary Window",
-      "thumb": "https://i.ytimg.com/vi/SZtp-ydegdI/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 341,
-      "stillLive": true
-    },
-    {
-      "videoId": "QkoDD3Gu31g",
-      "title": "✈️ PERFECT Flying Weather! ☀️ LIVE Plane Spotting at Palomar Airport",
-      "channel": "SDVIBEZ",
-      "thumb": "https://i.ytimg.com/vi/QkoDD3Gu31g/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 335,
-      "stillLive": true
-    },
-    {
-      "videoId": "8vuEPSbIfX8",
-      "title": "LIVE Plane Spotting at Boston Logan International Airport | KBOS",
-      "channel": "Logan in Flight",
-      "thumb": "https://i.ytimg.com/vi/8vuEPSbIfX8/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 245,
-      "stillLive": true
-    },
     {
       "videoId": "tjIEmjns5CU",
       "title": "🔴 LAX LIVE | LOS ANGELES AIRPORT PLANE SPOTTING | October 20th,  2026",
       "channel": "Mr. Gaucho",
       "thumb": "https://i.ytimg.com/vi/tjIEmjns5CU/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 236,
-      "stillLive": true
-    },
-    {
-      "videoId": "vtA10oLFXEM",
-      "title": "🔴 LIVE : EMIRATES SKYCARGO : Adelaide Airport Real-Time Action ( YPAD / ADL) ✈️🔴",
-      "channel": "InPlaneSight",
-      "thumb": "https://i.ytimg.com/vi/vtA10oLFXEM/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 184,
+      "viewers": 270,
       "stillLive": true
     },
     {
@@ -55,7 +19,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/T_QsY01tIK0/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 112,
+      "viewers": 75,
       "stillLive": true
     },
     {
@@ -64,34 +28,7 @@
       "channel": "SHOWME Caribbean",
       "thumb": "https://i.ytimg.com/vi/UIdX3avKB0w/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 36,
-      "stillLive": true
-    },
-    {
-      "videoId": "8BIOy3c5o6Q",
-      "title": "🔴 LIVE 24/7 Lisbon Airport Live Cam 20.10.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
-      "channel": "AVIAÇÃO TV",
-      "thumb": "https://i.ytimg.com/vi/8BIOy3c5o6Q/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 31,
-      "stillLive": true
-    },
-    {
-      "videoId": "EB1ZiyjWZCk",
-      "title": "🛫 PTFS LIVE FLIGHTS + PLANE SPOTTING VIEWS | COME FLY!",
-      "channel": "Officer Josh",
-      "thumb": "https://i.ytimg.com/vi/EB1ZiyjWZCk/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 13,
-      "stillLive": true
-    },
-    {
-      "videoId": "H3W5vZbp0Yc",
-      "title": "Adelaide Airport Webcam: Runway 23",
-      "channel": "Adelaide Airport Limited",
-      "thumb": "https://i.ytimg.com/vi/H3W5vZbp0Yc/mqdefault_live.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 3,
+      "viewers": 16,
       "stillLive": true
     },
     {
@@ -113,10 +50,10 @@
       "stillLive": true
     },
     {
-      "videoId": "ZkCh0NE8D7M",
-      "title": "LIVE Virtual Plane Spotting: SFO San Francisco International | MSFS 2024",
-      "channel": "Sky Center Live",
-      "thumb": "https://i.ytimg.com/vi/ZkCh0NE8D7M/mqdefault_live.jpg",
+      "videoId": "H3W5vZbp0Yc",
+      "title": "Adelaide Airport Webcam: Runway 23",
+      "channel": "Adelaide Airport Limited",
+      "thumb": "https://i.ytimg.com/vi/H3W5vZbp0Yc/mqdefault_live.jpg",
       "matchedQuery": "plane spotting live stream",
       "viewers": 1,
       "stillLive": true
