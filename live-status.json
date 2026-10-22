@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T19:42:53.103Z",
+  "updatedAt": "2026-10-22T20:03:20.676Z",
   "airportRotationStart": 0,
   "quotaExceeded": false,
   "lastSearchError": null,
@@ -10,7 +10,7 @@
       "channel": "L.A FLIGHTS",
       "thumb": "https://i.ytimg.com/vi/B7sF2nFIyfE/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1513,
+      "viewers": 1565,
       "stillLive": true
     },
     {
@@ -19,7 +19,7 @@
       "channel": "AirlineVideosLive+",
       "thumb": "https://i.ytimg.com/vi/n4I0d44oBEs/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 586,
+      "viewers": 595,
       "stillLive": true
     },
     {
@@ -28,16 +28,7 @@
       "channel": "Temporary Window",
       "thumb": "https://i.ytimg.com/vi/DPyn8j36oPA/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 494,
-      "stillLive": true
-    },
-    {
-      "videoId": "uDBYuEV4zjI",
-      "title": "Heathrow Airport LIVE 24/7",
-      "channel": "BIG JET TV",
-      "thumb": "https://i.ytimg.com/vi/uDBYuEV4zjI/mqdefault.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 300,
+      "viewers": 398,
       "stillLive": true
     },
     {
@@ -46,7 +37,16 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/V7_orOtu-oo/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 289,
+      "viewers": 299,
+      "stillLive": true
+    },
+    {
+      "videoId": "uDBYuEV4zjI",
+      "title": "Heathrow Airport LIVE 24/7",
+      "channel": "BIG JET TV",
+      "thumb": "https://i.ytimg.com/vi/uDBYuEV4zjI/mqdefault.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 273,
       "stillLive": true
     },
     {
@@ -55,7 +55,7 @@
       "channel": "AirlineVideosLive+",
       "thumb": "https://i.ytimg.com/vi/KzsNnyN8D_Q/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 275,
+      "viewers": 268,
       "stillLive": true
     },
     {
@@ -64,7 +64,7 @@
       "channel": "Flight Focus 365",
       "thumb": "https://i.ytimg.com/vi/uA9tbyk4lJ8/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 214,
+      "viewers": 163,
       "stillLive": true
     },
     {
@@ -73,7 +73,7 @@
       "channel": "Carolina Aviation",
       "thumb": "https://i.ytimg.com/vi/0J6FdvTzjDk/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 160,
+      "viewers": 158,
       "stillLive": true
     },
     {
@@ -82,7 +82,7 @@
       "channel": "SHOWME Caribbean",
       "thumb": "https://i.ytimg.com/vi/iSeH45R-8R0/mqdefault.jpg",
       "matchedQuery": "SFO airport plane spotting live",
-      "viewers": 132,
+      "viewers": 135,
       "stillLive": true
     },
     {
@@ -91,7 +91,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/2IQmpCXbOmM/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 126,
+      "viewers": 114,
       "stillLive": true
     },
     {
@@ -104,30 +104,12 @@
       "stillLive": true
     },
     {
-      "videoId": "VaDbfFG7RhI",
-      "title": "🔴 LIVE 24/7 KRNO Reno-Tahoe International Airport Plane Spotting - Grand Sierra Resort",
-      "channel": "RNO Flights",
-      "thumb": "https://i.ytimg.com/vi/VaDbfFG7RhI/mqdefault.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 70,
-      "stillLive": true
-    },
-    {
-      "videoId": "67BCsiW-1Io",
-      "title": "Midway Airport | Chicago, IL USA | StreamTime LIVE  4K",
-      "channel": "StreamTime Live",
-      "thumb": "https://i.ytimg.com/vi/67BCsiW-1Io/mqdefault.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 64,
-      "stillLive": true
-    },
-    {
       "videoId": "iZRbml7fnXI",
       "title": "MSY Airport  LIVE 24/7 • New Orleans",
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/iZRbml7fnXI/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 62,
+      "viewers": 67,
       "stillLive": true
     },
     {
@@ -136,7 +118,25 @@
       "channel": "LAS Vegas Airport LIVE",
       "thumb": "https://i.ytimg.com/vi/iIUCaiiMmNs/mqdefault.jpg",
       "matchedQuery": "airport live cam plane spotting",
+      "viewers": 66,
+      "stillLive": true
+    },
+    {
+      "videoId": "VaDbfFG7RhI",
+      "title": "🔴 LIVE 24/7 KRNO Reno-Tahoe International Airport Plane Spotting - Grand Sierra Resort",
+      "channel": "RNO Flights",
+      "thumb": "https://i.ytimg.com/vi/VaDbfFG7RhI/mqdefault.jpg",
+      "matchedQuery": "plane spotting live stream",
       "viewers": 62,
+      "stillLive": true
+    },
+    {
+      "videoId": "67BCsiW-1Io",
+      "title": "Midway Airport | Chicago, IL USA | StreamTime LIVE  4K",
+      "channel": "StreamTime Live",
+      "thumb": "https://i.ytimg.com/vi/67BCsiW-1Io/mqdefault.jpg",
+      "matchedQuery": "airport live cam plane spotting",
+      "viewers": 57,
       "stillLive": true
     },
     {
@@ -145,7 +145,7 @@
       "channel": "AVIAÇÃO TV",
       "thumb": "https://i.ytimg.com/vi/wPic57F5FfY/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 49,
+      "viewers": 45,
       "stillLive": true
     },
     {
@@ -154,7 +154,7 @@
       "channel": "Luftra Aviation",
       "thumb": "https://i.ytimg.com/vi/TSISjkPA-E0/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 34,
+      "viewers": 39,
       "stillLive": true
     },
     {
@@ -163,7 +163,7 @@
       "channel": "PTZtv",
       "thumb": "https://i.ytimg.com/vi/_GUsXnlVJmo/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 33,
+      "viewers": 37,
       "stillLive": true
     },
     {
@@ -172,7 +172,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/fFl0qD108sk/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 30,
+      "viewers": 28,
       "stillLive": true
     },
     {
@@ -190,7 +190,7 @@
       "channel": "Nippon Television News Japan",
       "thumb": "https://i.ytimg.com/vi/3w4zEyFamuA/mqdefault.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 15,
+      "viewers": 14,
       "stillLive": true
     },
     {
@@ -199,7 +199,7 @@
       "channel": "Information Zulu",
       "thumb": "https://i.ytimg.com/vi/t0GrpAgdBFI/mqdefault.jpg",
       "matchedQuery": "LAX airport plane spotting live",
-      "viewers": 5,
+      "viewers": 9,
       "stillLive": true
     },
     {
@@ -221,20 +221,20 @@
       "stillLive": true
     },
     {
-      "videoId": "FNtr2igI7e8",
-      "title": "🔴 LIVE: Airports Around the World — Plane Spotting Live Cameras 24/7 | TravelTV",
-      "channel": "TravelTV",
-      "thumb": "https://i.ytimg.com/vi/FNtr2igI7e8/mqdefault.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 1,
-      "stillLive": true
-    },
-    {
       "videoId": "PMetnXeBFSk",
       "title": "✈️ RE-Live Planespotting at Frankfurt Airport – B747 Paradise Takeoffs &amp; Landings - FRA - EDDF 2026",
       "channel": "Airplane Live",
       "thumb": "https://i.ytimg.com/vi/PMetnXeBFSk/mqdefault.jpg",
       "matchedQuery": "SFO airport plane spotting live",
+      "viewers": 2,
+      "stillLive": true
+    },
+    {
+      "videoId": "FNtr2igI7e8",
+      "title": "🔴 LIVE: Airports Around the World — Plane Spotting Live Cameras 24/7 | TravelTV",
+      "channel": "TravelTV",
+      "thumb": "https://i.ytimg.com/vi/FNtr2igI7e8/mqdefault.jpg",
+      "matchedQuery": "airport live cam plane spotting",
       "viewers": 1,
       "stillLive": true
     },
