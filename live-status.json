@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T22:16:02.520Z",
+  "updatedAt": "2026-10-25T22:28:24.433Z",
   "airportRotationStart": 3,
   "quotaExceeded": false,
   "lastSearchError": null,
@@ -10,7 +10,7 @@
       "channel": "SydSquad",
       "thumb": "https://i.ytimg.com/vi/H4-7j764QWM/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 2599,
+      "viewers": 1992,
       "stillLive": true
     },
     {
@@ -19,7 +19,7 @@
       "channel": "AIRLINE VIDEOS",
       "thumb": "https://i.ytimg.com/vi/3aRsjD_EoNg/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1865,
+      "viewers": 1845,
       "stillLive": true
     },
     {
@@ -28,7 +28,7 @@
       "channel": "AirlineVideosLive+",
       "thumb": "https://i.ytimg.com/vi/n4I0d44oBEs/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 444,
+      "viewers": 466,
       "stillLive": true
     },
     {
@@ -37,7 +37,7 @@
       "channel": "Temporary Window",
       "thumb": "https://i.ytimg.com/vi/yrFO6OKbJ48/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 417,
+      "viewers": 385,
       "stillLive": true
     },
     {
@@ -46,16 +46,7 @@
       "channel": "BIG JET TV",
       "thumb": "https://i.ytimg.com/vi/uDBYuEV4zjI/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 301,
-      "stillLive": true
-    },
-    {
-      "videoId": "vpyvm3vS_nM",
-      "title": "🔴 LIVE NONSTOP AIRPORT ACTION FROM MINNEAPOLIS! ✈ MSP/KMSP AIRPORT ✈ 10/25/26",
-      "channel": "MSP Airport LIVE",
-      "thumb": "https://i.ytimg.com/vi/vpyvm3vS_nM/mqdefault.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 243,
+      "viewers": 296,
       "stillLive": true
     },
     {
@@ -64,7 +55,16 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/V7_orOtu-oo/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 223,
+      "viewers": 222,
+      "stillLive": true
+    },
+    {
+      "videoId": "vpyvm3vS_nM",
+      "title": "🔴 LIVE NONSTOP AIRPORT ACTION FROM MINNEAPOLIS! ✈ MSP/KMSP AIRPORT ✈ 10/25/26",
+      "channel": "MSP Airport LIVE",
+      "thumb": "https://i.ytimg.com/vi/vpyvm3vS_nM/mqdefault.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 202,
       "stillLive": true
     },
     {
@@ -73,25 +73,7 @@
       "channel": "AirlineVideosLive+",
       "thumb": "https://i.ytimg.com/vi/KzsNnyN8D_Q/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 186,
-      "stillLive": true
-    },
-    {
-      "videoId": "N31IxMVUfGc",
-      "title": "🔴 INAUGURAL Finnair arriving into Melbourne Airport ( YMML / MEL ) [6.15am 26/OCTOBER/2026]",
-      "channel": "Melbourne Flyer",
-      "thumb": "https://i.ytimg.com/vi/N31IxMVUfGc/mqdefault.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 130,
-      "stillLive": true
-    },
-    {
-      "videoId": "B1NPaF7gR7s",
-      "title": "Heathrow Airport Live -  STRONG WINDS Sunday 25th October 2026",
-      "channel": "Flight Focus 365",
-      "thumb": "https://i.ytimg.com/vi/B1NPaF7gR7s/mqdefault.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 129,
+      "viewers": 185,
       "stillLive": true
     },
     {
@@ -100,7 +82,16 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/SgvpyjQX_HM/mqdefault.jpg",
       "matchedQuery": "Heathrow airport plane spotting live",
-      "viewers": 123,
+      "viewers": 129,
+      "stillLive": true
+    },
+    {
+      "videoId": "B1NPaF7gR7s",
+      "title": "Heathrow Airport Live -  STRONG WINDS Sunday 25th October 2026",
+      "channel": "Flight Focus 365",
+      "thumb": "https://i.ytimg.com/vi/B1NPaF7gR7s/mqdefault.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 101,
       "stillLive": true
     },
     {
@@ -109,16 +100,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/T_QsY01tIK0/mqdefault.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 90,
-      "stillLive": true
-    },
-    {
-      "videoId": "67BCsiW-1Io",
-      "title": "Midway Airport | Chicago, IL USA | StreamTime LIVE  4K",
-      "channel": "StreamTime Live",
-      "thumb": "https://i.ytimg.com/vi/67BCsiW-1Io/mqdefault.jpg",
-      "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": 68,
+      "viewers": 86,
       "stillLive": true
     },
     {
@@ -127,16 +109,16 @@
       "channel": "SHOWME Caribbean",
       "thumb": "https://i.ytimg.com/vi/iSeH45R-8R0/mqdefault.jpg",
       "matchedQuery": "Melbourne airport plane spotting live",
-      "viewers": 68,
+      "viewers": 70,
       "stillLive": true
     },
     {
-      "videoId": "2IQmpCXbOmM",
-      "title": "Iconic SXM Airport LIVE 24/7 • Sint Maarten Maho Beach",
-      "channel": "Flightradar24",
-      "thumb": "https://i.ytimg.com/vi/2IQmpCXbOmM/mqdefault.jpg",
+      "videoId": "67BCsiW-1Io",
+      "title": "Midway Airport | Chicago, IL USA | StreamTime LIVE  4K",
+      "channel": "StreamTime Live",
+      "thumb": "https://i.ytimg.com/vi/67BCsiW-1Io/mqdefault.jpg",
       "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": 55,
+      "viewers": 56,
       "stillLive": true
     },
     {
@@ -145,6 +127,15 @@
       "channel": "LAS Vegas Airport LIVE",
       "thumb": "https://i.ytimg.com/vi/iIUCaiiMmNs/mqdefault.jpg",
       "matchedQuery": "airport live cam plane spotting",
+      "viewers": 50,
+      "stillLive": true
+    },
+    {
+      "videoId": "2IQmpCXbOmM",
+      "title": "Iconic SXM Airport LIVE 24/7 • Sint Maarten Maho Beach",
+      "channel": "Flightradar24",
+      "thumb": "https://i.ytimg.com/vi/2IQmpCXbOmM/mqdefault.jpg",
+      "matchedQuery": "Sydney airport plane spotting live",
       "viewers": 45,
       "stillLive": true
     },
@@ -154,7 +145,7 @@
       "channel": "SHOWME Caribbean",
       "thumb": "https://i.ytimg.com/vi/XMjXmnlwiFE/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 39,
+      "viewers": 42,
       "stillLive": true
     },
     {
@@ -172,16 +163,7 @@
       "channel": "RNO Flights",
       "thumb": "https://i.ytimg.com/vi/VaDbfFG7RhI/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 38,
-      "stillLive": true
-    },
-    {
-      "videoId": "w2haPTtDUAo",
-      "title": "🔴 LIVE 24/7 Lisbon Airport Live Cam 25.10.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
-      "channel": "AVIAÇÃO TV",
-      "thumb": "https://i.ytimg.com/vi/w2haPTtDUAo/mqdefault.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 32,
+      "viewers": 36,
       "stillLive": true
     },
     {
@@ -190,16 +172,16 @@
       "channel": "Luftra Aviation",
       "thumb": "https://i.ytimg.com/vi/TSISjkPA-E0/mqdefault.jpg",
       "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": 25,
+      "viewers": 27,
       "stillLive": true
     },
     {
-      "videoId": "3w4zEyFamuA",
-      "title": "【Live】Tokyo International Airport ,Haneda Plane Spotting (NipponTV News24)  IATA: HND, ICAO: RJTT",
-      "channel": "Nippon Television News Japan",
-      "thumb": "https://i.ytimg.com/vi/3w4zEyFamuA/mqdefault.jpg",
-      "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": 24,
+      "videoId": "w2haPTtDUAo",
+      "title": "🔴 LIVE 24/7 Lisbon Airport Live Cam 25.10.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
+      "channel": "AVIAÇÃO TV",
+      "thumb": "https://i.ytimg.com/vi/w2haPTtDUAo/mqdefault.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 26,
       "stillLive": true
     },
     {
@@ -212,12 +194,12 @@
       "stillLive": true
     },
     {
-      "videoId": "fFl0qD108sk",
-      "title": "RNO Airport LIVE 24/7 • Reno",
-      "channel": "Flightradar24",
-      "thumb": "https://i.ytimg.com/vi/fFl0qD108sk/mqdefault.jpg",
-      "matchedQuery": "Heathrow airport plane spotting live",
-      "viewers": 19,
+      "videoId": "3w4zEyFamuA",
+      "title": "【Live】Tokyo International Airport ,Haneda Plane Spotting (NipponTV News24)  IATA: HND, ICAO: RJTT",
+      "channel": "Nippon Television News Japan",
+      "thumb": "https://i.ytimg.com/vi/3w4zEyFamuA/mqdefault.jpg",
+      "matchedQuery": "Sydney airport plane spotting live",
+      "viewers": 21,
       "stillLive": true
     },
     {
@@ -230,12 +212,21 @@
       "stillLive": true
     },
     {
+      "videoId": "fFl0qD108sk",
+      "title": "RNO Airport LIVE 24/7 • Reno",
+      "channel": "Flightradar24",
+      "thumb": "https://i.ytimg.com/vi/fFl0qD108sk/mqdefault.jpg",
+      "matchedQuery": "Heathrow airport plane spotting live",
+      "viewers": 16,
+      "stillLive": true
+    },
+    {
       "videoId": "A6R81wOlQqs",
       "title": "🔵 LIVE from Malaga Airport (AGP/LEMG) - Costa del Sol - Andalucía - Spain - 24/7",
       "channel": "meteo365es",
       "thumb": "https://i.ytimg.com/vi/A6R81wOlQqs/mqdefault.jpg",
       "matchedQuery": "Melbourne airport plane spotting live",
-      "viewers": 12,
+      "viewers": 9,
       "stillLive": true
     },
     {
@@ -253,16 +244,7 @@
       "channel": "Adelaide Airport Limited",
       "thumb": "https://i.ytimg.com/vi/H3W5vZbp0Yc/mqdefault.jpg",
       "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": 4,
-      "stillLive": true
-    },
-    {
-      "videoId": "Sl5EQRrxE0A",
-      "title": "🔴INAUGURAL| MSFS 2024 LIVE | Auckland - Western Sydney Int&#39;l | BravoAirspace 787 - 9🔴",
-      "channel": "Supremacy Aviation",
-      "thumb": "https://i.ytimg.com/vi/Sl5EQRrxE0A/mqdefault.jpg",
-      "matchedQuery": "Sydney airport plane spotting live",
-      "viewers": 4,
+      "viewers": 6,
       "stillLive": true
     },
     {
@@ -272,6 +254,15 @@
       "thumb": "https://i.ytimg.com/vi/t0GrpAgdBFI/mqdefault.jpg",
       "matchedQuery": "Sydney airport plane spotting live",
       "viewers": 3,
+      "stillLive": true
+    },
+    {
+      "videoId": "Sl5EQRrxE0A",
+      "title": "🔴INAUGURAL| MSFS 2024 LIVE | Auckland - Western Sydney Int&#39;l | BravoAirspace 787 - 9🔴",
+      "channel": "Supremacy Aviation",
+      "thumb": "https://i.ytimg.com/vi/Sl5EQRrxE0A/mqdefault.jpg",
+      "matchedQuery": "Sydney airport plane spotting live",
+      "viewers": 2,
       "stillLive": true
     },
     {
