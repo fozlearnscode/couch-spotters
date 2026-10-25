@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T18:41:49.687Z",
+  "updatedAt": "2026-10-25T19:58:54.368Z",
   "airportRotationStart": 0,
   "quotaExceeded": false,
   "lastSearchError": null,
@@ -10,7 +10,7 @@
       "channel": "AIRLINE VIDEOS",
       "thumb": "https://i.ytimg.com/vi/3aRsjD_EoNg/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 1733,
+      "viewers": 1643,
       "stillLive": true
     },
     {
@@ -19,16 +19,7 @@
       "channel": "BIG JET TV",
       "thumb": "https://i.ytimg.com/vi/uDBYuEV4zjI/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 634,
-      "stillLive": true
-    },
-    {
-      "videoId": "B1NPaF7gR7s",
-      "title": "Heathrow Airport Live -  STRONG WINDS Sunday 25th October 2026",
-      "channel": "Flight Focus 365",
-      "thumb": "https://i.ytimg.com/vi/B1NPaF7gR7s/mqdefault.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 436,
+      "viewers": 449,
       "stillLive": true
     },
     {
@@ -37,7 +28,16 @@
       "channel": "AirlineVideosLive+",
       "thumb": "https://i.ytimg.com/vi/n4I0d44oBEs/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 425,
+      "viewers": 408,
+      "stillLive": true
+    },
+    {
+      "videoId": "B1NPaF7gR7s",
+      "title": "Heathrow Airport Live -  STRONG WINDS Sunday 25th October 2026",
+      "channel": "Flight Focus 365",
+      "thumb": "https://i.ytimg.com/vi/B1NPaF7gR7s/mqdefault.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 222,
       "stillLive": true
     },
     {
@@ -46,16 +46,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/V7_orOtu-oo/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 228,
-      "stillLive": true
-    },
-    {
-      "videoId": "N8TCVn6LdTg",
-      "title": "🔴LIVE 4K PLANE SPOTTING FROM: RDU RALEIGH DURHAM INT🔴",
-      "channel": "Carolina Aviation",
-      "thumb": "https://i.ytimg.com/vi/N8TCVn6LdTg/mqdefault.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 222,
+      "viewers": 200,
       "stillLive": true
     },
     {
@@ -64,7 +55,16 @@
       "channel": "AirlineVideosLive+",
       "thumb": "https://i.ytimg.com/vi/KzsNnyN8D_Q/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 207,
+      "viewers": 183,
+      "stillLive": true
+    },
+    {
+      "videoId": "N8TCVn6LdTg",
+      "title": "🔴LIVE 4K PLANE SPOTTING FROM: RDU RALEIGH DURHAM INT🔴",
+      "channel": "Carolina Aviation",
+      "thumb": "https://i.ytimg.com/vi/N8TCVn6LdTg/mqdefault.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 180,
       "stillLive": true
     },
     {
@@ -73,7 +73,7 @@
       "channel": "MSP Airport LIVE",
       "thumb": "https://i.ytimg.com/vi/vpyvm3vS_nM/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 201,
+      "viewers": 139,
       "stillLive": true
     },
     {
@@ -82,7 +82,7 @@
       "channel": "SHOWME Caribbean",
       "thumb": "https://i.ytimg.com/vi/XMjXmnlwiFE/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 170,
+      "viewers": 118,
       "stillLive": true
     },
     {
@@ -91,16 +91,7 @@
       "channel": "SHOWME Caribbean",
       "thumb": "https://i.ytimg.com/vi/iSeH45R-8R0/mqdefault.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 136,
-      "stillLive": true
-    },
-    {
-      "videoId": "2IQmpCXbOmM",
-      "title": "Iconic SXM Airport LIVE 24/7 • Sint Maarten Maho Beach",
-      "channel": "Flightradar24",
-      "thumb": "https://i.ytimg.com/vi/2IQmpCXbOmM/mqdefault.jpg",
-      "matchedQuery": "SFO airport plane spotting live",
-      "viewers": 112,
+      "viewers": 105,
       "stillLive": true
     },
     {
@@ -109,7 +100,16 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/T_QsY01tIK0/mqdefault.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 101,
+      "viewers": 93,
+      "stillLive": true
+    },
+    {
+      "videoId": "2IQmpCXbOmM",
+      "title": "Iconic SXM Airport LIVE 24/7 • Sint Maarten Maho Beach",
+      "channel": "Flightradar24",
+      "thumb": "https://i.ytimg.com/vi/2IQmpCXbOmM/mqdefault.jpg",
+      "matchedQuery": "SFO airport plane spotting live",
+      "viewers": 84,
       "stillLive": true
     },
     {
@@ -118,25 +118,7 @@
       "channel": "StreamTime Live",
       "thumb": "https://i.ytimg.com/vi/67BCsiW-1Io/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 72,
-      "stillLive": true
-    },
-    {
-      "videoId": "ZHdq8eRULB8",
-      "title": "🔴 LIVE SFO Plane Spotting — Behind-the-Scenes with the Plane Jockey Kevin (October 25th, 2026)",
-      "channel": "AirlineVideosLive+",
-      "thumb": "https://i.ytimg.com/vi/ZHdq8eRULB8/mqdefault.jpg",
-      "matchedQuery": "SFO airport plane spotting live",
-      "viewers": 50,
-      "stillLive": true
-    },
-    {
-      "videoId": "iZRbml7fnXI",
-      "title": "MSY Airport  LIVE 24/7 • New Orleans",
-      "channel": "Flightradar24",
-      "thumb": "https://i.ytimg.com/vi/iZRbml7fnXI/mqdefault.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 43,
+      "viewers": 68,
       "stillLive": true
     },
     {
@@ -145,16 +127,16 @@
       "channel": "RNO Flights",
       "thumb": "https://i.ytimg.com/vi/VaDbfFG7RhI/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 39,
+      "viewers": 44,
       "stillLive": true
     },
     {
-      "videoId": "_GUsXnlVJmo",
-      "title": "LIVE Miami Airport -- Watch runway 9/27 with tower radio traffic!",
-      "channel": "PTZtv",
-      "thumb": "https://i.ytimg.com/vi/_GUsXnlVJmo/mqdefault.jpg",
+      "videoId": "iZRbml7fnXI",
+      "title": "MSY Airport  LIVE 24/7 • New Orleans",
+      "channel": "Flightradar24",
+      "thumb": "https://i.ytimg.com/vi/iZRbml7fnXI/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 34,
+      "viewers": 38,
       "stillLive": true
     },
     {
@@ -163,16 +145,25 @@
       "channel": "LAS Vegas Airport LIVE",
       "thumb": "https://i.ytimg.com/vi/iIUCaiiMmNs/mqdefault.jpg",
       "matchedQuery": "LAX airport plane spotting live",
-      "viewers": 32,
+      "viewers": 38,
       "stillLive": true
     },
     {
-      "videoId": "sJl7PsdHxWM",
-      "title": "MKE Airport LIVE 24/7 • Milwaukee, Wisconsin",
-      "channel": "Flightradar24",
-      "thumb": "https://i.ytimg.com/vi/sJl7PsdHxWM/mqdefault.jpg",
+      "videoId": "ZHdq8eRULB8",
+      "title": "🔴 LIVE SFO Plane Spotting — Behind-the-Scenes with the Plane Jockey Kevin (October 25th, 2026)",
+      "channel": "AirlineVideosLive+",
+      "thumb": "https://i.ytimg.com/vi/ZHdq8eRULB8/mqdefault.jpg",
+      "matchedQuery": "SFO airport plane spotting live",
+      "viewers": 35,
+      "stillLive": true
+    },
+    {
+      "videoId": "_GUsXnlVJmo",
+      "title": "LIVE Miami Airport -- Watch runway 9/27 with tower radio traffic!",
+      "channel": "PTZtv",
+      "thumb": "https://i.ytimg.com/vi/_GUsXnlVJmo/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 28,
+      "viewers": 32,
       "stillLive": true
     },
     {
@@ -181,7 +172,16 @@
       "channel": "Luftra Aviation",
       "thumb": "https://i.ytimg.com/vi/TSISjkPA-E0/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 21,
+      "viewers": 25,
+      "stillLive": true
+    },
+    {
+      "videoId": "sJl7PsdHxWM",
+      "title": "MKE Airport LIVE 24/7 • Milwaukee, Wisconsin",
+      "channel": "Flightradar24",
+      "thumb": "https://i.ytimg.com/vi/sJl7PsdHxWM/mqdefault.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 16,
       "stillLive": true
     },
     {
@@ -190,7 +190,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/fFl0qD108sk/mqdefault.jpg",
       "matchedQuery": "SFO airport plane spotting live",
-      "viewers": 13,
+      "viewers": 14,
       "stillLive": true
     },
     {
@@ -199,7 +199,7 @@
       "channel": "TravelTV",
       "thumb": "https://i.ytimg.com/vi/FNtr2igI7e8/mqdefault.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 6,
+      "viewers": 8,
       "stillLive": true
     },
     {
@@ -226,7 +226,7 @@
       "channel": "SF FLIGHTS",
       "thumb": "https://i.ytimg.com/vi/Bhoo5J0psc8/mqdefault.jpg",
       "matchedQuery": "SFO airport plane spotting live",
-      "viewers": 2,
+      "viewers": 3,
       "stillLive": true
     },
     {
@@ -235,7 +235,7 @@
       "channel": "Airplane Live",
       "thumb": "https://i.ytimg.com/vi/11INCtK6uiA/mqdefault.jpg",
       "matchedQuery": "SFO airport plane spotting live",
-      "viewers": 1,
+      "viewers": 2,
       "stillLive": true
     },
     {
