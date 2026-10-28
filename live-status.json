@@ -1,25 +1,25 @@
 {
-  "updatedAt": "2026-10-28T07:52:30.414Z",
+  "updatedAt": "2026-10-28T14:10:37.198Z",
   "airportRotationStart": 1,
   "quotaExceeded": false,
   "lastSearchError": null,
   "liveResults": [
-    {
-      "videoId": "MHBYp_lJJBU",
-      "title": "🔴LIVE  Aviation at  MANCHESTER AIRPORT - Plane spotting + chat",
-      "channel": "Blue Sky Live Aviation",
-      "thumb": "https://i.ytimg.com/vi/MHBYp_lJJBU/mqdefault.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 1154,
-      "stillLive": true
-    },
     {
       "videoId": "TAxBEEJZxao",
       "title": "Heathrow Airport Live -  Wednesday 28th October 2026",
       "channel": "Flight Focus 365",
       "thumb": "https://i.ytimg.com/vi/TAxBEEJZxao/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 805,
+      "viewers": 1112,
+      "stillLive": true
+    },
+    {
+      "videoId": "MHBYp_lJJBU",
+      "title": "🔴LIVE  Aviation at  MANCHESTER AIRPORT - Plane spotting + chat",
+      "channel": "Blue Sky Live Aviation",
+      "thumb": "https://i.ytimg.com/vi/MHBYp_lJJBU/mqdefault.jpg",
+      "matchedQuery": "airport live cam plane spotting",
+      "viewers": 850,
       "stillLive": true
     },
     {
@@ -28,16 +28,7 @@
       "channel": "BIG JET TV",
       "thumb": "https://i.ytimg.com/vi/uDBYuEV4zjI/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 473,
-      "stillLive": true
-    },
-    {
-      "videoId": "uz6vK05nUM0",
-      "title": "Heathrow Airport Live Morning Rush- 28/10/2026",
-      "channel": "JET VIEW AND SNAPS UK",
-      "thumb": "https://i.ytimg.com/vi/uz6vK05nUM0/mqdefault.jpg",
-      "matchedQuery": "Heathrow airport plane spotting live",
-      "viewers": 308,
+      "viewers": 364,
       "stillLive": true
     },
     {
@@ -46,16 +37,7 @@
       "channel": "AirlineVideosLive+",
       "thumb": "https://i.ytimg.com/vi/n4I0d44oBEs/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 288,
-      "stillLive": true
-    },
-    {
-      "videoId": "2lWH6tGMVEI",
-      "title": "🔴LIVE at  TOKYO　HANEDA　International Airport Plane Spotting　2026.10.28 羽田空港ライブカメラ 羽田空港　HND/RJTT",
-      "channel": "Love Flight Jack",
-      "thumb": "https://i.ytimg.com/vi/2lWH6tGMVEI/mqdefault.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 246,
+      "viewers": 344,
       "stillLive": true
     },
     {
@@ -64,7 +46,16 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/SgvpyjQX_HM/mqdefault.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 233,
+      "viewers": 258,
+      "stillLive": true
+    },
+    {
+      "videoId": "V7_orOtu-oo",
+      "title": "LAS Vegas Airport LIVE 24/7 with views of 26R &amp; 26L",
+      "channel": "Flightradar24",
+      "thumb": "https://i.ytimg.com/vi/V7_orOtu-oo/mqdefault.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 229,
       "stillLive": true
     },
     {
@@ -73,16 +64,7 @@
       "channel": "AirlineVideosLive+",
       "thumb": "https://i.ytimg.com/vi/KzsNnyN8D_Q/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 154,
-      "stillLive": true
-    },
-    {
-      "videoId": "uHePNjg__1c",
-      "title": "🔴 LIVE London City Airport Plane Spotting ✈️ Helvetic Airways Embraer E190-E2 morning Arrivals.",
-      "channel": "STUDIOS99Stream",
-      "thumb": "https://i.ytimg.com/vi/uHePNjg__1c/mqdefault.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 70,
+      "viewers": 212,
       "stillLive": true
     },
     {
@@ -91,7 +73,34 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/T_QsY01tIK0/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 59,
+      "viewers": 133,
+      "stillLive": true
+    },
+    {
+      "videoId": "2IQmpCXbOmM",
+      "title": "Iconic SXM Airport LIVE 24/7 • Sint Maarten Maho Beach",
+      "channel": "Flightradar24",
+      "thumb": "https://i.ytimg.com/vi/2IQmpCXbOmM/mqdefault.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 89,
+      "stillLive": true
+    },
+    {
+      "videoId": "67BCsiW-1Io",
+      "title": "Midway Airport | Chicago, IL USA | StreamTime LIVE  4K",
+      "channel": "StreamTime Live",
+      "thumb": "https://i.ytimg.com/vi/67BCsiW-1Io/mqdefault.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 80,
+      "stillLive": true
+    },
+    {
+      "videoId": "iIUCaiiMmNs",
+      "title": "OFFICIAL LAS Vegas Airport LIVE Camera: Departures, Arrivals, and the Strip - All in One!",
+      "channel": "LAS Vegas Airport LIVE",
+      "thumb": "https://i.ytimg.com/vi/iIUCaiiMmNs/mqdefault.jpg",
+      "matchedQuery": "LAX airport plane spotting live",
+      "viewers": 56,
       "stillLive": true
     },
     {
@@ -100,23 +109,23 @@
       "channel": "RNO Flights",
       "thumb": "https://i.ytimg.com/vi/VaDbfFG7RhI/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 46,
+      "viewers": 48,
       "stillLive": true
     },
     {
-      "videoId": "gnym_grlJT8",
-      "title": "🔴 LIVE 24/7 Lisbon Airport Live Cam 28.10.2026 • Plane Spotting • Direto Aeroporto Lisboa Ao Vivo",
-      "channel": "AVIAÇÃO TV",
-      "thumb": "https://i.ytimg.com/vi/gnym_grlJT8/mqdefault.jpg",
-      "matchedQuery": "airport live cam plane spotting",
-      "viewers": 46,
+      "videoId": "_GUsXnlVJmo",
+      "title": "LIVE Miami Airport -- Watch runway 9/27 with tower radio traffic!",
+      "channel": "PTZtv",
+      "thumb": "https://i.ytimg.com/vi/_GUsXnlVJmo/mqdefault.jpg",
+      "matchedQuery": "plane spotting live stream",
+      "viewers": 37,
       "stillLive": true
     },
     {
-      "videoId": "67BCsiW-1Io",
-      "title": "Midway Airport | Chicago, IL USA | StreamTime LIVE  4K",
-      "channel": "StreamTime Live",
-      "thumb": "https://i.ytimg.com/vi/67BCsiW-1Io/mqdefault.jpg",
+      "videoId": "iZRbml7fnXI",
+      "title": "MSY Airport  LIVE 24/7 • New Orleans",
+      "channel": "Flightradar24",
+      "thumb": "https://i.ytimg.com/vi/iZRbml7fnXI/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
       "viewers": 33,
       "stillLive": true
@@ -127,43 +136,7 @@
       "channel": "Luftra Aviation",
       "thumb": "https://i.ytimg.com/vi/TSISjkPA-E0/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 21,
-      "stillLive": true
-    },
-    {
-      "videoId": "iZRbml7fnXI",
-      "title": "MSY Airport  LIVE 24/7 • New Orleans",
-      "channel": "Flightradar24",
-      "thumb": "https://i.ytimg.com/vi/iZRbml7fnXI/mqdefault.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 16,
-      "stillLive": true
-    },
-    {
-      "videoId": "2IQmpCXbOmM",
-      "title": "Iconic SXM Airport LIVE 24/7 • Sint Maarten Maho Beach",
-      "channel": "Flightradar24",
-      "thumb": "https://i.ytimg.com/vi/2IQmpCXbOmM/mqdefault.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 16,
-      "stillLive": true
-    },
-    {
-      "videoId": "_GUsXnlVJmo",
-      "title": "LIVE Miami Airport -- Watch runway 9/27 with tower radio traffic!",
-      "channel": "PTZtv",
-      "thumb": "https://i.ytimg.com/vi/_GUsXnlVJmo/mqdefault.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 14,
-      "stillLive": true
-    },
-    {
-      "videoId": "V7_orOtu-oo",
-      "title": "LAS Vegas Airport LIVE 24/7 with views of 26R &amp; 26L",
-      "channel": "Flightradar24",
-      "thumb": "https://i.ytimg.com/vi/V7_orOtu-oo/mqdefault.jpg",
-      "matchedQuery": "plane spotting live stream",
-      "viewers": 13,
+      "viewers": 25,
       "stillLive": true
     },
     {
@@ -172,7 +145,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/fFl0qD108sk/mqdefault.jpg",
       "matchedQuery": "JFK airport plane spotting live",
-      "viewers": 13,
+      "viewers": 22,
       "stillLive": true
     },
     {
@@ -181,7 +154,7 @@
       "channel": "Flightradar24",
       "thumb": "https://i.ytimg.com/vi/sJl7PsdHxWM/mqdefault.jpg",
       "matchedQuery": "plane spotting live stream",
-      "viewers": 6,
+      "viewers": 16,
       "stillLive": true
     },
     {
@@ -194,20 +167,20 @@
       "stillLive": true
     },
     {
+      "videoId": "PMetnXeBFSk",
+      "title": "✈️ RE-Live Planespotting at Frankfurt Airport – B747 Paradise Takeoffs &amp; Landings - FRA - EDDF 2026",
+      "channel": "Airplane Live",
+      "thumb": "https://i.ytimg.com/vi/PMetnXeBFSk/mqdefault.jpg",
+      "matchedQuery": "JFK airport plane spotting live",
+      "viewers": 5,
+      "stillLive": true
+    },
+    {
       "videoId": "FNtr2igI7e8",
       "title": "🔴 LIVE: Airports Around the World — Plane Spotting Live Cameras 24/7 | TravelTV",
       "channel": "TravelTV",
       "thumb": "https://i.ytimg.com/vi/FNtr2igI7e8/mqdefault.jpg",
       "matchedQuery": "airport live cam plane spotting",
-      "viewers": 4,
-      "stillLive": true
-    },
-    {
-      "videoId": "iIUCaiiMmNs",
-      "title": "OFFICIAL LAS Vegas Airport LIVE Camera: Departures, Arrivals, and the Strip - All in One!",
-      "channel": "LAS Vegas Airport LIVE",
-      "thumb": "https://i.ytimg.com/vi/iIUCaiiMmNs/mqdefault.jpg",
-      "matchedQuery": "LAX airport plane spotting live",
       "viewers": 3,
       "stillLive": true
     },
@@ -226,16 +199,7 @@
       "channel": "Airplane Live",
       "thumb": "https://i.ytimg.com/vi/11INCtK6uiA/mqdefault.jpg",
       "matchedQuery": "LAX airport plane spotting live",
-      "viewers": 1,
-      "stillLive": true
-    },
-    {
-      "videoId": "PMetnXeBFSk",
-      "title": "✈️ RE-Live Planespotting at Frankfurt Airport – B747 Paradise Takeoffs &amp; Landings - FRA - EDDF 2026",
-      "channel": "Airplane Live",
-      "thumb": "https://i.ytimg.com/vi/PMetnXeBFSk/mqdefault.jpg",
-      "matchedQuery": "JFK airport plane spotting live",
-      "viewers": 1,
+      "viewers": 2,
       "stillLive": true
     },
     {
